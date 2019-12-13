@@ -29,9 +29,7 @@ Finally add this to the Gemfile:
 
 ### Install from Git
 
-If the Ruby gem is hosted at a git repository: https://github.com/YOUR_GIT_USERNAME/YOUR_GIT_REPO, then add the following in the Gemfile:
-
-    gem 'bitbar-cloud-api-client', :git => 'https://github.com/YOUR_GIT_USERNAME/YOUR_GIT_REPO.git'
+    gem 'bitbar-cloud-api-client', :git => 'https://github.com/bitbar/cloud-api-client-ruby.git'
 
 ### Include the Ruby code directly
 
@@ -57,11 +55,8 @@ BitbarCloudApiClient.configure do |config|
 end
 
 api_instance = BitbarCloudApiClient::AdminApi.new
-
 build_id = 789 # Integer | buildId
-
 job_id = 789 # Integer | jobId
-
 
 begin
   #Abort build.
