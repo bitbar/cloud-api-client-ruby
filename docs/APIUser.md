@@ -1,0 +1,39 @@
+# BitbarCloudApiClient::APIUser
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**account_id** | **Integer** |  | [optional] 
+**account_service_ids** | **Array&lt;Integer&gt;** |  | [optional] 
+**address** | **String** |  | [optional] 
+**api_key** | **String** |  | [optional] 
+**city** | **String** |  | [optional] 
+**code** | **String** |  | [optional] 
+**country** | **String** |  | [optional] 
+**create_time** | **DateTime** |  | [optional] 
+**created_by_email** | **String** |  | [optional] 
+**created_by_id** | **Integer** |  | [optional] 
+**delete_time** | **DateTime** |  | [optional] 
+**email** | **String** |  | [optional] 
+**enabled** | **BOOLEAN** |  | [optional] 
+**first_name** | **String** |  | [optional] 
+**id** | **Integer** |  | [optional] 
+**is_main_user** | **BOOLEAN** |  | [optional] 
+**last_launched_test_time** | **DateTime** |  | [optional] 
+**last_login_time** | **DateTime** |  | [optional] 
+**last_name** | **String** |  | [optional] 
+**main_user_email** | **String** |  | [optional] 
+**main_user_id** | **Integer** |  | [optional] 
+**mfa_qr_code_url** | **String** |  | [optional] 
+**mfa_status** | **String** |  | [optional] 
+**organization** | **String** |  | [optional] 
+**phone** | **String** |  | [optional] 
+**roles** | [**Array&lt;APIRole&gt;**](APIRole.md) |  | [optional] 
+**self_uri** | **String** |  | [optional] 
+**service_ids** | **Array&lt;Integer&gt;** |  | [optional] 
+**state** | **String** |  | [optional] 
+**status** | **String** |  | [optional] 
+**time_zone** | **String** |  | [optional] 
+**vat_id** | **String** |  | [optional] 
+
+

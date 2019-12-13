@@ -1,0 +1,6 @@
+# IDEA
+.idea/*
+
+# Built
+*.gem
+.rakeTasks
