@@ -1,9 +1,9 @@
-# BitbarCloudApiClient::APIListOfAPIPipelineBuild
+# BitbarCloudApiClient::APIListOfAPIDeviceStatistic
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**data** | [**Array&lt;APIPipelineBuild&gt;**](APIPipelineBuild.md) |  | [optional] 
+**data** | [**Array&lt;APIDeviceStatistic&gt;**](APIDeviceStatistic.md) |  | [optional] 
 **empty** | **BOOLEAN** |  | [optional] 
 **id** | **Integer** |  | [optional] 
 **limit** | **Integer** |  | [optional] 

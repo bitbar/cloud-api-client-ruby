@@ -3,13 +3,14 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**activate_time** | **DateTime** |  | [optional] 
+**activate_time** | **Integer** |  | [optional] 
 **activated** | **BOOLEAN** |  | [optional] 
-**archive_time** | **DateTime** |  | [optional] 
+**archive_time** | **Integer** |  | [optional] 
 **auto_renew** | **BOOLEAN** |  | [optional] 
 **cent_price** | **Integer** |  | [optional] 
 **charge_type** | **String** |  | [optional] 
 **custom_plan** | **BOOLEAN** |  | [optional] 
+**default_concurrences** | **Array&lt;Integer&gt;** |  | [optional] 
 **description** | **String** |  | [optional] 
 **external_id** | **String** |  | [optional] 
 **id** | **Integer** |  | [optional] 

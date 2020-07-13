@@ -5,7 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **cloud_name** | **String** |  | [optional] 
 **count** | **Integer** |  | [optional] 
-**day** | **DateTime** |  | [optional] 
+**day** | **Integer** |  | [optional] 
 **device_model_id** | **Integer** |  | [optional] 
 **device_model_name** | **String** |  | [optional] 
 **framework_id** | **Integer** |  | [optional] 

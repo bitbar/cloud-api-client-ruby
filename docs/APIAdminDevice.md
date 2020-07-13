@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 **id** | **Integer** |  | [optional] 
 **init_step** | **String** |  | [optional] 
 **ip_address** | **String** |  | [optional] 
-**last_online_time** | **DateTime** |  | [optional] 
+**last_online_time** | **Integer** |  | [optional] 
 **locked** | **BOOLEAN** |  | [optional] 
 **main_user_email** | **String** |  | [optional] 
 **name** | **String** |  | [optional] 
@@ -21,7 +21,8 @@ Name | Type | Description | Notes
 **serial_id** | **String** |  | [optional] 
 **software_version** | [**APISoftwareVersion**](APISoftwareVersion.md) |  | [optional] 
 **state** | **String** |  | [optional] 
-**state_time** | **DateTime** |  | [optional] 
+**state_change_time** | **Integer** |  | [optional] 
+**state_time** | **Integer** |  | [optional] 
 **unlock_gesture** | **String** |  | [optional] 
 
 

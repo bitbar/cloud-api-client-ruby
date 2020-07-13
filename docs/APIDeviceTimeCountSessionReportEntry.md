@@ -5,7 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **count_device_sessions** | **Integer** |  | [optional] 
 **count_test_runs** | **Integer** |  | [optional] 
-**day** | **DateTime** |  | [optional] 
+**day** | **Integer** |  | [optional] 
 **device_model_name** | **String** |  | [optional] 
 **device_time** | **Integer** |  | [optional] 
 **id** | **Integer** |  | [optional] 

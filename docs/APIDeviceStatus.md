@@ -30,6 +30,6 @@ Name | Type | Description | Notes
 **tds_version** | **String** |  | [optional] 
 **test_executing** | **BOOLEAN** |  | [optional] 
 **tethering_on** | **BOOLEAN** |  | [optional] 
-**update_time** | **DateTime** |  | [optional] 
+**update_time** | **Integer** |  | [optional] 
 
 

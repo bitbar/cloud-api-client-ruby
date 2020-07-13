@@ -5,7 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **account_id** | **Integer** |  | [optional] 
 **can_run_from_ui** | **BOOLEAN** |  | [optional] 
-**create_time** | **DateTime** |  | [optional] 
+**create_time** | **Integer** |  | [optional] 
 **description** | **String** |  | [optional] 
 **documentation_url** | **String** |  | [optional] 
 **for_projects** | **BOOLEAN** |  | [optional] 

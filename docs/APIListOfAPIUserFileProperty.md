@@ -1,9 +1,9 @@
-# BitbarCloudApiClient::APIListOfAPIBuildExecutor
+# BitbarCloudApiClient::APIListOfAPIUserFileProperty
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**data** | [**Array&lt;APIBuildExecutor&gt;**](APIBuildExecutor.md) |  | [optional] 
+**data** | [**Array&lt;APIUserFileProperty&gt;**](APIUserFileProperty.md) |  | [optional] 
 **empty** | **BOOLEAN** |  | [optional] 
 **id** | **Integer** |  | [optional] 
 **limit** | **Integer** |  | [optional] 

@@ -3,12 +3,12 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**activate_time** | **DateTime** |  | [optional] 
+**activate_time** | **Integer** |  | [optional] 
 **android** | [**AndroidLicense**](AndroidLicense.md) |  | [optional] 
 **build** | [**BuildLicense**](BuildLicense.md) |  | [optional] 
-**close_time** | **DateTime** |  | [optional] 
+**close_time** | **Integer** |  | [optional] 
 **desktop** | [**DesktopLicense**](DesktopLicense.md) |  | [optional] 
-**expire_time** | **DateTime** |  | [optional] 
+**expire_time** | **Integer** |  | [optional] 
 **global** | [**GlobalLicense**](GlobalLicense.md) |  | [optional] 
 **id** | **Integer** |  | [optional] 
 **inspector** | [**InspectorLicense**](InspectorLicense.md) |  | [optional] 

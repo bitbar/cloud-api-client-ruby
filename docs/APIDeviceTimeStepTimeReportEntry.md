@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**day** | **DateTime** |  | [optional] 
+**day** | **Integer** |  | [optional] 
 **device_model_name** | **String** |  | [optional] 
 **device_time** | **Integer** |  | [optional] 
 **id** | **Integer** |  | [optional] 

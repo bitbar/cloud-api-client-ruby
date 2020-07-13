@@ -6,8 +6,8 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**create_user_notification_using_post**](NotificationsApi.md#create_user_notification_using_post) | **POST** /api/v2/users/{userId}/notifications | Create notification.
 [**delete_user_notification_email_using_delete**](NotificationsApi.md#delete_user_notification_email_using_delete) | **DELETE** /api/v2/users/{userId}/notifications/{id} | Delete notification.
-[**get_channels_using_get1**](NotificationsApi.md#get_channels_using_get1) | **GET** /api/v2/users/{userId}/notifications/channels | Get notification channels.
-[**get_scopes_using_get1**](NotificationsApi.md#get_scopes_using_get1) | **GET** /api/v2/users/{userId}/notifications/scopes | Get notification scopes.
+[**get_channels_using_get1**](NotificationsApi.md#get_channels_using_get1) | **GET** /api/v2/users/*/notifications/channels | Get notification channels.
+[**get_scopes_using_get1**](NotificationsApi.md#get_scopes_using_get1) | **GET** /api/v2/users/*/notifications/scopes | Get notification scopes.
 [**get_user_notification_using_get**](NotificationsApi.md#get_user_notification_using_get) | **GET** /api/v2/users/{userId}/notifications/{id} | Get notification.
 [**get_user_notifications_using_get**](NotificationsApi.md#get_user_notifications_using_get) | **GET** /api/v2/users/{userId}/notifications | Get notifications.
 [**test_user_notification_using_post**](NotificationsApi.md#test_user_notification_using_post) | **POST** /api/v2/users/{userId}/notifications/{id}/test | Test notification.
@@ -28,6 +28,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::NotificationsApi.new
@@ -69,7 +72,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -92,6 +95,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::NotificationsApi.new
@@ -122,7 +128,7 @@ nil (empty response body)
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -132,7 +138,7 @@ nil (empty response body)
 
 
 # **get_channels_using_get1**
-> APIListOfAPIEnum get_channels_using_get1(user_id)
+> APIListOfAPIEnum get_channels_using_get1
 
 Get notification channels.
 
@@ -145,16 +151,16 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::NotificationsApi.new
 
-user_id = 789 # Integer | userId
-
-
 begin
   #Get notification channels.
-  result = api_instance.get_channels_using_get1(user_id)
+  result = api_instance.get_channels_using_get1
   p result
 rescue BitbarCloudApiClient::ApiError => e
   puts "Exception when calling NotificationsApi->get_channels_using_get1: #{e}"
@@ -162,10 +168,7 @@ end
 ```
 
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **user_id** | **Integer**| userId | 
+This endpoint does not need any parameter.
 
 ### Return type
 
@@ -173,7 +176,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -183,7 +186,7 @@ Name | Type | Description  | Notes
 
 
 # **get_scopes_using_get1**
-> APIListOfAPIEnum get_scopes_using_get1(user_id)
+> APIListOfAPIEnum get_scopes_using_get1
 
 Get notification scopes.
 
@@ -196,16 +199,16 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::NotificationsApi.new
 
-user_id = 789 # Integer | userId
-
-
 begin
   #Get notification scopes.
-  result = api_instance.get_scopes_using_get1(user_id)
+  result = api_instance.get_scopes_using_get1
   p result
 rescue BitbarCloudApiClient::ApiError => e
   puts "Exception when calling NotificationsApi->get_scopes_using_get1: #{e}"
@@ -213,10 +216,7 @@ end
 ```
 
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **user_id** | **Integer**| userId | 
+This endpoint does not need any parameter.
 
 ### Return type
 
@@ -224,7 +224,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -247,6 +247,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::NotificationsApi.new
@@ -278,7 +281,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -301,6 +304,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::NotificationsApi.new
@@ -339,7 +345,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -362,6 +368,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::NotificationsApi.new
@@ -393,7 +402,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -416,6 +425,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::NotificationsApi.new
@@ -453,7 +465,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
