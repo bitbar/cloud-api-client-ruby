@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **api_key** | **String** |  | [optional] 
-**create_time** | **DateTime** |  | [optional] 
+**create_time** | **Integer** |  | [optional] 
 **has_cert** | **BOOLEAN** |  | [optional] 
 **id** | **Integer** |  | [optional] 
 **self_uri** | **String** |  | [optional] 

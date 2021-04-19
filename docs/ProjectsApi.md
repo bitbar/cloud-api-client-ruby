@@ -25,6 +25,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::ProjectsApi.new
@@ -32,10 +35,7 @@ api_instance = BitbarCloudApiClient::ProjectsApi.new
 user_id = 789 # Integer | userId
 
 opts = { 
-  app_crawler_run: true, # BOOLEAN | appCrawlerRun
-  mode: 'mode_example', # String | mode
-  name: 'name_example', # String | name
-  type: 'GENERIC' # String | type
+  name: 'name_example' # String | name
 }
 
 begin
@@ -52,10 +52,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **user_id** | **Integer**| userId | 
- **app_crawler_run** | **BOOLEAN**| appCrawlerRun | [optional] 
- **mode** | **String**| mode | [optional] 
  **name** | **String**| name | [optional] 
- **type** | **String**| type | [optional] [default to GENERIC]
 
 ### Return type
 
@@ -63,7 +60,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -86,6 +83,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::ProjectsApi.new
@@ -116,7 +116,7 @@ nil (empty response body)
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -139,6 +139,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::ProjectsApi.new
@@ -170,7 +173,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -193,6 +196,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::ProjectsApi.new
@@ -200,14 +206,14 @@ api_instance = BitbarCloudApiClient::ProjectsApi.new
 user_id = 789 # Integer | userId
 
 opts = { 
-  filter: 'filter_example', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=archivetime_eq_1576134484593<br>filter=common_eq_null<br>filter=createtime_eq_1576134484593<br>filter=ostype_eq_ios<br>filter=name_eq_value<br>filter=description_eq_value<br>filter=readonly_eq_true<br>filter=id_eq_1<br>filter=sharedbyemail_eq_value
+  filter: 'filter_example', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=archivetime_eq_1593583746470<br>filter=common_eq_null<br>filter=createtime_eq_1593583746470<br>filter=ostype_eq_ios<br>filter=name_eq_value<br>filter=description_eq_value<br>filter=readonly_eq_true<br>filter=id_eq_1<br>filter=sharedbyemail_eq_value
+  for_whole_account: false, # BOOLEAN | forWholeAccount
   limit: 20, # Integer | limit parameter define page size
   offset: 0, # Integer | offset parameter define page number
   show_statistics: false, # BOOLEAN | showStatistics
   skip_common_project: false, # BOOLEAN | skipCommonProject
   skip_shared: false, # BOOLEAN | skipShared
-  sort: 'sort_example', # String | sort parameter contains list of fields used for sort query result <br> examples: <br> sort=archiveTime_a<br>sort=common_a<br>sort=createTime_a<br>sort=osType_a<br>sort=name_a<br>sort=description_a<br>sort=id_a<br>sort=type_a<br>sort=sharedByEmail_a
-  with_additional_users: false # BOOLEAN | withAdditionalUsers
+  sort: 'sort_example' # String | sort parameter contains list of fields used for sort query result <br> examples: <br> sort=archiveTime_a<br>sort=common_a<br>sort=createTime_a<br>sort=osType_a<br>sort=name_a<br>sort=description_a<br>sort=id_a<br>sort=sharedByEmail_a
 }
 
 begin
@@ -224,14 +230,14 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **user_id** | **Integer**| userId | 
- **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;archivetime_eq_1576134484593&lt;br&gt;filter&#x3D;common_eq_null&lt;br&gt;filter&#x3D;createtime_eq_1576134484593&lt;br&gt;filter&#x3D;ostype_eq_ios&lt;br&gt;filter&#x3D;name_eq_value&lt;br&gt;filter&#x3D;description_eq_value&lt;br&gt;filter&#x3D;readonly_eq_true&lt;br&gt;filter&#x3D;id_eq_1&lt;br&gt;filter&#x3D;sharedbyemail_eq_value | [optional] 
+ **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;archivetime_eq_1593583746470&lt;br&gt;filter&#x3D;common_eq_null&lt;br&gt;filter&#x3D;createtime_eq_1593583746470&lt;br&gt;filter&#x3D;ostype_eq_ios&lt;br&gt;filter&#x3D;name_eq_value&lt;br&gt;filter&#x3D;description_eq_value&lt;br&gt;filter&#x3D;readonly_eq_true&lt;br&gt;filter&#x3D;id_eq_1&lt;br&gt;filter&#x3D;sharedbyemail_eq_value | [optional] 
+ **for_whole_account** | **BOOLEAN**| forWholeAccount | [optional] [default to false]
  **limit** | **Integer**| limit parameter define page size | [optional] [default to 20]
  **offset** | **Integer**| offset parameter define page number | [optional] [default to 0]
  **show_statistics** | **BOOLEAN**| showStatistics | [optional] [default to false]
  **skip_common_project** | **BOOLEAN**| skipCommonProject | [optional] [default to false]
  **skip_shared** | **BOOLEAN**| skipShared | [optional] [default to false]
- **sort** | **String**| sort parameter contains list of fields used for sort query result &lt;br&gt; examples: &lt;br&gt; sort&#x3D;archiveTime_a&lt;br&gt;sort&#x3D;common_a&lt;br&gt;sort&#x3D;createTime_a&lt;br&gt;sort&#x3D;osType_a&lt;br&gt;sort&#x3D;name_a&lt;br&gt;sort&#x3D;description_a&lt;br&gt;sort&#x3D;id_a&lt;br&gt;sort&#x3D;type_a&lt;br&gt;sort&#x3D;sharedByEmail_a | [optional] 
- **with_additional_users** | **BOOLEAN**| withAdditionalUsers | [optional] [default to false]
+ **sort** | **String**| sort parameter contains list of fields used for sort query result &lt;br&gt; examples: &lt;br&gt; sort&#x3D;archiveTime_a&lt;br&gt;sort&#x3D;common_a&lt;br&gt;sort&#x3D;createTime_a&lt;br&gt;sort&#x3D;osType_a&lt;br&gt;sort&#x3D;name_a&lt;br&gt;sort&#x3D;description_a&lt;br&gt;sort&#x3D;id_a&lt;br&gt;sort&#x3D;sharedByEmail_a | [optional] 
 
 ### Return type
 
@@ -239,7 +245,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -262,6 +268,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::ProjectsApi.new
@@ -305,7 +314,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 

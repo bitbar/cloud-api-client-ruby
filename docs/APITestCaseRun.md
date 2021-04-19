@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **class_name** | **String** |  | [optional] 
-**create_time** | **DateTime** |  | [optional] 
+**create_time** | **Integer** |  | [optional] 
 **duration** | **Float** |  | [optional] 
 **error_message** | **String** |  | [optional] 
 **id** | **Integer** |  | [optional] 

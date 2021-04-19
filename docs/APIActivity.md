@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **body** | **String** |  | [optional] 
-**create_time** | **DateTime** |  | [optional] 
+**create_time** | **Integer** |  | [optional] 
 **deprecated_resource** | **BOOLEAN** |  | [optional] 
 **http_method** | **String** |  | [optional] 
 **id** | **Integer** |  | [optional] 

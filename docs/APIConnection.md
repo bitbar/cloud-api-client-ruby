@@ -3,9 +3,9 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**create_time** | **DateTime** |  | [optional] 
+**create_time** | **Integer** |  | [optional] 
 **device_session_id** | **Integer** |  | [optional] 
-**end_time** | **DateTime** |  | [optional] 
+**end_time** | **Integer** |  | [optional] 
 **host** | **String** |  | [optional] 
 **id** | **Integer** |  | [optional] 
 **password** | **String** |  | [optional] 

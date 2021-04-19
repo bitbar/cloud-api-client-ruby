@@ -10,8 +10,8 @@ Name | Type | Description | Notes
 **plugin_version** | **String** |  | [optional] 
 **self_uri** | **String** |  | [optional] 
 **state** | **String** |  | [optional] 
-**state_change_time** | **DateTime** |  | [optional] 
-**state_time** | **DateTime** |  | [optional] 
+**state_change_time** | **Integer** |  | [optional] 
+**state_time** | **Integer** |  | [optional] 
 **url** | **String** |  | [optional] 
 
 

@@ -8,7 +8,7 @@ Method | HTTP request | Description
 [**get_api_label_using_get**](DevicesApi.md#get_api_label_using_get) | **GET** /api/v2/label-groups/{groupId}/labels/{labelId} | Get label.
 [**get_desktop_browser_capabilities_using_get**](DevicesApi.md#get_desktop_browser_capabilities_using_get) | **GET** /api/v2/devices/desktop-browser-capabilities | Get desktop browser capabilities.
 [**get_device_picker_using_get**](DevicesApi.md#get_device_picker_using_get) | **GET** /api/v2/devices/filters | Get device picker filters.
-[**get_device_properties_using_get1**](DevicesApi.md#get_device_properties_using_get1) | **GET** /api/v2/devices/{deviceId}/properties | Get device properties.
+[**get_device_properties_using_get**](DevicesApi.md#get_device_properties_using_get) | **GET** /api/v2/devices/{deviceId}/properties | Get device properties.
 [**get_device_using_get**](DevicesApi.md#get_device_using_get) | **GET** /api/v2/devices/{deviceId} | Get device.
 [**get_devices_using_get1**](DevicesApi.md#get_devices_using_get1) | **GET** /api/v2/devices | Get devices.
 [**get_label_groups_using_get**](DevicesApi.md#get_label_groups_using_get) | **GET** /api/v2/label-groups | Get label groups.
@@ -30,6 +30,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::DevicesApi.new
@@ -58,7 +61,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -81,6 +84,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::DevicesApi.new
@@ -112,7 +118,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -135,6 +141,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::DevicesApi.new
@@ -157,7 +166,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -180,6 +189,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::DevicesApi.new
@@ -202,7 +214,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -211,8 +223,8 @@ This endpoint does not need any parameter.
 
 
 
-# **get_device_properties_using_get1**
-> APIListOfAPIDeviceProperty get_device_properties_using_get1(device_id, opts)
+# **get_device_properties_using_get**
+> APIListOfAPIDeviceProperty get_device_properties_using_get(device_id, opts)
 
 Get device properties.
 
@@ -225,6 +237,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::DevicesApi.new
@@ -240,10 +255,10 @@ opts = {
 
 begin
   #Get device properties.
-  result = api_instance.get_device_properties_using_get1(device_id, opts)
+  result = api_instance.get_device_properties_using_get(device_id, opts)
   p result
 rescue BitbarCloudApiClient::ApiError => e
-  puts "Exception when calling DevicesApi->get_device_properties_using_get1: #{e}"
+  puts "Exception when calling DevicesApi->get_device_properties_using_get: #{e}"
 end
 ```
 
@@ -263,7 +278,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -286,6 +301,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::DevicesApi.new
@@ -320,7 +338,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -343,19 +361,23 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::DevicesApi.new
 
 opts = { 
-  filter: 'filter_example', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=accountid_eq_1<br>filter=displayname_eq_value<br>filter=ostype_eq_ios<br>filter=creditsprice_eq_1<br>filter=online_eq_true<br>filter=id_eq_1<br>filter=device.archivetime_eq_1576134483799<br>filter=locked_eq_true<br>filter=enabled_eq_true
+  filter: 'filter_example', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=accountid_eq_1<br>filter=displayname_eq_value<br>filter=ostype_eq_ios<br>filter=creditsprice_eq_1<br>filter=online_eq_true<br>filter=id_eq_1<br>filter=device.archivetime_eq_1593583744768<br>filter=locked_eq_true<br>filter=enabled_eq_true
   label_ids: [56], # Array<Integer> | labelIds[]
   limit: 20, # Integer | limit parameter define page size
   offset: 0, # Integer | offset parameter define page number
   sort: 'sort_example', # String | sort parameter contains list of fields used for sort query result <br> examples: <br> sort=accountId_a<br>sort=displayName_a<br>sort=osType_a<br>sort=creditsPrice_a<br>sort=id_a<br>sort=device.archiveTime_a<br>sort=locked_a<br>sort=enabled_a
   with_dedicated: true, # BOOLEAN | withDedicated
   with_disabled: true, # BOOLEAN | withDisabled
-  with_properties: false # BOOLEAN | withProperties
+  with_properties: false, # BOOLEAN | withProperties
+  with_supported_creators: false # BOOLEAN | withSupportedCreators
 }
 
 begin
@@ -371,7 +393,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;accountid_eq_1&lt;br&gt;filter&#x3D;displayname_eq_value&lt;br&gt;filter&#x3D;ostype_eq_ios&lt;br&gt;filter&#x3D;creditsprice_eq_1&lt;br&gt;filter&#x3D;online_eq_true&lt;br&gt;filter&#x3D;id_eq_1&lt;br&gt;filter&#x3D;device.archivetime_eq_1576134483799&lt;br&gt;filter&#x3D;locked_eq_true&lt;br&gt;filter&#x3D;enabled_eq_true | [optional] 
+ **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;accountid_eq_1&lt;br&gt;filter&#x3D;displayname_eq_value&lt;br&gt;filter&#x3D;ostype_eq_ios&lt;br&gt;filter&#x3D;creditsprice_eq_1&lt;br&gt;filter&#x3D;online_eq_true&lt;br&gt;filter&#x3D;id_eq_1&lt;br&gt;filter&#x3D;device.archivetime_eq_1593583744768&lt;br&gt;filter&#x3D;locked_eq_true&lt;br&gt;filter&#x3D;enabled_eq_true | [optional] 
  **label_ids** | [**Array&lt;Integer&gt;**](Integer.md)| labelIds[] | [optional] 
  **limit** | **Integer**| limit parameter define page size | [optional] [default to 20]
  **offset** | **Integer**| offset parameter define page number | [optional] [default to 0]
@@ -379,6 +401,7 @@ Name | Type | Description  | Notes
  **with_dedicated** | **BOOLEAN**| withDedicated | [optional] 
  **with_disabled** | **BOOLEAN**| withDisabled | [optional] 
  **with_properties** | **BOOLEAN**| withProperties | [optional] [default to false]
+ **with_supported_creators** | **BOOLEAN**| withSupportedCreators | [optional] [default to false]
 
 ### Return type
 
@@ -386,7 +409,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -409,6 +432,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::DevicesApi.new
@@ -444,7 +470,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -467,6 +493,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::DevicesApi.new
@@ -505,7 +534,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -528,6 +557,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::DevicesApi.new
@@ -563,7 +595,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 

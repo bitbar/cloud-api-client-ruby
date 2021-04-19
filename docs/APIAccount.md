@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**create_time** | **DateTime** |  | [optional] 
+**create_time** | **Integer** |  | [optional] 
 **id** | **Integer** |  | [optional] 
 **main_user_email** | **String** |  | [optional] 
 **main_user_first_name** | **String** |  | [optional] 

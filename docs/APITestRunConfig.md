@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 **available_devices** | [**Array&lt;APIDevice&gt;**](APIDevice.md) |  | [optional] 
 **available_frameworks** | [**Array&lt;APIFramework&gt;**](APIFramework.md) |  | [optional] 
 **client_side_test_config** | [**APIClientSideTestConfig**](APIClientSideTestConfig.md) |  | [optional] 
+**computed_devices** | **Array&lt;Integer&gt;** |  | [optional] 
 **credits_price** | **Integer** |  | [optional] 
 **device_group_id** | **Integer** |  | [optional] 
 **device_ids** | **Array&lt;Integer&gt;** |  | [optional] 

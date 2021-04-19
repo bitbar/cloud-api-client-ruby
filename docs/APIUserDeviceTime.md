@@ -4,9 +4,9 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **billable_time** | **Integer** |  | [optional] 
-**create_time** | **DateTime** |  | [optional] 
+**create_time** | **Integer** |  | [optional] 
 **device_time** | **Integer** |  | [optional] 
-**end_time** | **DateTime** |  | [optional] 
+**end_time** | **Integer** |  | [optional] 
 **free_time** | **Integer** |  | [optional] 
 **id** | **Integer** |  | [optional] 
 **self_uri** | **String** |  | [optional] 

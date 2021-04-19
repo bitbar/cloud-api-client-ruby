@@ -27,5 +27,6 @@ Name | Type | Description | Notes
 **properties** | [**APIListOfAPIDeviceProperty**](APIListOfAPIDeviceProperty.md) |  | [optional] 
 **self_uri** | **String** |  | [optional] 
 **software_version** | [**APISoftwareVersion**](APISoftwareVersion.md) |  | [optional] 
+**supported_creators** | **Array&lt;String&gt;** |  | [optional] 
 
 

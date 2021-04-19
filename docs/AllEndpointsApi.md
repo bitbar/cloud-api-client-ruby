@@ -4,8 +4,6 @@ All URIs are relative to *https://cloud.bitbar.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**abort_build_using_post**](AllEndpointsApi.md#abort_build_using_post) | **POST** /api/v2/jobs/{jobId}/builds/{buildId}/abort | Abort build.
-[**abort_build_using_post1**](AllEndpointsApi.md#abort_build_using_post1) | **POST** /api/v2/users/{userId}/jobs/{jobId}/builds/{buildId}/abort | Abort build.
 [**abort_project_test_run_using_post**](AllEndpointsApi.md#abort_project_test_run_using_post) | **POST** /api/v2/projects/{projectId}/runs/{runId}/abort | Abort test run and receive partial results.
 [**abort_test_run_using_post**](AllEndpointsApi.md#abort_test_run_using_post) | **POST** /api/v2/admin/runs/{runId}/abort | Abort test run and receive partial results.
 [**abort_test_run_using_post1**](AllEndpointsApi.md#abort_test_run_using_post1) | **POST** /api/v2/runs/{runId}/abort | Abort test run and receive partial results.
@@ -17,20 +15,19 @@ Method | HTTP request | Description
 [**add_additional_user_using_post**](AllEndpointsApi.md#add_additional_user_using_post) | **POST** /api/v2/users/{userId}/account/additional-users | Add additional user.
 [**add_device_cleanup_configuration_using_post**](AllEndpointsApi.md#add_device_cleanup_configuration_using_post) | **POST** /api/v2/admin/devices/{deviceId}/cleanup-configuration | Add device specific cleanup configuration.
 [**add_device_label_using_post**](AllEndpointsApi.md#add_device_label_using_post) | **POST** /api/v2/admin/devices/{deviceId}/labels | Add label to device.
+[**add_device_label_using_post1**](AllEndpointsApi.md#add_device_label_using_post1) | **POST** /api/v2/admin/devices/{deviceId}/properties | Add label to device.
 [**add_device_model_criteria_using_post**](AllEndpointsApi.md#add_device_model_criteria_using_post) | **POST** /api/v2/admin/device-model-criteria | Create device model criterion.
 [**add_device_to_device_group_using_post**](AllEndpointsApi.md#add_device_to_device_group_using_post) | **POST** /api/v2/device-groups/{deviceGroupId}/devices | Add device to device group.
 [**add_device_to_device_group_using_post1**](AllEndpointsApi.md#add_device_to_device_group_using_post1) | **POST** /api/v2/users/{userId}/device-groups/{deviceGroupId}/devices | Add device to device group.
+[**add_file_using_post**](AllEndpointsApi.md#add_file_using_post) | **POST** /api/v2/device-sessions/{deviceSessionId}/output-file-set/files | Add file to device session.
+[**add_file_using_post1**](AllEndpointsApi.md#add_file_using_post1) | **POST** /api/v2/users/{userId}/device-sessions/{deviceSessionId}/output-file-set/files | Add file to device session.
 [**add_project_test_run_tag_using_post**](AllEndpointsApi.md#add_project_test_run_tag_using_post) | **POST** /api/v2/projects/{projectId}/runs/{runId}/tags | Add tag to test run.
 [**add_role_to_account_using_post**](AllEndpointsApi.md#add_role_to_account_using_post) | **POST** /api/v2/admin/users/{userId}/account/roles | Add account role.
-[**add_screenshot_using_post**](AllEndpointsApi.md#add_screenshot_using_post) | **POST** /api/v2/device-sessions/{deviceSessionId}/output-file-set/screenshots | Add screenshot to device session.
-[**add_screenshot_using_post1**](AllEndpointsApi.md#add_screenshot_using_post1) | **POST** /api/v2/users/{userId}/device-sessions/{deviceSessionId}/output-file-set/screenshots | Add screenshot to device session.
 [**add_selector_to_device_group_using_post**](AllEndpointsApi.md#add_selector_to_device_group_using_post) | **POST** /api/v2/device-groups/{deviceGroupId}/selectors | Add selectors to device group.
 [**add_selector_to_device_group_using_post1**](AllEndpointsApi.md#add_selector_to_device_group_using_post1) | **POST** /api/v2/users/{userId}/device-groups/{deviceGroupId}/selectors | Add selectors to device group.
 [**add_service_to_user_using_post**](AllEndpointsApi.md#add_service_to_user_using_post) | **POST** /api/v2/admin/users/{userId}/account-services | Add service to user.
-[**add_service_to_user_using_post1**](AllEndpointsApi.md#add_service_to_user_using_post1) | **POST** /api/v2/admin/users/{userId}/account/services | Add service to user.
 [**add_test_run_tag_using_post**](AllEndpointsApi.md#add_test_run_tag_using_post) | **POST** /api/v2/runs/{runId}/tags | Add tag to test run.
 [**add_test_run_tag_using_post1**](AllEndpointsApi.md#add_test_run_tag_using_post1) | **POST** /api/v2/users/{userId}/projects/{projectId}/runs/{runId}/tags | Add tag to test run.
-[**add_user_label_device_using_post**](AllEndpointsApi.md#add_user_label_device_using_post) | **POST** /api/v2/admin/devices/{deviceId}/properties | Add label to device.
 [**add_user_using_post**](AllEndpointsApi.md#add_user_using_post) | **POST** /api/v2/access-groups/{accessGroupId}/users | Add user to access group.
 [**add_user_using_post1**](AllEndpointsApi.md#add_user_using_post1) | **POST** /api/v2/users/{userId}/access-groups/{accessGroupId}/users | Add user to access group.
 [**archive_service_using_delete**](AllEndpointsApi.md#archive_service_using_delete) | **DELETE** /api/v2/admin/services/{serviceId} | Archive service.
@@ -40,18 +37,17 @@ Method | HTTP request | Description
 [**buy_service_using_post**](AllEndpointsApi.md#buy_service_using_post) | **POST** /api/v2/users/{userId}/services | Buy service.
 [**cancel_subscription_using_delete**](AllEndpointsApi.md#cancel_subscription_using_delete) | **DELETE** /api/v2/users/{userId}/services/{accountServiceId} | Cancel service subscription.
 [**check_notification_plan_using_get**](AllEndpointsApi.md#check_notification_plan_using_get) | **GET** /api/v2/admin/notification-plans/{id}/check | Check potential notifications generated by notification plan.
-[**create_build_using_post**](AllEndpointsApi.md#create_build_using_post) | **POST** /api/v2/users/{userId}/jobs/{jobId}/builds | Create build.
 [**create_device_cleanup_configuration_using_post**](AllEndpointsApi.md#create_device_cleanup_configuration_using_post) | **POST** /api/v2/admin/devices/cleanup-configurations | Create device cleanup configuration.
 [**create_device_session_connection_using_post**](AllEndpointsApi.md#create_device_session_connection_using_post) | **POST** /api/v2/device-sessions/{deviceSessionId}/connections | Create connection for device session.
 [**create_device_session_connection_using_post1**](AllEndpointsApi.md#create_device_session_connection_using_post1) | **POST** /api/v2/users/{userId}/device-sessions/{deviceSessionId}/connections | Create connection for device session.
 [**create_feedback_form_email_using_post**](AllEndpointsApi.md#create_feedback_form_email_using_post) | **POST** /api/v2/users/{userId}/feedback | Create feedback email.
+[**create_file_property_using_post**](AllEndpointsApi.md#create_file_property_using_post) | **POST** /api/v2/files/{fileId}/properties | Create file property.
 [**create_framework_using_post**](AllEndpointsApi.md#create_framework_using_post) | **POST** /api/v2/admin/frameworks | Create framework.
 [**create_inspector_device_session_using_post**](AllEndpointsApi.md#create_inspector_device_session_using_post) | **POST** /api/v2/users/{userId}/device-sessions | Create device session.
 [**create_issue_using_post**](AllEndpointsApi.md#create_issue_using_post) | **POST** /api/v2/jira/projects/{projectKey}/issues | Create jira issue.
 [**create_label_group_using_post**](AllEndpointsApi.md#create_label_group_using_post) | **POST** /api/v2/label-groups | Create label group.
 [**create_label_using_post**](AllEndpointsApi.md#create_label_using_post) | **POST** /api/v2/label-groups/{groupId}/labels | Add label to label group.
 [**create_license_using_post**](AllEndpointsApi.md#create_license_using_post) | **POST** /api/v2/admin/licenses | Create license.
-[**create_my_job_using_post**](AllEndpointsApi.md#create_my_job_using_post) | **POST** /api/v2/users/{userId}/jobs | Create job.
 [**create_my_project_using_post**](AllEndpointsApi.md#create_my_project_using_post) | **POST** /api/v2/users/{userId}/projects | Create project.
 [**create_notification_plan_using_post**](AllEndpointsApi.md#create_notification_plan_using_post) | **POST** /api/v2/admin/notification-plans | Create notification plan.
 [**create_property_using_post**](AllEndpointsApi.md#create_property_using_post) | **POST** /api/v2/properties | Create property.
@@ -62,25 +58,26 @@ Method | HTTP request | Description
 [**create_users_integration_using_post**](AllEndpointsApi.md#create_users_integration_using_post) | **POST** /api/v2/users/{userId}/integrations | Create integration.
 [**create_using_post**](AllEndpointsApi.md#create_using_post) | **POST** /api/v2/access-groups | Create access group.
 [**create_using_post1**](AllEndpointsApi.md#create_using_post1) | **POST** /api/v2/users/{userId}/access-groups | Create access group.
-[**create_using_post2**](AllEndpointsApi.md#create_using_post2) | **POST** /api/v2/admin/build-executors | Create build executor.
-[**create_using_post3**](AllEndpointsApi.md#create_using_post3) | **POST** /api/v2/admin/country-vat-rates | Create country vat rate.
+[**create_using_post2**](AllEndpointsApi.md#create_using_post2) | **POST** /api/v2/admin/country-vat-rates | Create country vat rate.
 [**deactivate_license_using_post**](AllEndpointsApi.md#deactivate_license_using_post) | **POST** /api/v2/admin/licenses/{id}/deactivate | Deactivate license.
 [**deactivate_user_service_using_post**](AllEndpointsApi.md#deactivate_user_service_using_post) | **POST** /api/v2/admin/account-services/{accountServiceId}/deactivate | Deactivate account service.
-[**delete_build_using_delete**](AllEndpointsApi.md#delete_build_using_delete) | **DELETE** /api/v2/jobs/{jobId}/builds/{buildId} | Delete build.
 [**delete_cluster_using_delete**](AllEndpointsApi.md#delete_cluster_using_delete) | **DELETE** /api/v2/clusters/{id} | Delete cluster.
 [**delete_device_cleanup_configuration_using_delete**](AllEndpointsApi.md#delete_device_cleanup_configuration_using_delete) | **DELETE** /api/v2/admin/devices/{deviceId}/cleanup-configuration | Delete device specific cleanup configuration.
 [**delete_device_from_device_group_using_delete**](AllEndpointsApi.md#delete_device_from_device_group_using_delete) | **DELETE** /api/v2/device-groups/{deviceGroupId}/devices/{deviceModelId} | Delete device from device group.
 [**delete_device_from_device_group_using_delete1**](AllEndpointsApi.md#delete_device_from_device_group_using_delete1) | **DELETE** /api/v2/users/{userId}/device-groups/{deviceGroupId}/devices/{deviceId} | Delete device from device group.
 [**delete_device_group_using_delete**](AllEndpointsApi.md#delete_device_group_using_delete) | **DELETE** /api/v2/device-groups/{deviceGroupId} | Delete device group.
 [**delete_device_label_using_delete**](AllEndpointsApi.md#delete_device_label_using_delete) | **DELETE** /api/v2/admin/devices/{deviceId}/labels/{labelId} | Delete label from device.
+[**delete_device_label_using_delete1**](AllEndpointsApi.md#delete_device_label_using_delete1) | **DELETE** /api/v2/admin/devices/{deviceId}/properties/{labelId} | Delete label from device.
 [**delete_device_model_criteria_using_delete**](AllEndpointsApi.md#delete_device_model_criteria_using_delete) | **DELETE** /api/v2/admin/device-model-criteria/{id} | Delete device model criterion.
 [**delete_device_using_delete**](AllEndpointsApi.md#delete_device_using_delete) | **DELETE** /api/v2/admin/devices/{deviceId} | Delete device.
+[**delete_file_property_using_delete**](AllEndpointsApi.md#delete_file_property_using_delete) | **DELETE** /api/v2/files/{fileId}/properties/{propertyId} | Delete file property.
 [**delete_file_using_delete**](AllEndpointsApi.md#delete_file_using_delete) | **DELETE** /api/v2/admin/samples/{fileId} | Delete sample file.
 [**delete_file_using_delete1**](AllEndpointsApi.md#delete_file_using_delete1) | **DELETE** /api/v2/files/{fileId} | Delete file.
 [**delete_file_using_delete2**](AllEndpointsApi.md#delete_file_using_delete2) | **DELETE** /api/v2/users/{userId}/files/{fileId} | Delete file.
+[**delete_file_using_delete3**](AllEndpointsApi.md#delete_file_using_delete3) | **DELETE** /api/v2/device-sessions/{deviceSessionId}/output-file-set/files/{fileId} | Delete file from device session.
+[**delete_file_using_delete4**](AllEndpointsApi.md#delete_file_using_delete4) | **DELETE** /api/v2/users/{userId}/device-sessions/{deviceSessionId}/output-file-set/files/{fileId} | Delete file from device session.
 [**delete_framework_using_delete**](AllEndpointsApi.md#delete_framework_using_delete) | **DELETE** /api/v2/admin/frameworks/{id} | Delete framework.
 [**delete_issue_using_delete**](AllEndpointsApi.md#delete_issue_using_delete) | **DELETE** /api/v2/jira/issues/{issueKey} | Delete jira issue.
-[**delete_job_using_delete**](AllEndpointsApi.md#delete_job_using_delete) | **DELETE** /api/v2/jobs/{jobId} | Delete job.
 [**delete_label_group_using_delete**](AllEndpointsApi.md#delete_label_group_using_delete) | **DELETE** /api/v2/label-groups/{groupId} | Delete label group.
 [**delete_label_using_delete**](AllEndpointsApi.md#delete_label_using_delete) | **DELETE** /api/v2/label-groups/{groupId}/labels/{labelId} | Delete label.
 [**delete_license_using_delete**](AllEndpointsApi.md#delete_license_using_delete) | **DELETE** /api/v2/admin/licenses/{id} | Delete license.
@@ -91,8 +88,6 @@ Method | HTTP request | Description
 [**delete_resource_using_delete**](AllEndpointsApi.md#delete_resource_using_delete) | **DELETE** /api/v2/access-groups/{accessGroupId}/resources/{resourceId} | Delete access group resource.
 [**delete_resource_using_delete1**](AllEndpointsApi.md#delete_resource_using_delete1) | **DELETE** /api/v2/users/{userId}/access-groups/{accessGroupId}/resources/{resourceId} | Delete access group resource.
 [**delete_role_from_account_using_delete**](AllEndpointsApi.md#delete_role_from_account_using_delete) | **DELETE** /api/v2/admin/users/{userId}/account/roles/{accountRoleId} | Delete account role.
-[**delete_screenshot_from_inspector_device_session_using_delete**](AllEndpointsApi.md#delete_screenshot_from_inspector_device_session_using_delete) | **DELETE** /api/v2/device-sessions/{deviceSessionId}/output-file-set/screenshots/{screenshotId} | Delete screenshot from device session.
-[**delete_screenshot_from_inspector_device_session_using_delete1**](AllEndpointsApi.md#delete_screenshot_from_inspector_device_session_using_delete1) | **DELETE** /api/v2/users/{userId}/device-sessions/{deviceSessionId}/output-file-set/screenshots/{screenshotId} | Delete screenshot from device session.
 [**delete_selector_from_device_group_using_delete**](AllEndpointsApi.md#delete_selector_from_device_group_using_delete) | **DELETE** /api/v2/device-groups/{deviceGroupId}/selectors/{selectorId} | Delete selector from device group.
 [**delete_selector_from_device_group_using_delete1**](AllEndpointsApi.md#delete_selector_from_device_group_using_delete1) | **DELETE** /api/v2/users/{userId}/device-groups/{deviceGroupId}/selectors/{selectorId} | Delete selector from device group.
 [**delete_test_run_tag_using_delete**](AllEndpointsApi.md#delete_test_run_tag_using_delete) | **DELETE** /api/v2/runs/{runId}/tags/{tagId} | Delete test run tag.
@@ -100,10 +95,7 @@ Method | HTTP request | Description
 [**delete_test_run_tag_with_project_using_delete**](AllEndpointsApi.md#delete_test_run_tag_with_project_using_delete) | **DELETE** /api/v2/projects/{projectId}/runs/{runId}/tags/{tagId} | Delete test run tag.
 [**delete_test_run_using_delete**](AllEndpointsApi.md#delete_test_run_using_delete) | **DELETE** /api/v2/admin/runs/{runId} | Delete test run.
 [**delete_test_run_using_delete1**](AllEndpointsApi.md#delete_test_run_using_delete1) | **DELETE** /api/v2/runs/{runId} | Delete test run.
-[**delete_user_build_using_delete**](AllEndpointsApi.md#delete_user_build_using_delete) | **DELETE** /api/v2/users/{userId}/jobs/{jobId}/builds/{buildId} | Delete build.
 [**delete_user_device_group_using_delete**](AllEndpointsApi.md#delete_user_device_group_using_delete) | **DELETE** /api/v2/users/{userId}/device-groups/{deviceGroupId} | Delete device group.
-[**delete_user_job_using_delete**](AllEndpointsApi.md#delete_user_job_using_delete) | **DELETE** /api/v2/users/{userId}/jobs/{jobId} | Delete job.
-[**delete_user_label_device_using_delete**](AllEndpointsApi.md#delete_user_label_device_using_delete) | **DELETE** /api/v2/admin/devices/{deviceId}/properties/{propertyId} | Delete label from device.
 [**delete_user_notification_email_using_delete**](AllEndpointsApi.md#delete_user_notification_email_using_delete) | **DELETE** /api/v2/users/{userId}/notifications/{id} | Delete notification.
 [**delete_user_project_using_delete**](AllEndpointsApi.md#delete_user_project_using_delete) | **DELETE** /api/v2/users/{userId}/projects/{projectId} | Delete project.
 [**delete_user_test_run_using_delete**](AllEndpointsApi.md#delete_user_test_run_using_delete) | **DELETE** /api/v2/users/{userId}/projects/{projectId}/runs/{runId} | Delete test run.
@@ -114,20 +106,19 @@ Method | HTTP request | Description
 [**delete_users_integration_using_delete**](AllEndpointsApi.md#delete_users_integration_using_delete) | **DELETE** /api/v2/users/{userId}/integrations/{id} | Delete integration.
 [**delete_using_delete**](AllEndpointsApi.md#delete_using_delete) | **DELETE** /api/v2/access-groups/{accessGroupId} | Delete access group.
 [**delete_using_delete1**](AllEndpointsApi.md#delete_using_delete1) | **DELETE** /api/v2/users/{userId}/access-groups/{accessGroupId} | Delete access group.
-[**delete_using_delete2**](AllEndpointsApi.md#delete_using_delete2) | **DELETE** /api/v2/admin/build-executors/{id} | Delete build executor.
-[**delete_using_delete3**](AllEndpointsApi.md#delete_using_delete3) | **DELETE** /api/v2/admin/country-vat-rates/{id} | Delete country vat rate.
+[**delete_using_delete2**](AllEndpointsApi.md#delete_using_delete2) | **DELETE** /api/v2/admin/country-vat-rates/{id} | Delete country vat rate.
 [**disable_additional_user_using_delete**](AllEndpointsApi.md#disable_additional_user_using_delete) | **DELETE** /api/v2/users/{userId}/account/additional-users/{additionalUserId} | Disable additional user.
 [**disable_user_using_delete**](AllEndpointsApi.md#disable_user_using_delete) | **DELETE** /api/v2/admin/users/{userId}/disable | Disable user.
 [**download_icon_file_using_get**](AllEndpointsApi.md#download_icon_file_using_get) | **GET** /api/v2/files/{fileId}/icon | Download icon of file.
 [**download_icon_file_using_get1**](AllEndpointsApi.md#download_icon_file_using_get1) | **GET** /api/v2/users/{userId}/files/{fileId}/icon | Download icon of file.
 [**download_license_using_get**](AllEndpointsApi.md#download_license_using_get) | **GET** /api/v2/admin/licenses/{id}/download | Get license.
 [**download_output_files_zip_using_get**](AllEndpointsApi.md#download_output_files_zip_using_get) | **GET** /api/v2/device-sessions/{deviceSessionId}/output-file-set/files.zip | Get device session output files.zip.
+[**download_output_files_zip_using_get1**](AllEndpointsApi.md#download_output_files_zip_using_get1) | **GET** /api/v2/users/{userId}/device-sessions/{deviceSessionId}/output-file-set/files.zip | Get device session output files.zip.
 [**download_test_run_output_files_zip_using_get**](AllEndpointsApi.md#download_test_run_output_files_zip_using_get) | **GET** /api/v2/projects/{projectId}/runs/{runId}/device-sessions/{deviceSessionId}/output-file-set/files.zip | Get device session output files.zip.
 [**download_test_run_output_files_zip_using_get1**](AllEndpointsApi.md#download_test_run_output_files_zip_using_get1) | **GET** /api/v2/runs/{runId}/device-sessions/{deviceSessionId}/output-file-set/files.zip | Get device session output files.zip.
 [**download_test_run_output_files_zip_using_get2**](AllEndpointsApi.md#download_test_run_output_files_zip_using_get2) | **GET** /api/v2/users/{userId}/projects/{projectId}/runs/{runId}/device-sessions/{deviceSessionId}/output-file-set/files.zip | Get device session output files.zip.
 [**download_user_file_using_get**](AllEndpointsApi.md#download_user_file_using_get) | **GET** /api/v2/files/{fileId}/file | Download file.
 [**download_user_file_using_get1**](AllEndpointsApi.md#download_user_file_using_get1) | **GET** /api/v2/users/{userId}/files/{fileId}/file | Download file.
-[**download_user_output_files_zip_using_get**](AllEndpointsApi.md#download_user_output_files_zip_using_get) | **GET** /api/v2/users/{userId}/device-sessions/{deviceSessionId}/output-file-set/files.zip | Get device session output files.zip.
 [**enable_additional_user_using_post**](AllEndpointsApi.md#enable_additional_user_using_post) | **POST** /api/v2/users/{userId}/account/additional-users/{additionalUserId} | Enable additional user.
 [**enable_user_using_post**](AllEndpointsApi.md#enable_user_using_post) | **POST** /api/v2/admin/users/{userId}/enable | Enable user.
 [**execute_notification_plan_using_post**](AllEndpointsApi.md#execute_notification_plan_using_post) | **POST** /api/v2/admin/notification-plans/{id}/execute | Send notifications basing on notification plan.
@@ -145,26 +136,20 @@ Method | HTTP request | Description
 [**get_admin_test_runs_using_get**](AllEndpointsApi.md#get_admin_test_runs_using_get) | **GET** /api/v2/admin/statistics/device-sessions | Get device session statistics.
 [**get_admin_test_runs_using_get1**](AllEndpointsApi.md#get_admin_test_runs_using_get1) | **GET** /api/v2/admin/runs | Get test runs.
 [**get_all_billing_periods_using_get**](AllEndpointsApi.md#get_all_billing_periods_using_get) | **GET** /api/v2/admin/billing-periods | Get billing periods.
-[**get_all_builds_using_get**](AllEndpointsApi.md#get_all_builds_using_get) | **GET** /api/v2/builds | Get builds.
 [**get_all_test_run_device_session_steps_using_get**](AllEndpointsApi.md#get_all_test_run_device_session_steps_using_get) | **GET** /api/v2/projects/{projectId}/runs/{runId}/steps | Get device session steps of all device sessions in run.
 [**get_all_test_run_device_session_steps_using_get1**](AllEndpointsApi.md#get_all_test_run_device_session_steps_using_get1) | **GET** /api/v2/runs/{runId}/steps | Get device session steps of all device sessions in run.
 [**get_all_test_run_device_session_steps_using_get2**](AllEndpointsApi.md#get_all_test_run_device_session_steps_using_get2) | **GET** /api/v2/users/{userId}/projects/{projectId}/runs/{runId}/steps | Get device session steps of all device sessions in run.
-[**get_all_using_get**](AllEndpointsApi.md#get_all_using_get) | **GET** /api/v2/admin/build-executors | Get build executors.
 [**get_api_label_group_using_get**](AllEndpointsApi.md#get_api_label_group_using_get) | **GET** /api/v2/label-groups/{groupId} | Get label group.
 [**get_api_label_using_get**](AllEndpointsApi.md#get_api_label_using_get) | **GET** /api/v2/label-groups/{groupId}/labels/{labelId} | Get label.
 [**get_api_property_using_get**](AllEndpointsApi.md#get_api_property_using_get) | **GET** /api/v2/properties/{id} | Get property.
-[**get_available_executors_using_get**](AllEndpointsApi.md#get_available_executors_using_get) | **GET** /api/v2/users/{userId}/available-build-executors | Get available build executors.
 [**get_available_frameworks_using_get**](AllEndpointsApi.md#get_available_frameworks_using_get) | **GET** /api/v2/users/{userId}/available-frameworks | Get available frameworks.
 [**get_available_services_using_get**](AllEndpointsApi.md#get_available_services_using_get) | **GET** /api/v2/services/available | Get available services.
+[**get_available_services_using_get1**](AllEndpointsApi.md#get_available_services_using_get1) | **GET** /api/v2/users/*/services/available | Get available services.
 [**get_ban_application_using_get**](AllEndpointsApi.md#get_ban_application_using_get) | **GET** /api/v2/properties/app-bans | Get property of banned application.
 [**get_billing_period_using_get**](AllEndpointsApi.md#get_billing_period_using_get) | **GET** /api/v2/users/{userId}/billing-periods/{billingPeriodId} | Get billing period.
-[**get_build_using_get**](AllEndpointsApi.md#get_build_using_get) | **GET** /api/v2/jobs/{jobId}/builds/{buildId} | Get build.
-[**get_build_using_get1**](AllEndpointsApi.md#get_build_using_get1) | **GET** /api/v2/users/{userId}/jobs/{jobId}/builds/{buildId} | Get build.
-[**get_builds_using_get**](AllEndpointsApi.md#get_builds_using_get) | **GET** /api/v2/jobs/{jobId}/builds | Get builds.
-[**get_builds_using_get1**](AllEndpointsApi.md#get_builds_using_get1) | **GET** /api/v2/users/{userId}/jobs/{jobId}/builds | Get builds.
-[**get_channel_scopes_using_get**](AllEndpointsApi.md#get_channel_scopes_using_get) | **GET** /api/v2/users/{userId}/notifications/channels/{channel}/scopes | Get notification scopes for user and channel.
+[**get_channel_scopes_using_get**](AllEndpointsApi.md#get_channel_scopes_using_get) | **GET** /api/v2/users/*/notifications/channels/{channel}/scopes | Get notification scopes for user and channel.
 [**get_channels_using_get**](AllEndpointsApi.md#get_channels_using_get) | **GET** /api/v2/admin/notification-plans/channels | Get notification channels.
-[**get_channels_using_get1**](AllEndpointsApi.md#get_channels_using_get1) | **GET** /api/v2/users/{userId}/notifications/channels | Get notification channels.
+[**get_channels_using_get1**](AllEndpointsApi.md#get_channels_using_get1) | **GET** /api/v2/users/*/notifications/channels | Get notification channels.
 [**get_cluster_by_id_using_get**](AllEndpointsApi.md#get_cluster_by_id_using_get) | **GET** /api/v2/clusters/{id} | Get cluster.
 [**get_cluster_devices_using_get**](AllEndpointsApi.md#get_cluster_devices_using_get) | **GET** /api/v2/clusters/{id}/devices | Get cluster devices.
 [**get_cluster_logs_using_get**](AllEndpointsApi.md#get_cluster_logs_using_get) | **GET** /api/v2/device-sessions/{deviceSessionId}/cluster-logs | This endpoint is deprecated.
@@ -186,12 +171,14 @@ Method | HTTP request | Description
 [**get_device_group_using_get**](AllEndpointsApi.md#get_device_group_using_get) | **GET** /api/v2/device-groups/{deviceGroupId} | Get device group.
 [**get_device_groups_using_get**](AllEndpointsApi.md#get_device_groups_using_get) | **GET** /api/v2/device-groups | Get device groups.
 [**get_device_labels_using_get**](AllEndpointsApi.md#get_device_labels_using_get) | **GET** /api/v2/admin/devices/{deviceId}/labels | Get device labels.
+[**get_device_labels_using_get1**](AllEndpointsApi.md#get_device_labels_using_get1) | **GET** /api/v2/admin/devices/{deviceId}/properties | Get device labels.
 [**get_device_models_using_get**](AllEndpointsApi.md#get_device_models_using_get) | **GET** /api/v2/admin/device-models | Get device models.
 [**get_device_picker_using_get**](AllEndpointsApi.md#get_device_picker_using_get) | **GET** /api/v2/devices/filters | Get device picker filters.
 [**get_device_problems_using_get**](AllEndpointsApi.md#get_device_problems_using_get) | **GET** /api/v2/admin/device-problems | Get device problems.
-[**get_device_properties_using_get**](AllEndpointsApi.md#get_device_properties_using_get) | **GET** /api/v2/admin/devices/{deviceId}/properties | Get device properties.
-[**get_device_properties_using_get1**](AllEndpointsApi.md#get_device_properties_using_get1) | **GET** /api/v2/devices/{deviceId}/properties | Get device properties.
+[**get_device_properties_using_get**](AllEndpointsApi.md#get_device_properties_using_get) | **GET** /api/v2/devices/{deviceId}/properties | Get device properties.
 [**get_device_queue_using_get**](AllEndpointsApi.md#get_device_queue_using_get) | **GET** /api/v2/admin/devices/{deviceId}/queue | Get device queue.
+[**get_device_session_connections_using_get**](AllEndpointsApi.md#get_device_session_connections_using_get) | **GET** /api/v2/device-sessions/{deviceSessionId}/connections | Get connections for device session.
+[**get_device_session_connections_using_get1**](AllEndpointsApi.md#get_device_session_connections_using_get1) | **GET** /api/v2/users/{userId}/device-sessions/{deviceSessionId}/connections | Get connections for device session.
 [**get_device_session_data_zip_using_get**](AllEndpointsApi.md#get_device_session_data_zip_using_get) | **GET** /api/v2/device-sessions/{deviceSessionId}/result-data.zip | This endpoint is deprecated.
 [**get_device_session_data_zip_using_get1**](AllEndpointsApi.md#get_device_session_data_zip_using_get1) | **GET** /api/v2/runs/{runId}/device-sessions/{deviceSessionId}/result-data.zip | This endpoint is deprecated.
 [**get_device_session_history_using_get**](AllEndpointsApi.md#get_device_session_history_using_get) | **GET** /api/v2/admin/device-sessions | Get device sessions.
@@ -221,6 +208,8 @@ Method | HTTP request | Description
 [**get_device_session_with_run_using_get**](AllEndpointsApi.md#get_device_session_with_run_using_get) | **GET** /api/v2/runs/{runId}/device-sessions/{deviceSessionId} | Get device session.
 [**get_device_sessions_using_get**](AllEndpointsApi.md#get_device_sessions_using_get) | **GET** /api/v2/runs/{runId}/device-sessions | Get device sessions.
 [**get_device_sessions_using_get1**](AllEndpointsApi.md#get_device_sessions_using_get1) | **GET** /api/v2/users/{userId}/projects/{projectId}/runs/{runId}/device-sessions | Get device sessions.
+[**get_device_statistics_using_get**](AllEndpointsApi.md#get_device_statistics_using_get) | **GET** /api/v2/device-statistics | Get device statistics.
+[**get_device_statistics_using_get1**](AllEndpointsApi.md#get_device_statistics_using_get1) | **GET** /api/v2/users/{userId}/device-statistics | Get device statistics.
 [**get_device_statuses_using_get**](AllEndpointsApi.md#get_device_statuses_using_get) | **GET** /api/v2/admin/device/statuses | Get device statuses.
 [**get_device_time_count_session_report_using_get**](AllEndpointsApi.md#get_device_time_count_session_report_using_get) | **GET** /api/v2/admin/device-time/count-session-report | Get device time, counted testRuns and deviceSessions per day, user, project, deviceModel.
 [**get_device_time_history_summary_using_get**](AllEndpointsApi.md#get_device_time_history_summary_using_get) | **GET** /api/v2/admin/device-time-summary | Get device time summary.
@@ -235,6 +224,8 @@ Method | HTTP request | Description
 [**get_emails_using_get**](AllEndpointsApi.md#get_emails_using_get) | **GET** /api/v2/admin/emails | Get emails.
 [**get_enums_using_get**](AllEndpointsApi.md#get_enums_using_get) | **GET** /api/v2/enums | Get enums.
 [**get_errors_using_get**](AllEndpointsApi.md#get_errors_using_get) | **GET** /api/v2/admin/errors | Get errors.
+[**get_file_properties_using_get**](AllEndpointsApi.md#get_file_properties_using_get) | **GET** /api/v2/files/{fileId}/properties | Get file properties.
+[**get_file_property_using_get**](AllEndpointsApi.md#get_file_property_using_get) | **GET** /api/v2/files/{fileId}/properties/{propertyId} | Get file property.
 [**get_file_tags_using_get**](AllEndpointsApi.md#get_file_tags_using_get) | **GET** /api/v2/files/{fileId}/tags | Get file tags.
 [**get_file_tags_using_get1**](AllEndpointsApi.md#get_file_tags_using_get1) | **GET** /api/v2/users/{userId}/files/{fileId}/tags | Get file tags.
 [**get_files_for_device_session_by_tag_using_get**](AllEndpointsApi.md#get_files_for_device_session_by_tag_using_get) | **GET** /api/v2/users/{userId}/projects/{projectId}/runs/{runId}/device-sessions/{deviceSessionId}/output-file-set/files | Get device session output files.
@@ -247,16 +238,12 @@ Method | HTTP request | Description
 [**get_frameworks_using_get**](AllEndpointsApi.md#get_frameworks_using_get) | **GET** /api/v2/admin/frameworks | Get frameworks.
 [**get_health_check_using_get**](AllEndpointsApi.md#get_health_check_using_get) | **GET** /api/v2/health | Get health check.
 [**get_inspector_device_session_connection_using_get**](AllEndpointsApi.md#get_inspector_device_session_connection_using_get) | **GET** /api/v2/device-sessions/{deviceSessionId}/connections/{connectionId} | Get connection for device session.
-[**get_inspector_device_session_connections_using_get**](AllEndpointsApi.md#get_inspector_device_session_connections_using_get) | **GET** /api/v2/device-sessions/{deviceSessionId}/connections | Get connections for device session.
 [**get_inspector_device_sessions_using_get**](AllEndpointsApi.md#get_inspector_device_sessions_using_get) | **GET** /api/v2/users/{userId}/device-sessions | Get device sessions.
 [**get_integrations_using_get**](AllEndpointsApi.md#get_integrations_using_get) | **GET** /api/v2/users/{userId}/integrations | Get integrations.
 [**get_interactive_queue_using_get**](AllEndpointsApi.md#get_interactive_queue_using_get) | **GET** /api/v2/admin/interactive-queue | Get manual sessions queue.
 [**get_issue_types_using_get**](AllEndpointsApi.md#get_issue_types_using_get) | **GET** /api/v2/jira/issues/issue-types | Get jira issue types.
 [**get_issue_using_get**](AllEndpointsApi.md#get_issue_using_get) | **GET** /api/v2/jira/issues/{issueKey} | Get jira issue.
 [**get_issues_using_get**](AllEndpointsApi.md#get_issues_using_get) | **GET** /api/v2/jira/projects/{projectKey}/issues | Get jira issues.
-[**get_job_using_get**](AllEndpointsApi.md#get_job_using_get) | **GET** /api/v2/jobs/{jobId} | Get job.
-[**get_job_using_get1**](AllEndpointsApi.md#get_job_using_get1) | **GET** /api/v2/users/{userId}/jobs/{jobId} | Get job.
-[**get_jobs_using_get**](AllEndpointsApi.md#get_jobs_using_get) | **GET** /api/v2/jobs | Get jobs.
 [**get_label_groups_using_get**](AllEndpointsApi.md#get_label_groups_using_get) | **GET** /api/v2/label-groups | Get label groups.
 [**get_labels_using_get**](AllEndpointsApi.md#get_labels_using_get) | **GET** /api/v2/label-groups/{groupId}/labels | Get labels.
 [**get_labels_using_get1**](AllEndpointsApi.md#get_labels_using_get1) | **GET** /api/v2/labels | Get labels.
@@ -268,18 +255,12 @@ Method | HTTP request | Description
 [**get_list_using_get2**](AllEndpointsApi.md#get_list_using_get2) | **GET** /api/v2/admin/country-vat-rates | Get country vat rates.
 [**get_notification_plan_using_get**](AllEndpointsApi.md#get_notification_plan_using_get) | **GET** /api/v2/admin/notification-plans/{id} | Get notification plan.
 [**get_notification_plans_using_get**](AllEndpointsApi.md#get_notification_plans_using_get) | **GET** /api/v2/admin/notification-plans | Get notification plans.
-[**get_output_files_for_device_session_by_tag_using_get**](AllEndpointsApi.md#get_output_files_for_device_session_by_tag_using_get) | **GET** /api/v2/device-sessions/{deviceSessionId}/output-file-set/files | Get device session output files.
-[**get_output_files_for_device_session_by_tag_using_get1**](AllEndpointsApi.md#get_output_files_for_device_session_by_tag_using_get1) | **GET** /api/v2/projects/{projectId}/runs/{runId}/device-sessions/{deviceSessionId}/output-file-set/files | Get device session output files.
-[**get_output_files_for_device_session_by_tag_using_get2**](AllEndpointsApi.md#get_output_files_for_device_session_by_tag_using_get2) | **GET** /api/v2/runs/{runId}/device-sessions/{deviceSessionId}/output-file-set/files | Get device session output files.
-[**get_output_files_for_pipeline_build_by_tag_using_get**](AllEndpointsApi.md#get_output_files_for_pipeline_build_by_tag_using_get) | **GET** /api/v2/jobs/{jobId}/builds/{buildId}/output-file-set/files | Get output files.
-[**get_output_files_for_pipeline_build_by_tag_using_get1**](AllEndpointsApi.md#get_output_files_for_pipeline_build_by_tag_using_get1) | **GET** /api/v2/users/{userId}/jobs/{jobId}/builds/{buildId}/output-file-set/files | Get output files.
+[**get_output_files_for_device_session_by_tag_using_get**](AllEndpointsApi.md#get_output_files_for_device_session_by_tag_using_get) | **GET** /api/v2/projects/{projectId}/runs/{runId}/device-sessions/{deviceSessionId}/output-file-set/files | Get device session output files.
+[**get_output_files_for_device_session_by_tag_using_get1**](AllEndpointsApi.md#get_output_files_for_device_session_by_tag_using_get1) | **GET** /api/v2/runs/{runId}/device-sessions/{deviceSessionId}/output-file-set/files | Get device session output files.
+[**get_output_files_for_device_session_by_tag_using_get2**](AllEndpointsApi.md#get_output_files_for_device_session_by_tag_using_get2) | **GET** /api/v2/device-sessions/{deviceSessionId}/output-file-set/files | Get device session output files.
+[**get_output_files_using_get**](AllEndpointsApi.md#get_output_files_using_get) | **GET** /api/v2/users/{userId}/device-sessions/{deviceSessionId}/output-file-set/files | Get files for device session.
 [**get_priorities_using_get**](AllEndpointsApi.md#get_priorities_using_get) | **GET** /api/v2/jira/issues/priorities | Get jira issue priorities.
-[**get_project_application_file_using_get**](AllEndpointsApi.md#get_project_application_file_using_get) | **GET** /api/v2/projects/{projectId}/files/application | This endpoint is deprecated.
-[**get_project_application_file_using_get1**](AllEndpointsApi.md#get_project_application_file_using_get1) | **GET** /api/v2/users/{userId}/projects/{projectId}/files/application | This endpoint is deprecated.
 [**get_project_cluster_logs_using_get**](AllEndpointsApi.md#get_project_cluster_logs_using_get) | **GET** /api/v2/projects/{projectId}/runs/{runId}/device-sessions/{deviceSessionId}/cluster-logs | This endpoint is deprecated.
-[**get_project_config_using_get**](AllEndpointsApi.md#get_project_config_using_get) | **GET** /api/v2/projects/{projectId}/config | This endpoint is deprecated.
-[**get_project_data_file_using_get**](AllEndpointsApi.md#get_project_data_file_using_get) | **GET** /api/v2/projects/{projectId}/files/data | This endpoint is deprecated.
-[**get_project_data_file_using_get1**](AllEndpointsApi.md#get_project_data_file_using_get1) | **GET** /api/v2/users/{userId}/projects/{projectId}/files/data | This endpoint is deprecated.
 [**get_project_device_session_data_zip_using_get**](AllEndpointsApi.md#get_project_device_session_data_zip_using_get) | **GET** /api/v2/projects/{projectId}/runs/{runId}/device-sessions/{deviceSessionId}/result-data.zip | This endpoint is deprecated.
 [**get_project_device_session_junit_using_get**](AllEndpointsApi.md#get_project_device_session_junit_using_get) | **GET** /api/v2/projects/{projectId}/runs/{runId}/device-sessions/{deviceSessionId}/junit.xml | This endpoint is deprecated.
 [**get_project_device_session_logs_using_get**](AllEndpointsApi.md#get_project_device_session_logs_using_get) | **GET** /api/v2/projects/{projectId}/runs/{runId}/device-sessions/{deviceSessionId}/logs | This endpoint is deprecated.
@@ -287,19 +268,7 @@ Method | HTTP request | Description
 [**get_project_device_session_screenshot_using_get**](AllEndpointsApi.md#get_project_device_session_screenshot_using_get) | **GET** /api/v2/projects/{projectId}/runs/{runId}/device-sessions/{deviceSessionId}/screenshots/{screenshotId} | Get device session screenshot.
 [**get_project_device_session_screenshots_using_get**](AllEndpointsApi.md#get_project_device_session_screenshots_using_get) | **GET** /api/v2/projects/{projectId}/runs/{runId}/device-sessions/{deviceSessionId}/screenshots | Get device session screenshots.
 [**get_project_device_sessions_using_get**](AllEndpointsApi.md#get_project_device_sessions_using_get) | **GET** /api/v2/projects/{projectId}/runs/{runId}/device-sessions | Get device sessions.
-[**get_project_file_zip_using_get**](AllEndpointsApi.md#get_project_file_zip_using_get) | **GET** /api/v2/projects/{projectId}/files.zip | This endpoint is deprecated.
-[**get_project_file_zip_using_get1**](AllEndpointsApi.md#get_project_file_zip_using_get1) | **GET** /api/v2/users/{userId}/projects/{projectId}/files.zip | This endpoint is deprecated.
-[**get_project_files_using_get**](AllEndpointsApi.md#get_project_files_using_get) | **GET** /api/v2/projects/{projectId}/files | This endpoint is deprecated.
-[**get_project_files_using_get1**](AllEndpointsApi.md#get_project_files_using_get1) | **GET** /api/v2/users/{userId}/projects/{projectId}/files | This endpoint is deprecated.
-[**get_project_test_file_using_get**](AllEndpointsApi.md#get_project_test_file_using_get) | **GET** /api/v2/projects/{projectId}/files/test | This endpoint is deprecated.
-[**get_project_test_file_using_get1**](AllEndpointsApi.md#get_project_test_file_using_get1) | **GET** /api/v2/users/{userId}/projects/{projectId}/files/test | This endpoint is deprecated.
-[**get_project_test_run_application_file_using_get**](AllEndpointsApi.md#get_project_test_run_application_file_using_get) | **GET** /api/v2/projects/{projectId}/runs/{runId}/files/application | This endpoint is deprecated.
-[**get_project_test_run_config_using_get**](AllEndpointsApi.md#get_project_test_run_config_using_get) | **GET** /api/v2/projects/{projectId}/runs/{runId}/config | This endpoint is deprecated.
-[**get_project_test_run_data_file_using_get**](AllEndpointsApi.md#get_project_test_run_data_file_using_get) | **GET** /api/v2/projects/{projectId}/runs/{runId}/files/data | This endpoint is deprecated.
-[**get_project_test_run_file_zip_using_get**](AllEndpointsApi.md#get_project_test_run_file_zip_using_get) | **GET** /api/v2/projects/{projectId}/runs/{runId}/files.zip | This endpoint is deprecated.
-[**get_project_test_run_files_using_get**](AllEndpointsApi.md#get_project_test_run_files_using_get) | **GET** /api/v2/projects/{projectId}/runs/{runId}/files | This endpoint is deprecated.
 [**get_project_test_run_tags_using_get**](AllEndpointsApi.md#get_project_test_run_tags_using_get) | **GET** /api/v2/projects/{projectId}/runs/{runId}/tags | Get test run tags.
-[**get_project_test_run_test_file_using_get**](AllEndpointsApi.md#get_project_test_run_test_file_using_get) | **GET** /api/v2/projects/{projectId}/runs/{runId}/files/test | This endpoint is deprecated.
 [**get_project_test_run_with_project_using_get**](AllEndpointsApi.md#get_project_test_run_with_project_using_get) | **GET** /api/v2/projects/{projectId}/runs/{runId} | Get test run.
 [**get_project_test_runs_using_get**](AllEndpointsApi.md#get_project_test_runs_using_get) | **GET** /api/v2/projects/{projectId}/runs | Get test runs.
 [**get_project_using_get**](AllEndpointsApi.md#get_project_using_get) | **GET** /api/v2/jira/projects/{projectKey} | Get jira projects.
@@ -308,7 +277,6 @@ Method | HTTP request | Description
 [**get_projects_using_get1**](AllEndpointsApi.md#get_projects_using_get1) | **GET** /api/v2/projects | Get projects.
 [**get_properties_using_get**](AllEndpointsApi.md#get_properties_using_get) | **GET** /api/v2/properties | Get properties.
 [**get_receipt_using_get**](AllEndpointsApi.md#get_receipt_using_get) | **GET** /api/v2/users/{userId}/billing-periods/{billingPeriodId}/receipt | Get purchased service receipt.
-[**get_receipts_using_get**](AllEndpointsApi.md#get_receipts_using_get) | **GET** /api/v2/users/{userId}/receipts | Get receipt.
 [**get_resource_using_get**](AllEndpointsApi.md#get_resource_using_get) | **GET** /api/v2/access-groups/{accessGroupId}/resources/{resourceId} | Get access group resource.
 [**get_resource_using_get1**](AllEndpointsApi.md#get_resource_using_get1) | **GET** /api/v2/users/{userId}/access-groups/{accessGroupId}/resources/{resourceId} | Get access group resource.
 [**get_resources_using_get**](AllEndpointsApi.md#get_resources_using_get) | **GET** /api/v2/access-groups/{accessGroupId}/resources | Get access group resources.
@@ -316,16 +284,10 @@ Method | HTTP request | Description
 [**get_roles_using_get**](AllEndpointsApi.md#get_roles_using_get) | **GET** /api/v2/admin/roles | Get roles.
 [**get_sample_files_using_get**](AllEndpointsApi.md#get_sample_files_using_get) | **GET** /api/v2/admin/samples | Get sample files.
 [**get_scopes_using_get**](AllEndpointsApi.md#get_scopes_using_get) | **GET** /api/v2/admin/notification-plans/scopes | Get notification scopes.
-[**get_scopes_using_get1**](AllEndpointsApi.md#get_scopes_using_get1) | **GET** /api/v2/users/{userId}/notifications/scopes | Get notification scopes.
-[**get_screenshot_for_device_session_using_get**](AllEndpointsApi.md#get_screenshot_for_device_session_using_get) | **GET** /api/v2/device-sessions/{deviceSessionId}/output-file-set/screenshots/{screenshotId}/file | Download device session screenshot.
-[**get_screenshot_for_device_session_using_get1**](AllEndpointsApi.md#get_screenshot_for_device_session_using_get1) | **GET** /api/v2/device-sessions/{deviceSessionId}/output-file-set/screenshots/{screenshotId} | Get device session screenshot.
-[**get_screenshot_for_device_session_using_get2**](AllEndpointsApi.md#get_screenshot_for_device_session_using_get2) | **GET** /api/v2/users/{userId}/device-sessions/{deviceSessionId}/output-file-set/screenshots/{screenshotId}/file | Download device session screenshot.
-[**get_screenshot_for_device_session_using_get3**](AllEndpointsApi.md#get_screenshot_for_device_session_using_get3) | **GET** /api/v2/users/{userId}/device-sessions/{deviceSessionId}/output-file-set/screenshots/{screenshotId} | Get device session screenshot.
+[**get_scopes_using_get1**](AllEndpointsApi.md#get_scopes_using_get1) | **GET** /api/v2/users/*/notifications/scopes | Get notification scopes.
 [**get_screenshot_names_using_get**](AllEndpointsApi.md#get_screenshot_names_using_get) | **GET** /api/v2/projects/{projectId}/runs/{runId}/screenshot-names | Get screenshot names.
 [**get_screenshot_names_using_get1**](AllEndpointsApi.md#get_screenshot_names_using_get1) | **GET** /api/v2/runs/{runId}/screenshot-names | Get screenshot names.
 [**get_screenshot_names_using_get2**](AllEndpointsApi.md#get_screenshot_names_using_get2) | **GET** /api/v2/users/{userId}/projects/{projectId}/runs/{runId}/screenshot-names | Get screenshot names.
-[**get_screenshots_for_device_session_using_get**](AllEndpointsApi.md#get_screenshots_for_device_session_using_get) | **GET** /api/v2/device-sessions/{deviceSessionId}/output-file-set/screenshots | Get screenshots for device session.
-[**get_screenshots_for_device_session_using_get1**](AllEndpointsApi.md#get_screenshots_for_device_session_using_get1) | **GET** /api/v2/users/{userId}/device-sessions/{deviceSessionId}/output-file-set/screenshots | Get screenshots for device session.
 [**get_server_info_using_get**](AllEndpointsApi.md#get_server_info_using_get) | **GET** /api/v2/jira/server-info | Get jira server info and validate connection.
 [**get_service_using_get**](AllEndpointsApi.md#get_service_using_get) | **GET** /api/v2/admin/services/{serviceId} | Get service.
 [**get_services_using_get**](AllEndpointsApi.md#get_services_using_get) | **GET** /api/v2/admin/services | Get services.
@@ -334,18 +296,9 @@ Method | HTTP request | Description
 [**get_specific_device_cleanup_configuration_using_get**](AllEndpointsApi.md#get_specific_device_cleanup_configuration_using_get) | **GET** /api/v2/admin/devices/cleanup-configurations/specific | Get specific device cleanup configuration.
 [**get_status_using_get**](AllEndpointsApi.md#get_status_using_get) | **GET** /api/v2/info | Get basic cloud info.
 [**get_system_overview_using_get**](AllEndpointsApi.md#get_system_overview_using_get) | **GET** /api/v2/admin/overview | Get overview status.
-[**get_test_run_application_file_using_get**](AllEndpointsApi.md#get_test_run_application_file_using_get) | **GET** /api/v2/runs/{runId}/files/application | This endpoint is deprecated.
-[**get_test_run_application_file_using_get1**](AllEndpointsApi.md#get_test_run_application_file_using_get1) | **GET** /api/v2/users/{userId}/projects/{projectId}/runs/{runId}/files/application | This endpoint is deprecated.
-[**get_test_run_config_using_get**](AllEndpointsApi.md#get_test_run_config_using_get) | **GET** /api/v2/runs/{runId}/config | This endpoint is deprecated.
-[**get_test_run_data_availability_with_project_using_get**](AllEndpointsApi.md#get_test_run_data_availability_with_project_using_get) | **GET** /api/v2/projects/{projectId}/runs/{runId}/data-availability | This endpoint is deprecated.
-[**get_test_run_data_availability_with_test_run_using_get**](AllEndpointsApi.md#get_test_run_data_availability_with_test_run_using_get) | **GET** /api/v2/runs/{runId}/data-availability | This endpoint is deprecated.
-[**get_test_run_data_availability_with_user_using_get**](AllEndpointsApi.md#get_test_run_data_availability_with_user_using_get) | **GET** /api/v2/users/{userId}/projects/{projectId}/runs/{runId}/data-availability | This endpoint is deprecated.
-[**get_test_run_data_file_using_get**](AllEndpointsApi.md#get_test_run_data_file_using_get) | **GET** /api/v2/runs/{runId}/files/data | This endpoint is deprecated.
-[**get_test_run_data_file_using_get1**](AllEndpointsApi.md#get_test_run_data_file_using_get1) | **GET** /api/v2/users/{userId}/projects/{projectId}/runs/{runId}/files/data | This endpoint is deprecated.
-[**get_test_run_file_zip_using_get**](AllEndpointsApi.md#get_test_run_file_zip_using_get) | **GET** /api/v2/runs/{runId}/files.zip | This endpoint is deprecated.
-[**get_test_run_file_zip_using_get1**](AllEndpointsApi.md#get_test_run_file_zip_using_get1) | **GET** /api/v2/users/{userId}/projects/{projectId}/runs/{runId}/files.zip | This endpoint is deprecated.
-[**get_test_run_files_using_get**](AllEndpointsApi.md#get_test_run_files_using_get) | **GET** /api/v2/runs/{runId}/files | This endpoint is deprecated.
-[**get_test_run_files_using_get1**](AllEndpointsApi.md#get_test_run_files_using_get1) | **GET** /api/v2/users/{userId}/projects/{projectId}/runs/{runId}/files | This endpoint is deprecated.
+[**get_test_run_data_availability_with_project_using_get**](AllEndpointsApi.md#get_test_run_data_availability_with_project_using_get) | **GET** /api/v2/projects/{projectId}/runs/{runId}/data-availability | Get test run data availability.
+[**get_test_run_data_availability_with_test_run_using_get**](AllEndpointsApi.md#get_test_run_data_availability_with_test_run_using_get) | **GET** /api/v2/runs/{runId}/data-availability | Get test run data availability.
+[**get_test_run_data_availability_with_user_using_get**](AllEndpointsApi.md#get_test_run_data_availability_with_user_using_get) | **GET** /api/v2/users/{userId}/projects/{projectId}/runs/{runId}/data-availability | Get test run data availability.
 [**get_test_run_screenshots_using_get**](AllEndpointsApi.md#get_test_run_screenshots_using_get) | **GET** /api/v2/projects/{projectId}/runs/{runId}/screenshots | Get test run screenshots by name.
 [**get_test_run_screenshots_using_get1**](AllEndpointsApi.md#get_test_run_screenshots_using_get1) | **GET** /api/v2/runs/{runId}/screenshots | Get test run screenshots by name.
 [**get_test_run_screenshots_using_get2**](AllEndpointsApi.md#get_test_run_screenshots_using_get2) | **GET** /api/v2/users/{userId}/projects/{projectId}/runs/{runId}/screenshots | Get test run screenshots by name.
@@ -354,14 +307,10 @@ Method | HTTP request | Description
 [**get_test_run_tag_with_run_using_get**](AllEndpointsApi.md#get_test_run_tag_with_run_using_get) | **GET** /api/v2/runs/{runId}/tags/{tagId} | Get test run tag.
 [**get_test_run_tags_using_get**](AllEndpointsApi.md#get_test_run_tags_using_get) | **GET** /api/v2/runs/{runId}/tags | Get test run tags.
 [**get_test_run_tags_using_get1**](AllEndpointsApi.md#get_test_run_tags_using_get1) | **GET** /api/v2/users/{userId}/projects/{projectId}/runs/{runId}/tags | Get test run tags.
-[**get_test_run_test_file_using_get**](AllEndpointsApi.md#get_test_run_test_file_using_get) | **GET** /api/v2/runs/{runId}/files/test | This endpoint is deprecated.
-[**get_test_run_test_file_using_get1**](AllEndpointsApi.md#get_test_run_test_file_using_get1) | **GET** /api/v2/users/{userId}/projects/{projectId}/runs/{runId}/files/test | This endpoint is deprecated.
 [**get_test_run_using_get**](AllEndpointsApi.md#get_test_run_using_get) | **GET** /api/v2/runs/{runId} | Get test run.
 [**get_test_runs_using_get**](AllEndpointsApi.md#get_test_runs_using_get) | **GET** /api/v2/runs | Get test runs.
 [**get_user_active_services_using_get**](AllEndpointsApi.md#get_user_active_services_using_get) | **GET** /api/v2/users/{userId}/services/active | Get active services.
-[**get_user_available_services_using_get**](AllEndpointsApi.md#get_user_available_services_using_get) | **GET** /api/v2/users/{userId}/services/available | Get available services.
 [**get_user_billing_periods_using_get**](AllEndpointsApi.md#get_user_billing_periods_using_get) | **GET** /api/v2/users/{userId}/billing-periods | Get users billing periods.
-[**get_user_builds_using_get**](AllEndpointsApi.md#get_user_builds_using_get) | **GET** /api/v2/users/{userId}/builds | Get builds.
 [**get_user_by_recovery_key_using_get**](AllEndpointsApi.md#get_user_by_recovery_key_using_get) | **GET** /api/v2/users/recoveries | Get user by recovery key.
 [**get_user_cluster_logs_using_get**](AllEndpointsApi.md#get_user_cluster_logs_using_get) | **GET** /api/v2/users/{userId}/projects/{projectId}/runs/{runId}/device-sessions/{deviceSessionId}/cluster-logs | This endpoint is deprecated.
 [**get_user_device_group_using_get**](AllEndpointsApi.md#get_user_device_group_using_get) | **GET** /api/v2/users/{userId}/device-groups/{deviceGroupId} | Get device group.
@@ -370,7 +319,6 @@ Method | HTTP request | Description
 [**get_user_device_session_junit_using_get**](AllEndpointsApi.md#get_user_device_session_junit_using_get) | **GET** /api/v2/users/{userId}/projects/{projectId}/runs/{runId}/device-sessions/{deviceSessionId}/junit.xml | This endpoint is deprecated.
 [**get_user_device_session_logs_using_get**](AllEndpointsApi.md#get_user_device_session_logs_using_get) | **GET** /api/v2/users/{userId}/projects/{projectId}/runs/{runId}/device-sessions/{deviceSessionId}/logs | This endpoint is deprecated.
 [**get_user_device_session_performance_using_get**](AllEndpointsApi.md#get_user_device_session_performance_using_get) | **GET** /api/v2/users/{userId}/projects/{projectId}/runs/{runId}/device-sessions/{deviceSessionId}/performance | This endpoint is deprecated.
-[**get_user_device_session_screenshot_using_get**](AllEndpointsApi.md#get_user_device_session_screenshot_using_get) | **GET** /api/v2/users/{userId}/projects/{projectId}/runs/{runId}/device-sessions/{deviceSessionId}/screenshots/{screenshotId} | Get device session screenshot.
 [**get_user_device_session_screenshots_using_get**](AllEndpointsApi.md#get_user_device_session_screenshots_using_get) | **GET** /api/v2/users/{userId}/projects/{projectId}/runs/{runId}/device-sessions/{deviceSessionId}/screenshots | Get device session screenshots.
 [**get_user_device_session_step_using_get**](AllEndpointsApi.md#get_user_device_session_step_using_get) | **GET** /api/v2/users/{userId}/projects/{projectId}/runs/{runId}/device-sessions/{deviceSessionId}/steps/{deviceSessionStepId} | Get device session step.
 [**get_user_device_session_with_users_using_get**](AllEndpointsApi.md#get_user_device_session_with_users_using_get) | **GET** /api/v2/users/{userId}/projects/{projectId}/runs/{runId}/device-sessions/{deviceSessionId} | Get device session.
@@ -379,23 +327,17 @@ Method | HTTP request | Description
 [**get_user_file_using_get1**](AllEndpointsApi.md#get_user_file_using_get1) | **GET** /api/v2/users/{userId}/files/{fileId} | Get file.
 [**get_user_files_using_get**](AllEndpointsApi.md#get_user_files_using_get) | **GET** /api/v2/users/{userId}/files | Get files.
 [**get_user_inspector_device_session_connection_using_get**](AllEndpointsApi.md#get_user_inspector_device_session_connection_using_get) | **GET** /api/v2/users/{userId}/device-sessions/{deviceSessionId}/connections/{connectionId} | Get connection for device session.
-[**get_user_inspector_device_session_connections_using_get**](AllEndpointsApi.md#get_user_inspector_device_session_connections_using_get) | **GET** /api/v2/users/{userId}/device-sessions/{deviceSessionId}/connections | Get connections for device session.
 [**get_user_inspector_device_session_using_get**](AllEndpointsApi.md#get_user_inspector_device_session_using_get) | **GET** /api/v2/users/{userId}/device-sessions/{deviceSessionId} | Get device session.
-[**get_user_jobs_using_get**](AllEndpointsApi.md#get_user_jobs_using_get) | **GET** /api/v2/users/{userId}/jobs | Get jobs.
 [**get_user_licenses_using_get**](AllEndpointsApi.md#get_user_licenses_using_get) | **GET** /api/v2/admin/users/{userId}/licenses | Get user licenses.
 [**get_user_notification_using_get**](AllEndpointsApi.md#get_user_notification_using_get) | **GET** /api/v2/users/{userId}/notifications/{id} | Get notification.
 [**get_user_notifications_using_get**](AllEndpointsApi.md#get_user_notifications_using_get) | **GET** /api/v2/users/{userId}/notifications | Get notifications.
-[**get_user_project_config_using_get**](AllEndpointsApi.md#get_user_project_config_using_get) | **GET** /api/v2/users/{userId}/projects/{projectId}/config | This endpoint is deprecated.
 [**get_user_project_test_runs_using_get**](AllEndpointsApi.md#get_user_project_test_runs_using_get) | **GET** /api/v2/users/{userId}/projects/{projectId}/runs | Get test runs.
 [**get_user_project_using_get**](AllEndpointsApi.md#get_user_project_using_get) | **GET** /api/v2/users/{userId}/projects/{projectId} | Get project.
 [**get_user_projects_using_get**](AllEndpointsApi.md#get_user_projects_using_get) | **GET** /api/v2/users/{userId}/projects | Get projects.
-[**get_user_purchases_using_get**](AllEndpointsApi.md#get_user_purchases_using_get) | **GET** /api/v2/users/{userId}/services/purchased | Get purchased services.
 [**get_user_reserved_device_time_using_get**](AllEndpointsApi.md#get_user_reserved_device_time_using_get) | **GET** /api/v2/users/{userId}/device-time/reserved | Get reserved device time.
 [**get_user_service_using_get**](AllEndpointsApi.md#get_user_service_using_get) | **GET** /api/v2/admin/account-services/{accountServiceId} | Get account service.
 [**get_user_services_using_get**](AllEndpointsApi.md#get_user_services_using_get) | **GET** /api/v2/admin/users/{userId}/account-services | Get account services.
-[**get_user_services_using_get1**](AllEndpointsApi.md#get_user_services_using_get1) | **GET** /api/v2/admin/users/{userId}/account/services | Get account services.
 [**get_user_statistics_using_get**](AllEndpointsApi.md#get_user_statistics_using_get) | **GET** /api/v2/users/{userId}/statistics | Get statistics.
-[**get_user_test_run_config_using_get**](AllEndpointsApi.md#get_user_test_run_config_using_get) | **GET** /api/v2/users/{userId}/projects/{projectId}/runs/{runId}/config | This endpoint is deprecated.
 [**get_user_test_run_using_get**](AllEndpointsApi.md#get_user_test_run_using_get) | **GET** /api/v2/users/{userId}/projects/{projectId}/runs/{runId} | Get test run.
 [**get_user_test_runs_using_get**](AllEndpointsApi.md#get_user_test_runs_using_get) | **GET** /api/v2/users/{userId}/runs | Get test runs.
 [**get_user_used_device_time_using_get**](AllEndpointsApi.md#get_user_used_device_time_using_get) | **GET** /api/v2/users/{userId}/device-time/used | Get used device time.
@@ -409,8 +351,8 @@ Method | HTTP request | Description
 [**get_users_using_get2**](AllEndpointsApi.md#get_users_using_get2) | **GET** /api/v2/users | Get users.
 [**get_using_get**](AllEndpointsApi.md#get_using_get) | **GET** /api/v2/access-groups/{accessGroupId} | Get access group.
 [**get_using_get1**](AllEndpointsApi.md#get_using_get1) | **GET** /api/v2/users/{userId}/access-groups/{accessGroupId} | Get access group.
-[**get_using_get2**](AllEndpointsApi.md#get_using_get2) | **GET** /api/v2/admin/build-executors/{id} | Get build executor.
-[**get_using_get3**](AllEndpointsApi.md#get_using_get3) | **GET** /api/v2/admin/country-vat-rates/{id} | Get country vat rate.
+[**get_using_get2**](AllEndpointsApi.md#get_using_get2) | **GET** /api/v2/admin/country-vat-rates/{id} | Get country vat rate.
+[**load_user_preferences_using_get**](AllEndpointsApi.md#load_user_preferences_using_get) | **GET** /api/v2/users/{userId}/preferences | Load user preferences.
 [**load_user_ui_preferences_using_get**](AllEndpointsApi.md#load_user_ui_preferences_using_get) | **GET** /api/v2/users/{userId}/ui-preferences | Load ui preferences.
 [**mark_billing_period_as_paid_using_post**](AllEndpointsApi.md#mark_billing_period_as_paid_using_post) | **POST** /api/v2/admin/billing-periods/{billingPeriodId} | Mark billing period as paid.
 [**recover_password_using_post**](AllEndpointsApi.md#recover_password_using_post) | **POST** /api/v2/users/password-recovery | Set new password after recovery.
@@ -430,9 +372,7 @@ Method | HTTP request | Description
 [**request_user_test_run_files_using_post**](AllEndpointsApi.md#request_user_test_run_files_using_post) | **POST** /api/v2/users/{userId}/projects/{projectId}/runs/{runId}/files.zip | Generate files zip.
 [**request_user_test_run_logs_using_post**](AllEndpointsApi.md#request_user_test_run_logs_using_post) | **POST** /api/v2/users/{userId}/projects/{projectId}/runs/{runId}/logs.zip | Generate logs zip.
 [**request_user_test_run_performance_using_post**](AllEndpointsApi.md#request_user_test_run_performance_using_post) | **POST** /api/v2/users/{userId}/projects/{projectId}/runs/{runId}/performance.zip | Generate performance zip.
-[**request_user_test_run_screenshots_using_post**](AllEndpointsApi.md#request_user_test_run_screenshots_using_post) | **POST** /api/v2/device-sessions/{deviceSessionId}/output-file-set/screenshots/screenshots.zip | Generate zipped screenshots file.
-[**request_user_test_run_screenshots_using_post1**](AllEndpointsApi.md#request_user_test_run_screenshots_using_post1) | **POST** /api/v2/users/{userId}/device-sessions/{deviceSessionId}/output-file-set/screenshots/screenshots.zip | Generate zipped screenshots file.
-[**request_user_test_run_screenshots_using_post2**](AllEndpointsApi.md#request_user_test_run_screenshots_using_post2) | **POST** /api/v2/users/{userId}/projects/{projectId}/runs/{runId}/screenshots.zip | Generate screenshot zip.
+[**request_user_test_run_screenshots_using_post**](AllEndpointsApi.md#request_user_test_run_screenshots_using_post) | **POST** /api/v2/users/{userId}/projects/{projectId}/runs/{runId}/screenshots.zip | Generate screenshot zip.
 [**resend_activation_email_using_post**](AllEndpointsApi.md#resend_activation_email_using_post) | **POST** /api/v2/admin/users/{userId}/resend-activation | Resend activation email.
 [**resend_activation_email_using_post1**](AllEndpointsApi.md#resend_activation_email_using_post1) | **POST** /api/v2/users/{userId}/account/additional-users/{additionalUserId}/resend-activation | Resend activation email to additional user.
 [**resend_email_using_post**](AllEndpointsApi.md#resend_email_using_post) | **POST** /api/v2/admin/emails/{id}/resend | Resend email.
@@ -446,10 +386,9 @@ Method | HTTP request | Description
 [**retry_test_run_with_test_run_using_post**](AllEndpointsApi.md#retry_test_run_with_test_run_using_post) | **POST** /api/v2/runs/{runId}/retry | Retry test run or its device sessions.
 [**retry_test_run_with_user_using_post**](AllEndpointsApi.md#retry_test_run_with_user_using_post) | **POST** /api/v2/users/{userId}/projects/{projectId}/runs/{runId}/retry | Retry test run or its device sessions.
 [**rollback_framework_config_using_delete**](AllEndpointsApi.md#rollback_framework_config_using_delete) | **DELETE** /api/v2/admin/frameworks/{id}/config | Rollback framework&#39;s config.
-[**run_project_using_post**](AllEndpointsApi.md#run_project_using_post) | **POST** /api/v2/projects/{projectId}/runs | This endpoint is deprecated.
-[**run_project_using_post1**](AllEndpointsApi.md#run_project_using_post1) | **POST** /api/v2/runs | Run test run.
-[**run_test_run_using_post**](AllEndpointsApi.md#run_test_run_using_post) | **POST** /api/v2/users/{userId}/runs | Run test run.
-[**run_user_project_using_post**](AllEndpointsApi.md#run_user_project_using_post) | **POST** /api/v2/users/{userId}/projects/{projectId}/runs | This endpoint is deprecated.
+[**run_test_run_using_post**](AllEndpointsApi.md#run_test_run_using_post) | **POST** /api/v2/runs | Run test run.
+[**run_test_run_using_post1**](AllEndpointsApi.md#run_test_run_using_post1) | **POST** /api/v2/users/{userId}/runs | Run test run.
+[**serve_screenshot_using_get**](AllEndpointsApi.md#serve_screenshot_using_get) | **GET** /api/v2/users/{userId}/projects/{projectId}/runs/{runId}/device-sessions/{deviceSessionId}/screenshots/{screenshotId} | Get device session screenshot.
 [**set_billable_flag_using_post**](AllEndpointsApi.md#set_billable_flag_using_post) | **POST** /api/v2/admin/device-sessions/{deviceSessionId}/changebillable | Change billable status for device session.
 [**set_billable_flag_using_post1**](AllEndpointsApi.md#set_billable_flag_using_post1) | **POST** /api/v2/admin/runs/{runId}/changebillable | Change billable status.
 [**set_priority_using_post**](AllEndpointsApi.md#set_priority_using_post) | **POST** /api/v2/admin/runs/{runId}/changepriority | Change priority.
@@ -459,12 +398,12 @@ Method | HTTP request | Description
 [**share_file_using_post1**](AllEndpointsApi.md#share_file_using_post1) | **POST** /api/v2/users/{userId}/files/{fileId}/share | Share file.
 [**share_project_using_post**](AllEndpointsApi.md#share_project_using_post) | **POST** /api/v2/projects/{projectId}/share | Share project.
 [**share_project_using_post1**](AllEndpointsApi.md#share_project_using_post1) | **POST** /api/v2/users/{userId}/projects/{projectId}/share | Share project.
+[**store_user_preferences_using_post**](AllEndpointsApi.md#store_user_preferences_using_post) | **POST** /api/v2/users/{userId}/preferences | Store user preferences.
 [**store_user_ui_preferences_using_post**](AllEndpointsApi.md#store_user_ui_preferences_using_post) | **POST** /api/v2/users/{userId}/ui-preferences | Store ui preferences.
 [**test_notification_plan_using_post**](AllEndpointsApi.md#test_notification_plan_using_post) | **POST** /api/v2/admin/notification-plans/{id}/test | Test notifications basing on notification plan by sending it to admin.
 [**test_user_notification_using_post**](AllEndpointsApi.md#test_user_notification_using_post) | **POST** /api/v2/users/{userId}/notifications/{id}/test | Test notification.
 [**unarchive_project_using_post**](AllEndpointsApi.md#unarchive_project_using_post) | **POST** /api/v2/projects/{projectId}/unarchive | Unarchive project.
 [**update_api_label_using_post**](AllEndpointsApi.md#update_api_label_using_post) | **POST** /api/v2/label-groups/{groupId}/labels/{labelId} | Update label.
-[**update_build_using_post**](AllEndpointsApi.md#update_build_using_post) | **POST** /api/v2/users/{userId}/jobs/{jobId}/builds/{buildId} | Update build.
 [**update_cluster_using_post**](AllEndpointsApi.md#update_cluster_using_post) | **POST** /api/v2/clusters/{id} | Update cluster.
 [**update_device_cleanup_configuration_using_post**](AllEndpointsApi.md#update_device_cleanup_configuration_using_post) | **POST** /api/v2/admin/devices/cleanup-configurations/{id} | Update device cleanup configuration.
 [**update_device_model_using_post**](AllEndpointsApi.md#update_device_model_using_post) | **POST** /api/v2/admin/device-models/{deviceModelId} | Update device model.
@@ -473,14 +412,12 @@ Method | HTTP request | Description
 [**update_device_using_post**](AllEndpointsApi.md#update_device_using_post) | **POST** /api/v2/admin/devices/{deviceId} | Update device.
 [**update_file_name_using_post**](AllEndpointsApi.md#update_file_name_using_post) | **POST** /api/v2/files/{fileId} | Update file name.
 [**update_file_name_using_post1**](AllEndpointsApi.md#update_file_name_using_post1) | **POST** /api/v2/users/{userId}/files/{fileId} | Update file name.
+[**update_file_property_using_post**](AllEndpointsApi.md#update_file_property_using_post) | **POST** /api/v2/files/{fileId}/properties/{propertyId} | Update file property.
 [**update_framework_config_using_post**](AllEndpointsApi.md#update_framework_config_using_post) | **POST** /api/v2/admin/frameworks/{id}/config | Update framework&#39;s config.
 [**update_framework_using_post**](AllEndpointsApi.md#update_framework_using_post) | **POST** /api/v2/admin/frameworks/{id} | Update framework.
 [**update_issue_using_post**](AllEndpointsApi.md#update_issue_using_post) | **POST** /api/v2/jira/issues/{issueKey} | Update jira issue.
-[**update_job_using_post**](AllEndpointsApi.md#update_job_using_post) | **POST** /api/v2/jobs/{jobId} | Update job.
-[**update_job_using_post1**](AllEndpointsApi.md#update_job_using_post1) | **POST** /api/v2/users/{userId}/jobs/{jobId} | Update job.
 [**update_label_group_using_post**](AllEndpointsApi.md#update_label_group_using_post) | **POST** /api/v2/label-groups/{groupId} | Update label group.
 [**update_notification_plan_using_post**](AllEndpointsApi.md#update_notification_plan_using_post) | **POST** /api/v2/admin/notification-plans/{id} | Update notification plan.
-[**update_project_config_using_post**](AllEndpointsApi.md#update_project_config_using_post) | **POST** /api/v2/projects/{projectId}/config | This endpoint is deprecated.
 [**update_project_test_run_using_post**](AllEndpointsApi.md#update_project_test_run_using_post) | **POST** /api/v2/projects/{projectId}/runs/{runId} | Update test run.
 [**update_project_using_post**](AllEndpointsApi.md#update_project_using_post) | **POST** /api/v2/projects/{projectId} | Update project.
 [**update_property_using_post**](AllEndpointsApi.md#update_property_using_post) | **POST** /api/v2/properties/{id} | Update property.
@@ -490,139 +427,21 @@ Method | HTTP request | Description
 [**update_user_file_using_post**](AllEndpointsApi.md#update_user_file_using_post) | **POST** /api/v2/files/{fileId}/file | Update file content.
 [**update_user_file_using_post1**](AllEndpointsApi.md#update_user_file_using_post1) | **POST** /api/v2/users/{userId}/files/{fileId}/file | Update file content.
 [**update_user_notification_using_post**](AllEndpointsApi.md#update_user_notification_using_post) | **POST** /api/v2/users/{userId}/notifications/{id} | Update notification.
-[**update_user_project_config_using_post**](AllEndpointsApi.md#update_user_project_config_using_post) | **POST** /api/v2/users/{userId}/projects/{projectId}/config | This endpoint is deprecated.
 [**update_user_project_using_post**](AllEndpointsApi.md#update_user_project_using_post) | **POST** /api/v2/users/{userId}/projects/{projectId} | Update project.
 [**update_user_test_run_using_post**](AllEndpointsApi.md#update_user_test_run_using_post) | **POST** /api/v2/users/{userId}/projects/{projectId}/runs/{runId} | Update test run.
 [**update_user_using_post**](AllEndpointsApi.md#update_user_using_post) | **POST** /api/v2/users/{userId} | Update user.
 [**update_users_main_account_using_post**](AllEndpointsApi.md#update_users_main_account_using_post) | **POST** /api/v2/admin/users/{userId}/update-account | Update users main account, switch main user.
 [**update_using_post**](AllEndpointsApi.md#update_using_post) | **POST** /api/v2/access-groups/{accessGroupId} | Update access group.
 [**update_using_post1**](AllEndpointsApi.md#update_using_post1) | **POST** /api/v2/users/{userId}/access-groups/{accessGroupId} | Update access group.
-[**update_using_post2**](AllEndpointsApi.md#update_using_post2) | **POST** /api/v2/admin/build-executors/{id} | Update build executor.
-[**update_using_post3**](AllEndpointsApi.md#update_using_post3) | **POST** /api/v2/admin/country-vat-rates/{id} | Update country vat rate.
+[**update_using_post2**](AllEndpointsApi.md#update_using_post2) | **POST** /api/v2/admin/country-vat-rates/{id} | Update country vat rate.
 [**upload_file_using_post**](AllEndpointsApi.md#upload_file_using_post) | **POST** /api/v2/admin/samples | Upload sample file.
 [**upload_file_using_post1**](AllEndpointsApi.md#upload_file_using_post1) | **POST** /api/v2/files | Upload file.
 [**upload_file_using_post2**](AllEndpointsApi.md#upload_file_using_post2) | **POST** /api/v2/users/{userId}/files | Upload file.
 [**upload_license_using_post**](AllEndpointsApi.md#upload_license_using_post) | **POST** /api/v2/license | Upload license to cloud.
-[**upload_project_application_file_using_post**](AllEndpointsApi.md#upload_project_application_file_using_post) | **POST** /api/v2/projects/{projectId}/files/application | This endpoint is deprecated.
-[**upload_project_application_file_using_post1**](AllEndpointsApi.md#upload_project_application_file_using_post1) | **POST** /api/v2/users/{userId}/projects/{projectId}/files/application | This endpoint is deprecated.
-[**upload_project_data_file_using_post**](AllEndpointsApi.md#upload_project_data_file_using_post) | **POST** /api/v2/projects/{projectId}/files/data | This endpoint is deprecated.
-[**upload_project_data_file_using_post1**](AllEndpointsApi.md#upload_project_data_file_using_post1) | **POST** /api/v2/users/{userId}/projects/{projectId}/files/data | This endpoint is deprecated.
-[**upload_project_test_file_using_post**](AllEndpointsApi.md#upload_project_test_file_using_post) | **POST** /api/v2/projects/{projectId}/files/test | This endpoint is deprecated.
-[**upload_project_test_file_using_post1**](AllEndpointsApi.md#upload_project_test_file_using_post1) | **POST** /api/v2/users/{userId}/projects/{projectId}/files/test | This endpoint is deprecated.
+[**validate_credentials_using_post**](AllEndpointsApi.md#validate_credentials_using_post) | **POST** /api/v2/users/validateCredentials | Validate credentials.
 [**validate_test_run_config_using_post**](AllEndpointsApi.md#validate_test_run_config_using_post) | **POST** /api/v2/runs/config | Validate test run configuration.
 [**validate_test_run_config_using_post1**](AllEndpointsApi.md#validate_test_run_config_using_post1) | **POST** /api/v2/users/{userId}/runs/config | Validate test run configuration.
 [**validate_vat_id_using_get**](AllEndpointsApi.md#validate_vat_id_using_get) | **GET** /api/v2/users/validateVatId | Validate EU VAT ID.
-
-
-# **abort_build_using_post**
-> APIPipelineBuild abort_build_using_post(build_id, job_id)
-
-Abort build.
-
-### Example
-```ruby
-# load the gem
-require 'bitbar-cloud-api-client'
-# setup authorization
-BitbarCloudApiClient.configure do |config|
-  # Configure HTTP basic authorization: apiKeyInHeader
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
-end
-
-api_instance = BitbarCloudApiClient::AllEndpointsApi.new
-
-build_id = 789 # Integer | buildId
-
-job_id = 789 # Integer | jobId
-
-
-begin
-  #Abort build.
-  result = api_instance.abort_build_using_post(build_id, job_id)
-  p result
-rescue BitbarCloudApiClient::ApiError => e
-  puts "Exception when calling AllEndpointsApi->abort_build_using_post: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **build_id** | **Integer**| buildId | 
- **job_id** | **Integer**| jobId | 
-
-### Return type
-
-[**APIPipelineBuild**](APIPipelineBuild.md)
-
-### Authorization
-
-[apiKeyInHeader](../README.md#apiKeyInHeader)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: */*
-
-
-
-# **abort_build_using_post1**
-> APIPipelineBuild abort_build_using_post1(build_id, job_id, user_id)
-
-Abort build.
-
-### Example
-```ruby
-# load the gem
-require 'bitbar-cloud-api-client'
-# setup authorization
-BitbarCloudApiClient.configure do |config|
-  # Configure HTTP basic authorization: apiKeyInHeader
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
-end
-
-api_instance = BitbarCloudApiClient::AllEndpointsApi.new
-
-build_id = 789 # Integer | buildId
-
-job_id = 789 # Integer | jobId
-
-user_id = 789 # Integer | userId
-
-
-begin
-  #Abort build.
-  result = api_instance.abort_build_using_post1(build_id, job_id, user_id)
-  p result
-rescue BitbarCloudApiClient::ApiError => e
-  puts "Exception when calling AllEndpointsApi->abort_build_using_post1: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **build_id** | **Integer**| buildId | 
- **job_id** | **Integer**| jobId | 
- **user_id** | **Integer**| userId | 
-
-### Return type
-
-[**APIPipelineBuild**](APIPipelineBuild.md)
-
-### Authorization
-
-[apiKeyInHeader](../README.md#apiKeyInHeader)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: */*
-
 
 
 # **abort_project_test_run_using_post**
@@ -639,6 +458,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -670,7 +492,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -693,6 +515,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -721,7 +546,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -744,6 +569,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -776,7 +604,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -799,6 +627,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -833,7 +664,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -856,6 +687,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -884,7 +718,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -907,6 +741,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -939,7 +776,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -962,6 +799,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -990,7 +830,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -1013,6 +853,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -1028,11 +871,9 @@ opts = {
   city: 'city_example', # String | city
   country: 'country_example', # String | country
   first_name: 'first_name_example', # String | firstName
-  hear_from: 'OTHER', # String | hearFrom
   last_name: 'last_name_example', # String | lastName
   organization: 'organization_example', # String | organization
   phone: 'phone_example', # String | phone
-  role: 'OTHER', # String | role
   state: 'state_example', # String | state
   vat_id: 'vat_id_example', # String | vatId
   zip: 'zip_example' # String | zip
@@ -1058,11 +899,9 @@ Name | Type | Description  | Notes
  **city** | **String**| city | [optional] 
  **country** | **String**| country | [optional] 
  **first_name** | **String**| firstName | [optional] 
- **hear_from** | **String**| hearFrom | [optional] [default to OTHER]
  **last_name** | **String**| lastName | [optional] 
  **organization** | **String**| organization | [optional] 
  **phone** | **String**| phone | [optional] 
- **role** | **String**| role | [optional] [default to OTHER]
  **state** | **String**| state | [optional] 
  **vat_id** | **String**| vatId | [optional] 
  **zip** | **String**| zip | [optional] 
@@ -1073,7 +912,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -1096,6 +935,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -1131,7 +973,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -1154,6 +996,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -1185,7 +1030,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -1208,6 +1053,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -1239,7 +1087,64 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: */*
+
+
+
+# **add_device_label_using_post1**
+> APIDeviceProperty add_device_label_using_post1(device_id, label_id)
+
+Add label to device.
+
+### Example
+```ruby
+# load the gem
+require 'bitbar-cloud-api-client'
+# setup authorization
+BitbarCloudApiClient.configure do |config|
+  # Configure HTTP basic authorization: apiKeyInHeader
+  config.username = 'YOUR USERNAME'
+  config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
+end
+
+api_instance = BitbarCloudApiClient::AllEndpointsApi.new
+
+device_id = 789 # Integer | deviceId
+
+label_id = 789 # Integer | labelId
+
+
+begin
+  #Add label to device.
+  result = api_instance.add_device_label_using_post1(device_id, label_id)
+  p result
+rescue BitbarCloudApiClient::ApiError => e
+  puts "Exception when calling AllEndpointsApi->add_device_label_using_post1: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **device_id** | **Integer**| deviceId | 
+ **label_id** | **Integer**| labelId | 
+
+### Return type
+
+[**APIDeviceProperty**](APIDeviceProperty.md)
+
+### Authorization
+
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -1262,6 +1167,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -1292,7 +1200,7 @@ nil (empty response body)
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -1315,6 +1223,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -1349,7 +1260,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -1372,6 +1283,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -1409,11 +1323,142 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
  - **Content-Type**: application/json
+ - **Accept**: */*
+
+
+
+# **add_file_using_post**
+> APIUserFile add_file_using_post(device_session_id, file, name, opts)
+
+Add file to device session.
+
+### Example
+```ruby
+# load the gem
+require 'bitbar-cloud-api-client'
+# setup authorization
+BitbarCloudApiClient.configure do |config|
+  # Configure HTTP basic authorization: apiKeyInHeader
+  config.username = 'YOUR USERNAME'
+  config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
+end
+
+api_instance = BitbarCloudApiClient::AllEndpointsApi.new
+
+device_session_id = 789 # Integer | deviceSessionId
+
+file = File.new('/path/to/file.txt') # File | file
+
+name = 'name_example' # String | name
+
+opts = { 
+  tag: 'tag_example' # String | tag
+}
+
+begin
+  #Add file to device session.
+  result = api_instance.add_file_using_post(device_session_id, file, name, opts)
+  p result
+rescue BitbarCloudApiClient::ApiError => e
+  puts "Exception when calling AllEndpointsApi->add_file_using_post: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **device_session_id** | **Integer**| deviceSessionId | 
+ **file** | **File**| file | 
+ **name** | **String**| name | 
+ **tag** | **String**| tag | [optional] 
+
+### Return type
+
+[**APIUserFile**](APIUserFile.md)
+
+### Authorization
+
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
+
+### HTTP request headers
+
+ - **Content-Type**: multipart/form-data
+ - **Accept**: */*
+
+
+
+# **add_file_using_post1**
+> APIUserFile add_file_using_post1(device_session_id, file, name, user_id, opts)
+
+Add file to device session.
+
+### Example
+```ruby
+# load the gem
+require 'bitbar-cloud-api-client'
+# setup authorization
+BitbarCloudApiClient.configure do |config|
+  # Configure HTTP basic authorization: apiKeyInHeader
+  config.username = 'YOUR USERNAME'
+  config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
+end
+
+api_instance = BitbarCloudApiClient::AllEndpointsApi.new
+
+device_session_id = 789 # Integer | deviceSessionId
+
+file = File.new('/path/to/file.txt') # File | file
+
+name = 'name_example' # String | name
+
+user_id = 789 # Integer | userId
+
+opts = { 
+  tag: 'tag_example' # String | tag
+}
+
+begin
+  #Add file to device session.
+  result = api_instance.add_file_using_post1(device_session_id, file, name, user_id, opts)
+  p result
+rescue BitbarCloudApiClient::ApiError => e
+  puts "Exception when calling AllEndpointsApi->add_file_using_post1: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **device_session_id** | **Integer**| deviceSessionId | 
+ **file** | **File**| file | 
+ **name** | **String**| name | 
+ **user_id** | **Integer**| userId | 
+ **tag** | **String**| tag | [optional] 
+
+### Return type
+
+[**APIUserFile**](APIUserFile.md)
+
+### Authorization
+
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
+
+### HTTP request headers
+
+ - **Content-Type**: multipart/form-data
  - **Accept**: */*
 
 
@@ -1432,6 +1477,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -1466,7 +1514,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -1489,6 +1537,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -1526,128 +1577,11 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: */*
-
-
-
-# **add_screenshot_using_post**
-> APIUserFile add_screenshot_using_post(device_session_id, name, screenshot)
-
-Add screenshot to device session.
-
-### Example
-```ruby
-# load the gem
-require 'bitbar-cloud-api-client'
-# setup authorization
-BitbarCloudApiClient.configure do |config|
-  # Configure HTTP basic authorization: apiKeyInHeader
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
-end
-
-api_instance = BitbarCloudApiClient::AllEndpointsApi.new
-
-device_session_id = 789 # Integer | deviceSessionId
-
-name = 'name_example' # String | name
-
-screenshot = File.new('/path/to/file.txt') # File | screenshot
-
-
-begin
-  #Add screenshot to device session.
-  result = api_instance.add_screenshot_using_post(device_session_id, name, screenshot)
-  p result
-rescue BitbarCloudApiClient::ApiError => e
-  puts "Exception when calling AllEndpointsApi->add_screenshot_using_post: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **device_session_id** | **Integer**| deviceSessionId | 
- **name** | **String**| name | 
- **screenshot** | **File**| screenshot | 
-
-### Return type
-
-[**APIUserFile**](APIUserFile.md)
-
-### Authorization
-
-[apiKeyInHeader](../README.md#apiKeyInHeader)
-
-### HTTP request headers
-
- - **Content-Type**: multipart/form-data
- - **Accept**: */*
-
-
-
-# **add_screenshot_using_post1**
-> APIUserFile add_screenshot_using_post1(device_session_id, name, screenshot, user_id)
-
-Add screenshot to device session.
-
-### Example
-```ruby
-# load the gem
-require 'bitbar-cloud-api-client'
-# setup authorization
-BitbarCloudApiClient.configure do |config|
-  # Configure HTTP basic authorization: apiKeyInHeader
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
-end
-
-api_instance = BitbarCloudApiClient::AllEndpointsApi.new
-
-device_session_id = 789 # Integer | deviceSessionId
-
-name = 'name_example' # String | name
-
-screenshot = File.new('/path/to/file.txt') # File | screenshot
-
-user_id = 789 # Integer | userId
-
-
-begin
-  #Add screenshot to device session.
-  result = api_instance.add_screenshot_using_post1(device_session_id, name, screenshot, user_id)
-  p result
-rescue BitbarCloudApiClient::ApiError => e
-  puts "Exception when calling AllEndpointsApi->add_screenshot_using_post1: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **device_session_id** | **Integer**| deviceSessionId | 
- **name** | **String**| name | 
- **screenshot** | **File**| screenshot | 
- **user_id** | **Integer**| userId | 
-
-### Return type
-
-[**APIUserFile**](APIUserFile.md)
-
-### Authorization
-
-[apiKeyInHeader](../README.md#apiKeyInHeader)
-
-### HTTP request headers
-
- - **Content-Type**: multipart/form-data
  - **Accept**: */*
 
 
@@ -1666,6 +1600,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -1697,7 +1634,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -1720,6 +1657,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -1764,7 +1704,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -1787,6 +1727,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -1822,65 +1765,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: */*
-
-
-
-# **add_service_to_user_using_post1**
-> APIAccountService add_service_to_user_using_post1(service_id, user_id, opts)
-
-Add service to user.
-
-### Example
-```ruby
-# load the gem
-require 'bitbar-cloud-api-client'
-# setup authorization
-BitbarCloudApiClient.configure do |config|
-  # Configure HTTP basic authorization: apiKeyInHeader
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
-end
-
-api_instance = BitbarCloudApiClient::AllEndpointsApi.new
-
-service_id = 789 # Integer | serviceId
-
-user_id = 789 # Integer | userId
-
-opts = { 
-  count: 1 # Integer | count
-}
-
-begin
-  #Add service to user.
-  result = api_instance.add_service_to_user_using_post1(service_id, user_id, opts)
-  p result
-rescue BitbarCloudApiClient::ApiError => e
-  puts "Exception when calling AllEndpointsApi->add_service_to_user_using_post1: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **service_id** | **Integer**| serviceId | 
- **user_id** | **Integer**| userId | 
- **count** | **Integer**| count | [optional] [default to 1]
-
-### Return type
-
-[**APIAccountService**](APIAccountService.md)
-
-### Authorization
-
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -1903,6 +1788,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -1938,7 +1826,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -1961,6 +1849,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -1998,61 +1889,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: */*
-
-
-
-# **add_user_label_device_using_post**
-> APIDeviceProperty add_user_label_device_using_post(device_id, label_id)
-
-Add label to device.
-
-### Example
-```ruby
-# load the gem
-require 'bitbar-cloud-api-client'
-# setup authorization
-BitbarCloudApiClient.configure do |config|
-  # Configure HTTP basic authorization: apiKeyInHeader
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
-end
-
-api_instance = BitbarCloudApiClient::AllEndpointsApi.new
-
-device_id = 789 # Integer | deviceId
-
-label_id = 789 # Integer | labelId
-
-
-begin
-  #Add label to device.
-  result = api_instance.add_user_label_device_using_post(device_id, label_id)
-  p result
-rescue BitbarCloudApiClient::ApiError => e
-  puts "Exception when calling AllEndpointsApi->add_user_label_device_using_post: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **device_id** | **Integer**| deviceId | 
- **label_id** | **Integer**| labelId | 
-
-### Return type
-
-[**APIDeviceProperty**](APIDeviceProperty.md)
-
-### Authorization
-
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -2075,6 +1912,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -2106,7 +1946,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -2129,6 +1969,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -2163,7 +2006,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -2186,6 +2029,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -2213,7 +2059,7 @@ nil (empty response body)
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -2236,6 +2082,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -2264,7 +2113,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -2287,6 +2136,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -2315,7 +2167,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -2338,6 +2190,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -2366,7 +2221,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -2389,6 +2244,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -2459,7 +2317,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -2482,6 +2340,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -2513,7 +2374,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -2536,6 +2397,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -2574,68 +2438,11 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: */*
-
-
-
-# **create_build_using_post**
-> APIPipelineBuild create_build_using_post(config, job_id, user_id)
-
-Create build.
-
-### Example
-```ruby
-# load the gem
-require 'bitbar-cloud-api-client'
-# setup authorization
-BitbarCloudApiClient.configure do |config|
-  # Configure HTTP basic authorization: apiKeyInHeader
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
-end
-
-api_instance = BitbarCloudApiClient::AllEndpointsApi.new
-
-config = BitbarCloudApiClient::APIBuildConfig.new # APIBuildConfig | config
-
-job_id = 789 # Integer | jobId
-
-user_id = 789 # Integer | userId
-
-
-begin
-  #Create build.
-  result = api_instance.create_build_using_post(config, job_id, user_id)
-  p result
-rescue BitbarCloudApiClient::ApiError => e
-  puts "Exception when calling AllEndpointsApi->create_build_using_post: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **config** | [**APIBuildConfig**](APIBuildConfig.md)| config | 
- **job_id** | **Integer**| jobId | 
- **user_id** | **Integer**| userId | 
-
-### Return type
-
-[**APIPipelineBuild**](APIPipelineBuild.md)
-
-### Authorization
-
-[apiKeyInHeader](../README.md#apiKeyInHeader)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
  - **Accept**: */*
 
 
@@ -2654,6 +2461,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -2692,7 +2502,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -2715,6 +2525,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -2756,7 +2569,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -2779,6 +2592,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -2823,7 +2639,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -2846,6 +2662,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -2880,11 +2699,71 @@ nil (empty response body)
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
  - **Content-Type**: multipart/form-data
+ - **Accept**: */*
+
+
+
+# **create_file_property_using_post**
+> APIUserFileProperty create_file_property_using_post(file_id, key, value)
+
+Create file property.
+
+### Example
+```ruby
+# load the gem
+require 'bitbar-cloud-api-client'
+# setup authorization
+BitbarCloudApiClient.configure do |config|
+  # Configure HTTP basic authorization: apiKeyInHeader
+  config.username = 'YOUR USERNAME'
+  config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
+end
+
+api_instance = BitbarCloudApiClient::AllEndpointsApi.new
+
+file_id = 789 # Integer | fileId
+
+key = 'key_example' # String | key
+
+value = 'value_example' # String | value
+
+
+begin
+  #Create file property.
+  result = api_instance.create_file_property_using_post(file_id, key, value)
+  p result
+rescue BitbarCloudApiClient::ApiError => e
+  puts "Exception when calling AllEndpointsApi->create_file_property_using_post: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **file_id** | **Integer**| fileId | 
+ **key** | **String**| key | 
+ **value** | **String**| value | 
+
+### Return type
+
+[**APIUserFileProperty**](APIUserFileProperty.md)
+
+### Authorization
+
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
  - **Accept**: */*
 
 
@@ -2903,6 +2782,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -2975,7 +2857,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -2998,6 +2880,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -3034,7 +2919,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -3057,6 +2942,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -3096,7 +2984,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -3119,6 +3007,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -3150,7 +3041,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -3173,6 +3064,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -3207,7 +3101,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -3230,6 +3124,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -3296,67 +3193,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: */*
-
-
-
-# **create_my_job_using_post**
-> APIPipelineJob create_my_job_using_post(name, user_id, opts)
-
-Create job.
-
-### Example
-```ruby
-# load the gem
-require 'bitbar-cloud-api-client'
-# setup authorization
-BitbarCloudApiClient.configure do |config|
-  # Configure HTTP basic authorization: apiKeyInHeader
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
-end
-
-api_instance = BitbarCloudApiClient::AllEndpointsApi.new
-
-name = 'name_example' # String | name
-
-user_id = 789 # Integer | userId
-
-opts = { 
-  content: 'content_example', # String | content
-  type: 'BUILD' # String | type
-}
-
-begin
-  #Create job.
-  result = api_instance.create_my_job_using_post(name, user_id, opts)
-  p result
-rescue BitbarCloudApiClient::ApiError => e
-  puts "Exception when calling AllEndpointsApi->create_my_job_using_post: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **name** | **String**| name | 
- **user_id** | **Integer**| userId | 
- **content** | **String**| content | [optional] 
- **type** | **String**| type | [optional] [default to BUILD]
-
-### Return type
-
-[**APIPipelineJob**](APIPipelineJob.md)
-
-### Authorization
-
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -3379,6 +3216,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -3386,10 +3226,7 @@ api_instance = BitbarCloudApiClient::AllEndpointsApi.new
 user_id = 789 # Integer | userId
 
 opts = { 
-  app_crawler_run: true, # BOOLEAN | appCrawlerRun
-  mode: 'mode_example', # String | mode
-  name: 'name_example', # String | name
-  type: 'GENERIC' # String | type
+  name: 'name_example' # String | name
 }
 
 begin
@@ -3406,10 +3243,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **user_id** | **Integer**| userId | 
- **app_crawler_run** | **BOOLEAN**| appCrawlerRun | [optional] 
- **mode** | **String**| mode | [optional] 
  **name** | **String**| name | [optional] 
- **type** | **String**| type | [optional] [default to GENERIC]
 
 ### Return type
 
@@ -3417,7 +3251,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -3440,6 +3274,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -3480,7 +3317,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -3503,6 +3340,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -3543,7 +3383,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -3566,6 +3406,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -3594,7 +3437,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -3617,6 +3460,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -3653,7 +3499,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -3676,6 +3522,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -3717,7 +3566,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -3740,6 +3589,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -3768,7 +3620,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -3791,6 +3643,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -3834,7 +3689,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -3857,6 +3712,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -3891,7 +3749,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -3914,6 +3772,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -3949,7 +3810,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -3959,58 +3820,7 @@ Name | Type | Description  | Notes
 
 
 # **create_using_post2**
-> APIBuildExecutor create_using_post2(build_executor)
-
-Create build executor.
-
-### Example
-```ruby
-# load the gem
-require 'bitbar-cloud-api-client'
-# setup authorization
-BitbarCloudApiClient.configure do |config|
-  # Configure HTTP basic authorization: apiKeyInHeader
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
-end
-
-api_instance = BitbarCloudApiClient::AllEndpointsApi.new
-
-build_executor = BitbarCloudApiClient::APIBuildExecutor.new # APIBuildExecutor | buildExecutor
-
-
-begin
-  #Create build executor.
-  result = api_instance.create_using_post2(build_executor)
-  p result
-rescue BitbarCloudApiClient::ApiError => e
-  puts "Exception when calling AllEndpointsApi->create_using_post2: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **build_executor** | [**APIBuildExecutor**](APIBuildExecutor.md)| buildExecutor | 
-
-### Return type
-
-[**APIBuildExecutor**](APIBuildExecutor.md)
-
-### Authorization
-
-[apiKeyInHeader](../README.md#apiKeyInHeader)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: */*
-
-
-
-# **create_using_post3**
-> APICountryVatRate create_using_post3(country_code, vat_rate)
+> APICountryVatRate create_using_post2(country_code, vat_rate)
 
 Create country vat rate.
 
@@ -4023,6 +3833,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -4034,10 +3847,10 @@ vat_rate = 56 # Integer | vatRate
 
 begin
   #Create country vat rate.
-  result = api_instance.create_using_post3(country_code, vat_rate)
+  result = api_instance.create_using_post2(country_code, vat_rate)
   p result
 rescue BitbarCloudApiClient::ApiError => e
-  puts "Exception when calling AllEndpointsApi->create_using_post3: #{e}"
+  puts "Exception when calling AllEndpointsApi->create_using_post2: #{e}"
 end
 ```
 
@@ -4054,7 +3867,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -4077,6 +3890,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -4105,7 +3921,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -4128,6 +3944,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -4156,64 +3975,11 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: */*
-
-
-
-# **delete_build_using_delete**
-> delete_build_using_delete(build_id, job_id)
-
-Delete build.
-
-### Example
-```ruby
-# load the gem
-require 'bitbar-cloud-api-client'
-# setup authorization
-BitbarCloudApiClient.configure do |config|
-  # Configure HTTP basic authorization: apiKeyInHeader
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
-end
-
-api_instance = BitbarCloudApiClient::AllEndpointsApi.new
-
-build_id = 789 # Integer | buildId
-
-job_id = 789 # Integer | jobId
-
-
-begin
-  #Delete build.
-  api_instance.delete_build_using_delete(build_id, job_id)
-rescue BitbarCloudApiClient::ApiError => e
-  puts "Exception when calling AllEndpointsApi->delete_build_using_delete: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **build_id** | **Integer**| buildId | 
- **job_id** | **Integer**| jobId | 
-
-### Return type
-
-nil (empty response body)
-
-### Authorization
-
-[apiKeyInHeader](../README.md#apiKeyInHeader)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
  - **Accept**: */*
 
 
@@ -4232,6 +3998,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -4259,7 +4028,7 @@ nil (empty response body)
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -4282,6 +4051,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -4309,7 +4081,7 @@ nil (empty response body)
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -4332,6 +4104,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -4362,7 +4137,7 @@ nil (empty response body)
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -4385,6 +4160,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -4418,7 +4196,7 @@ nil (empty response body)
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -4441,6 +4219,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -4468,7 +4249,7 @@ nil (empty response body)
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -4491,6 +4272,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -4521,7 +4305,63 @@ nil (empty response body)
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: */*
+
+
+
+# **delete_device_label_using_delete1**
+> delete_device_label_using_delete1(device_id, label_id)
+
+Delete label from device.
+
+### Example
+```ruby
+# load the gem
+require 'bitbar-cloud-api-client'
+# setup authorization
+BitbarCloudApiClient.configure do |config|
+  # Configure HTTP basic authorization: apiKeyInHeader
+  config.username = 'YOUR USERNAME'
+  config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
+end
+
+api_instance = BitbarCloudApiClient::AllEndpointsApi.new
+
+device_id = 789 # Integer | deviceId
+
+label_id = 789 # Integer | labelId
+
+
+begin
+  #Delete label from device.
+  api_instance.delete_device_label_using_delete1(device_id, label_id)
+rescue BitbarCloudApiClient::ApiError => e
+  puts "Exception when calling AllEndpointsApi->delete_device_label_using_delete1: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **device_id** | **Integer**| deviceId | 
+ **label_id** | **Integer**| labelId | 
+
+### Return type
+
+nil (empty response body)
+
+### Authorization
+
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -4544,6 +4384,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -4572,7 +4415,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -4595,6 +4438,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -4622,7 +4468,63 @@ nil (empty response body)
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: */*
+
+
+
+# **delete_file_property_using_delete**
+> delete_file_property_using_delete(file_id, property_id)
+
+Delete file property.
+
+### Example
+```ruby
+# load the gem
+require 'bitbar-cloud-api-client'
+# setup authorization
+BitbarCloudApiClient.configure do |config|
+  # Configure HTTP basic authorization: apiKeyInHeader
+  config.username = 'YOUR USERNAME'
+  config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
+end
+
+api_instance = BitbarCloudApiClient::AllEndpointsApi.new
+
+file_id = 789 # Integer | fileId
+
+property_id = 789 # Integer | propertyId
+
+
+begin
+  #Delete file property.
+  api_instance.delete_file_property_using_delete(file_id, property_id)
+rescue BitbarCloudApiClient::ApiError => e
+  puts "Exception when calling AllEndpointsApi->delete_file_property_using_delete: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **file_id** | **Integer**| fileId | 
+ **property_id** | **Integer**| propertyId | 
+
+### Return type
+
+nil (empty response body)
+
+### Authorization
+
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -4645,6 +4547,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -4672,7 +4577,7 @@ nil (empty response body)
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -4695,6 +4600,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -4722,7 +4630,7 @@ nil (empty response body)
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -4745,6 +4653,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -4775,7 +4686,122 @@ nil (empty response body)
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: */*
+
+
+
+# **delete_file_using_delete3**
+> delete_file_using_delete3(device_session_id, file_id)
+
+Delete file from device session.
+
+### Example
+```ruby
+# load the gem
+require 'bitbar-cloud-api-client'
+# setup authorization
+BitbarCloudApiClient.configure do |config|
+  # Configure HTTP basic authorization: apiKeyInHeader
+  config.username = 'YOUR USERNAME'
+  config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
+end
+
+api_instance = BitbarCloudApiClient::AllEndpointsApi.new
+
+device_session_id = 789 # Integer | deviceSessionId
+
+file_id = 789 # Integer | fileId
+
+
+begin
+  #Delete file from device session.
+  api_instance.delete_file_using_delete3(device_session_id, file_id)
+rescue BitbarCloudApiClient::ApiError => e
+  puts "Exception when calling AllEndpointsApi->delete_file_using_delete3: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **device_session_id** | **Integer**| deviceSessionId | 
+ **file_id** | **Integer**| fileId | 
+
+### Return type
+
+nil (empty response body)
+
+### Authorization
+
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: */*
+
+
+
+# **delete_file_using_delete4**
+> delete_file_using_delete4(device_session_id, file_id, user_id)
+
+Delete file from device session.
+
+### Example
+```ruby
+# load the gem
+require 'bitbar-cloud-api-client'
+# setup authorization
+BitbarCloudApiClient.configure do |config|
+  # Configure HTTP basic authorization: apiKeyInHeader
+  config.username = 'YOUR USERNAME'
+  config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
+end
+
+api_instance = BitbarCloudApiClient::AllEndpointsApi.new
+
+device_session_id = 789 # Integer | deviceSessionId
+
+file_id = 789 # Integer | fileId
+
+user_id = 789 # Integer | userId
+
+
+begin
+  #Delete file from device session.
+  api_instance.delete_file_using_delete4(device_session_id, file_id, user_id)
+rescue BitbarCloudApiClient::ApiError => e
+  puts "Exception when calling AllEndpointsApi->delete_file_using_delete4: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **device_session_id** | **Integer**| deviceSessionId | 
+ **file_id** | **Integer**| fileId | 
+ **user_id** | **Integer**| userId | 
+
+### Return type
+
+nil (empty response body)
+
+### Authorization
+
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -4798,6 +4824,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -4825,7 +4854,7 @@ nil (empty response body)
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -4848,6 +4877,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -4875,57 +4907,7 @@ nil (empty response body)
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: */*
-
-
-
-# **delete_job_using_delete**
-> delete_job_using_delete(job_id)
-
-Delete job.
-
-### Example
-```ruby
-# load the gem
-require 'bitbar-cloud-api-client'
-# setup authorization
-BitbarCloudApiClient.configure do |config|
-  # Configure HTTP basic authorization: apiKeyInHeader
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
-end
-
-api_instance = BitbarCloudApiClient::AllEndpointsApi.new
-
-job_id = 789 # Integer | jobId
-
-
-begin
-  #Delete job.
-  api_instance.delete_job_using_delete(job_id)
-rescue BitbarCloudApiClient::ApiError => e
-  puts "Exception when calling AllEndpointsApi->delete_job_using_delete: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **job_id** | **Integer**| jobId | 
-
-### Return type
-
-nil (empty response body)
-
-### Authorization
-
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -4948,6 +4930,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -4975,7 +4960,7 @@ nil (empty response body)
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -4998,6 +4983,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -5028,7 +5016,7 @@ nil (empty response body)
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -5051,6 +5039,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -5078,7 +5069,7 @@ nil (empty response body)
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -5101,6 +5092,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -5128,7 +5122,7 @@ nil (empty response body)
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -5151,6 +5145,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -5181,7 +5178,7 @@ nil (empty response body)
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -5204,6 +5201,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -5231,7 +5231,7 @@ nil (empty response body)
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -5254,6 +5254,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -5281,7 +5284,7 @@ nil (empty response body)
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -5304,6 +5307,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -5334,7 +5340,7 @@ nil (empty response body)
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -5357,6 +5363,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -5390,7 +5399,7 @@ nil (empty response body)
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -5413,6 +5422,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -5443,116 +5455,7 @@ nil (empty response body)
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: */*
-
-
-
-# **delete_screenshot_from_inspector_device_session_using_delete**
-> delete_screenshot_from_inspector_device_session_using_delete(device_session_id, screenshot_id)
-
-Delete screenshot from device session.
-
-### Example
-```ruby
-# load the gem
-require 'bitbar-cloud-api-client'
-# setup authorization
-BitbarCloudApiClient.configure do |config|
-  # Configure HTTP basic authorization: apiKeyInHeader
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
-end
-
-api_instance = BitbarCloudApiClient::AllEndpointsApi.new
-
-device_session_id = 789 # Integer | deviceSessionId
-
-screenshot_id = 789 # Integer | screenshotId
-
-
-begin
-  #Delete screenshot from device session.
-  api_instance.delete_screenshot_from_inspector_device_session_using_delete(device_session_id, screenshot_id)
-rescue BitbarCloudApiClient::ApiError => e
-  puts "Exception when calling AllEndpointsApi->delete_screenshot_from_inspector_device_session_using_delete: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **device_session_id** | **Integer**| deviceSessionId | 
- **screenshot_id** | **Integer**| screenshotId | 
-
-### Return type
-
-nil (empty response body)
-
-### Authorization
-
-[apiKeyInHeader](../README.md#apiKeyInHeader)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: */*
-
-
-
-# **delete_screenshot_from_inspector_device_session_using_delete1**
-> delete_screenshot_from_inspector_device_session_using_delete1(device_session_id, screenshot_id, user_id)
-
-Delete screenshot from device session.
-
-### Example
-```ruby
-# load the gem
-require 'bitbar-cloud-api-client'
-# setup authorization
-BitbarCloudApiClient.configure do |config|
-  # Configure HTTP basic authorization: apiKeyInHeader
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
-end
-
-api_instance = BitbarCloudApiClient::AllEndpointsApi.new
-
-device_session_id = 789 # Integer | deviceSessionId
-
-screenshot_id = 789 # Integer | screenshotId
-
-user_id = 789 # Integer | userId
-
-
-begin
-  #Delete screenshot from device session.
-  api_instance.delete_screenshot_from_inspector_device_session_using_delete1(device_session_id, screenshot_id, user_id)
-rescue BitbarCloudApiClient::ApiError => e
-  puts "Exception when calling AllEndpointsApi->delete_screenshot_from_inspector_device_session_using_delete1: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **device_session_id** | **Integer**| deviceSessionId | 
- **screenshot_id** | **Integer**| screenshotId | 
- **user_id** | **Integer**| userId | 
-
-### Return type
-
-nil (empty response body)
-
-### Authorization
-
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -5575,6 +5478,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -5605,7 +5511,7 @@ nil (empty response body)
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -5628,6 +5534,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -5661,7 +5570,7 @@ nil (empty response body)
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -5684,6 +5593,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -5718,7 +5630,7 @@ nil (empty response body)
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -5741,6 +5653,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -5777,7 +5692,7 @@ nil (empty response body)
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -5800,6 +5715,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -5833,7 +5751,7 @@ nil (empty response body)
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -5856,6 +5774,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -5883,7 +5804,7 @@ nil (empty response body)
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -5906,6 +5827,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -5937,63 +5861,7 @@ nil (empty response body)
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: */*
-
-
-
-# **delete_user_build_using_delete**
-> delete_user_build_using_delete(build_id, job_id, user_id)
-
-Delete build.
-
-### Example
-```ruby
-# load the gem
-require 'bitbar-cloud-api-client'
-# setup authorization
-BitbarCloudApiClient.configure do |config|
-  # Configure HTTP basic authorization: apiKeyInHeader
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
-end
-
-api_instance = BitbarCloudApiClient::AllEndpointsApi.new
-
-build_id = 789 # Integer | buildId
-
-job_id = 789 # Integer | jobId
-
-user_id = 789 # Integer | userId
-
-
-begin
-  #Delete build.
-  api_instance.delete_user_build_using_delete(build_id, job_id, user_id)
-rescue BitbarCloudApiClient::ApiError => e
-  puts "Exception when calling AllEndpointsApi->delete_user_build_using_delete: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **build_id** | **Integer**| buildId | 
- **job_id** | **Integer**| jobId | 
- **user_id** | **Integer**| userId | 
-
-### Return type
-
-nil (empty response body)
-
-### Authorization
-
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -6016,6 +5884,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -6046,113 +5917,7 @@ nil (empty response body)
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: */*
-
-
-
-# **delete_user_job_using_delete**
-> delete_user_job_using_delete(job_id, user_id)
-
-Delete job.
-
-### Example
-```ruby
-# load the gem
-require 'bitbar-cloud-api-client'
-# setup authorization
-BitbarCloudApiClient.configure do |config|
-  # Configure HTTP basic authorization: apiKeyInHeader
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
-end
-
-api_instance = BitbarCloudApiClient::AllEndpointsApi.new
-
-job_id = 789 # Integer | jobId
-
-user_id = 789 # Integer | userId
-
-
-begin
-  #Delete job.
-  api_instance.delete_user_job_using_delete(job_id, user_id)
-rescue BitbarCloudApiClient::ApiError => e
-  puts "Exception when calling AllEndpointsApi->delete_user_job_using_delete: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **job_id** | **Integer**| jobId | 
- **user_id** | **Integer**| userId | 
-
-### Return type
-
-nil (empty response body)
-
-### Authorization
-
-[apiKeyInHeader](../README.md#apiKeyInHeader)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: */*
-
-
-
-# **delete_user_label_device_using_delete**
-> delete_user_label_device_using_delete(device_id, property_id)
-
-Delete label from device.
-
-### Example
-```ruby
-# load the gem
-require 'bitbar-cloud-api-client'
-# setup authorization
-BitbarCloudApiClient.configure do |config|
-  # Configure HTTP basic authorization: apiKeyInHeader
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
-end
-
-api_instance = BitbarCloudApiClient::AllEndpointsApi.new
-
-device_id = 789 # Integer | deviceId
-
-property_id = 789 # Integer | propertyId
-
-
-begin
-  #Delete label from device.
-  api_instance.delete_user_label_device_using_delete(device_id, property_id)
-rescue BitbarCloudApiClient::ApiError => e
-  puts "Exception when calling AllEndpointsApi->delete_user_label_device_using_delete: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **device_id** | **Integer**| deviceId | 
- **property_id** | **Integer**| propertyId | 
-
-### Return type
-
-nil (empty response body)
-
-### Authorization
-
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -6175,6 +5940,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -6205,7 +5973,7 @@ nil (empty response body)
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -6228,6 +5996,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -6258,7 +6029,7 @@ nil (empty response body)
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -6281,6 +6052,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -6314,7 +6088,7 @@ nil (empty response body)
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -6337,6 +6111,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -6364,7 +6141,7 @@ nil (empty response body)
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -6387,6 +6164,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -6417,7 +6197,7 @@ nil (empty response body)
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -6440,6 +6220,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -6473,7 +6256,7 @@ nil (empty response body)
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -6496,6 +6279,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -6527,7 +6313,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -6550,6 +6336,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -6580,7 +6369,7 @@ nil (empty response body)
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -6603,6 +6392,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -6630,7 +6422,7 @@ nil (empty response body)
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -6653,6 +6445,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -6683,7 +6478,7 @@ nil (empty response body)
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -6695,7 +6490,7 @@ nil (empty response body)
 # **delete_using_delete2**
 > delete_using_delete2(id)
 
-Delete build executor.
+Delete country vat rate.
 
 ### Example
 ```ruby
@@ -6706,6 +6501,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -6714,7 +6512,7 @@ id = 789 # Integer | id
 
 
 begin
-  #Delete build executor.
+  #Delete country vat rate.
   api_instance.delete_using_delete2(id)
 rescue BitbarCloudApiClient::ApiError => e
   puts "Exception when calling AllEndpointsApi->delete_using_delete2: #{e}"
@@ -6733,57 +6531,7 @@ nil (empty response body)
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: */*
-
-
-
-# **delete_using_delete3**
-> delete_using_delete3(id)
-
-Delete country vat rate.
-
-### Example
-```ruby
-# load the gem
-require 'bitbar-cloud-api-client'
-# setup authorization
-BitbarCloudApiClient.configure do |config|
-  # Configure HTTP basic authorization: apiKeyInHeader
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
-end
-
-api_instance = BitbarCloudApiClient::AllEndpointsApi.new
-
-id = 789 # Integer | id
-
-
-begin
-  #Delete country vat rate.
-  api_instance.delete_using_delete3(id)
-rescue BitbarCloudApiClient::ApiError => e
-  puts "Exception when calling AllEndpointsApi->delete_using_delete3: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **Integer**| id | 
-
-### Return type
-
-nil (empty response body)
-
-### Authorization
-
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -6806,6 +6554,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -6837,7 +6588,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -6860,6 +6611,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -6888,7 +6642,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -6911,6 +6665,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -6938,7 +6695,7 @@ nil (empty response body)
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -6961,6 +6718,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -6991,7 +6751,7 @@ nil (empty response body)
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -7014,6 +6774,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -7041,7 +6804,7 @@ nil (empty response body)
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -7064,6 +6827,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -7091,7 +6857,63 @@ nil (empty response body)
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: */*
+
+
+
+# **download_output_files_zip_using_get1**
+> download_output_files_zip_using_get1(device_session_id, user_id)
+
+Get device session output files.zip.
+
+### Example
+```ruby
+# load the gem
+require 'bitbar-cloud-api-client'
+# setup authorization
+BitbarCloudApiClient.configure do |config|
+  # Configure HTTP basic authorization: apiKeyInHeader
+  config.username = 'YOUR USERNAME'
+  config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
+end
+
+api_instance = BitbarCloudApiClient::AllEndpointsApi.new
+
+device_session_id = 789 # Integer | deviceSessionId
+
+user_id = 789 # Integer | userId
+
+
+begin
+  #Get device session output files.zip.
+  api_instance.download_output_files_zip_using_get1(device_session_id, user_id)
+rescue BitbarCloudApiClient::ApiError => e
+  puts "Exception when calling AllEndpointsApi->download_output_files_zip_using_get1: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **device_session_id** | **Integer**| deviceSessionId | 
+ **user_id** | **Integer**| userId | 
+
+### Return type
+
+nil (empty response body)
+
+### Authorization
+
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -7114,6 +6936,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -7147,7 +6972,7 @@ nil (empty response body)
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -7170,6 +6995,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -7200,7 +7028,7 @@ nil (empty response body)
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -7223,6 +7051,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -7259,7 +7090,7 @@ nil (empty response body)
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -7282,6 +7113,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -7289,7 +7123,9 @@ api_instance = BitbarCloudApiClient::AllEndpointsApi.new
 file_id = 789 # Integer | fileId
 
 opts = { 
-  attachment: true # BOOLEAN | attachment
+  attachment: true, # BOOLEAN | attachment
+  height: 56, # Integer | height
+  width: 56 # Integer | width
 }
 
 begin
@@ -7306,6 +7142,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **file_id** | **Integer**| fileId | 
  **attachment** | **BOOLEAN**| attachment | [optional] [default to true]
+ **height** | **Integer**| height | [optional] 
+ **width** | **Integer**| width | [optional] 
 
 ### Return type
 
@@ -7313,7 +7151,7 @@ nil (empty response body)
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -7336,6 +7174,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -7345,7 +7186,9 @@ file_id = 789 # Integer | fileId
 user_id = 789 # Integer | userId
 
 opts = { 
-  attachment: true # BOOLEAN | attachment
+  attachment: true, # BOOLEAN | attachment
+  height: 56, # Integer | height
+  width: 56 # Integer | width
 }
 
 begin
@@ -7363,6 +7206,8 @@ Name | Type | Description  | Notes
  **file_id** | **Integer**| fileId | 
  **user_id** | **Integer**| userId | 
  **attachment** | **BOOLEAN**| attachment | [optional] [default to true]
+ **height** | **Integer**| height | [optional] 
+ **width** | **Integer**| width | [optional] 
 
 ### Return type
 
@@ -7370,60 +7215,7 @@ nil (empty response body)
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: */*
-
-
-
-# **download_user_output_files_zip_using_get**
-> download_user_output_files_zip_using_get(device_session_id, user_id)
-
-Get device session output files.zip.
-
-### Example
-```ruby
-# load the gem
-require 'bitbar-cloud-api-client'
-# setup authorization
-BitbarCloudApiClient.configure do |config|
-  # Configure HTTP basic authorization: apiKeyInHeader
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
-end
-
-api_instance = BitbarCloudApiClient::AllEndpointsApi.new
-
-device_session_id = 789 # Integer | deviceSessionId
-
-user_id = 789 # Integer | userId
-
-
-begin
-  #Get device session output files.zip.
-  api_instance.download_user_output_files_zip_using_get(device_session_id, user_id)
-rescue BitbarCloudApiClient::ApiError => e
-  puts "Exception when calling AllEndpointsApi->download_user_output_files_zip_using_get: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **device_session_id** | **Integer**| deviceSessionId | 
- **user_id** | **Integer**| userId | 
-
-### Return type
-
-nil (empty response body)
-
-### Authorization
-
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -7446,6 +7238,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -7477,7 +7272,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -7500,6 +7295,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -7528,7 +7326,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -7551,6 +7349,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -7579,7 +7380,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -7589,7 +7390,7 @@ Name | Type | Description  | Notes
 
 
 # **generate_recovery_key_for_user_using_post**
-> APIUser generate_recovery_key_for_user_using_post(email)
+> APIMessage generate_recovery_key_for_user_using_post(email)
 
 Generate recovery key.
 
@@ -7602,6 +7403,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -7626,11 +7430,11 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**APIUser**](APIUser.md)
+[**APIMessage**](APIMessage.md)
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -7653,12 +7457,15 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
 
 opts = { 
-  filter: 'filter_example', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=createtime_eq_1576134479488<br>filter=mainuserfirstname_eq_value<br>filter=mainuseremail_eq_value<br>filter=id_eq_1<br>filter=mainuserlastname_eq_value
+  filter: 'filter_example', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=createtime_eq_1593583737870<br>filter=mainuserfirstname_eq_value<br>filter=mainuseremail_eq_value<br>filter=id_eq_1<br>filter=mainuserlastname_eq_value
   limit: 20, # Integer | limit parameter define page size
   offset: 0, # Integer | offset parameter define page number
   sort: 'sort_example' # String | sort parameter contains list of fields used for sort query result <br> examples: <br> sort=createTime_a<br>sort=mainUserFirstName_a<br>sort=mainUserEmail_a<br>sort=id_a<br>sort=mainUserLastName_a
@@ -7677,7 +7484,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;createtime_eq_1576134479488&lt;br&gt;filter&#x3D;mainuserfirstname_eq_value&lt;br&gt;filter&#x3D;mainuseremail_eq_value&lt;br&gt;filter&#x3D;id_eq_1&lt;br&gt;filter&#x3D;mainuserlastname_eq_value | [optional] 
+ **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;createtime_eq_1593583737870&lt;br&gt;filter&#x3D;mainuserfirstname_eq_value&lt;br&gt;filter&#x3D;mainuseremail_eq_value&lt;br&gt;filter&#x3D;id_eq_1&lt;br&gt;filter&#x3D;mainuserlastname_eq_value | [optional] 
  **limit** | **Integer**| limit parameter define page size | [optional] [default to 20]
  **offset** | **Integer**| offset parameter define page number | [optional] [default to 0]
  **sort** | **String**| sort parameter contains list of fields used for sort query result &lt;br&gt; examples: &lt;br&gt; sort&#x3D;createTime_a&lt;br&gt;sort&#x3D;mainUserFirstName_a&lt;br&gt;sort&#x3D;mainUserEmail_a&lt;br&gt;sort&#x3D;id_a&lt;br&gt;sort&#x3D;mainUserLastName_a | [optional] 
@@ -7688,7 +7495,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -7711,6 +7518,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -7718,10 +7528,10 @@ api_instance = BitbarCloudApiClient::AllEndpointsApi.new
 user_id = 789 # Integer | userId
 
 opts = { 
-  filter: 'filter_example', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=expiretime_eq_1576134479093<br>filter=addedbyemail_eq_value<br>filter=name_eq_value<br>filter=starttime_eq_1576134479093<br>filter=id_eq_1<br>filter=userid_eq_1
+  filter: 'filter_example', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=name_eq_admin<br>filter=id_eq_1
   limit: 20, # Integer | limit parameter define page size
   offset: 0, # Integer | offset parameter define page number
-  sort: 'sort_example' # String | sort parameter contains list of fields used for sort query result <br> examples: <br> sort=expireTime_a<br>sort=addedByEmail_a<br>sort=name_a<br>sort=startTime_a<br>sort=id_a<br>sort=userId_a
+  sort: 'sort_example' # String | sort parameter contains list of fields used for sort query result <br> examples: <br> 
 }
 
 begin
@@ -7738,10 +7548,10 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **user_id** | **Integer**| userId | 
- **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;expiretime_eq_1576134479093&lt;br&gt;filter&#x3D;addedbyemail_eq_value&lt;br&gt;filter&#x3D;name_eq_value&lt;br&gt;filter&#x3D;starttime_eq_1576134479093&lt;br&gt;filter&#x3D;id_eq_1&lt;br&gt;filter&#x3D;userid_eq_1 | [optional] 
+ **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;name_eq_admin&lt;br&gt;filter&#x3D;id_eq_1 | [optional] 
  **limit** | **Integer**| limit parameter define page size | [optional] [default to 20]
  **offset** | **Integer**| offset parameter define page number | [optional] [default to 0]
- **sort** | **String**| sort parameter contains list of fields used for sort query result &lt;br&gt; examples: &lt;br&gt; sort&#x3D;expireTime_a&lt;br&gt;sort&#x3D;addedByEmail_a&lt;br&gt;sort&#x3D;name_a&lt;br&gt;sort&#x3D;startTime_a&lt;br&gt;sort&#x3D;id_a&lt;br&gt;sort&#x3D;userId_a | [optional] 
+ **sort** | **String**| sort parameter contains list of fields used for sort query result &lt;br&gt; examples: &lt;br&gt;  | [optional] 
 
 ### Return type
 
@@ -7749,7 +7559,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -7772,6 +7582,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -7807,7 +7620,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -7830,12 +7643,15 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
 
 opts = { 
-  filter: 'filter_example', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=accountid_eq_1<br>filter=deactivatereason_eq_initial_failure<br>filter=price_eq_1<br>filter=chargetype_eq_usage<br>filter=paymentmethod_eq_paypal<br>filter=autorenew_eq_true<br>filter=active_eq_true<br>filter=starttime_eq_1576134479387<br>filter=id_eq_1<br>filter=_endtime_eq_1576134479387<br>filter=activatedbyname_eq_value<br>filter=servicename_eq_value<br>filter=deactivatedbyname_eq_value
+  filter: 'filter_example', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=accountid_eq_1<br>filter=deactivatereason_eq_initial_failure<br>filter=price_eq_1<br>filter=chargetype_eq_usage_mobile<br>filter=paymentmethod_eq_paypal<br>filter=autorenew_eq_true<br>filter=active_eq_true<br>filter=starttime_eq_1593583738269<br>filter=id_eq_1<br>filter=_endtime_eq_1593583738269<br>filter=activatedbyname_eq_value<br>filter=servicename_eq_value<br>filter=deactivatedbyname_eq_value
   limit: 20, # Integer | limit parameter define page size
   offset: 0, # Integer | offset parameter define page number
   sort: 'sort_example' # String | sort parameter contains list of fields used for sort query result <br> examples: <br> sort=accountId_a<br>sort=price_a<br>sort=chargeType_a<br>sort=paymentMethod_a<br>sort=autoRenew_a<br>sort=active_a<br>sort=startTime_a<br>sort=id_a<br>sort=_endTime_a<br>sort=activatedByName_a<br>sort=serviceName_a<br>sort=deactivatedByName_a
@@ -7854,7 +7670,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;accountid_eq_1&lt;br&gt;filter&#x3D;deactivatereason_eq_initial_failure&lt;br&gt;filter&#x3D;price_eq_1&lt;br&gt;filter&#x3D;chargetype_eq_usage&lt;br&gt;filter&#x3D;paymentmethod_eq_paypal&lt;br&gt;filter&#x3D;autorenew_eq_true&lt;br&gt;filter&#x3D;active_eq_true&lt;br&gt;filter&#x3D;starttime_eq_1576134479387&lt;br&gt;filter&#x3D;id_eq_1&lt;br&gt;filter&#x3D;_endtime_eq_1576134479387&lt;br&gt;filter&#x3D;activatedbyname_eq_value&lt;br&gt;filter&#x3D;servicename_eq_value&lt;br&gt;filter&#x3D;deactivatedbyname_eq_value | [optional] 
+ **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;accountid_eq_1&lt;br&gt;filter&#x3D;deactivatereason_eq_initial_failure&lt;br&gt;filter&#x3D;price_eq_1&lt;br&gt;filter&#x3D;chargetype_eq_usage_mobile&lt;br&gt;filter&#x3D;paymentmethod_eq_paypal&lt;br&gt;filter&#x3D;autorenew_eq_true&lt;br&gt;filter&#x3D;active_eq_true&lt;br&gt;filter&#x3D;starttime_eq_1593583738269&lt;br&gt;filter&#x3D;id_eq_1&lt;br&gt;filter&#x3D;_endtime_eq_1593583738269&lt;br&gt;filter&#x3D;activatedbyname_eq_value&lt;br&gt;filter&#x3D;servicename_eq_value&lt;br&gt;filter&#x3D;deactivatedbyname_eq_value | [optional] 
  **limit** | **Integer**| limit parameter define page size | [optional] [default to 20]
  **offset** | **Integer**| offset parameter define page number | [optional] [default to 0]
  **sort** | **String**| sort parameter contains list of fields used for sort query result &lt;br&gt; examples: &lt;br&gt; sort&#x3D;accountId_a&lt;br&gt;sort&#x3D;price_a&lt;br&gt;sort&#x3D;chargeType_a&lt;br&gt;sort&#x3D;paymentMethod_a&lt;br&gt;sort&#x3D;autoRenew_a&lt;br&gt;sort&#x3D;active_a&lt;br&gt;sort&#x3D;startTime_a&lt;br&gt;sort&#x3D;id_a&lt;br&gt;sort&#x3D;_endTime_a&lt;br&gt;sort&#x3D;activatedByName_a&lt;br&gt;sort&#x3D;serviceName_a&lt;br&gt;sort&#x3D;deactivatedByName_a | [optional] 
@@ -7865,7 +7681,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -7888,6 +7704,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -7916,7 +7735,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -7939,6 +7758,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -7967,7 +7789,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -7990,12 +7812,15 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
 
 opts = { 
-  filter: 'filter_example', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=createtime_eq_1576134479584<br>filter=useremail_eq_value<br>filter=useragent_eq_value<br>filter=id_eq_1<br>filter=httpmethod_eq_get<br>filter=body_eq_value<br>filter=userid_eq_1<br>filter=uri_eq_value<br>filter=parameters_eq_value<br>filter=deprecatedresource_eq_null
+  filter: 'filter_example', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=createtime_eq_1593583738381<br>filter=useremail_eq_value<br>filter=useragent_eq_value<br>filter=id_eq_1<br>filter=httpmethod_eq_get<br>filter=body_eq_value<br>filter=userid_eq_1<br>filter=uri_eq_value<br>filter=parameters_eq_value<br>filter=deprecatedresource_eq_null
   limit: 20, # Integer | limit parameter define page size
   offset: 0, # Integer | offset parameter define page number
   sort: 'sort_example' # String | sort parameter contains list of fields used for sort query result <br> examples: <br> sort=createTime_a<br>sort=userEmail_a<br>sort=userAgent_a<br>sort=id_a<br>sort=httpMethod_a<br>sort=body_a<br>sort=userId_a<br>sort=uri_a<br>sort=parameters_a<br>sort=deprecatedResource_a
@@ -8014,7 +7839,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;createtime_eq_1576134479584&lt;br&gt;filter&#x3D;useremail_eq_value&lt;br&gt;filter&#x3D;useragent_eq_value&lt;br&gt;filter&#x3D;id_eq_1&lt;br&gt;filter&#x3D;httpmethod_eq_get&lt;br&gt;filter&#x3D;body_eq_value&lt;br&gt;filter&#x3D;userid_eq_1&lt;br&gt;filter&#x3D;uri_eq_value&lt;br&gt;filter&#x3D;parameters_eq_value&lt;br&gt;filter&#x3D;deprecatedresource_eq_null | [optional] 
+ **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;createtime_eq_1593583738381&lt;br&gt;filter&#x3D;useremail_eq_value&lt;br&gt;filter&#x3D;useragent_eq_value&lt;br&gt;filter&#x3D;id_eq_1&lt;br&gt;filter&#x3D;httpmethod_eq_get&lt;br&gt;filter&#x3D;body_eq_value&lt;br&gt;filter&#x3D;userid_eq_1&lt;br&gt;filter&#x3D;uri_eq_value&lt;br&gt;filter&#x3D;parameters_eq_value&lt;br&gt;filter&#x3D;deprecatedresource_eq_null | [optional] 
  **limit** | **Integer**| limit parameter define page size | [optional] [default to 20]
  **offset** | **Integer**| offset parameter define page number | [optional] [default to 0]
  **sort** | **String**| sort parameter contains list of fields used for sort query result &lt;br&gt; examples: &lt;br&gt; sort&#x3D;createTime_a&lt;br&gt;sort&#x3D;userEmail_a&lt;br&gt;sort&#x3D;userAgent_a&lt;br&gt;sort&#x3D;id_a&lt;br&gt;sort&#x3D;httpMethod_a&lt;br&gt;sort&#x3D;body_a&lt;br&gt;sort&#x3D;userId_a&lt;br&gt;sort&#x3D;uri_a&lt;br&gt;sort&#x3D;parameters_a&lt;br&gt;sort&#x3D;deprecatedResource_a | [optional] 
@@ -8025,7 +7850,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -8048,6 +7873,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -8083,7 +7911,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -8106,6 +7934,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -8113,7 +7944,7 @@ api_instance = BitbarCloudApiClient::AllEndpointsApi.new
 user_id = 789 # Integer | userId
 
 opts = { 
-  filter: 'filter_example', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=lastname_eq_value<br>filter=country_eq_value<br>filter=code_eq_value<br>filter=address_eq_value<br>filter=lastlaunchedtesttime_eq_1576134485706<br>filter=city_eq_value<br>filter=vatid_eq_value<br>filter=timezone_eq_value<br>filter=mainuseremail_eq_value<br>filter=lastlogintime_eq_1576134485707<br>filter=firstname_eq_value<br>filter=accountid_eq_1<br>filter=serviceids_eq_1<br>filter=mainuserid_eq_1<br>filter=phone_eq_value<br>filter=deletetime_eq_1576134485707<br>filter=createtime_eq_1576134485707<br>filter=accountserviceids_eq_1<br>filter=organization_eq_value<br>filter=ismainuser_eq_true<br>filter=state_eq_value<br>filter=id_eq_1<br>filter=email_eq_value<br>filter=status_eq_inactive
+  filter: 'filter_example', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=lastname_eq_value<br>filter=country_eq_value<br>filter=code_eq_value<br>filter=address_eq_value<br>filter=lastlaunchedtesttime_eq_1593583748368<br>filter=city_eq_value<br>filter=vatid_eq_value<br>filter=timezone_eq_value<br>filter=mainuseremail_eq_value<br>filter=lastlogintime_eq_1593583748368<br>filter=firstname_eq_value<br>filter=accountid_eq_1<br>filter=serviceids_eq_1<br>filter=mainuserid_eq_1<br>filter=phone_eq_value<br>filter=deletetime_eq_1593583748368<br>filter=createtime_eq_1593583748368<br>filter=accountserviceids_eq_1<br>filter=organization_eq_value<br>filter=ismainuser_eq_true<br>filter=state_eq_value<br>filter=id_eq_1<br>filter=email_eq_value<br>filter=status_eq_inactive
   limit: 20, # Integer | limit parameter define page size
   offset: 0, # Integer | offset parameter define page number
   sort: 'sort_example' # String | sort parameter contains list of fields used for sort query result <br> examples: <br> sort=lastName_a<br>sort=country_a<br>sort=code_a<br>sort=address_a<br>sort=lastLaunchedTestTime_a<br>sort=city_a<br>sort=vatId_a<br>sort=timeZone_a<br>sort=mainUserEmail_a<br>sort=lastLoginTime_a<br>sort=firstName_a<br>sort=accountId_a<br>sort=serviceIds_a<br>sort=mainUserId_a<br>sort=phone_a<br>sort=deleteTime_a<br>sort=createTime_a<br>sort=accountServiceIds_a<br>sort=organization_a<br>sort=state_a<br>sort=id_a<br>sort=email_a<br>sort=status_a
@@ -8133,7 +7964,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **user_id** | **Integer**| userId | 
- **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;lastname_eq_value&lt;br&gt;filter&#x3D;country_eq_value&lt;br&gt;filter&#x3D;code_eq_value&lt;br&gt;filter&#x3D;address_eq_value&lt;br&gt;filter&#x3D;lastlaunchedtesttime_eq_1576134485706&lt;br&gt;filter&#x3D;city_eq_value&lt;br&gt;filter&#x3D;vatid_eq_value&lt;br&gt;filter&#x3D;timezone_eq_value&lt;br&gt;filter&#x3D;mainuseremail_eq_value&lt;br&gt;filter&#x3D;lastlogintime_eq_1576134485707&lt;br&gt;filter&#x3D;firstname_eq_value&lt;br&gt;filter&#x3D;accountid_eq_1&lt;br&gt;filter&#x3D;serviceids_eq_1&lt;br&gt;filter&#x3D;mainuserid_eq_1&lt;br&gt;filter&#x3D;phone_eq_value&lt;br&gt;filter&#x3D;deletetime_eq_1576134485707&lt;br&gt;filter&#x3D;createtime_eq_1576134485707&lt;br&gt;filter&#x3D;accountserviceids_eq_1&lt;br&gt;filter&#x3D;organization_eq_value&lt;br&gt;filter&#x3D;ismainuser_eq_true&lt;br&gt;filter&#x3D;state_eq_value&lt;br&gt;filter&#x3D;id_eq_1&lt;br&gt;filter&#x3D;email_eq_value&lt;br&gt;filter&#x3D;status_eq_inactive | [optional] 
+ **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;lastname_eq_value&lt;br&gt;filter&#x3D;country_eq_value&lt;br&gt;filter&#x3D;code_eq_value&lt;br&gt;filter&#x3D;address_eq_value&lt;br&gt;filter&#x3D;lastlaunchedtesttime_eq_1593583748368&lt;br&gt;filter&#x3D;city_eq_value&lt;br&gt;filter&#x3D;vatid_eq_value&lt;br&gt;filter&#x3D;timezone_eq_value&lt;br&gt;filter&#x3D;mainuseremail_eq_value&lt;br&gt;filter&#x3D;lastlogintime_eq_1593583748368&lt;br&gt;filter&#x3D;firstname_eq_value&lt;br&gt;filter&#x3D;accountid_eq_1&lt;br&gt;filter&#x3D;serviceids_eq_1&lt;br&gt;filter&#x3D;mainuserid_eq_1&lt;br&gt;filter&#x3D;phone_eq_value&lt;br&gt;filter&#x3D;deletetime_eq_1593583748368&lt;br&gt;filter&#x3D;createtime_eq_1593583748368&lt;br&gt;filter&#x3D;accountserviceids_eq_1&lt;br&gt;filter&#x3D;organization_eq_value&lt;br&gt;filter&#x3D;ismainuser_eq_true&lt;br&gt;filter&#x3D;state_eq_value&lt;br&gt;filter&#x3D;id_eq_1&lt;br&gt;filter&#x3D;email_eq_value&lt;br&gt;filter&#x3D;status_eq_inactive | [optional] 
  **limit** | **Integer**| limit parameter define page size | [optional] [default to 20]
  **offset** | **Integer**| offset parameter define page number | [optional] [default to 0]
  **sort** | **String**| sort parameter contains list of fields used for sort query result &lt;br&gt; examples: &lt;br&gt; sort&#x3D;lastName_a&lt;br&gt;sort&#x3D;country_a&lt;br&gt;sort&#x3D;code_a&lt;br&gt;sort&#x3D;address_a&lt;br&gt;sort&#x3D;lastLaunchedTestTime_a&lt;br&gt;sort&#x3D;city_a&lt;br&gt;sort&#x3D;vatId_a&lt;br&gt;sort&#x3D;timeZone_a&lt;br&gt;sort&#x3D;mainUserEmail_a&lt;br&gt;sort&#x3D;lastLoginTime_a&lt;br&gt;sort&#x3D;firstName_a&lt;br&gt;sort&#x3D;accountId_a&lt;br&gt;sort&#x3D;serviceIds_a&lt;br&gt;sort&#x3D;mainUserId_a&lt;br&gt;sort&#x3D;phone_a&lt;br&gt;sort&#x3D;deleteTime_a&lt;br&gt;sort&#x3D;createTime_a&lt;br&gt;sort&#x3D;accountServiceIds_a&lt;br&gt;sort&#x3D;organization_a&lt;br&gt;sort&#x3D;state_a&lt;br&gt;sort&#x3D;id_a&lt;br&gt;sort&#x3D;email_a&lt;br&gt;sort&#x3D;status_a | [optional] 
@@ -8144,7 +7975,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -8167,6 +7998,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -8195,7 +8029,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -8218,6 +8052,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -8247,7 +8084,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -8270,12 +8107,15 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
 
 opts = { 
-  filter: 'filter_example', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=frameworkid_eq_1<br>filter=frameworkname_eq_value<br>filter=common_eq_null<br>filter=createtime_eq_1576134482595<br>filter=displayname_eq_value<br>filter=successratio_eq_1<br>filter=starttime_eq_1576134482595<br>filter=id_eq_1<br>filter=userid_eq_1<br>filter=projectid_eq_1
+  filter: 'filter_example', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=frameworkid_eq_1<br>filter=frameworkname_eq_value<br>filter=common_eq_null<br>filter=createtime_eq_1593583743269<br>filter=displayname_eq_value<br>filter=successratio_eq_1<br>filter=starttime_eq_1593583743269<br>filter=id_eq_1<br>filter=userid_eq_1<br>filter=projectid_eq_1
   limit: 20, # Integer | limit parameter define page size
   offset: 0, # Integer | offset parameter define page number
   sort: 'sort_example' # String | sort parameter contains list of fields used for sort query result <br> examples: <br> sort=frameworkId_a<br>sort=frameworkName_a<br>sort=common_a<br>sort=deviceCount_a<br>sort=createTime_a<br>sort=displayName_a<br>sort=executionRatio_a<br>sort=successRatio_a<br>sort=startTime_a<br>sort=state_a<br>sort=id_a<br>sort=userId_a<br>sort=projectId_a
@@ -8294,7 +8134,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;frameworkid_eq_1&lt;br&gt;filter&#x3D;frameworkname_eq_value&lt;br&gt;filter&#x3D;common_eq_null&lt;br&gt;filter&#x3D;createtime_eq_1576134482595&lt;br&gt;filter&#x3D;displayname_eq_value&lt;br&gt;filter&#x3D;successratio_eq_1&lt;br&gt;filter&#x3D;starttime_eq_1576134482595&lt;br&gt;filter&#x3D;id_eq_1&lt;br&gt;filter&#x3D;userid_eq_1&lt;br&gt;filter&#x3D;projectid_eq_1 | [optional] 
+ **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;frameworkid_eq_1&lt;br&gt;filter&#x3D;frameworkname_eq_value&lt;br&gt;filter&#x3D;common_eq_null&lt;br&gt;filter&#x3D;createtime_eq_1593583743269&lt;br&gt;filter&#x3D;displayname_eq_value&lt;br&gt;filter&#x3D;successratio_eq_1&lt;br&gt;filter&#x3D;starttime_eq_1593583743269&lt;br&gt;filter&#x3D;id_eq_1&lt;br&gt;filter&#x3D;userid_eq_1&lt;br&gt;filter&#x3D;projectid_eq_1 | [optional] 
  **limit** | **Integer**| limit parameter define page size | [optional] [default to 20]
  **offset** | **Integer**| offset parameter define page number | [optional] [default to 0]
  **sort** | **String**| sort parameter contains list of fields used for sort query result &lt;br&gt; examples: &lt;br&gt; sort&#x3D;frameworkId_a&lt;br&gt;sort&#x3D;frameworkName_a&lt;br&gt;sort&#x3D;common_a&lt;br&gt;sort&#x3D;deviceCount_a&lt;br&gt;sort&#x3D;createTime_a&lt;br&gt;sort&#x3D;displayName_a&lt;br&gt;sort&#x3D;executionRatio_a&lt;br&gt;sort&#x3D;successRatio_a&lt;br&gt;sort&#x3D;startTime_a&lt;br&gt;sort&#x3D;state_a&lt;br&gt;sort&#x3D;id_a&lt;br&gt;sort&#x3D;userId_a&lt;br&gt;sort&#x3D;projectId_a | [optional] 
@@ -8305,7 +8145,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -8328,12 +8168,15 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
 
 opts = { 
-  filter: 'filter_example', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=additionalhoursprice_eq_1<br>filter=mail_eq_value<br>filter=totalprice_eq_1<br>filter=startbillingperiod_eq_1576134479784<br>filter=userid_eq_1<br>filter=_endbillingperiod_eq_1576134479784<br>filter=subscriptionend_eq_1576134479784<br>filter=serviceprice_eq_1<br>filter=createtime_eq_1576134479784<br>filter=subscriptionstart_eq_1576134479784<br>filter=paid_eq_true<br>filter=lastpaymentdate_eq_1576134479784<br>filter=paymentmethod_eq_paypal<br>filter=additionalhours_eq_1<br>filter=id_eq_1<br>filter=plan_eq_value
+  filter: 'filter_example', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=additionalhoursprice_eq_1<br>filter=mail_eq_value<br>filter=totalprice_eq_1<br>filter=startbillingperiod_eq_1593583738669<br>filter=userid_eq_1<br>filter=_endbillingperiod_eq_1593583738669<br>filter=subscriptionend_eq_1593583738669<br>filter=serviceprice_eq_1<br>filter=createtime_eq_1593583738669<br>filter=subscriptionstart_eq_1593583738669<br>filter=paid_eq_true<br>filter=lastpaymentdate_eq_1593583738669<br>filter=paymentmethod_eq_paypal<br>filter=additionalhours_eq_1<br>filter=id_eq_1<br>filter=plan_eq_value
   limit: 20, # Integer | limit parameter define page size
   offset: 0, # Integer | offset parameter define page number
   sort: 'sort_example' # String | sort parameter contains list of fields used for sort query result <br> examples: <br> sort=additionalHoursPrice_a<br>sort=mail_a<br>sort=totalPrice_a<br>sort=startBillingPeriod_a<br>sort=userId_a<br>sort=_endBillingPeriod_a<br>sort=subscriptionEnd_a<br>sort=servicePrice_a<br>sort=createTime_a<br>sort=subscriptionStart_a<br>sort=lastPaymentDate_a<br>sort=paymentMethod_a<br>sort=additionalHours_a<br>sort=id_a<br>sort=paymentDate_a<br>sort=additionalHoursPaymentDate_a<br>sort=plan_a
@@ -8352,7 +8195,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;additionalhoursprice_eq_1&lt;br&gt;filter&#x3D;mail_eq_value&lt;br&gt;filter&#x3D;totalprice_eq_1&lt;br&gt;filter&#x3D;startbillingperiod_eq_1576134479784&lt;br&gt;filter&#x3D;userid_eq_1&lt;br&gt;filter&#x3D;_endbillingperiod_eq_1576134479784&lt;br&gt;filter&#x3D;subscriptionend_eq_1576134479784&lt;br&gt;filter&#x3D;serviceprice_eq_1&lt;br&gt;filter&#x3D;createtime_eq_1576134479784&lt;br&gt;filter&#x3D;subscriptionstart_eq_1576134479784&lt;br&gt;filter&#x3D;paid_eq_true&lt;br&gt;filter&#x3D;lastpaymentdate_eq_1576134479784&lt;br&gt;filter&#x3D;paymentmethod_eq_paypal&lt;br&gt;filter&#x3D;additionalhours_eq_1&lt;br&gt;filter&#x3D;id_eq_1&lt;br&gt;filter&#x3D;plan_eq_value | [optional] 
+ **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;additionalhoursprice_eq_1&lt;br&gt;filter&#x3D;mail_eq_value&lt;br&gt;filter&#x3D;totalprice_eq_1&lt;br&gt;filter&#x3D;startbillingperiod_eq_1593583738669&lt;br&gt;filter&#x3D;userid_eq_1&lt;br&gt;filter&#x3D;_endbillingperiod_eq_1593583738669&lt;br&gt;filter&#x3D;subscriptionend_eq_1593583738669&lt;br&gt;filter&#x3D;serviceprice_eq_1&lt;br&gt;filter&#x3D;createtime_eq_1593583738669&lt;br&gt;filter&#x3D;subscriptionstart_eq_1593583738669&lt;br&gt;filter&#x3D;paid_eq_true&lt;br&gt;filter&#x3D;lastpaymentdate_eq_1593583738669&lt;br&gt;filter&#x3D;paymentmethod_eq_paypal&lt;br&gt;filter&#x3D;additionalhours_eq_1&lt;br&gt;filter&#x3D;id_eq_1&lt;br&gt;filter&#x3D;plan_eq_value | [optional] 
  **limit** | **Integer**| limit parameter define page size | [optional] [default to 20]
  **offset** | **Integer**| offset parameter define page number | [optional] [default to 0]
  **sort** | **String**| sort parameter contains list of fields used for sort query result &lt;br&gt; examples: &lt;br&gt; sort&#x3D;additionalHoursPrice_a&lt;br&gt;sort&#x3D;mail_a&lt;br&gt;sort&#x3D;totalPrice_a&lt;br&gt;sort&#x3D;startBillingPeriod_a&lt;br&gt;sort&#x3D;userId_a&lt;br&gt;sort&#x3D;_endBillingPeriod_a&lt;br&gt;sort&#x3D;subscriptionEnd_a&lt;br&gt;sort&#x3D;servicePrice_a&lt;br&gt;sort&#x3D;createTime_a&lt;br&gt;sort&#x3D;subscriptionStart_a&lt;br&gt;sort&#x3D;lastPaymentDate_a&lt;br&gt;sort&#x3D;paymentMethod_a&lt;br&gt;sort&#x3D;additionalHours_a&lt;br&gt;sort&#x3D;id_a&lt;br&gt;sort&#x3D;paymentDate_a&lt;br&gt;sort&#x3D;additionalHoursPaymentDate_a&lt;br&gt;sort&#x3D;plan_a | [optional] 
@@ -8363,65 +8206,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: */*
-
-
-
-# **get_all_builds_using_get**
-> APIListOfAPIPipelineBuild get_all_builds_using_get(opts)
-
-Get builds.
-
-### Example
-```ruby
-# load the gem
-require 'bitbar-cloud-api-client'
-# setup authorization
-BitbarCloudApiClient.configure do |config|
-  # Configure HTTP basic authorization: apiKeyInHeader
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
-end
-
-api_instance = BitbarCloudApiClient::AllEndpointsApi.new
-
-opts = { 
-  filter: 'filter_example', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=duration_eq_1<br>filter=createtime_eq_1576134482784<br>filter=pipelinejobid_eq_1<br>filter=state_eq_created<br>filter=id_eq_1<br>filter=userid_eq_1<br>filter=buildnumber_eq_1<br>filter=status_eq_undefined
-  limit: 20, # Integer | limit parameter define page size
-  offset: 0, # Integer | offset parameter define page number
-  sort: 'sort_example' # String | sort parameter contains list of fields used for sort query result <br> examples: <br> sort=duration_a<br>sort=createTime_a<br>sort=pipelineJobId_a<br>sort=state_a<br>sort=id_a<br>sort=userId_a<br>sort=buildNumber_a<br>sort=status_a
-}
-
-begin
-  #Get builds.
-  result = api_instance.get_all_builds_using_get(opts)
-  p result
-rescue BitbarCloudApiClient::ApiError => e
-  puts "Exception when calling AllEndpointsApi->get_all_builds_using_get: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;duration_eq_1&lt;br&gt;filter&#x3D;createtime_eq_1576134482784&lt;br&gt;filter&#x3D;pipelinejobid_eq_1&lt;br&gt;filter&#x3D;state_eq_created&lt;br&gt;filter&#x3D;id_eq_1&lt;br&gt;filter&#x3D;userid_eq_1&lt;br&gt;filter&#x3D;buildnumber_eq_1&lt;br&gt;filter&#x3D;status_eq_undefined | [optional] 
- **limit** | **Integer**| limit parameter define page size | [optional] [default to 20]
- **offset** | **Integer**| offset parameter define page number | [optional] [default to 0]
- **sort** | **String**| sort parameter contains list of fields used for sort query result &lt;br&gt; examples: &lt;br&gt; sort&#x3D;duration_a&lt;br&gt;sort&#x3D;createTime_a&lt;br&gt;sort&#x3D;pipelineJobId_a&lt;br&gt;sort&#x3D;state_a&lt;br&gt;sort&#x3D;id_a&lt;br&gt;sort&#x3D;userId_a&lt;br&gt;sort&#x3D;buildNumber_a&lt;br&gt;sort&#x3D;status_a | [optional] 
-
-### Return type
-
-[**APIListOfAPIPipelineBuild**](APIListOfAPIPipelineBuild.md)
-
-### Authorization
-
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -8444,6 +8229,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -8485,7 +8273,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -8508,6 +8296,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -8546,7 +8337,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -8569,6 +8360,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -8613,65 +8407,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: */*
-
-
-
-# **get_all_using_get**
-> APIListOfAPIBuildExecutor get_all_using_get(opts)
-
-Get build executors.
-
-### Example
-```ruby
-# load the gem
-require 'bitbar-cloud-api-client'
-# setup authorization
-BitbarCloudApiClient.configure do |config|
-  # Configure HTTP basic authorization: apiKeyInHeader
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
-end
-
-api_instance = BitbarCloudApiClient::AllEndpointsApi.new
-
-opts = { 
-  filter: 'filter_example', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=label.id_eq_1<br>filter=createtime_eq_value<br>filter=displayname_eq_value<br>filter=name_eq_value<br>filter=id_eq_1<br>filter=type_eq_build<br>filter=label.name_eq_value<br>filter=enabled_eq_null<br>filter=label.displayname_eq_value
-  limit: 20, # Integer | limit parameter define page size
-  offset: 0, # Integer | offset parameter define page number
-  sort: 'sort_example' # String | sort parameter contains list of fields used for sort query result <br> examples: <br> sort=label.id_a<br>sort=createTime_a<br>sort=displayName_a<br>sort=name_a<br>sort=id_a<br>sort=type_a<br>sort=label.name_a<br>sort=enabled_a<br>sort=label.displayName_a
-}
-
-begin
-  #Get build executors.
-  result = api_instance.get_all_using_get(opts)
-  p result
-rescue BitbarCloudApiClient::ApiError => e
-  puts "Exception when calling AllEndpointsApi->get_all_using_get: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;label.id_eq_1&lt;br&gt;filter&#x3D;createtime_eq_value&lt;br&gt;filter&#x3D;displayname_eq_value&lt;br&gt;filter&#x3D;name_eq_value&lt;br&gt;filter&#x3D;id_eq_1&lt;br&gt;filter&#x3D;type_eq_build&lt;br&gt;filter&#x3D;label.name_eq_value&lt;br&gt;filter&#x3D;enabled_eq_null&lt;br&gt;filter&#x3D;label.displayname_eq_value | [optional] 
- **limit** | **Integer**| limit parameter define page size | [optional] [default to 20]
- **offset** | **Integer**| offset parameter define page number | [optional] [default to 0]
- **sort** | **String**| sort parameter contains list of fields used for sort query result &lt;br&gt; examples: &lt;br&gt; sort&#x3D;label.id_a&lt;br&gt;sort&#x3D;createTime_a&lt;br&gt;sort&#x3D;displayName_a&lt;br&gt;sort&#x3D;name_a&lt;br&gt;sort&#x3D;id_a&lt;br&gt;sort&#x3D;type_a&lt;br&gt;sort&#x3D;label.name_a&lt;br&gt;sort&#x3D;enabled_a&lt;br&gt;sort&#x3D;label.displayName_a | [optional] 
-
-### Return type
-
-[**APIListOfAPIBuildExecutor**](APIListOfAPIBuildExecutor.md)
-
-### Authorization
-
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -8694,6 +8430,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -8722,7 +8461,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -8745,6 +8484,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -8776,7 +8518,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -8799,6 +8541,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -8827,68 +8572,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: */*
-
-
-
-# **get_available_executors_using_get**
-> APIListOfAPIBuildExecutor get_available_executors_using_get(user_id, opts)
-
-Get available build executors.
-
-### Example
-```ruby
-# load the gem
-require 'bitbar-cloud-api-client'
-# setup authorization
-BitbarCloudApiClient.configure do |config|
-  # Configure HTTP basic authorization: apiKeyInHeader
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
-end
-
-api_instance = BitbarCloudApiClient::AllEndpointsApi.new
-
-user_id = 789 # Integer | userId
-
-opts = { 
-  filter: 'filter_example', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=label.id_eq_1<br>filter=createtime_eq_value<br>filter=displayname_eq_value<br>filter=name_eq_value<br>filter=id_eq_1<br>filter=type_eq_build<br>filter=label.name_eq_value<br>filter=enabled_eq_null<br>filter=label.displayname_eq_value
-  limit: 20, # Integer | limit parameter define page size
-  offset: 0, # Integer | offset parameter define page number
-  sort: 'sort_example' # String | sort parameter contains list of fields used for sort query result <br> examples: <br> sort=label.id_a<br>sort=createTime_a<br>sort=displayName_a<br>sort=name_a<br>sort=id_a<br>sort=type_a<br>sort=label.name_a<br>sort=enabled_a<br>sort=label.displayName_a
-}
-
-begin
-  #Get available build executors.
-  result = api_instance.get_available_executors_using_get(user_id, opts)
-  p result
-rescue BitbarCloudApiClient::ApiError => e
-  puts "Exception when calling AllEndpointsApi->get_available_executors_using_get: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **user_id** | **Integer**| userId | 
- **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;label.id_eq_1&lt;br&gt;filter&#x3D;createtime_eq_value&lt;br&gt;filter&#x3D;displayname_eq_value&lt;br&gt;filter&#x3D;name_eq_value&lt;br&gt;filter&#x3D;id_eq_1&lt;br&gt;filter&#x3D;type_eq_build&lt;br&gt;filter&#x3D;label.name_eq_value&lt;br&gt;filter&#x3D;enabled_eq_null&lt;br&gt;filter&#x3D;label.displayname_eq_value | [optional] 
- **limit** | **Integer**| limit parameter define page size | [optional] [default to 20]
- **offset** | **Integer**| offset parameter define page number | [optional] [default to 0]
- **sort** | **String**| sort parameter contains list of fields used for sort query result &lt;br&gt; examples: &lt;br&gt; sort&#x3D;label.id_a&lt;br&gt;sort&#x3D;createTime_a&lt;br&gt;sort&#x3D;displayName_a&lt;br&gt;sort&#x3D;name_a&lt;br&gt;sort&#x3D;id_a&lt;br&gt;sort&#x3D;type_a&lt;br&gt;sort&#x3D;label.name_a&lt;br&gt;sort&#x3D;enabled_a&lt;br&gt;sort&#x3D;label.displayName_a | [optional] 
-
-### Return type
-
-[**APIListOfAPIBuildExecutor**](APIListOfAPIBuildExecutor.md)
-
-### Authorization
-
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -8911,6 +8595,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -8918,7 +8605,7 @@ api_instance = BitbarCloudApiClient::AllEndpointsApi.new
 user_id = 789 # Integer | userId
 
 opts = { 
-  filter: 'filter_example', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=retryable_eq_true<br>filter=canrunfromui_eq_true<br>filter=skipqueue_eq_true<br>filter=forprojects_eq_true<br>filter=description_eq_value<br>filter=mainuseremail_eq_value<br>filter=type_eq_value<br>filter=accountid_eq_1<br>filter=labelid_eq_1<br>filter=createtime_eq_1576134485786<br>filter=ostype_eq_ios<br>filter=name_eq_value<br>filter=jobconfigid_eq_1<br>filter=id_eq_1<br>filter=labelname_eq_value<br>filter=secured_eq_true<br>filter=skipoldersdk_eq_true
+  filter: 'filter_example', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=retryable_eq_true<br>filter=canrunfromui_eq_true<br>filter=skipqueue_eq_true<br>filter=forprojects_eq_true<br>filter=description_eq_value<br>filter=mainuseremail_eq_value<br>filter=type_eq_value<br>filter=accountid_eq_1<br>filter=labelid_eq_1<br>filter=createtime_eq_1593583748370<br>filter=ostype_eq_ios<br>filter=name_eq_value<br>filter=jobconfigid_eq_1<br>filter=id_eq_1<br>filter=labelname_eq_value<br>filter=secured_eq_true<br>filter=skipoldersdk_eq_true
   limit: 20, # Integer | limit parameter define page size
   offset: 0, # Integer | offset parameter define page number
   sort: 'sort_example' # String | sort parameter contains list of fields used for sort query result <br> examples: <br> sort=retryable_a<br>sort=canRunFromUI_a<br>sort=skipQueue_a<br>sort=forProjects_a<br>sort=description_a<br>sort=mainUserEmail_a<br>sort=type_a<br>sort=accountId_a<br>sort=labelId_a<br>sort=createTime_a<br>sort=osType_a<br>sort=name_a<br>sort=jobConfigId_a<br>sort=id_a<br>sort=labelName_a<br>sort=secured_a<br>sort=skipOlderSdk_a
@@ -8938,7 +8625,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **user_id** | **Integer**| userId | 
- **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;retryable_eq_true&lt;br&gt;filter&#x3D;canrunfromui_eq_true&lt;br&gt;filter&#x3D;skipqueue_eq_true&lt;br&gt;filter&#x3D;forprojects_eq_true&lt;br&gt;filter&#x3D;description_eq_value&lt;br&gt;filter&#x3D;mainuseremail_eq_value&lt;br&gt;filter&#x3D;type_eq_value&lt;br&gt;filter&#x3D;accountid_eq_1&lt;br&gt;filter&#x3D;labelid_eq_1&lt;br&gt;filter&#x3D;createtime_eq_1576134485786&lt;br&gt;filter&#x3D;ostype_eq_ios&lt;br&gt;filter&#x3D;name_eq_value&lt;br&gt;filter&#x3D;jobconfigid_eq_1&lt;br&gt;filter&#x3D;id_eq_1&lt;br&gt;filter&#x3D;labelname_eq_value&lt;br&gt;filter&#x3D;secured_eq_true&lt;br&gt;filter&#x3D;skipoldersdk_eq_true | [optional] 
+ **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;retryable_eq_true&lt;br&gt;filter&#x3D;canrunfromui_eq_true&lt;br&gt;filter&#x3D;skipqueue_eq_true&lt;br&gt;filter&#x3D;forprojects_eq_true&lt;br&gt;filter&#x3D;description_eq_value&lt;br&gt;filter&#x3D;mainuseremail_eq_value&lt;br&gt;filter&#x3D;type_eq_value&lt;br&gt;filter&#x3D;accountid_eq_1&lt;br&gt;filter&#x3D;labelid_eq_1&lt;br&gt;filter&#x3D;createtime_eq_1593583748370&lt;br&gt;filter&#x3D;ostype_eq_ios&lt;br&gt;filter&#x3D;name_eq_value&lt;br&gt;filter&#x3D;jobconfigid_eq_1&lt;br&gt;filter&#x3D;id_eq_1&lt;br&gt;filter&#x3D;labelname_eq_value&lt;br&gt;filter&#x3D;secured_eq_true&lt;br&gt;filter&#x3D;skipoldersdk_eq_true | [optional] 
  **limit** | **Integer**| limit parameter define page size | [optional] [default to 20]
  **offset** | **Integer**| offset parameter define page number | [optional] [default to 0]
  **sort** | **String**| sort parameter contains list of fields used for sort query result &lt;br&gt; examples: &lt;br&gt; sort&#x3D;retryable_a&lt;br&gt;sort&#x3D;canRunFromUI_a&lt;br&gt;sort&#x3D;skipQueue_a&lt;br&gt;sort&#x3D;forProjects_a&lt;br&gt;sort&#x3D;description_a&lt;br&gt;sort&#x3D;mainUserEmail_a&lt;br&gt;sort&#x3D;type_a&lt;br&gt;sort&#x3D;accountId_a&lt;br&gt;sort&#x3D;labelId_a&lt;br&gt;sort&#x3D;createTime_a&lt;br&gt;sort&#x3D;osType_a&lt;br&gt;sort&#x3D;name_a&lt;br&gt;sort&#x3D;jobConfigId_a&lt;br&gt;sort&#x3D;id_a&lt;br&gt;sort&#x3D;labelName_a&lt;br&gt;sort&#x3D;secured_a&lt;br&gt;sort&#x3D;skipOlderSdk_a | [optional] 
@@ -8949,7 +8636,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -8974,12 +8661,15 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
 
 opts = { 
-  filter: 'filter_example', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=archivetime_eq_1576134485598<br>filter=includedhours_eq_1<br>filter=name_eq_value<br>filter=chargetype_eq_usage<br>filter=priceperhour_eq_1<br>filter=description_eq_value<br>filter=autorenew_eq_true<br>filter=activatetime_eq_1576134485598<br>filter=id_eq_1<br>filter=centprice_eq_1<br>filter=customplan_eq_true<br>filter=activated_eq_true
+  filter: 'filter_example', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=archivetime_eq_1593583748388<br>filter=includedhours_eq_1<br>filter=name_eq_value<br>filter=chargetype_eq_usage_mobile<br>filter=priceperhour_eq_1<br>filter=description_eq_value<br>filter=autorenew_eq_true<br>filter=activatetime_eq_1593583748388<br>filter=id_eq_1<br>filter=centprice_eq_1<br>filter=customplan_eq_true<br>filter=activated_eq_true
   limit: 20, # Integer | limit parameter define page size
   offset: 0, # Integer | offset parameter define page number
   sort: 'sort_example' # String | sort parameter contains list of fields used for sort query result <br> examples: <br> sort=archiveTime_a<br>sort=includedHours_a<br>sort=name_a<br>sort=chargeType_a<br>sort=pricePerHour_a<br>sort=description_a<br>sort=autoRenew_a<br>sort=activateTime_a<br>sort=id_a<br>sort=centPrice_a<br>sort=customPlan_a<br>sort=activated_a
@@ -8998,7 +8688,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;archivetime_eq_1576134485598&lt;br&gt;filter&#x3D;includedhours_eq_1&lt;br&gt;filter&#x3D;name_eq_value&lt;br&gt;filter&#x3D;chargetype_eq_usage&lt;br&gt;filter&#x3D;priceperhour_eq_1&lt;br&gt;filter&#x3D;description_eq_value&lt;br&gt;filter&#x3D;autorenew_eq_true&lt;br&gt;filter&#x3D;activatetime_eq_1576134485598&lt;br&gt;filter&#x3D;id_eq_1&lt;br&gt;filter&#x3D;centprice_eq_1&lt;br&gt;filter&#x3D;customplan_eq_true&lt;br&gt;filter&#x3D;activated_eq_true | [optional] 
+ **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;archivetime_eq_1593583748388&lt;br&gt;filter&#x3D;includedhours_eq_1&lt;br&gt;filter&#x3D;name_eq_value&lt;br&gt;filter&#x3D;chargetype_eq_usage_mobile&lt;br&gt;filter&#x3D;priceperhour_eq_1&lt;br&gt;filter&#x3D;description_eq_value&lt;br&gt;filter&#x3D;autorenew_eq_true&lt;br&gt;filter&#x3D;activatetime_eq_1593583748388&lt;br&gt;filter&#x3D;id_eq_1&lt;br&gt;filter&#x3D;centprice_eq_1&lt;br&gt;filter&#x3D;customplan_eq_true&lt;br&gt;filter&#x3D;activated_eq_true | [optional] 
  **limit** | **Integer**| limit parameter define page size | [optional] [default to 20]
  **offset** | **Integer**| offset parameter define page number | [optional] [default to 0]
  **sort** | **String**| sort parameter contains list of fields used for sort query result &lt;br&gt; examples: &lt;br&gt; sort&#x3D;archiveTime_a&lt;br&gt;sort&#x3D;includedHours_a&lt;br&gt;sort&#x3D;name_a&lt;br&gt;sort&#x3D;chargeType_a&lt;br&gt;sort&#x3D;pricePerHour_a&lt;br&gt;sort&#x3D;description_a&lt;br&gt;sort&#x3D;autoRenew_a&lt;br&gt;sort&#x3D;activateTime_a&lt;br&gt;sort&#x3D;id_a&lt;br&gt;sort&#x3D;centPrice_a&lt;br&gt;sort&#x3D;customPlan_a&lt;br&gt;sort&#x3D;activated_a | [optional] 
@@ -9009,7 +8699,70 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: */*
+
+
+
+# **get_available_services_using_get1**
+> APIListOfAPIService get_available_services_using_get1(opts)
+
+Get available services.
+
+For not logged in users
+
+### Example
+```ruby
+# load the gem
+require 'bitbar-cloud-api-client'
+# setup authorization
+BitbarCloudApiClient.configure do |config|
+  # Configure HTTP basic authorization: apiKeyInHeader
+  config.username = 'YOUR USERNAME'
+  config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
+end
+
+api_instance = BitbarCloudApiClient::AllEndpointsApi.new
+
+opts = { 
+  filter: 'filter_example', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=archivetime_eq_1593583748388<br>filter=includedhours_eq_1<br>filter=name_eq_value<br>filter=chargetype_eq_usage_mobile<br>filter=priceperhour_eq_1<br>filter=description_eq_value<br>filter=autorenew_eq_true<br>filter=activatetime_eq_1593583748389<br>filter=id_eq_1<br>filter=centprice_eq_1<br>filter=customplan_eq_true<br>filter=activated_eq_true
+  limit: 20, # Integer | limit parameter define page size
+  offset: 0, # Integer | offset parameter define page number
+  sort: 'sort_example' # String | sort parameter contains list of fields used for sort query result <br> examples: <br> sort=archiveTime_a<br>sort=includedHours_a<br>sort=name_a<br>sort=chargeType_a<br>sort=pricePerHour_a<br>sort=description_a<br>sort=autoRenew_a<br>sort=activateTime_a<br>sort=id_a<br>sort=centPrice_a<br>sort=customPlan_a<br>sort=activated_a
+}
+
+begin
+  #Get available services.
+  result = api_instance.get_available_services_using_get1(opts)
+  p result
+rescue BitbarCloudApiClient::ApiError => e
+  puts "Exception when calling AllEndpointsApi->get_available_services_using_get1: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;archivetime_eq_1593583748388&lt;br&gt;filter&#x3D;includedhours_eq_1&lt;br&gt;filter&#x3D;name_eq_value&lt;br&gt;filter&#x3D;chargetype_eq_usage_mobile&lt;br&gt;filter&#x3D;priceperhour_eq_1&lt;br&gt;filter&#x3D;description_eq_value&lt;br&gt;filter&#x3D;autorenew_eq_true&lt;br&gt;filter&#x3D;activatetime_eq_1593583748389&lt;br&gt;filter&#x3D;id_eq_1&lt;br&gt;filter&#x3D;centprice_eq_1&lt;br&gt;filter&#x3D;customplan_eq_true&lt;br&gt;filter&#x3D;activated_eq_true | [optional] 
+ **limit** | **Integer**| limit parameter define page size | [optional] [default to 20]
+ **offset** | **Integer**| offset parameter define page number | [optional] [default to 0]
+ **sort** | **String**| sort parameter contains list of fields used for sort query result &lt;br&gt; examples: &lt;br&gt; sort&#x3D;archiveTime_a&lt;br&gt;sort&#x3D;includedHours_a&lt;br&gt;sort&#x3D;name_a&lt;br&gt;sort&#x3D;chargeType_a&lt;br&gt;sort&#x3D;pricePerHour_a&lt;br&gt;sort&#x3D;description_a&lt;br&gt;sort&#x3D;autoRenew_a&lt;br&gt;sort&#x3D;activateTime_a&lt;br&gt;sort&#x3D;id_a&lt;br&gt;sort&#x3D;centPrice_a&lt;br&gt;sort&#x3D;customPlan_a&lt;br&gt;sort&#x3D;activated_a | [optional] 
+
+### Return type
+
+[**APIListOfAPIService**](APIListOfAPIService.md)
+
+### Authorization
+
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -9032,6 +8785,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -9060,7 +8816,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -9083,6 +8839,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -9114,243 +8873,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: */*
-
-
-
-# **get_build_using_get**
-> APIPipelineBuild get_build_using_get(build_id, job_id)
-
-Get build.
-
-### Example
-```ruby
-# load the gem
-require 'bitbar-cloud-api-client'
-# setup authorization
-BitbarCloudApiClient.configure do |config|
-  # Configure HTTP basic authorization: apiKeyInHeader
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
-end
-
-api_instance = BitbarCloudApiClient::AllEndpointsApi.new
-
-build_id = 789 # Integer | buildId
-
-job_id = 789 # Integer | jobId
-
-
-begin
-  #Get build.
-  result = api_instance.get_build_using_get(build_id, job_id)
-  p result
-rescue BitbarCloudApiClient::ApiError => e
-  puts "Exception when calling AllEndpointsApi->get_build_using_get: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **build_id** | **Integer**| buildId | 
- **job_id** | **Integer**| jobId | 
-
-### Return type
-
-[**APIPipelineBuild**](APIPipelineBuild.md)
-
-### Authorization
-
-[apiKeyInHeader](../README.md#apiKeyInHeader)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: */*
-
-
-
-# **get_build_using_get1**
-> APIPipelineBuild get_build_using_get1(build_id, job_id, user_id)
-
-Get build.
-
-### Example
-```ruby
-# load the gem
-require 'bitbar-cloud-api-client'
-# setup authorization
-BitbarCloudApiClient.configure do |config|
-  # Configure HTTP basic authorization: apiKeyInHeader
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
-end
-
-api_instance = BitbarCloudApiClient::AllEndpointsApi.new
-
-build_id = 789 # Integer | buildId
-
-job_id = 789 # Integer | jobId
-
-user_id = 789 # Integer | userId
-
-
-begin
-  #Get build.
-  result = api_instance.get_build_using_get1(build_id, job_id, user_id)
-  p result
-rescue BitbarCloudApiClient::ApiError => e
-  puts "Exception when calling AllEndpointsApi->get_build_using_get1: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **build_id** | **Integer**| buildId | 
- **job_id** | **Integer**| jobId | 
- **user_id** | **Integer**| userId | 
-
-### Return type
-
-[**APIPipelineBuild**](APIPipelineBuild.md)
-
-### Authorization
-
-[apiKeyInHeader](../README.md#apiKeyInHeader)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: */*
-
-
-
-# **get_builds_using_get**
-> APIListOfAPIPipelineBuild get_builds_using_get(job_id, opts)
-
-Get builds.
-
-### Example
-```ruby
-# load the gem
-require 'bitbar-cloud-api-client'
-# setup authorization
-BitbarCloudApiClient.configure do |config|
-  # Configure HTTP basic authorization: apiKeyInHeader
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
-end
-
-api_instance = BitbarCloudApiClient::AllEndpointsApi.new
-
-job_id = 789 # Integer | jobId
-
-opts = { 
-  filter: 'filter_example', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=duration_eq_1<br>filter=createtime_eq_1576134482787<br>filter=pipelinejobid_eq_1<br>filter=state_eq_created<br>filter=id_eq_1<br>filter=userid_eq_1<br>filter=buildnumber_eq_1<br>filter=status_eq_undefined
-  limit: 20, # Integer | limit parameter define page size
-  offset: 0, # Integer | offset parameter define page number
-  sort: 'sort_example' # String | sort parameter contains list of fields used for sort query result <br> examples: <br> sort=duration_a<br>sort=createTime_a<br>sort=pipelineJobId_a<br>sort=state_a<br>sort=id_a<br>sort=userId_a<br>sort=buildNumber_a<br>sort=status_a
-}
-
-begin
-  #Get builds.
-  result = api_instance.get_builds_using_get(job_id, opts)
-  p result
-rescue BitbarCloudApiClient::ApiError => e
-  puts "Exception when calling AllEndpointsApi->get_builds_using_get: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **job_id** | **Integer**| jobId | 
- **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;duration_eq_1&lt;br&gt;filter&#x3D;createtime_eq_1576134482787&lt;br&gt;filter&#x3D;pipelinejobid_eq_1&lt;br&gt;filter&#x3D;state_eq_created&lt;br&gt;filter&#x3D;id_eq_1&lt;br&gt;filter&#x3D;userid_eq_1&lt;br&gt;filter&#x3D;buildnumber_eq_1&lt;br&gt;filter&#x3D;status_eq_undefined | [optional] 
- **limit** | **Integer**| limit parameter define page size | [optional] [default to 20]
- **offset** | **Integer**| offset parameter define page number | [optional] [default to 0]
- **sort** | **String**| sort parameter contains list of fields used for sort query result &lt;br&gt; examples: &lt;br&gt; sort&#x3D;duration_a&lt;br&gt;sort&#x3D;createTime_a&lt;br&gt;sort&#x3D;pipelineJobId_a&lt;br&gt;sort&#x3D;state_a&lt;br&gt;sort&#x3D;id_a&lt;br&gt;sort&#x3D;userId_a&lt;br&gt;sort&#x3D;buildNumber_a&lt;br&gt;sort&#x3D;status_a | [optional] 
-
-### Return type
-
-[**APIListOfAPIPipelineBuild**](APIListOfAPIPipelineBuild.md)
-
-### Authorization
-
-[apiKeyInHeader](../README.md#apiKeyInHeader)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: */*
-
-
-
-# **get_builds_using_get1**
-> APIListOfAPIPipelineBuild get_builds_using_get1(job_id, user_id, opts)
-
-Get builds.
-
-### Example
-```ruby
-# load the gem
-require 'bitbar-cloud-api-client'
-# setup authorization
-BitbarCloudApiClient.configure do |config|
-  # Configure HTTP basic authorization: apiKeyInHeader
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
-end
-
-api_instance = BitbarCloudApiClient::AllEndpointsApi.new
-
-job_id = 789 # Integer | jobId
-
-user_id = 789 # Integer | userId
-
-opts = { 
-  filter: 'filter_example', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=duration_eq_1<br>filter=createtime_eq_1576134482789<br>filter=pipelinejobid_eq_1<br>filter=state_eq_created<br>filter=id_eq_1<br>filter=userid_eq_1<br>filter=buildnumber_eq_1<br>filter=status_eq_undefined
-  limit: 20, # Integer | limit parameter define page size
-  offset: 0, # Integer | offset parameter define page number
-  sort: 'sort_example' # String | sort parameter contains list of fields used for sort query result <br> examples: <br> sort=duration_a<br>sort=createTime_a<br>sort=pipelineJobId_a<br>sort=state_a<br>sort=id_a<br>sort=userId_a<br>sort=buildNumber_a<br>sort=status_a
-}
-
-begin
-  #Get builds.
-  result = api_instance.get_builds_using_get1(job_id, user_id, opts)
-  p result
-rescue BitbarCloudApiClient::ApiError => e
-  puts "Exception when calling AllEndpointsApi->get_builds_using_get1: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **job_id** | **Integer**| jobId | 
- **user_id** | **Integer**| userId | 
- **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;duration_eq_1&lt;br&gt;filter&#x3D;createtime_eq_1576134482789&lt;br&gt;filter&#x3D;pipelinejobid_eq_1&lt;br&gt;filter&#x3D;state_eq_created&lt;br&gt;filter&#x3D;id_eq_1&lt;br&gt;filter&#x3D;userid_eq_1&lt;br&gt;filter&#x3D;buildnumber_eq_1&lt;br&gt;filter&#x3D;status_eq_undefined | [optional] 
- **limit** | **Integer**| limit parameter define page size | [optional] [default to 20]
- **offset** | **Integer**| offset parameter define page number | [optional] [default to 0]
- **sort** | **String**| sort parameter contains list of fields used for sort query result &lt;br&gt; examples: &lt;br&gt; sort&#x3D;duration_a&lt;br&gt;sort&#x3D;createTime_a&lt;br&gt;sort&#x3D;pipelineJobId_a&lt;br&gt;sort&#x3D;state_a&lt;br&gt;sort&#x3D;id_a&lt;br&gt;sort&#x3D;userId_a&lt;br&gt;sort&#x3D;buildNumber_a&lt;br&gt;sort&#x3D;status_a | [optional] 
-
-### Return type
-
-[**APIListOfAPIPipelineBuild**](APIListOfAPIPipelineBuild.md)
-
-### Authorization
-
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -9360,7 +8883,7 @@ Name | Type | Description  | Notes
 
 
 # **get_channel_scopes_using_get**
-> APIListOfAPIEnum get_channel_scopes_using_get(channel, user_id)
+> APIListOfAPIEnum get_channel_scopes_using_get(channel)
 
 Get notification scopes for user and channel.
 
@@ -9373,18 +8896,19 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
 
 channel = 'channel_example' # String | channel
 
-user_id = 789 # Integer | userId
-
 
 begin
   #Get notification scopes for user and channel.
-  result = api_instance.get_channel_scopes_using_get(channel, user_id)
+  result = api_instance.get_channel_scopes_using_get(channel)
   p result
 rescue BitbarCloudApiClient::ApiError => e
   puts "Exception when calling AllEndpointsApi->get_channel_scopes_using_get: #{e}"
@@ -9396,7 +8920,6 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **channel** | **String**| channel | 
- **user_id** | **Integer**| userId | 
 
 ### Return type
 
@@ -9404,7 +8927,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -9427,6 +8950,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -9449,7 +8975,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -9459,7 +8985,7 @@ This endpoint does not need any parameter.
 
 
 # **get_channels_using_get1**
-> APIListOfAPIEnum get_channels_using_get1(user_id)
+> APIListOfAPIEnum get_channels_using_get1
 
 Get notification channels.
 
@@ -9472,16 +8998,16 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
 
-user_id = 789 # Integer | userId
-
-
 begin
   #Get notification channels.
-  result = api_instance.get_channels_using_get1(user_id)
+  result = api_instance.get_channels_using_get1
   p result
 rescue BitbarCloudApiClient::ApiError => e
   puts "Exception when calling AllEndpointsApi->get_channels_using_get1: #{e}"
@@ -9489,10 +9015,7 @@ end
 ```
 
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **user_id** | **Integer**| userId | 
+This endpoint does not need any parameter.
 
 ### Return type
 
@@ -9500,7 +9023,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -9523,6 +9046,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -9555,7 +9081,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -9578,6 +9104,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -9585,10 +9114,10 @@ api_instance = BitbarCloudApiClient::AllEndpointsApi.new
 id = 789 # Integer | id
 
 opts = { 
-  filter: 'filter_example', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=cluster.name_eq_value<br>filter=statetime_eq_1576134480289<br>filter=serialid_eq_value<br>filter=ostype_eq_ios<br>filter=name_eq_value<br>filter=fingerprint_eq_value<br>filter=devicemodelid_eq_1<br>filter=mainuseremail_eq_value<br>filter=devicecleanupconfigurationid_eq_1<br>filter=state_eq_offline_cleaning<br>filter=id_eq_1<br>filter=locked_eq_true<br>filter=enabled_eq_true
+  filter: 'filter_example', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=statechangetime_eq_1593583738870<br>filter=cluster.name_eq_value<br>filter=mainuseremail_eq_value<br>filter=enabled_eq_true<br>filter=statetime_eq_1593583738870<br>filter=serialid_eq_value<br>filter=ostype_eq_ios<br>filter=name_eq_value<br>filter=fingerprint_eq_value<br>filter=devicemodelid_eq_1<br>filter=devicecleanupconfigurationid_eq_1<br>filter=state_eq_offline_cleaning<br>filter=id_eq_1<br>filter=locked_eq_true
   limit: 20, # Integer | limit parameter define page size
   offset: 0, # Integer | offset parameter define page number
-  sort: 'sort_example' # String | sort parameter contains list of fields used for sort query result <br> examples: <br> sort=cluster.name_a<br>sort=stateTime_a<br>sort=serialId_a<br>sort=name_a<br>sort=fingerprint_a<br>sort=deviceModelId_a<br>sort=mainUserEmail_a<br>sort=state_a<br>sort=id_a<br>sort=enabled_a
+  sort: 'sort_example' # String | sort parameter contains list of fields used for sort query result <br> examples: <br> sort=stateChangeTime_a<br>sort=cluster.name_a<br>sort=mainUserEmail_a<br>sort=enabled_a<br>sort=stateTime_a<br>sort=serialId_a<br>sort=name_a<br>sort=fingerprint_a<br>sort=deviceModelId_a<br>sort=state_a<br>sort=id_a
 }
 
 begin
@@ -9605,10 +9134,10 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| id | 
- **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;cluster.name_eq_value&lt;br&gt;filter&#x3D;statetime_eq_1576134480289&lt;br&gt;filter&#x3D;serialid_eq_value&lt;br&gt;filter&#x3D;ostype_eq_ios&lt;br&gt;filter&#x3D;name_eq_value&lt;br&gt;filter&#x3D;fingerprint_eq_value&lt;br&gt;filter&#x3D;devicemodelid_eq_1&lt;br&gt;filter&#x3D;mainuseremail_eq_value&lt;br&gt;filter&#x3D;devicecleanupconfigurationid_eq_1&lt;br&gt;filter&#x3D;state_eq_offline_cleaning&lt;br&gt;filter&#x3D;id_eq_1&lt;br&gt;filter&#x3D;locked_eq_true&lt;br&gt;filter&#x3D;enabled_eq_true | [optional] 
+ **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;statechangetime_eq_1593583738870&lt;br&gt;filter&#x3D;cluster.name_eq_value&lt;br&gt;filter&#x3D;mainuseremail_eq_value&lt;br&gt;filter&#x3D;enabled_eq_true&lt;br&gt;filter&#x3D;statetime_eq_1593583738870&lt;br&gt;filter&#x3D;serialid_eq_value&lt;br&gt;filter&#x3D;ostype_eq_ios&lt;br&gt;filter&#x3D;name_eq_value&lt;br&gt;filter&#x3D;fingerprint_eq_value&lt;br&gt;filter&#x3D;devicemodelid_eq_1&lt;br&gt;filter&#x3D;devicecleanupconfigurationid_eq_1&lt;br&gt;filter&#x3D;state_eq_offline_cleaning&lt;br&gt;filter&#x3D;id_eq_1&lt;br&gt;filter&#x3D;locked_eq_true | [optional] 
  **limit** | **Integer**| limit parameter define page size | [optional] [default to 20]
  **offset** | **Integer**| offset parameter define page number | [optional] [default to 0]
- **sort** | **String**| sort parameter contains list of fields used for sort query result &lt;br&gt; examples: &lt;br&gt; sort&#x3D;cluster.name_a&lt;br&gt;sort&#x3D;stateTime_a&lt;br&gt;sort&#x3D;serialId_a&lt;br&gt;sort&#x3D;name_a&lt;br&gt;sort&#x3D;fingerprint_a&lt;br&gt;sort&#x3D;deviceModelId_a&lt;br&gt;sort&#x3D;mainUserEmail_a&lt;br&gt;sort&#x3D;state_a&lt;br&gt;sort&#x3D;id_a&lt;br&gt;sort&#x3D;enabled_a | [optional] 
+ **sort** | **String**| sort parameter contains list of fields used for sort query result &lt;br&gt; examples: &lt;br&gt; sort&#x3D;stateChangeTime_a&lt;br&gt;sort&#x3D;cluster.name_a&lt;br&gt;sort&#x3D;mainUserEmail_a&lt;br&gt;sort&#x3D;enabled_a&lt;br&gt;sort&#x3D;stateTime_a&lt;br&gt;sort&#x3D;serialId_a&lt;br&gt;sort&#x3D;name_a&lt;br&gt;sort&#x3D;fingerprint_a&lt;br&gt;sort&#x3D;deviceModelId_a&lt;br&gt;sort&#x3D;state_a&lt;br&gt;sort&#x3D;id_a | [optional] 
 
 ### Return type
 
@@ -9616,7 +9145,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -9639,6 +9168,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -9672,7 +9204,7 @@ nil (empty response body)
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -9695,6 +9227,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -9725,7 +9260,7 @@ nil (empty response body)
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -9748,12 +9283,15 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
 
 opts = { 
-  filter: 'filter_example', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=statechangetime_eq_1576134480390<br>filter=pluginversion_eq_value<br>filter=statetime_eq_1576134480390<br>filter=name_eq_value<br>filter=state_eq_offline<br>filter=id_eq_1<br>filter=url_eq_value<br>filter=enabled_eq_true
+  filter: 'filter_example', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=statechangetime_eq_1593583738972<br>filter=pluginversion_eq_value<br>filter=statetime_eq_1593583738972<br>filter=name_eq_value<br>filter=state_eq_offline<br>filter=id_eq_1<br>filter=url_eq_value<br>filter=enabled_eq_true
   limit: 20, # Integer | limit parameter define page size
   offset: 0, # Integer | offset parameter define page number
   sort: 'sort_example' # String | sort parameter contains list of fields used for sort query result <br> examples: <br> sort=stateChangeTime_a<br>sort=pluginVersion_a<br>sort=stateTime_a<br>sort=name_a<br>sort=state_a<br>sort=id_a<br>sort=url_a<br>sort=enabled_a
@@ -9772,7 +9310,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;statechangetime_eq_1576134480390&lt;br&gt;filter&#x3D;pluginversion_eq_value&lt;br&gt;filter&#x3D;statetime_eq_1576134480390&lt;br&gt;filter&#x3D;name_eq_value&lt;br&gt;filter&#x3D;state_eq_offline&lt;br&gt;filter&#x3D;id_eq_1&lt;br&gt;filter&#x3D;url_eq_value&lt;br&gt;filter&#x3D;enabled_eq_true | [optional] 
+ **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;statechangetime_eq_1593583738972&lt;br&gt;filter&#x3D;pluginversion_eq_value&lt;br&gt;filter&#x3D;statetime_eq_1593583738972&lt;br&gt;filter&#x3D;name_eq_value&lt;br&gt;filter&#x3D;state_eq_offline&lt;br&gt;filter&#x3D;id_eq_1&lt;br&gt;filter&#x3D;url_eq_value&lt;br&gt;filter&#x3D;enabled_eq_true | [optional] 
  **limit** | **Integer**| limit parameter define page size | [optional] [default to 20]
  **offset** | **Integer**| offset parameter define page number | [optional] [default to 0]
  **sort** | **String**| sort parameter contains list of fields used for sort query result &lt;br&gt; examples: &lt;br&gt; sort&#x3D;stateChangeTime_a&lt;br&gt;sort&#x3D;pluginVersion_a&lt;br&gt;sort&#x3D;stateTime_a&lt;br&gt;sort&#x3D;name_a&lt;br&gt;sort&#x3D;state_a&lt;br&gt;sort&#x3D;id_a&lt;br&gt;sort&#x3D;url_a&lt;br&gt;sort&#x3D;enabled_a | [optional] 
@@ -9783,7 +9321,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -9806,6 +9344,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -9841,7 +9382,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -9864,6 +9405,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -9892,7 +9436,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -9915,6 +9459,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -9949,7 +9496,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -9972,6 +9519,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -10003,7 +9553,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -10026,6 +9576,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -10063,7 +9616,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -10086,6 +9639,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -10108,7 +9664,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -10131,6 +9687,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -10159,7 +9718,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -10182,6 +9741,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -10210,7 +9772,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -10233,12 +9795,15 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
 
 opts = { 
-  filter: 'filter_example', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=createdbyemail_eq_value<br>filter=lastmodificationtime_eq_1576134480885<br>filter=createtime_eq_1576134480885<br>filter=ostype_eq_ios<br>filter=global_eq_true<br>filter=id_eq_1<br>filter=enabled_eq_true<br>filter=createdbyid_eq_1<br>filter=content_eq_value<br>filter=discriminator_eq_value
+  filter: 'filter_example', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=createdbyemail_eq_value<br>filter=lastmodificationtime_eq_1593583739276<br>filter=createtime_eq_1593583739276<br>filter=ostype_eq_ios<br>filter=global_eq_true<br>filter=id_eq_1<br>filter=enabled_eq_true<br>filter=createdbyid_eq_1<br>filter=content_eq_value<br>filter=discriminator_eq_value
   limit: 20, # Integer | limit parameter define page size
   offset: 0, # Integer | offset parameter define page number
   sort: 'sort_example' # String | sort parameter contains list of fields used for sort query result <br> examples: <br> sort=createdByEmail_a<br>sort=lastModificationTime_a<br>sort=createTime_a<br>sort=osType_a<br>sort=global_a<br>sort=id_a<br>sort=enabled_a<br>sort=createdById_a<br>sort=content_a<br>sort=discriminator_a
@@ -10257,7 +9822,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;createdbyemail_eq_value&lt;br&gt;filter&#x3D;lastmodificationtime_eq_1576134480885&lt;br&gt;filter&#x3D;createtime_eq_1576134480885&lt;br&gt;filter&#x3D;ostype_eq_ios&lt;br&gt;filter&#x3D;global_eq_true&lt;br&gt;filter&#x3D;id_eq_1&lt;br&gt;filter&#x3D;enabled_eq_true&lt;br&gt;filter&#x3D;createdbyid_eq_1&lt;br&gt;filter&#x3D;content_eq_value&lt;br&gt;filter&#x3D;discriminator_eq_value | [optional] 
+ **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;createdbyemail_eq_value&lt;br&gt;filter&#x3D;lastmodificationtime_eq_1593583739276&lt;br&gt;filter&#x3D;createtime_eq_1593583739276&lt;br&gt;filter&#x3D;ostype_eq_ios&lt;br&gt;filter&#x3D;global_eq_true&lt;br&gt;filter&#x3D;id_eq_1&lt;br&gt;filter&#x3D;enabled_eq_true&lt;br&gt;filter&#x3D;createdbyid_eq_1&lt;br&gt;filter&#x3D;content_eq_value&lt;br&gt;filter&#x3D;discriminator_eq_value | [optional] 
  **limit** | **Integer**| limit parameter define page size | [optional] [default to 20]
  **offset** | **Integer**| offset parameter define page number | [optional] [default to 0]
  **sort** | **String**| sort parameter contains list of fields used for sort query result &lt;br&gt; examples: &lt;br&gt; sort&#x3D;createdByEmail_a&lt;br&gt;sort&#x3D;lastModificationTime_a&lt;br&gt;sort&#x3D;createTime_a&lt;br&gt;sort&#x3D;osType_a&lt;br&gt;sort&#x3D;global_a&lt;br&gt;sort&#x3D;id_a&lt;br&gt;sort&#x3D;enabled_a&lt;br&gt;sort&#x3D;createdById_a&lt;br&gt;sort&#x3D;content_a&lt;br&gt;sort&#x3D;discriminator_a | [optional] 
@@ -10268,7 +9833,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -10291,6 +9856,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -10298,7 +9866,7 @@ api_instance = BitbarCloudApiClient::AllEndpointsApi.new
 device_group_id = 789 # Integer | deviceGroupId
 
 opts = { 
-  filter: 'filter_example', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=accountid_eq_1<br>filter=displayname_eq_value<br>filter=ostype_eq_ios<br>filter=creditsprice_eq_1<br>filter=online_eq_true<br>filter=id_eq_1<br>filter=device.archivetime_eq_1576134482901<br>filter=locked_eq_true<br>filter=enabled_eq_true
+  filter: 'filter_example', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=accountid_eq_1<br>filter=displayname_eq_value<br>filter=ostype_eq_ios<br>filter=creditsprice_eq_1<br>filter=online_eq_true<br>filter=id_eq_1<br>filter=device.archivetime_eq_1593583744173<br>filter=locked_eq_true<br>filter=enabled_eq_true
   limit: 20, # Integer | limit parameter define page size
   offset: 0, # Integer | offset parameter define page number
   sort: 'sort_example', # String | sort parameter contains list of fields used for sort query result <br> examples: <br> sort=accountId_a<br>sort=displayName_a<br>sort=osType_a<br>sort=creditsPrice_a<br>sort=id_a<br>sort=device.archiveTime_a<br>sort=locked_a<br>sort=enabled_a
@@ -10319,7 +9887,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **device_group_id** | **Integer**| deviceGroupId | 
- **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;accountid_eq_1&lt;br&gt;filter&#x3D;displayname_eq_value&lt;br&gt;filter&#x3D;ostype_eq_ios&lt;br&gt;filter&#x3D;creditsprice_eq_1&lt;br&gt;filter&#x3D;online_eq_true&lt;br&gt;filter&#x3D;id_eq_1&lt;br&gt;filter&#x3D;device.archivetime_eq_1576134482901&lt;br&gt;filter&#x3D;locked_eq_true&lt;br&gt;filter&#x3D;enabled_eq_true | [optional] 
+ **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;accountid_eq_1&lt;br&gt;filter&#x3D;displayname_eq_value&lt;br&gt;filter&#x3D;ostype_eq_ios&lt;br&gt;filter&#x3D;creditsprice_eq_1&lt;br&gt;filter&#x3D;online_eq_true&lt;br&gt;filter&#x3D;id_eq_1&lt;br&gt;filter&#x3D;device.archivetime_eq_1593583744173&lt;br&gt;filter&#x3D;locked_eq_true&lt;br&gt;filter&#x3D;enabled_eq_true | [optional] 
  **limit** | **Integer**| limit parameter define page size | [optional] [default to 20]
  **offset** | **Integer**| offset parameter define page number | [optional] [default to 0]
  **sort** | **String**| sort parameter contains list of fields used for sort query result &lt;br&gt; examples: &lt;br&gt; sort&#x3D;accountId_a&lt;br&gt;sort&#x3D;displayName_a&lt;br&gt;sort&#x3D;osType_a&lt;br&gt;sort&#x3D;creditsPrice_a&lt;br&gt;sort&#x3D;id_a&lt;br&gt;sort&#x3D;device.archiveTime_a&lt;br&gt;sort&#x3D;locked_a&lt;br&gt;sort&#x3D;enabled_a | [optional] 
@@ -10331,7 +9899,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -10354,6 +9922,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -10363,7 +9934,7 @@ device_group_id = 789 # Integer | deviceGroupId
 user_id = 789 # Integer | userId
 
 opts = { 
-  filter: 'filter_example', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=accountid_eq_1<br>filter=displayname_eq_value<br>filter=ostype_eq_ios<br>filter=creditsprice_eq_1<br>filter=online_eq_true<br>filter=id_eq_1<br>filter=device.archivetime_eq_1576134482903<br>filter=locked_eq_true<br>filter=enabled_eq_true
+  filter: 'filter_example', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=accountid_eq_1<br>filter=displayname_eq_value<br>filter=ostype_eq_ios<br>filter=creditsprice_eq_1<br>filter=online_eq_true<br>filter=id_eq_1<br>filter=device.archivetime_eq_1593583744176<br>filter=locked_eq_true<br>filter=enabled_eq_true
   limit: 20, # Integer | limit parameter define page size
   offset: 0, # Integer | offset parameter define page number
   sort: 'sort_example', # String | sort parameter contains list of fields used for sort query result <br> examples: <br> sort=accountId_a<br>sort=displayName_a<br>sort=osType_a<br>sort=creditsPrice_a<br>sort=id_a<br>sort=device.archiveTime_a<br>sort=locked_a<br>sort=enabled_a
@@ -10385,7 +9956,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **device_group_id** | **Integer**| deviceGroupId | 
  **user_id** | **Integer**| userId | 
- **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;accountid_eq_1&lt;br&gt;filter&#x3D;displayname_eq_value&lt;br&gt;filter&#x3D;ostype_eq_ios&lt;br&gt;filter&#x3D;creditsprice_eq_1&lt;br&gt;filter&#x3D;online_eq_true&lt;br&gt;filter&#x3D;id_eq_1&lt;br&gt;filter&#x3D;device.archivetime_eq_1576134482903&lt;br&gt;filter&#x3D;locked_eq_true&lt;br&gt;filter&#x3D;enabled_eq_true | [optional] 
+ **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;accountid_eq_1&lt;br&gt;filter&#x3D;displayname_eq_value&lt;br&gt;filter&#x3D;ostype_eq_ios&lt;br&gt;filter&#x3D;creditsprice_eq_1&lt;br&gt;filter&#x3D;online_eq_true&lt;br&gt;filter&#x3D;id_eq_1&lt;br&gt;filter&#x3D;device.archivetime_eq_1593583744176&lt;br&gt;filter&#x3D;locked_eq_true&lt;br&gt;filter&#x3D;enabled_eq_true | [optional] 
  **limit** | **Integer**| limit parameter define page size | [optional] [default to 20]
  **offset** | **Integer**| offset parameter define page number | [optional] [default to 0]
  **sort** | **String**| sort parameter contains list of fields used for sort query result &lt;br&gt; examples: &lt;br&gt; sort&#x3D;accountId_a&lt;br&gt;sort&#x3D;displayName_a&lt;br&gt;sort&#x3D;osType_a&lt;br&gt;sort&#x3D;creditsPrice_a&lt;br&gt;sort&#x3D;id_a&lt;br&gt;sort&#x3D;device.archiveTime_a&lt;br&gt;sort&#x3D;locked_a&lt;br&gt;sort&#x3D;enabled_a | [optional] 
@@ -10397,7 +9968,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -10420,6 +9991,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -10458,7 +10032,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -10481,6 +10055,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -10522,7 +10099,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -10545,6 +10122,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -10573,7 +10153,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -10596,6 +10176,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -10631,7 +10214,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -10654,6 +10237,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -10692,7 +10278,71 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: */*
+
+
+
+# **get_device_labels_using_get1**
+> APIListOfAPIDeviceProperty get_device_labels_using_get1(device_id, opts)
+
+Get device labels.
+
+### Example
+```ruby
+# load the gem
+require 'bitbar-cloud-api-client'
+# setup authorization
+BitbarCloudApiClient.configure do |config|
+  # Configure HTTP basic authorization: apiKeyInHeader
+  config.username = 'YOUR USERNAME'
+  config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
+end
+
+api_instance = BitbarCloudApiClient::AllEndpointsApi.new
+
+device_id = 789 # Integer | deviceId
+
+opts = { 
+  filter: 'filter_example', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=propertygroupname_eq_value<br>filter=displayname_eq_value<br>filter=name_eq_value<br>filter=propertygroupid_eq_1<br>filter=id_eq_1<br>filter=labelgroupname_eq_value
+  limit: 20, # Integer | limit parameter define page size
+  offset: 0, # Integer | offset parameter define page number
+  sort: 'sort_example' # String | sort parameter contains list of fields used for sort query result <br> examples: <br> sort=propertyGroupName_a<br>sort=displayName_a<br>sort=name_a<br>sort=propertyGroupId_a<br>sort=id_a<br>sort=labelGroupName_a
+}
+
+begin
+  #Get device labels.
+  result = api_instance.get_device_labels_using_get1(device_id, opts)
+  p result
+rescue BitbarCloudApiClient::ApiError => e
+  puts "Exception when calling AllEndpointsApi->get_device_labels_using_get1: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **device_id** | **Integer**| deviceId | 
+ **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;propertygroupname_eq_value&lt;br&gt;filter&#x3D;displayname_eq_value&lt;br&gt;filter&#x3D;name_eq_value&lt;br&gt;filter&#x3D;propertygroupid_eq_1&lt;br&gt;filter&#x3D;id_eq_1&lt;br&gt;filter&#x3D;labelgroupname_eq_value | [optional] 
+ **limit** | **Integer**| limit parameter define page size | [optional] [default to 20]
+ **offset** | **Integer**| offset parameter define page number | [optional] [default to 0]
+ **sort** | **String**| sort parameter contains list of fields used for sort query result &lt;br&gt; examples: &lt;br&gt; sort&#x3D;propertyGroupName_a&lt;br&gt;sort&#x3D;displayName_a&lt;br&gt;sort&#x3D;name_a&lt;br&gt;sort&#x3D;propertyGroupId_a&lt;br&gt;sort&#x3D;id_a&lt;br&gt;sort&#x3D;labelGroupName_a | [optional] 
+
+### Return type
+
+[**APIListOfAPIDeviceProperty**](APIListOfAPIDeviceProperty.md)
+
+### Authorization
+
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -10715,6 +10365,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -10750,7 +10403,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -10773,6 +10426,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -10795,7 +10451,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -10818,6 +10474,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -10853,7 +10512,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -10876,6 +10535,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -10914,68 +10576,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: */*
-
-
-
-# **get_device_properties_using_get1**
-> APIListOfAPIDeviceProperty get_device_properties_using_get1(device_id, opts)
-
-Get device properties.
-
-### Example
-```ruby
-# load the gem
-require 'bitbar-cloud-api-client'
-# setup authorization
-BitbarCloudApiClient.configure do |config|
-  # Configure HTTP basic authorization: apiKeyInHeader
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
-end
-
-api_instance = BitbarCloudApiClient::AllEndpointsApi.new
-
-device_id = 789 # Integer | deviceId
-
-opts = { 
-  filter: 'filter_example', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=propertygroupname_eq_value<br>filter=displayname_eq_value<br>filter=name_eq_value<br>filter=propertygroupid_eq_1<br>filter=id_eq_1<br>filter=labelgroupname_eq_value
-  limit: 20, # Integer | limit parameter define page size
-  offset: 0, # Integer | offset parameter define page number
-  sort: 'sort_example' # String | sort parameter contains list of fields used for sort query result <br> examples: <br> sort=propertyGroupName_a<br>sort=displayName_a<br>sort=name_a<br>sort=propertyGroupId_a<br>sort=id_a<br>sort=labelGroupName_a
-}
-
-begin
-  #Get device properties.
-  result = api_instance.get_device_properties_using_get1(device_id, opts)
-  p result
-rescue BitbarCloudApiClient::ApiError => e
-  puts "Exception when calling AllEndpointsApi->get_device_properties_using_get1: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **device_id** | **Integer**| deviceId | 
- **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;propertygroupname_eq_value&lt;br&gt;filter&#x3D;displayname_eq_value&lt;br&gt;filter&#x3D;name_eq_value&lt;br&gt;filter&#x3D;propertygroupid_eq_1&lt;br&gt;filter&#x3D;id_eq_1&lt;br&gt;filter&#x3D;labelgroupname_eq_value | [optional] 
- **limit** | **Integer**| limit parameter define page size | [optional] [default to 20]
- **offset** | **Integer**| offset parameter define page number | [optional] [default to 0]
- **sort** | **String**| sort parameter contains list of fields used for sort query result &lt;br&gt; examples: &lt;br&gt; sort&#x3D;propertyGroupName_a&lt;br&gt;sort&#x3D;displayName_a&lt;br&gt;sort&#x3D;name_a&lt;br&gt;sort&#x3D;propertyGroupId_a&lt;br&gt;sort&#x3D;id_a&lt;br&gt;sort&#x3D;labelGroupName_a | [optional] 
-
-### Return type
-
-[**APIListOfAPIDeviceProperty**](APIListOfAPIDeviceProperty.md)
-
-### Authorization
-
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -11000,6 +10601,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -11007,7 +10611,7 @@ api_instance = BitbarCloudApiClient::AllEndpointsApi.new
 device_id = 789 # Integer | deviceId
 
 opts = { 
-  filter: 'filter_example', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=archivetime_eq_1576134481497<br>filter=createtime_eq_1576134481497<br>filter=startedbydisplayname_eq_value<br>filter=devicemodel.id_eq_1<br>filter=currentsteptype_eq_waiting<br>filter=starttime_eq_1576134481497<br>filter=state_eq_aborted<br>filter=id_eq_1<br>filter=_endtime_eq_1576134481497<br>filter=projectname_eq_value<br>filter=priority_eq_1<br>filter=device.id_eq_1<br>filter=testrunname_eq_value
+  filter: 'filter_example', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=archivetime_eq_1593583740369<br>filter=createtime_eq_1593583740369<br>filter=startedbydisplayname_eq_value<br>filter=devicemodel.id_eq_1<br>filter=currentsteptype_eq_waiting<br>filter=starttime_eq_1593583740369<br>filter=state_eq_aborted<br>filter=id_eq_1<br>filter=_endtime_eq_1593583740369<br>filter=projectname_eq_value<br>filter=priority_eq_1<br>filter=device.id_eq_1<br>filter=testrunname_eq_value
   limit: 20, # Integer | limit parameter define page size
   offset: 0, # Integer | offset parameter define page number
   sort: 'sort_example' # String | sort parameter contains list of fields used for sort query result <br> examples: <br> sort=archiveTime_a<br>sort=createTime_a<br>sort=startedByDisplayName_a<br>sort=deviceModel.id_a<br>sort=currentStepType_a<br>sort=startTime_a<br>sort=state_a<br>sort=id_a<br>sort=_endTime_a<br>sort=projectName_a<br>sort=priority_a<br>sort=device.id_a<br>sort=testRunName_a
@@ -11027,7 +10631,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **device_id** | **Integer**| deviceId | 
- **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;archivetime_eq_1576134481497&lt;br&gt;filter&#x3D;createtime_eq_1576134481497&lt;br&gt;filter&#x3D;startedbydisplayname_eq_value&lt;br&gt;filter&#x3D;devicemodel.id_eq_1&lt;br&gt;filter&#x3D;currentsteptype_eq_waiting&lt;br&gt;filter&#x3D;starttime_eq_1576134481497&lt;br&gt;filter&#x3D;state_eq_aborted&lt;br&gt;filter&#x3D;id_eq_1&lt;br&gt;filter&#x3D;_endtime_eq_1576134481497&lt;br&gt;filter&#x3D;projectname_eq_value&lt;br&gt;filter&#x3D;priority_eq_1&lt;br&gt;filter&#x3D;device.id_eq_1&lt;br&gt;filter&#x3D;testrunname_eq_value | [optional] 
+ **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;archivetime_eq_1593583740369&lt;br&gt;filter&#x3D;createtime_eq_1593583740369&lt;br&gt;filter&#x3D;startedbydisplayname_eq_value&lt;br&gt;filter&#x3D;devicemodel.id_eq_1&lt;br&gt;filter&#x3D;currentsteptype_eq_waiting&lt;br&gt;filter&#x3D;starttime_eq_1593583740369&lt;br&gt;filter&#x3D;state_eq_aborted&lt;br&gt;filter&#x3D;id_eq_1&lt;br&gt;filter&#x3D;_endtime_eq_1593583740369&lt;br&gt;filter&#x3D;projectname_eq_value&lt;br&gt;filter&#x3D;priority_eq_1&lt;br&gt;filter&#x3D;device.id_eq_1&lt;br&gt;filter&#x3D;testrunname_eq_value | [optional] 
  **limit** | **Integer**| limit parameter define page size | [optional] [default to 20]
  **offset** | **Integer**| offset parameter define page number | [optional] [default to 0]
  **sort** | **String**| sort parameter contains list of fields used for sort query result &lt;br&gt; examples: &lt;br&gt; sort&#x3D;archiveTime_a&lt;br&gt;sort&#x3D;createTime_a&lt;br&gt;sort&#x3D;startedByDisplayName_a&lt;br&gt;sort&#x3D;deviceModel.id_a&lt;br&gt;sort&#x3D;currentStepType_a&lt;br&gt;sort&#x3D;startTime_a&lt;br&gt;sort&#x3D;state_a&lt;br&gt;sort&#x3D;id_a&lt;br&gt;sort&#x3D;_endTime_a&lt;br&gt;sort&#x3D;projectName_a&lt;br&gt;sort&#x3D;priority_a&lt;br&gt;sort&#x3D;device.id_a&lt;br&gt;sort&#x3D;testRunName_a | [optional] 
@@ -11038,7 +10642,138 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: */*
+
+
+
+# **get_device_session_connections_using_get**
+> APIListOfAPIConnection get_device_session_connections_using_get(device_session_id, opts)
+
+Get connections for device session.
+
+### Example
+```ruby
+# load the gem
+require 'bitbar-cloud-api-client'
+# setup authorization
+BitbarCloudApiClient.configure do |config|
+  # Configure HTTP basic authorization: apiKeyInHeader
+  config.username = 'YOUR USERNAME'
+  config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
+end
+
+api_instance = BitbarCloudApiClient::AllEndpointsApi.new
+
+device_session_id = 789 # Integer | deviceSessionId
+
+opts = { 
+  filter: 'filter_example', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=path_eq_value<br>filter=password_eq_value<br>filter=urlschema_eq_value<br>filter=devicesessionid_eq_1<br>filter=port_eq_null<br>filter=createtime_eq_1593583743780<br>filter=host_eq_value<br>filter=id_eq_1<br>filter=_endtime_eq_1593583743780<br>filter=type_eq_value
+  limit: 20, # Integer | limit parameter define page size
+  offset: 0, # Integer | offset parameter define page number
+  sort: 'sort_example' # String | sort parameter contains list of fields used for sort query result <br> examples: <br> sort=path_a<br>sort=password_a<br>sort=urlSchema_a<br>sort=deviceSessionId_a<br>sort=port_a<br>sort=createTime_a<br>sort=host_a<br>sort=id_a<br>sort=_endTime_a<br>sort=type_a
+}
+
+begin
+  #Get connections for device session.
+  result = api_instance.get_device_session_connections_using_get(device_session_id, opts)
+  p result
+rescue BitbarCloudApiClient::ApiError => e
+  puts "Exception when calling AllEndpointsApi->get_device_session_connections_using_get: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **device_session_id** | **Integer**| deviceSessionId | 
+ **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;path_eq_value&lt;br&gt;filter&#x3D;password_eq_value&lt;br&gt;filter&#x3D;urlschema_eq_value&lt;br&gt;filter&#x3D;devicesessionid_eq_1&lt;br&gt;filter&#x3D;port_eq_null&lt;br&gt;filter&#x3D;createtime_eq_1593583743780&lt;br&gt;filter&#x3D;host_eq_value&lt;br&gt;filter&#x3D;id_eq_1&lt;br&gt;filter&#x3D;_endtime_eq_1593583743780&lt;br&gt;filter&#x3D;type_eq_value | [optional] 
+ **limit** | **Integer**| limit parameter define page size | [optional] [default to 20]
+ **offset** | **Integer**| offset parameter define page number | [optional] [default to 0]
+ **sort** | **String**| sort parameter contains list of fields used for sort query result &lt;br&gt; examples: &lt;br&gt; sort&#x3D;path_a&lt;br&gt;sort&#x3D;password_a&lt;br&gt;sort&#x3D;urlSchema_a&lt;br&gt;sort&#x3D;deviceSessionId_a&lt;br&gt;sort&#x3D;port_a&lt;br&gt;sort&#x3D;createTime_a&lt;br&gt;sort&#x3D;host_a&lt;br&gt;sort&#x3D;id_a&lt;br&gt;sort&#x3D;_endTime_a&lt;br&gt;sort&#x3D;type_a | [optional] 
+
+### Return type
+
+[**APIListOfAPIConnection**](APIListOfAPIConnection.md)
+
+### Authorization
+
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: */*
+
+
+
+# **get_device_session_connections_using_get1**
+> APIListOfAPIConnection get_device_session_connections_using_get1(device_session_id, user_id, opts)
+
+Get connections for device session.
+
+### Example
+```ruby
+# load the gem
+require 'bitbar-cloud-api-client'
+# setup authorization
+BitbarCloudApiClient.configure do |config|
+  # Configure HTTP basic authorization: apiKeyInHeader
+  config.username = 'YOUR USERNAME'
+  config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
+end
+
+api_instance = BitbarCloudApiClient::AllEndpointsApi.new
+
+device_session_id = 789 # Integer | deviceSessionId
+
+user_id = 789 # Integer | userId
+
+opts = { 
+  filter: 'filter_example', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=path_eq_value<br>filter=password_eq_value<br>filter=urlschema_eq_value<br>filter=devicesessionid_eq_1<br>filter=port_eq_null<br>filter=createtime_eq_1593583743782<br>filter=host_eq_value<br>filter=id_eq_1<br>filter=_endtime_eq_1593583743782<br>filter=type_eq_value
+  limit: 20, # Integer | limit parameter define page size
+  offset: 0, # Integer | offset parameter define page number
+  sort: 'sort_example' # String | sort parameter contains list of fields used for sort query result <br> examples: <br> sort=path_a<br>sort=password_a<br>sort=urlSchema_a<br>sort=deviceSessionId_a<br>sort=port_a<br>sort=createTime_a<br>sort=host_a<br>sort=id_a<br>sort=_endTime_a<br>sort=type_a
+}
+
+begin
+  #Get connections for device session.
+  result = api_instance.get_device_session_connections_using_get1(device_session_id, user_id, opts)
+  p result
+rescue BitbarCloudApiClient::ApiError => e
+  puts "Exception when calling AllEndpointsApi->get_device_session_connections_using_get1: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **device_session_id** | **Integer**| deviceSessionId | 
+ **user_id** | **Integer**| userId | 
+ **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;path_eq_value&lt;br&gt;filter&#x3D;password_eq_value&lt;br&gt;filter&#x3D;urlschema_eq_value&lt;br&gt;filter&#x3D;devicesessionid_eq_1&lt;br&gt;filter&#x3D;port_eq_null&lt;br&gt;filter&#x3D;createtime_eq_1593583743782&lt;br&gt;filter&#x3D;host_eq_value&lt;br&gt;filter&#x3D;id_eq_1&lt;br&gt;filter&#x3D;_endtime_eq_1593583743782&lt;br&gt;filter&#x3D;type_eq_value | [optional] 
+ **limit** | **Integer**| limit parameter define page size | [optional] [default to 20]
+ **offset** | **Integer**| offset parameter define page number | [optional] [default to 0]
+ **sort** | **String**| sort parameter contains list of fields used for sort query result &lt;br&gt; examples: &lt;br&gt; sort&#x3D;path_a&lt;br&gt;sort&#x3D;password_a&lt;br&gt;sort&#x3D;urlSchema_a&lt;br&gt;sort&#x3D;deviceSessionId_a&lt;br&gt;sort&#x3D;port_a&lt;br&gt;sort&#x3D;createTime_a&lt;br&gt;sort&#x3D;host_a&lt;br&gt;sort&#x3D;id_a&lt;br&gt;sort&#x3D;_endTime_a&lt;br&gt;sort&#x3D;type_a | [optional] 
+
+### Return type
+
+[**APIListOfAPIConnection**](APIListOfAPIConnection.md)
+
+### Authorization
+
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -11061,6 +10796,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -11094,7 +10832,7 @@ nil (empty response body)
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -11117,6 +10855,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -11147,7 +10888,7 @@ nil (empty response body)
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -11170,12 +10911,15 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
 
 opts = { 
-  filter: 'filter_example', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=archivetime_eq_1576134481586<br>filter=createtime_eq_1576134481587<br>filter=startedbydisplayname_eq_value<br>filter=devicemodel.id_eq_1<br>filter=currentsteptype_eq_waiting<br>filter=starttime_eq_1576134481587<br>filter=state_eq_aborted<br>filter=id_eq_1<br>filter=_endtime_eq_1576134481587<br>filter=projectname_eq_value<br>filter=priority_eq_1<br>filter=device.id_eq_1<br>filter=testrunname_eq_value
+  filter: 'filter_example', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=archivetime_eq_1593583740472<br>filter=createtime_eq_1593583740472<br>filter=startedbydisplayname_eq_value<br>filter=devicemodel.id_eq_1<br>filter=currentsteptype_eq_waiting<br>filter=starttime_eq_1593583740472<br>filter=state_eq_aborted<br>filter=id_eq_1<br>filter=_endtime_eq_1593583740472<br>filter=projectname_eq_value<br>filter=priority_eq_1<br>filter=device.id_eq_1<br>filter=testrunname_eq_value
   limit: 20, # Integer | limit parameter define page size
   offset: 0, # Integer | offset parameter define page number
   sort: 'sort_example' # String | sort parameter contains list of fields used for sort query result <br> examples: <br> sort=archiveTime_a<br>sort=createTime_a<br>sort=startedByDisplayName_a<br>sort=deviceModel.id_a<br>sort=currentStepType_a<br>sort=startTime_a<br>sort=state_a<br>sort=id_a<br>sort=_endTime_a<br>sort=projectName_a<br>sort=priority_a<br>sort=device.id_a<br>sort=testRunName_a
@@ -11194,7 +10938,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;archivetime_eq_1576134481586&lt;br&gt;filter&#x3D;createtime_eq_1576134481587&lt;br&gt;filter&#x3D;startedbydisplayname_eq_value&lt;br&gt;filter&#x3D;devicemodel.id_eq_1&lt;br&gt;filter&#x3D;currentsteptype_eq_waiting&lt;br&gt;filter&#x3D;starttime_eq_1576134481587&lt;br&gt;filter&#x3D;state_eq_aborted&lt;br&gt;filter&#x3D;id_eq_1&lt;br&gt;filter&#x3D;_endtime_eq_1576134481587&lt;br&gt;filter&#x3D;projectname_eq_value&lt;br&gt;filter&#x3D;priority_eq_1&lt;br&gt;filter&#x3D;device.id_eq_1&lt;br&gt;filter&#x3D;testrunname_eq_value | [optional] 
+ **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;archivetime_eq_1593583740472&lt;br&gt;filter&#x3D;createtime_eq_1593583740472&lt;br&gt;filter&#x3D;startedbydisplayname_eq_value&lt;br&gt;filter&#x3D;devicemodel.id_eq_1&lt;br&gt;filter&#x3D;currentsteptype_eq_waiting&lt;br&gt;filter&#x3D;starttime_eq_1593583740472&lt;br&gt;filter&#x3D;state_eq_aborted&lt;br&gt;filter&#x3D;id_eq_1&lt;br&gt;filter&#x3D;_endtime_eq_1593583740472&lt;br&gt;filter&#x3D;projectname_eq_value&lt;br&gt;filter&#x3D;priority_eq_1&lt;br&gt;filter&#x3D;device.id_eq_1&lt;br&gt;filter&#x3D;testrunname_eq_value | [optional] 
  **limit** | **Integer**| limit parameter define page size | [optional] [default to 20]
  **offset** | **Integer**| offset parameter define page number | [optional] [default to 0]
  **sort** | **String**| sort parameter contains list of fields used for sort query result &lt;br&gt; examples: &lt;br&gt; sort&#x3D;archiveTime_a&lt;br&gt;sort&#x3D;createTime_a&lt;br&gt;sort&#x3D;startedByDisplayName_a&lt;br&gt;sort&#x3D;deviceModel.id_a&lt;br&gt;sort&#x3D;currentStepType_a&lt;br&gt;sort&#x3D;startTime_a&lt;br&gt;sort&#x3D;state_a&lt;br&gt;sort&#x3D;id_a&lt;br&gt;sort&#x3D;_endTime_a&lt;br&gt;sort&#x3D;projectName_a&lt;br&gt;sort&#x3D;priority_a&lt;br&gt;sort&#x3D;device.id_a&lt;br&gt;sort&#x3D;testRunName_a | [optional] 
@@ -11205,7 +10949,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -11228,6 +10972,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -11261,7 +11008,7 @@ nil (empty response body)
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -11284,6 +11031,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -11314,7 +11064,7 @@ nil (empty response body)
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -11337,6 +11087,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -11370,7 +11123,7 @@ nil (empty response body)
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -11393,6 +11146,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -11423,7 +11179,7 @@ nil (empty response body)
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -11446,6 +11202,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -11479,7 +11238,7 @@ nil (empty response body)
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -11502,6 +11261,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -11532,7 +11294,7 @@ nil (empty response body)
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -11555,6 +11317,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -11595,7 +11360,7 @@ nil (empty response body)
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -11618,6 +11383,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -11657,7 +11425,7 @@ nil (empty response body)
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -11680,6 +11448,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -11722,7 +11493,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -11745,6 +11516,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -11786,7 +11560,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -11809,6 +11583,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -11840,7 +11617,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -11863,6 +11640,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -11900,7 +11680,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -11923,6 +11703,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -11957,7 +11740,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -11980,6 +11763,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -12018,7 +11804,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -12041,6 +11827,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -12085,7 +11874,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -12108,6 +11897,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -12149,7 +11941,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -12172,6 +11964,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -12219,7 +12014,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -12242,6 +12037,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -12249,7 +12047,7 @@ api_instance = BitbarCloudApiClient::AllEndpointsApi.new
 device_session_id = 789 # Integer | deviceSessionId
 
 opts = { 
-  filter: 'filter_example', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=result_eq_passed<br>filter=createtime_eq_1576134483194<br>filter=id_eq_1
+  filter: 'filter_example', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=result_eq_passed<br>filter=createtime_eq_1593583746576<br>filter=id_eq_1
   limit: 20, # Integer | limit parameter define page size
   offset: 0, # Integer | offset parameter define page number
   project_id: 789, # Integer | projectId
@@ -12271,7 +12069,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **device_session_id** | **Integer**| deviceSessionId | 
- **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;result_eq_passed&lt;br&gt;filter&#x3D;createtime_eq_1576134483194&lt;br&gt;filter&#x3D;id_eq_1 | [optional] 
+ **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;result_eq_passed&lt;br&gt;filter&#x3D;createtime_eq_1593583746576&lt;br&gt;filter&#x3D;id_eq_1 | [optional] 
  **limit** | **Integer**| limit parameter define page size | [optional] [default to 20]
  **offset** | **Integer**| offset parameter define page number | [optional] [default to 0]
  **project_id** | **Integer**| projectId | [optional] 
@@ -12284,7 +12082,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -12307,6 +12105,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -12318,7 +12119,7 @@ project_id = 789 # Integer | projectId
 run_id = 789 # Integer | runId
 
 opts = { 
-  filter: 'filter_example', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=result_eq_passed<br>filter=createtime_eq_1576134483195<br>filter=id_eq_1
+  filter: 'filter_example', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=result_eq_passed<br>filter=createtime_eq_1593583746578<br>filter=id_eq_1
   limit: 20, # Integer | limit parameter define page size
   offset: 0, # Integer | offset parameter define page number
   sort: 'sort_example' # String | sort parameter contains list of fields used for sort query result <br> examples: <br> sort=result_a<br>sort=createTime_a<br>sort=id_a
@@ -12340,7 +12141,7 @@ Name | Type | Description  | Notes
  **device_session_id** | **Integer**| deviceSessionId | 
  **project_id** | **Integer**| projectId | 
  **run_id** | **Integer**| runId | 
- **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;result_eq_passed&lt;br&gt;filter&#x3D;createtime_eq_1576134483195&lt;br&gt;filter&#x3D;id_eq_1 | [optional] 
+ **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;result_eq_passed&lt;br&gt;filter&#x3D;createtime_eq_1593583746578&lt;br&gt;filter&#x3D;id_eq_1 | [optional] 
  **limit** | **Integer**| limit parameter define page size | [optional] [default to 20]
  **offset** | **Integer**| offset parameter define page number | [optional] [default to 0]
  **sort** | **String**| sort parameter contains list of fields used for sort query result &lt;br&gt; examples: &lt;br&gt; sort&#x3D;result_a&lt;br&gt;sort&#x3D;createTime_a&lt;br&gt;sort&#x3D;id_a | [optional] 
@@ -12351,7 +12152,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -12374,6 +12175,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -12383,7 +12187,7 @@ device_session_id = 789 # Integer | deviceSessionId
 run_id = 789 # Integer | runId
 
 opts = { 
-  filter: 'filter_example', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=result_eq_passed<br>filter=createtime_eq_1576134483197<br>filter=id_eq_1
+  filter: 'filter_example', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=result_eq_passed<br>filter=createtime_eq_1593583746580<br>filter=id_eq_1
   limit: 20, # Integer | limit parameter define page size
   offset: 0, # Integer | offset parameter define page number
   sort: 'sort_example' # String | sort parameter contains list of fields used for sort query result <br> examples: <br> sort=result_a<br>sort=createTime_a<br>sort=id_a
@@ -12404,7 +12208,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **device_session_id** | **Integer**| deviceSessionId | 
  **run_id** | **Integer**| runId | 
- **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;result_eq_passed&lt;br&gt;filter&#x3D;createtime_eq_1576134483197&lt;br&gt;filter&#x3D;id_eq_1 | [optional] 
+ **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;result_eq_passed&lt;br&gt;filter&#x3D;createtime_eq_1593583746580&lt;br&gt;filter&#x3D;id_eq_1 | [optional] 
  **limit** | **Integer**| limit parameter define page size | [optional] [default to 20]
  **offset** | **Integer**| offset parameter define page number | [optional] [default to 0]
  **sort** | **String**| sort parameter contains list of fields used for sort query result &lt;br&gt; examples: &lt;br&gt; sort&#x3D;result_a&lt;br&gt;sort&#x3D;createTime_a&lt;br&gt;sort&#x3D;id_a | [optional] 
@@ -12415,7 +12219,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -12438,6 +12242,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -12451,7 +12258,7 @@ run_id = 789 # Integer | runId
 user_id = 789 # Integer | userId
 
 opts = { 
-  filter: 'filter_example', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=result_eq_passed<br>filter=createtime_eq_1576134483198<br>filter=id_eq_1
+  filter: 'filter_example', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=result_eq_passed<br>filter=createtime_eq_1593583746581<br>filter=id_eq_1
   limit: 20, # Integer | limit parameter define page size
   offset: 0, # Integer | offset parameter define page number
   sort: 'sort_example' # String | sort parameter contains list of fields used for sort query result <br> examples: <br> sort=result_a<br>sort=createTime_a<br>sort=id_a
@@ -12474,7 +12281,7 @@ Name | Type | Description  | Notes
  **project_id** | **Integer**| projectId | 
  **run_id** | **Integer**| runId | 
  **user_id** | **Integer**| userId | 
- **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;result_eq_passed&lt;br&gt;filter&#x3D;createtime_eq_1576134483198&lt;br&gt;filter&#x3D;id_eq_1 | [optional] 
+ **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;result_eq_passed&lt;br&gt;filter&#x3D;createtime_eq_1593583746581&lt;br&gt;filter&#x3D;id_eq_1 | [optional] 
  **limit** | **Integer**| limit parameter define page size | [optional] [default to 20]
  **offset** | **Integer**| offset parameter define page number | [optional] [default to 0]
  **sort** | **String**| sort parameter contains list of fields used for sort query result &lt;br&gt; examples: &lt;br&gt; sort&#x3D;result_a&lt;br&gt;sort&#x3D;createTime_a&lt;br&gt;sort&#x3D;id_a | [optional] 
@@ -12485,7 +12292,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -12508,6 +12315,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -12542,7 +12352,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -12565,6 +12375,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -12599,7 +12412,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -12622,6 +12435,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -12653,7 +12469,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -12676,6 +12492,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -12683,11 +12502,11 @@ api_instance = BitbarCloudApiClient::AllEndpointsApi.new
 run_id = 789 # Integer | runId
 
 opts = { 
-  filter: 'filter_example', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=testrunid_eq_1<br>filter=successratio_eq_1<br>filter=retrystate_eq_none<br>filter=device.id_eq_1<br>filter=userid_eq_1<br>filter=timelimit_eq_1<br>filter=duration_eq_1<br>filter=createtime_eq_1576134483591<br>filter=launchappduration_eq_1<br>filter=starttime_eq_1576134483591<br>filter=state_eq_aborted<br>filter=id_eq_1<br>filter=_endtime_eq_1576134483591<br>filter=projectname_eq_value<br>filter=device.displayname_eq_value<br>filter=testrunname_eq_value<br>filter=projectid_eq_1
+  filter: 'filter_example', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=testrunid_eq_1<br>filter=successratio_eq_1<br>filter=type_eq_automatic<br>filter=retrystate_eq_none<br>filter=device.id_eq_1<br>filter=userid_eq_1<br>filter=timelimit_eq_1<br>filter=duration_eq_1<br>filter=createtime_eq_1593583743579<br>filter=launchappduration_eq_1<br>filter=useremail_eq_value<br>filter=starttime_eq_1593583743579<br>filter=state_eq_aborted<br>filter=id_eq_1<br>filter=_endtime_eq_1593583743579<br>filter=projectname_eq_value<br>filter=device.displayname_eq_value<br>filter=testrunname_eq_null<br>filter=projectid_eq_1
   limit: 20, # Integer | limit parameter define page size
   offset: 0, # Integer | offset parameter define page number
   project_id: 789, # Integer | projectId
-  sort: 'sort_example' # String | sort parameter contains list of fields used for sort query result <br> examples: <br> sort=testRunId_a<br>sort=isExcluded_a<br>sort=successRatio_a<br>sort=retryState_a<br>sort=device.id_a<br>sort=userId_a<br>sort=timeLimit_a<br>sort=duration_a<br>sort=createTime_a<br>sort=launchAppDuration_a<br>sort=startTime_a<br>sort=state_a<br>sort=id_a<br>sort=_endTime_a<br>sort=projectName_a<br>sort=device.displayName_a<br>sort=testRunName_a<br>sort=projectId_a
+  sort: 'sort_example' # String | sort parameter contains list of fields used for sort query result <br> examples: <br> sort=testRunId_a<br>sort=isExcluded_a<br>sort=successRatio_a<br>sort=type_a<br>sort=retryState_a<br>sort=device.id_a<br>sort=userId_a<br>sort=timeLimit_a<br>sort=duration_a<br>sort=createTime_a<br>sort=launchAppDuration_a<br>sort=userEmail_a<br>sort=startTime_a<br>sort=state_a<br>sort=id_a<br>sort=_endTime_a<br>sort=projectName_a<br>sort=device.displayName_a<br>sort=testRunName_a<br>sort=projectId_a
 }
 
 begin
@@ -12704,11 +12523,11 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **run_id** | **Integer**| runId | 
- **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;testrunid_eq_1&lt;br&gt;filter&#x3D;successratio_eq_1&lt;br&gt;filter&#x3D;retrystate_eq_none&lt;br&gt;filter&#x3D;device.id_eq_1&lt;br&gt;filter&#x3D;userid_eq_1&lt;br&gt;filter&#x3D;timelimit_eq_1&lt;br&gt;filter&#x3D;duration_eq_1&lt;br&gt;filter&#x3D;createtime_eq_1576134483591&lt;br&gt;filter&#x3D;launchappduration_eq_1&lt;br&gt;filter&#x3D;starttime_eq_1576134483591&lt;br&gt;filter&#x3D;state_eq_aborted&lt;br&gt;filter&#x3D;id_eq_1&lt;br&gt;filter&#x3D;_endtime_eq_1576134483591&lt;br&gt;filter&#x3D;projectname_eq_value&lt;br&gt;filter&#x3D;device.displayname_eq_value&lt;br&gt;filter&#x3D;testrunname_eq_value&lt;br&gt;filter&#x3D;projectid_eq_1 | [optional] 
+ **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;testrunid_eq_1&lt;br&gt;filter&#x3D;successratio_eq_1&lt;br&gt;filter&#x3D;type_eq_automatic&lt;br&gt;filter&#x3D;retrystate_eq_none&lt;br&gt;filter&#x3D;device.id_eq_1&lt;br&gt;filter&#x3D;userid_eq_1&lt;br&gt;filter&#x3D;timelimit_eq_1&lt;br&gt;filter&#x3D;duration_eq_1&lt;br&gt;filter&#x3D;createtime_eq_1593583743579&lt;br&gt;filter&#x3D;launchappduration_eq_1&lt;br&gt;filter&#x3D;useremail_eq_value&lt;br&gt;filter&#x3D;starttime_eq_1593583743579&lt;br&gt;filter&#x3D;state_eq_aborted&lt;br&gt;filter&#x3D;id_eq_1&lt;br&gt;filter&#x3D;_endtime_eq_1593583743579&lt;br&gt;filter&#x3D;projectname_eq_value&lt;br&gt;filter&#x3D;device.displayname_eq_value&lt;br&gt;filter&#x3D;testrunname_eq_null&lt;br&gt;filter&#x3D;projectid_eq_1 | [optional] 
  **limit** | **Integer**| limit parameter define page size | [optional] [default to 20]
  **offset** | **Integer**| offset parameter define page number | [optional] [default to 0]
  **project_id** | **Integer**| projectId | [optional] 
- **sort** | **String**| sort parameter contains list of fields used for sort query result &lt;br&gt; examples: &lt;br&gt; sort&#x3D;testRunId_a&lt;br&gt;sort&#x3D;isExcluded_a&lt;br&gt;sort&#x3D;successRatio_a&lt;br&gt;sort&#x3D;retryState_a&lt;br&gt;sort&#x3D;device.id_a&lt;br&gt;sort&#x3D;userId_a&lt;br&gt;sort&#x3D;timeLimit_a&lt;br&gt;sort&#x3D;duration_a&lt;br&gt;sort&#x3D;createTime_a&lt;br&gt;sort&#x3D;launchAppDuration_a&lt;br&gt;sort&#x3D;startTime_a&lt;br&gt;sort&#x3D;state_a&lt;br&gt;sort&#x3D;id_a&lt;br&gt;sort&#x3D;_endTime_a&lt;br&gt;sort&#x3D;projectName_a&lt;br&gt;sort&#x3D;device.displayName_a&lt;br&gt;sort&#x3D;testRunName_a&lt;br&gt;sort&#x3D;projectId_a | [optional] 
+ **sort** | **String**| sort parameter contains list of fields used for sort query result &lt;br&gt; examples: &lt;br&gt; sort&#x3D;testRunId_a&lt;br&gt;sort&#x3D;isExcluded_a&lt;br&gt;sort&#x3D;successRatio_a&lt;br&gt;sort&#x3D;type_a&lt;br&gt;sort&#x3D;retryState_a&lt;br&gt;sort&#x3D;device.id_a&lt;br&gt;sort&#x3D;userId_a&lt;br&gt;sort&#x3D;timeLimit_a&lt;br&gt;sort&#x3D;duration_a&lt;br&gt;sort&#x3D;createTime_a&lt;br&gt;sort&#x3D;launchAppDuration_a&lt;br&gt;sort&#x3D;userEmail_a&lt;br&gt;sort&#x3D;startTime_a&lt;br&gt;sort&#x3D;state_a&lt;br&gt;sort&#x3D;id_a&lt;br&gt;sort&#x3D;_endTime_a&lt;br&gt;sort&#x3D;projectName_a&lt;br&gt;sort&#x3D;device.displayName_a&lt;br&gt;sort&#x3D;testRunName_a&lt;br&gt;sort&#x3D;projectId_a | [optional] 
 
 ### Return type
 
@@ -12716,7 +12535,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -12739,6 +12558,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -12750,10 +12572,10 @@ run_id = 789 # Integer | runId
 user_id = 789 # Integer | userId
 
 opts = { 
-  filter: 'filter_example', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=testrunid_eq_1<br>filter=successratio_eq_1<br>filter=retrystate_eq_none<br>filter=device.id_eq_1<br>filter=userid_eq_1<br>filter=timelimit_eq_1<br>filter=duration_eq_1<br>filter=createtime_eq_1576134483594<br>filter=launchappduration_eq_1<br>filter=starttime_eq_1576134483594<br>filter=state_eq_aborted<br>filter=id_eq_1<br>filter=_endtime_eq_1576134483594<br>filter=projectname_eq_value<br>filter=device.displayname_eq_value<br>filter=testrunname_eq_value<br>filter=projectid_eq_1
+  filter: 'filter_example', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=testrunid_eq_1<br>filter=successratio_eq_1<br>filter=type_eq_automatic<br>filter=retrystate_eq_none<br>filter=device.id_eq_1<br>filter=userid_eq_1<br>filter=timelimit_eq_1<br>filter=duration_eq_1<br>filter=createtime_eq_1593583743582<br>filter=launchappduration_eq_1<br>filter=useremail_eq_value<br>filter=starttime_eq_1593583743582<br>filter=state_eq_aborted<br>filter=id_eq_1<br>filter=_endtime_eq_1593583743582<br>filter=projectname_eq_value<br>filter=device.displayname_eq_value<br>filter=testrunname_eq_null<br>filter=projectid_eq_1
   limit: 20, # Integer | limit parameter define page size
   offset: 0, # Integer | offset parameter define page number
-  sort: 'sort_example' # String | sort parameter contains list of fields used for sort query result <br> examples: <br> sort=testRunId_a<br>sort=isExcluded_a<br>sort=successRatio_a<br>sort=retryState_a<br>sort=device.id_a<br>sort=userId_a<br>sort=timeLimit_a<br>sort=duration_a<br>sort=createTime_a<br>sort=launchAppDuration_a<br>sort=startTime_a<br>sort=state_a<br>sort=id_a<br>sort=_endTime_a<br>sort=projectName_a<br>sort=device.displayName_a<br>sort=testRunName_a<br>sort=projectId_a
+  sort: 'sort_example' # String | sort parameter contains list of fields used for sort query result <br> examples: <br> sort=testRunId_a<br>sort=isExcluded_a<br>sort=successRatio_a<br>sort=type_a<br>sort=retryState_a<br>sort=device.id_a<br>sort=userId_a<br>sort=timeLimit_a<br>sort=duration_a<br>sort=createTime_a<br>sort=launchAppDuration_a<br>sort=userEmail_a<br>sort=startTime_a<br>sort=state_a<br>sort=id_a<br>sort=_endTime_a<br>sort=projectName_a<br>sort=device.displayName_a<br>sort=testRunName_a<br>sort=projectId_a
 }
 
 begin
@@ -12772,10 +12594,10 @@ Name | Type | Description  | Notes
  **project_id** | **Integer**| projectId | 
  **run_id** | **Integer**| runId | 
  **user_id** | **Integer**| userId | 
- **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;testrunid_eq_1&lt;br&gt;filter&#x3D;successratio_eq_1&lt;br&gt;filter&#x3D;retrystate_eq_none&lt;br&gt;filter&#x3D;device.id_eq_1&lt;br&gt;filter&#x3D;userid_eq_1&lt;br&gt;filter&#x3D;timelimit_eq_1&lt;br&gt;filter&#x3D;duration_eq_1&lt;br&gt;filter&#x3D;createtime_eq_1576134483594&lt;br&gt;filter&#x3D;launchappduration_eq_1&lt;br&gt;filter&#x3D;starttime_eq_1576134483594&lt;br&gt;filter&#x3D;state_eq_aborted&lt;br&gt;filter&#x3D;id_eq_1&lt;br&gt;filter&#x3D;_endtime_eq_1576134483594&lt;br&gt;filter&#x3D;projectname_eq_value&lt;br&gt;filter&#x3D;device.displayname_eq_value&lt;br&gt;filter&#x3D;testrunname_eq_value&lt;br&gt;filter&#x3D;projectid_eq_1 | [optional] 
+ **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;testrunid_eq_1&lt;br&gt;filter&#x3D;successratio_eq_1&lt;br&gt;filter&#x3D;type_eq_automatic&lt;br&gt;filter&#x3D;retrystate_eq_none&lt;br&gt;filter&#x3D;device.id_eq_1&lt;br&gt;filter&#x3D;userid_eq_1&lt;br&gt;filter&#x3D;timelimit_eq_1&lt;br&gt;filter&#x3D;duration_eq_1&lt;br&gt;filter&#x3D;createtime_eq_1593583743582&lt;br&gt;filter&#x3D;launchappduration_eq_1&lt;br&gt;filter&#x3D;useremail_eq_value&lt;br&gt;filter&#x3D;starttime_eq_1593583743582&lt;br&gt;filter&#x3D;state_eq_aborted&lt;br&gt;filter&#x3D;id_eq_1&lt;br&gt;filter&#x3D;_endtime_eq_1593583743582&lt;br&gt;filter&#x3D;projectname_eq_value&lt;br&gt;filter&#x3D;device.displayname_eq_value&lt;br&gt;filter&#x3D;testrunname_eq_null&lt;br&gt;filter&#x3D;projectid_eq_1 | [optional] 
  **limit** | **Integer**| limit parameter define page size | [optional] [default to 20]
  **offset** | **Integer**| offset parameter define page number | [optional] [default to 0]
- **sort** | **String**| sort parameter contains list of fields used for sort query result &lt;br&gt; examples: &lt;br&gt; sort&#x3D;testRunId_a&lt;br&gt;sort&#x3D;isExcluded_a&lt;br&gt;sort&#x3D;successRatio_a&lt;br&gt;sort&#x3D;retryState_a&lt;br&gt;sort&#x3D;device.id_a&lt;br&gt;sort&#x3D;userId_a&lt;br&gt;sort&#x3D;timeLimit_a&lt;br&gt;sort&#x3D;duration_a&lt;br&gt;sort&#x3D;createTime_a&lt;br&gt;sort&#x3D;launchAppDuration_a&lt;br&gt;sort&#x3D;startTime_a&lt;br&gt;sort&#x3D;state_a&lt;br&gt;sort&#x3D;id_a&lt;br&gt;sort&#x3D;_endTime_a&lt;br&gt;sort&#x3D;projectName_a&lt;br&gt;sort&#x3D;device.displayName_a&lt;br&gt;sort&#x3D;testRunName_a&lt;br&gt;sort&#x3D;projectId_a | [optional] 
+ **sort** | **String**| sort parameter contains list of fields used for sort query result &lt;br&gt; examples: &lt;br&gt; sort&#x3D;testRunId_a&lt;br&gt;sort&#x3D;isExcluded_a&lt;br&gt;sort&#x3D;successRatio_a&lt;br&gt;sort&#x3D;type_a&lt;br&gt;sort&#x3D;retryState_a&lt;br&gt;sort&#x3D;device.id_a&lt;br&gt;sort&#x3D;userId_a&lt;br&gt;sort&#x3D;timeLimit_a&lt;br&gt;sort&#x3D;duration_a&lt;br&gt;sort&#x3D;createTime_a&lt;br&gt;sort&#x3D;launchAppDuration_a&lt;br&gt;sort&#x3D;userEmail_a&lt;br&gt;sort&#x3D;startTime_a&lt;br&gt;sort&#x3D;state_a&lt;br&gt;sort&#x3D;id_a&lt;br&gt;sort&#x3D;_endTime_a&lt;br&gt;sort&#x3D;projectName_a&lt;br&gt;sort&#x3D;device.displayName_a&lt;br&gt;sort&#x3D;testRunName_a&lt;br&gt;sort&#x3D;projectId_a | [optional] 
 
 ### Return type
 
@@ -12783,7 +12605,144 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: */*
+
+
+
+# **get_device_statistics_using_get**
+> APIListOfAPIDeviceStatistic get_device_statistics_using_get(opts)
+
+Get device statistics.
+
+### Example
+```ruby
+# load the gem
+require 'bitbar-cloud-api-client'
+# setup authorization
+BitbarCloudApiClient.configure do |config|
+  # Configure HTTP basic authorization: apiKeyInHeader
+  config.username = 'YOUR USERNAME'
+  config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
+end
+
+api_instance = BitbarCloudApiClient::AllEndpointsApi.new
+
+opts = { 
+  filter: 'filter_example', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=testrunid_eq_1<br>filter=releaseversion_eq_value<br>filter=devicename_eq_value<br>filter=common_eq_null<br>filter=createtime_eq_1593583748399<br>filter=ostype_eq_ios<br>filter=id_eq_1<br>filter=projectid_eq_1
+  limit: 20, # Integer | limit parameter define page size
+  mode: 'DEVICE_NAME', # String | mode
+  offset: 0, # Integer | offset parameter define page number
+  skip_common_project: false, # BOOLEAN | skipCommonProject
+  sort: 'sort_example' # String | sort parameter contains list of fields used for sort query result <br> examples: <br> sort=failedRatio_a<br>sort=passedTests_a<br>sort=releaseVersion_a<br>sort=failedTests_a<br>sort=passedRatio_a<br>sort=deviceName_a<br>sort=usageCount_a<br>sort=totalTests_a<br>sort=failedDevices_a<br>sort=usageMillis_a<br>sort=osType_a<br>sort=id_a<br>sort=projectId_a
+}
+
+begin
+  #Get device statistics.
+  result = api_instance.get_device_statistics_using_get(opts)
+  p result
+rescue BitbarCloudApiClient::ApiError => e
+  puts "Exception when calling AllEndpointsApi->get_device_statistics_using_get: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;testrunid_eq_1&lt;br&gt;filter&#x3D;releaseversion_eq_value&lt;br&gt;filter&#x3D;devicename_eq_value&lt;br&gt;filter&#x3D;common_eq_null&lt;br&gt;filter&#x3D;createtime_eq_1593583748399&lt;br&gt;filter&#x3D;ostype_eq_ios&lt;br&gt;filter&#x3D;id_eq_1&lt;br&gt;filter&#x3D;projectid_eq_1 | [optional] 
+ **limit** | **Integer**| limit parameter define page size | [optional] [default to 20]
+ **mode** | **String**| mode | [optional] [default to DEVICE_NAME]
+ **offset** | **Integer**| offset parameter define page number | [optional] [default to 0]
+ **skip_common_project** | **BOOLEAN**| skipCommonProject | [optional] [default to false]
+ **sort** | **String**| sort parameter contains list of fields used for sort query result &lt;br&gt; examples: &lt;br&gt; sort&#x3D;failedRatio_a&lt;br&gt;sort&#x3D;passedTests_a&lt;br&gt;sort&#x3D;releaseVersion_a&lt;br&gt;sort&#x3D;failedTests_a&lt;br&gt;sort&#x3D;passedRatio_a&lt;br&gt;sort&#x3D;deviceName_a&lt;br&gt;sort&#x3D;usageCount_a&lt;br&gt;sort&#x3D;totalTests_a&lt;br&gt;sort&#x3D;failedDevices_a&lt;br&gt;sort&#x3D;usageMillis_a&lt;br&gt;sort&#x3D;osType_a&lt;br&gt;sort&#x3D;id_a&lt;br&gt;sort&#x3D;projectId_a | [optional] 
+
+### Return type
+
+[**APIListOfAPIDeviceStatistic**](APIListOfAPIDeviceStatistic.md)
+
+### Authorization
+
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: */*
+
+
+
+# **get_device_statistics_using_get1**
+> APIListOfAPIDeviceStatistic get_device_statistics_using_get1(user_id, opts)
+
+Get device statistics.
+
+### Example
+```ruby
+# load the gem
+require 'bitbar-cloud-api-client'
+# setup authorization
+BitbarCloudApiClient.configure do |config|
+  # Configure HTTP basic authorization: apiKeyInHeader
+  config.username = 'YOUR USERNAME'
+  config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
+end
+
+api_instance = BitbarCloudApiClient::AllEndpointsApi.new
+
+user_id = 789 # Integer | userId
+
+opts = { 
+  filter: 'filter_example', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=testrunid_eq_1<br>filter=releaseversion_eq_value<br>filter=devicename_eq_value<br>filter=common_eq_null<br>filter=createtime_eq_1593583748401<br>filter=ostype_eq_ios<br>filter=id_eq_1<br>filter=projectid_eq_1
+  for_whole_account: false, # BOOLEAN | forWholeAccount
+  limit: 20, # Integer | limit parameter define page size
+  mode: 'DEVICE_NAME', # String | mode
+  offset: 0, # Integer | offset parameter define page number
+  skip_common_project: false, # BOOLEAN | skipCommonProject
+  skip_shared: false, # BOOLEAN | skipShared
+  sort: 'sort_example' # String | sort parameter contains list of fields used for sort query result <br> examples: <br> sort=failedRatio_a<br>sort=passedTests_a<br>sort=releaseVersion_a<br>sort=failedTests_a<br>sort=passedRatio_a<br>sort=deviceName_a<br>sort=usageCount_a<br>sort=totalTests_a<br>sort=failedDevices_a<br>sort=usageMillis_a<br>sort=osType_a<br>sort=id_a<br>sort=projectId_a
+}
+
+begin
+  #Get device statistics.
+  result = api_instance.get_device_statistics_using_get1(user_id, opts)
+  p result
+rescue BitbarCloudApiClient::ApiError => e
+  puts "Exception when calling AllEndpointsApi->get_device_statistics_using_get1: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **user_id** | **Integer**| userId | 
+ **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;testrunid_eq_1&lt;br&gt;filter&#x3D;releaseversion_eq_value&lt;br&gt;filter&#x3D;devicename_eq_value&lt;br&gt;filter&#x3D;common_eq_null&lt;br&gt;filter&#x3D;createtime_eq_1593583748401&lt;br&gt;filter&#x3D;ostype_eq_ios&lt;br&gt;filter&#x3D;id_eq_1&lt;br&gt;filter&#x3D;projectid_eq_1 | [optional] 
+ **for_whole_account** | **BOOLEAN**| forWholeAccount | [optional] [default to false]
+ **limit** | **Integer**| limit parameter define page size | [optional] [default to 20]
+ **mode** | **String**| mode | [optional] [default to DEVICE_NAME]
+ **offset** | **Integer**| offset parameter define page number | [optional] [default to 0]
+ **skip_common_project** | **BOOLEAN**| skipCommonProject | [optional] [default to false]
+ **skip_shared** | **BOOLEAN**| skipShared | [optional] [default to false]
+ **sort** | **String**| sort parameter contains list of fields used for sort query result &lt;br&gt; examples: &lt;br&gt; sort&#x3D;failedRatio_a&lt;br&gt;sort&#x3D;passedTests_a&lt;br&gt;sort&#x3D;releaseVersion_a&lt;br&gt;sort&#x3D;failedTests_a&lt;br&gt;sort&#x3D;passedRatio_a&lt;br&gt;sort&#x3D;deviceName_a&lt;br&gt;sort&#x3D;usageCount_a&lt;br&gt;sort&#x3D;totalTests_a&lt;br&gt;sort&#x3D;failedDevices_a&lt;br&gt;sort&#x3D;usageMillis_a&lt;br&gt;sort&#x3D;osType_a&lt;br&gt;sort&#x3D;id_a&lt;br&gt;sort&#x3D;projectId_a | [optional] 
+
+### Return type
+
+[**APIListOfAPIDeviceStatistic**](APIListOfAPIDeviceStatistic.md)
+
+### Authorization
+
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -12806,12 +12765,15 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
 
 opts = { 
-  filter: 'filter_example', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=tdsversion_eq_value<br>filter=internalstorage_eq_1<br>filter=alarmon_eq_true<br>filter=externalstorage_eq_1<br>filter=monitoringon_eq_true<br>filter=devicetime_eq_1<br>filter=ssid_eq_value<br>filter=devicename_eq_value<br>filter=deviceid_eq_1<br>filter=enabled_eq_true<br>filter=serialid_eq_value<br>filter=internetaccess_eq_true<br>filter=emailaccount_eq_value<br>filter=clustername_eq_value<br>filter=bluetoothon_eq_true<br>filter=state_eq_offline_cleaning<br>filter=id_eq_1<br>filter=mocklocationon_eq_true<br>filter=batterylevel_eq_1<br>filter=locationserviceon_eq_true<br>filter=testexecuting_eq_true<br>filter=screenlocked_eq_true<br>filter=sdcardpresent_eq_true<br>filter=aslon_eq_true<br>filter=devicetimezone_eq_value<br>filter=device.archivetime_eq_1576134481687<br>filter=flashon_eq_true<br>filter=tetheringon_eq_true
+  filter: 'filter_example', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=tdsversion_eq_value<br>filter=internalstorage_eq_1<br>filter=alarmon_eq_true<br>filter=externalstorage_eq_1<br>filter=monitoringon_eq_true<br>filter=devicetime_eq_1<br>filter=ssid_eq_value<br>filter=devicename_eq_value<br>filter=deviceid_eq_1<br>filter=enabled_eq_true<br>filter=serialid_eq_value<br>filter=internetaccess_eq_true<br>filter=emailaccount_eq_value<br>filter=clustername_eq_value<br>filter=bluetoothon_eq_true<br>filter=state_eq_offline_cleaning<br>filter=id_eq_1<br>filter=mocklocationon_eq_true<br>filter=batterylevel_eq_1<br>filter=locationserviceon_eq_true<br>filter=testexecuting_eq_true<br>filter=screenlocked_eq_true<br>filter=sdcardpresent_eq_true<br>filter=aslon_eq_true<br>filter=devicetimezone_eq_value<br>filter=device.archivetime_eq_1593583740771<br>filter=flashon_eq_true<br>filter=tetheringon_eq_true
   limit: 20, # Integer | limit parameter define page size
   offset: 0, # Integer | offset parameter define page number
   sort: 'sort_example' # String | sort parameter contains list of fields used for sort query result <br> examples: <br> sort=tdsVersion_a<br>sort=internalStorage_a<br>sort=alarmOn_a<br>sort=externalStorage_a<br>sort=monitoringOn_a<br>sort=deviceTime_a<br>sort=ssid_a<br>sort=deviceName_a<br>sort=deviceId_a<br>sort=enabled_a<br>sort=serialId_a<br>sort=internetAccess_a<br>sort=emailAccount_a<br>sort=clusterName_a<br>sort=bluetoothOn_a<br>sort=state_a<br>sort=id_a<br>sort=mockLocationOn_a<br>sort=batteryLevel_a<br>sort=locationServiceOn_a<br>sort=testExecuting_a<br>sort=screenLocked_a<br>sort=updateTime_a<br>sort=sdcardPresent_a<br>sort=aslOn_a<br>sort=deviceTimeZone_a<br>sort=device.archiveTime_a<br>sort=flashOn_a<br>sort=tetheringOn_a
@@ -12830,7 +12792,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;tdsversion_eq_value&lt;br&gt;filter&#x3D;internalstorage_eq_1&lt;br&gt;filter&#x3D;alarmon_eq_true&lt;br&gt;filter&#x3D;externalstorage_eq_1&lt;br&gt;filter&#x3D;monitoringon_eq_true&lt;br&gt;filter&#x3D;devicetime_eq_1&lt;br&gt;filter&#x3D;ssid_eq_value&lt;br&gt;filter&#x3D;devicename_eq_value&lt;br&gt;filter&#x3D;deviceid_eq_1&lt;br&gt;filter&#x3D;enabled_eq_true&lt;br&gt;filter&#x3D;serialid_eq_value&lt;br&gt;filter&#x3D;internetaccess_eq_true&lt;br&gt;filter&#x3D;emailaccount_eq_value&lt;br&gt;filter&#x3D;clustername_eq_value&lt;br&gt;filter&#x3D;bluetoothon_eq_true&lt;br&gt;filter&#x3D;state_eq_offline_cleaning&lt;br&gt;filter&#x3D;id_eq_1&lt;br&gt;filter&#x3D;mocklocationon_eq_true&lt;br&gt;filter&#x3D;batterylevel_eq_1&lt;br&gt;filter&#x3D;locationserviceon_eq_true&lt;br&gt;filter&#x3D;testexecuting_eq_true&lt;br&gt;filter&#x3D;screenlocked_eq_true&lt;br&gt;filter&#x3D;sdcardpresent_eq_true&lt;br&gt;filter&#x3D;aslon_eq_true&lt;br&gt;filter&#x3D;devicetimezone_eq_value&lt;br&gt;filter&#x3D;device.archivetime_eq_1576134481687&lt;br&gt;filter&#x3D;flashon_eq_true&lt;br&gt;filter&#x3D;tetheringon_eq_true | [optional] 
+ **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;tdsversion_eq_value&lt;br&gt;filter&#x3D;internalstorage_eq_1&lt;br&gt;filter&#x3D;alarmon_eq_true&lt;br&gt;filter&#x3D;externalstorage_eq_1&lt;br&gt;filter&#x3D;monitoringon_eq_true&lt;br&gt;filter&#x3D;devicetime_eq_1&lt;br&gt;filter&#x3D;ssid_eq_value&lt;br&gt;filter&#x3D;devicename_eq_value&lt;br&gt;filter&#x3D;deviceid_eq_1&lt;br&gt;filter&#x3D;enabled_eq_true&lt;br&gt;filter&#x3D;serialid_eq_value&lt;br&gt;filter&#x3D;internetaccess_eq_true&lt;br&gt;filter&#x3D;emailaccount_eq_value&lt;br&gt;filter&#x3D;clustername_eq_value&lt;br&gt;filter&#x3D;bluetoothon_eq_true&lt;br&gt;filter&#x3D;state_eq_offline_cleaning&lt;br&gt;filter&#x3D;id_eq_1&lt;br&gt;filter&#x3D;mocklocationon_eq_true&lt;br&gt;filter&#x3D;batterylevel_eq_1&lt;br&gt;filter&#x3D;locationserviceon_eq_true&lt;br&gt;filter&#x3D;testexecuting_eq_true&lt;br&gt;filter&#x3D;screenlocked_eq_true&lt;br&gt;filter&#x3D;sdcardpresent_eq_true&lt;br&gt;filter&#x3D;aslon_eq_true&lt;br&gt;filter&#x3D;devicetimezone_eq_value&lt;br&gt;filter&#x3D;device.archivetime_eq_1593583740771&lt;br&gt;filter&#x3D;flashon_eq_true&lt;br&gt;filter&#x3D;tetheringon_eq_true | [optional] 
  **limit** | **Integer**| limit parameter define page size | [optional] [default to 20]
  **offset** | **Integer**| offset parameter define page number | [optional] [default to 0]
  **sort** | **String**| sort parameter contains list of fields used for sort query result &lt;br&gt; examples: &lt;br&gt; sort&#x3D;tdsVersion_a&lt;br&gt;sort&#x3D;internalStorage_a&lt;br&gt;sort&#x3D;alarmOn_a&lt;br&gt;sort&#x3D;externalStorage_a&lt;br&gt;sort&#x3D;monitoringOn_a&lt;br&gt;sort&#x3D;deviceTime_a&lt;br&gt;sort&#x3D;ssid_a&lt;br&gt;sort&#x3D;deviceName_a&lt;br&gt;sort&#x3D;deviceId_a&lt;br&gt;sort&#x3D;enabled_a&lt;br&gt;sort&#x3D;serialId_a&lt;br&gt;sort&#x3D;internetAccess_a&lt;br&gt;sort&#x3D;emailAccount_a&lt;br&gt;sort&#x3D;clusterName_a&lt;br&gt;sort&#x3D;bluetoothOn_a&lt;br&gt;sort&#x3D;state_a&lt;br&gt;sort&#x3D;id_a&lt;br&gt;sort&#x3D;mockLocationOn_a&lt;br&gt;sort&#x3D;batteryLevel_a&lt;br&gt;sort&#x3D;locationServiceOn_a&lt;br&gt;sort&#x3D;testExecuting_a&lt;br&gt;sort&#x3D;screenLocked_a&lt;br&gt;sort&#x3D;updateTime_a&lt;br&gt;sort&#x3D;sdcardPresent_a&lt;br&gt;sort&#x3D;aslOn_a&lt;br&gt;sort&#x3D;deviceTimeZone_a&lt;br&gt;sort&#x3D;device.archiveTime_a&lt;br&gt;sort&#x3D;flashOn_a&lt;br&gt;sort&#x3D;tetheringOn_a | [optional] 
@@ -12841,7 +12803,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -12864,12 +12826,15 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
 
 opts = { 
-  filter: 'filter_example', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=devicemodelname_eq_value<br>filter=ostype_eq_ios<br>filter=useremail_eq_value<br>filter=starttime_eq_1576134481698<br>filter=_endtime_eq_1576134481698<br>filter=projectname_eq_value
+  filter: 'filter_example', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=devicemodelname_eq_value<br>filter=ostype_eq_ios<br>filter=useremail_eq_value<br>filter=starttime_eq_1593583740785<br>filter=_endtime_eq_1593583740785<br>filter=projectname_eq_value
   limit: 20, # Integer | limit parameter define page size
   offset: 0, # Integer | offset parameter define page number
   sort: 'sort_example' # String | sort parameter contains list of fields used for sort query result <br> examples: <br> 
@@ -12888,7 +12853,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;devicemodelname_eq_value&lt;br&gt;filter&#x3D;ostype_eq_ios&lt;br&gt;filter&#x3D;useremail_eq_value&lt;br&gt;filter&#x3D;starttime_eq_1576134481698&lt;br&gt;filter&#x3D;_endtime_eq_1576134481698&lt;br&gt;filter&#x3D;projectname_eq_value | [optional] 
+ **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;devicemodelname_eq_value&lt;br&gt;filter&#x3D;ostype_eq_ios&lt;br&gt;filter&#x3D;useremail_eq_value&lt;br&gt;filter&#x3D;starttime_eq_1593583740785&lt;br&gt;filter&#x3D;_endtime_eq_1593583740785&lt;br&gt;filter&#x3D;projectname_eq_value | [optional] 
  **limit** | **Integer**| limit parameter define page size | [optional] [default to 20]
  **offset** | **Integer**| offset parameter define page number | [optional] [default to 0]
  **sort** | **String**| sort parameter contains list of fields used for sort query result &lt;br&gt; examples: &lt;br&gt;  | [optional] 
@@ -12899,7 +12864,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -12922,16 +12887,19 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
 
 opts = { 
-  filter: 'filter_example', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=starttime_eq_1576134481796<br>filter=id_eq_1<br>filter=_endtime_eq_1576134481796<br>filter=username_eq_value<br>filter=userid_eq_1
+  filter: 'filter_example', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=starttime_eq_1593583740973<br>filter=id_eq_1<br>filter=_endtime_eq_1593583740973<br>filter=username_eq_value<br>filter=userid_eq_1
+  for_whole_account: false, # BOOLEAN | forWholeAccount
   limit: 20, # Integer | limit parameter define page size
   offset: 0, # Integer | offset parameter define page number
-  sort: 'sort_example', # String | sort parameter contains list of fields used for sort query result <br> examples: <br> sort=createTime_a<br>sort=id_a<br>sort=userName_a<br>sort=type_a
-  with_additional_users: false # BOOLEAN | withAdditionalUsers
+  sort: 'sort_example' # String | sort parameter contains list of fields used for sort query result <br> examples: <br> sort=createTime_a<br>sort=id_a<br>sort=userName_a<br>sort=type_a
 }
 
 begin
@@ -12947,11 +12915,11 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;starttime_eq_1576134481796&lt;br&gt;filter&#x3D;id_eq_1&lt;br&gt;filter&#x3D;_endtime_eq_1576134481796&lt;br&gt;filter&#x3D;username_eq_value&lt;br&gt;filter&#x3D;userid_eq_1 | [optional] 
+ **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;starttime_eq_1593583740973&lt;br&gt;filter&#x3D;id_eq_1&lt;br&gt;filter&#x3D;_endtime_eq_1593583740973&lt;br&gt;filter&#x3D;username_eq_value&lt;br&gt;filter&#x3D;userid_eq_1 | [optional] 
+ **for_whole_account** | **BOOLEAN**| forWholeAccount | [optional] [default to false]
  **limit** | **Integer**| limit parameter define page size | [optional] [default to 20]
  **offset** | **Integer**| offset parameter define page number | [optional] [default to 0]
  **sort** | **String**| sort parameter contains list of fields used for sort query result &lt;br&gt; examples: &lt;br&gt; sort&#x3D;createTime_a&lt;br&gt;sort&#x3D;id_a&lt;br&gt;sort&#x3D;userName_a&lt;br&gt;sort&#x3D;type_a | [optional] 
- **with_additional_users** | **BOOLEAN**| withAdditionalUsers | [optional] [default to false]
 
 ### Return type
 
@@ -12959,7 +12927,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -12982,16 +12950,19 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
 
 opts = { 
-  filter: 'filter_example', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=starttime_eq_1576134481793<br>filter=id_eq_1<br>filter=_endtime_eq_1576134481793<br>filter=username_eq_value<br>filter=userid_eq_1
+  filter: 'filter_example', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=starttime_eq_1593583740967<br>filter=id_eq_1<br>filter=_endtime_eq_1593583740968<br>filter=username_eq_value<br>filter=userid_eq_1
+  for_whole_account: false, # BOOLEAN | forWholeAccount
   limit: 20, # Integer | limit parameter define page size
   offset: 0, # Integer | offset parameter define page number
-  sort: 'sort_example', # String | sort parameter contains list of fields used for sort query result <br> examples: <br> sort=createTime_a<br>sort=id_a<br>sort=userName_a<br>sort=type_a
-  with_additional_users: false # BOOLEAN | withAdditionalUsers
+  sort: 'sort_example' # String | sort parameter contains list of fields used for sort query result <br> examples: <br> sort=createTime_a<br>sort=id_a<br>sort=userName_a<br>sort=type_a
 }
 
 begin
@@ -13007,11 +12978,11 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;starttime_eq_1576134481793&lt;br&gt;filter&#x3D;id_eq_1&lt;br&gt;filter&#x3D;_endtime_eq_1576134481793&lt;br&gt;filter&#x3D;username_eq_value&lt;br&gt;filter&#x3D;userid_eq_1 | [optional] 
+ **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;starttime_eq_1593583740967&lt;br&gt;filter&#x3D;id_eq_1&lt;br&gt;filter&#x3D;_endtime_eq_1593583740968&lt;br&gt;filter&#x3D;username_eq_value&lt;br&gt;filter&#x3D;userid_eq_1 | [optional] 
+ **for_whole_account** | **BOOLEAN**| forWholeAccount | [optional] [default to false]
  **limit** | **Integer**| limit parameter define page size | [optional] [default to 20]
  **offset** | **Integer**| offset parameter define page number | [optional] [default to 0]
  **sort** | **String**| sort parameter contains list of fields used for sort query result &lt;br&gt; examples: &lt;br&gt; sort&#x3D;createTime_a&lt;br&gt;sort&#x3D;id_a&lt;br&gt;sort&#x3D;userName_a&lt;br&gt;sort&#x3D;type_a | [optional] 
- **with_additional_users** | **BOOLEAN**| withAdditionalUsers | [optional] [default to false]
 
 ### Return type
 
@@ -13019,7 +12990,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -13042,12 +13013,15 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
 
 opts = { 
-  filter: 'filter_example', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=devicemodelname_eq_value<br>filter=ostype_eq_ios<br>filter=useremail_eq_value<br>filter=starttime_eq_1576134481885<br>filter=_endtime_eq_1576134481885<br>filter=projectname_eq_value
+  filter: 'filter_example', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=devicemodelname_eq_value<br>filter=ostype_eq_ios<br>filter=useremail_eq_value<br>filter=starttime_eq_1593583741070<br>filter=_endtime_eq_1593583741070<br>filter=projectname_eq_value
   limit: 20, # Integer | limit parameter define page size
   offset: 0, # Integer | offset parameter define page number
   sort: 'sort_example' # String | sort parameter contains list of fields used for sort query result <br> examples: <br> 
@@ -13066,7 +13040,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;devicemodelname_eq_value&lt;br&gt;filter&#x3D;ostype_eq_ios&lt;br&gt;filter&#x3D;useremail_eq_value&lt;br&gt;filter&#x3D;starttime_eq_1576134481885&lt;br&gt;filter&#x3D;_endtime_eq_1576134481885&lt;br&gt;filter&#x3D;projectname_eq_value | [optional] 
+ **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;devicemodelname_eq_value&lt;br&gt;filter&#x3D;ostype_eq_ios&lt;br&gt;filter&#x3D;useremail_eq_value&lt;br&gt;filter&#x3D;starttime_eq_1593583741070&lt;br&gt;filter&#x3D;_endtime_eq_1593583741070&lt;br&gt;filter&#x3D;projectname_eq_value | [optional] 
  **limit** | **Integer**| limit parameter define page size | [optional] [default to 20]
  **offset** | **Integer**| offset parameter define page number | [optional] [default to 0]
  **sort** | **String**| sort parameter contains list of fields used for sort query result &lt;br&gt; examples: &lt;br&gt;  | [optional] 
@@ -13077,7 +13051,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -13100,6 +13074,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -13128,7 +13105,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -13151,6 +13128,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -13186,7 +13166,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -13209,6 +13189,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -13243,7 +13226,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -13266,6 +13249,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -13273,10 +13259,10 @@ api_instance = BitbarCloudApiClient::AllEndpointsApi.new
 id = 789 # Integer | id
 
 opts = { 
-  filter: 'filter_example', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=cluster.name_eq_value<br>filter=statetime_eq_1576134480887<br>filter=serialid_eq_value<br>filter=ostype_eq_ios<br>filter=name_eq_value<br>filter=fingerprint_eq_value<br>filter=devicemodelid_eq_1<br>filter=mainuseremail_eq_value<br>filter=devicecleanupconfigurationid_eq_1<br>filter=state_eq_offline_cleaning<br>filter=id_eq_1<br>filter=locked_eq_true<br>filter=enabled_eq_true
+  filter: 'filter_example', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=statechangetime_eq_1593583739279<br>filter=cluster.name_eq_value<br>filter=mainuseremail_eq_value<br>filter=enabled_eq_true<br>filter=statetime_eq_1593583739279<br>filter=serialid_eq_value<br>filter=ostype_eq_ios<br>filter=name_eq_value<br>filter=fingerprint_eq_value<br>filter=devicemodelid_eq_1<br>filter=devicecleanupconfigurationid_eq_1<br>filter=state_eq_offline_cleaning<br>filter=id_eq_1<br>filter=locked_eq_true
   limit: 20, # Integer | limit parameter define page size
   offset: 0, # Integer | offset parameter define page number
-  sort: 'sort_example' # String | sort parameter contains list of fields used for sort query result <br> examples: <br> sort=cluster.name_a<br>sort=stateTime_a<br>sort=serialId_a<br>sort=name_a<br>sort=fingerprint_a<br>sort=deviceModelId_a<br>sort=mainUserEmail_a<br>sort=state_a<br>sort=id_a<br>sort=enabled_a
+  sort: 'sort_example' # String | sort parameter contains list of fields used for sort query result <br> examples: <br> sort=stateChangeTime_a<br>sort=cluster.name_a<br>sort=mainUserEmail_a<br>sort=enabled_a<br>sort=stateTime_a<br>sort=serialId_a<br>sort=name_a<br>sort=fingerprint_a<br>sort=deviceModelId_a<br>sort=state_a<br>sort=id_a
 }
 
 begin
@@ -13293,10 +13279,10 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| id | 
- **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;cluster.name_eq_value&lt;br&gt;filter&#x3D;statetime_eq_1576134480887&lt;br&gt;filter&#x3D;serialid_eq_value&lt;br&gt;filter&#x3D;ostype_eq_ios&lt;br&gt;filter&#x3D;name_eq_value&lt;br&gt;filter&#x3D;fingerprint_eq_value&lt;br&gt;filter&#x3D;devicemodelid_eq_1&lt;br&gt;filter&#x3D;mainuseremail_eq_value&lt;br&gt;filter&#x3D;devicecleanupconfigurationid_eq_1&lt;br&gt;filter&#x3D;state_eq_offline_cleaning&lt;br&gt;filter&#x3D;id_eq_1&lt;br&gt;filter&#x3D;locked_eq_true&lt;br&gt;filter&#x3D;enabled_eq_true | [optional] 
+ **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;statechangetime_eq_1593583739279&lt;br&gt;filter&#x3D;cluster.name_eq_value&lt;br&gt;filter&#x3D;mainuseremail_eq_value&lt;br&gt;filter&#x3D;enabled_eq_true&lt;br&gt;filter&#x3D;statetime_eq_1593583739279&lt;br&gt;filter&#x3D;serialid_eq_value&lt;br&gt;filter&#x3D;ostype_eq_ios&lt;br&gt;filter&#x3D;name_eq_value&lt;br&gt;filter&#x3D;fingerprint_eq_value&lt;br&gt;filter&#x3D;devicemodelid_eq_1&lt;br&gt;filter&#x3D;devicecleanupconfigurationid_eq_1&lt;br&gt;filter&#x3D;state_eq_offline_cleaning&lt;br&gt;filter&#x3D;id_eq_1&lt;br&gt;filter&#x3D;locked_eq_true | [optional] 
  **limit** | **Integer**| limit parameter define page size | [optional] [default to 20]
  **offset** | **Integer**| offset parameter define page number | [optional] [default to 0]
- **sort** | **String**| sort parameter contains list of fields used for sort query result &lt;br&gt; examples: &lt;br&gt; sort&#x3D;cluster.name_a&lt;br&gt;sort&#x3D;stateTime_a&lt;br&gt;sort&#x3D;serialId_a&lt;br&gt;sort&#x3D;name_a&lt;br&gt;sort&#x3D;fingerprint_a&lt;br&gt;sort&#x3D;deviceModelId_a&lt;br&gt;sort&#x3D;mainUserEmail_a&lt;br&gt;sort&#x3D;state_a&lt;br&gt;sort&#x3D;id_a&lt;br&gt;sort&#x3D;enabled_a | [optional] 
+ **sort** | **String**| sort parameter contains list of fields used for sort query result &lt;br&gt; examples: &lt;br&gt; sort&#x3D;stateChangeTime_a&lt;br&gt;sort&#x3D;cluster.name_a&lt;br&gt;sort&#x3D;mainUserEmail_a&lt;br&gt;sort&#x3D;enabled_a&lt;br&gt;sort&#x3D;stateTime_a&lt;br&gt;sort&#x3D;serialId_a&lt;br&gt;sort&#x3D;name_a&lt;br&gt;sort&#x3D;fingerprint_a&lt;br&gt;sort&#x3D;deviceModelId_a&lt;br&gt;sort&#x3D;state_a&lt;br&gt;sort&#x3D;id_a | [optional] 
 
 ### Return type
 
@@ -13304,7 +13290,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -13327,15 +13313,18 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
 
 opts = { 
-  filter: 'filter_example', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=cluster.name_eq_value<br>filter=statetime_eq_1576134481499<br>filter=serialid_eq_value<br>filter=ostype_eq_ios<br>filter=name_eq_value<br>filter=fingerprint_eq_value<br>filter=devicemodelid_eq_1<br>filter=mainuseremail_eq_value<br>filter=devicecleanupconfigurationid_eq_1<br>filter=state_eq_offline_cleaning<br>filter=id_eq_1<br>filter=locked_eq_true<br>filter=enabled_eq_true
+  filter: 'filter_example', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=statechangetime_eq_1593583740372<br>filter=cluster.name_eq_value<br>filter=mainuseremail_eq_value<br>filter=enabled_eq_true<br>filter=statetime_eq_1593583740372<br>filter=serialid_eq_value<br>filter=ostype_eq_ios<br>filter=name_eq_value<br>filter=fingerprint_eq_value<br>filter=devicemodelid_eq_1<br>filter=devicecleanupconfigurationid_eq_1<br>filter=state_eq_offline_cleaning<br>filter=id_eq_1<br>filter=locked_eq_true
   limit: 20, # Integer | limit parameter define page size
   offset: 0, # Integer | offset parameter define page number
-  sort: 'sort_example', # String | sort parameter contains list of fields used for sort query result <br> examples: <br> sort=cluster.name_a<br>sort=stateTime_a<br>sort=serialId_a<br>sort=name_a<br>sort=fingerprint_a<br>sort=deviceModelId_a<br>sort=mainUserEmail_a<br>sort=state_a<br>sort=id_a<br>sort=enabled_a
+  sort: 'sort_example', # String | sort parameter contains list of fields used for sort query result <br> examples: <br> sort=stateChangeTime_a<br>sort=cluster.name_a<br>sort=mainUserEmail_a<br>sort=enabled_a<br>sort=stateTime_a<br>sort=serialId_a<br>sort=name_a<br>sort=fingerprint_a<br>sort=deviceModelId_a<br>sort=state_a<br>sort=id_a
   with_disabled: true # BOOLEAN | withDisabled
 }
 
@@ -13352,10 +13341,10 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;cluster.name_eq_value&lt;br&gt;filter&#x3D;statetime_eq_1576134481499&lt;br&gt;filter&#x3D;serialid_eq_value&lt;br&gt;filter&#x3D;ostype_eq_ios&lt;br&gt;filter&#x3D;name_eq_value&lt;br&gt;filter&#x3D;fingerprint_eq_value&lt;br&gt;filter&#x3D;devicemodelid_eq_1&lt;br&gt;filter&#x3D;mainuseremail_eq_value&lt;br&gt;filter&#x3D;devicecleanupconfigurationid_eq_1&lt;br&gt;filter&#x3D;state_eq_offline_cleaning&lt;br&gt;filter&#x3D;id_eq_1&lt;br&gt;filter&#x3D;locked_eq_true&lt;br&gt;filter&#x3D;enabled_eq_true | [optional] 
+ **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;statechangetime_eq_1593583740372&lt;br&gt;filter&#x3D;cluster.name_eq_value&lt;br&gt;filter&#x3D;mainuseremail_eq_value&lt;br&gt;filter&#x3D;enabled_eq_true&lt;br&gt;filter&#x3D;statetime_eq_1593583740372&lt;br&gt;filter&#x3D;serialid_eq_value&lt;br&gt;filter&#x3D;ostype_eq_ios&lt;br&gt;filter&#x3D;name_eq_value&lt;br&gt;filter&#x3D;fingerprint_eq_value&lt;br&gt;filter&#x3D;devicemodelid_eq_1&lt;br&gt;filter&#x3D;devicecleanupconfigurationid_eq_1&lt;br&gt;filter&#x3D;state_eq_offline_cleaning&lt;br&gt;filter&#x3D;id_eq_1&lt;br&gt;filter&#x3D;locked_eq_true | [optional] 
  **limit** | **Integer**| limit parameter define page size | [optional] [default to 20]
  **offset** | **Integer**| offset parameter define page number | [optional] [default to 0]
- **sort** | **String**| sort parameter contains list of fields used for sort query result &lt;br&gt; examples: &lt;br&gt; sort&#x3D;cluster.name_a&lt;br&gt;sort&#x3D;stateTime_a&lt;br&gt;sort&#x3D;serialId_a&lt;br&gt;sort&#x3D;name_a&lt;br&gt;sort&#x3D;fingerprint_a&lt;br&gt;sort&#x3D;deviceModelId_a&lt;br&gt;sort&#x3D;mainUserEmail_a&lt;br&gt;sort&#x3D;state_a&lt;br&gt;sort&#x3D;id_a&lt;br&gt;sort&#x3D;enabled_a | [optional] 
+ **sort** | **String**| sort parameter contains list of fields used for sort query result &lt;br&gt; examples: &lt;br&gt; sort&#x3D;stateChangeTime_a&lt;br&gt;sort&#x3D;cluster.name_a&lt;br&gt;sort&#x3D;mainUserEmail_a&lt;br&gt;sort&#x3D;enabled_a&lt;br&gt;sort&#x3D;stateTime_a&lt;br&gt;sort&#x3D;serialId_a&lt;br&gt;sort&#x3D;name_a&lt;br&gt;sort&#x3D;fingerprint_a&lt;br&gt;sort&#x3D;deviceModelId_a&lt;br&gt;sort&#x3D;state_a&lt;br&gt;sort&#x3D;id_a | [optional] 
  **with_disabled** | **BOOLEAN**| withDisabled | [optional] [default to true]
 
 ### Return type
@@ -13364,7 +13353,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -13387,19 +13376,23 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
 
 opts = { 
-  filter: 'filter_example', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=accountid_eq_1<br>filter=displayname_eq_value<br>filter=ostype_eq_ios<br>filter=creditsprice_eq_1<br>filter=online_eq_true<br>filter=id_eq_1<br>filter=device.archivetime_eq_1576134483799<br>filter=locked_eq_true<br>filter=enabled_eq_true
+  filter: 'filter_example', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=accountid_eq_1<br>filter=displayname_eq_value<br>filter=ostype_eq_ios<br>filter=creditsprice_eq_1<br>filter=online_eq_true<br>filter=id_eq_1<br>filter=device.archivetime_eq_1593583744768<br>filter=locked_eq_true<br>filter=enabled_eq_true
   label_ids: [56], # Array<Integer> | labelIds[]
   limit: 20, # Integer | limit parameter define page size
   offset: 0, # Integer | offset parameter define page number
   sort: 'sort_example', # String | sort parameter contains list of fields used for sort query result <br> examples: <br> sort=accountId_a<br>sort=displayName_a<br>sort=osType_a<br>sort=creditsPrice_a<br>sort=id_a<br>sort=device.archiveTime_a<br>sort=locked_a<br>sort=enabled_a
   with_dedicated: true, # BOOLEAN | withDedicated
   with_disabled: true, # BOOLEAN | withDisabled
-  with_properties: false # BOOLEAN | withProperties
+  with_properties: false, # BOOLEAN | withProperties
+  with_supported_creators: false # BOOLEAN | withSupportedCreators
 }
 
 begin
@@ -13415,7 +13408,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;accountid_eq_1&lt;br&gt;filter&#x3D;displayname_eq_value&lt;br&gt;filter&#x3D;ostype_eq_ios&lt;br&gt;filter&#x3D;creditsprice_eq_1&lt;br&gt;filter&#x3D;online_eq_true&lt;br&gt;filter&#x3D;id_eq_1&lt;br&gt;filter&#x3D;device.archivetime_eq_1576134483799&lt;br&gt;filter&#x3D;locked_eq_true&lt;br&gt;filter&#x3D;enabled_eq_true | [optional] 
+ **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;accountid_eq_1&lt;br&gt;filter&#x3D;displayname_eq_value&lt;br&gt;filter&#x3D;ostype_eq_ios&lt;br&gt;filter&#x3D;creditsprice_eq_1&lt;br&gt;filter&#x3D;online_eq_true&lt;br&gt;filter&#x3D;id_eq_1&lt;br&gt;filter&#x3D;device.archivetime_eq_1593583744768&lt;br&gt;filter&#x3D;locked_eq_true&lt;br&gt;filter&#x3D;enabled_eq_true | [optional] 
  **label_ids** | [**Array&lt;Integer&gt;**](Integer.md)| labelIds[] | [optional] 
  **limit** | **Integer**| limit parameter define page size | [optional] [default to 20]
  **offset** | **Integer**| offset parameter define page number | [optional] [default to 0]
@@ -13423,6 +13416,7 @@ Name | Type | Description  | Notes
  **with_dedicated** | **BOOLEAN**| withDedicated | [optional] 
  **with_disabled** | **BOOLEAN**| withDisabled | [optional] 
  **with_properties** | **BOOLEAN**| withProperties | [optional] [default to false]
+ **with_supported_creators** | **BOOLEAN**| withSupportedCreators | [optional] [default to false]
 
 ### Return type
 
@@ -13430,7 +13424,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -13453,12 +13447,15 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
 
 opts = { 
-  filter: 'filter_example', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=createtime_eq_1576134481894<br>filter=subject_eq_value<br>filter=lastretrytime_eq_1576134481894<br>filter=channel_eq_slack<br>filter=useremail_eq_value<br>filter=id_eq_1<br>filter=userid_eq_1<br>filter=sent_eq_true
+  filter: 'filter_example', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=createtime_eq_1593583741171<br>filter=subject_eq_value<br>filter=lastretrytime_eq_1593583741171<br>filter=channel_eq_slack<br>filter=useremail_eq_value<br>filter=id_eq_1<br>filter=userid_eq_1<br>filter=sent_eq_true
   limit: 20, # Integer | limit parameter define page size
   offset: 0, # Integer | offset parameter define page number
   sort: 'sort_example' # String | sort parameter contains list of fields used for sort query result <br> examples: <br> sort=createTime_a<br>sort=subject_a<br>sort=lastRetryTime_a<br>sort=channel_a<br>sort=userEmail_a<br>sort=id_a<br>sort=userId_a<br>sort=sent_a
@@ -13477,7 +13474,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;createtime_eq_1576134481894&lt;br&gt;filter&#x3D;subject_eq_value&lt;br&gt;filter&#x3D;lastretrytime_eq_1576134481894&lt;br&gt;filter&#x3D;channel_eq_slack&lt;br&gt;filter&#x3D;useremail_eq_value&lt;br&gt;filter&#x3D;id_eq_1&lt;br&gt;filter&#x3D;userid_eq_1&lt;br&gt;filter&#x3D;sent_eq_true | [optional] 
+ **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;createtime_eq_1593583741171&lt;br&gt;filter&#x3D;subject_eq_value&lt;br&gt;filter&#x3D;lastretrytime_eq_1593583741171&lt;br&gt;filter&#x3D;channel_eq_slack&lt;br&gt;filter&#x3D;useremail_eq_value&lt;br&gt;filter&#x3D;id_eq_1&lt;br&gt;filter&#x3D;userid_eq_1&lt;br&gt;filter&#x3D;sent_eq_true | [optional] 
  **limit** | **Integer**| limit parameter define page size | [optional] [default to 20]
  **offset** | **Integer**| offset parameter define page number | [optional] [default to 0]
  **sort** | **String**| sort parameter contains list of fields used for sort query result &lt;br&gt; examples: &lt;br&gt; sort&#x3D;createTime_a&lt;br&gt;sort&#x3D;subject_a&lt;br&gt;sort&#x3D;lastRetryTime_a&lt;br&gt;sort&#x3D;channel_a&lt;br&gt;sort&#x3D;userEmail_a&lt;br&gt;sort&#x3D;id_a&lt;br&gt;sort&#x3D;userId_a&lt;br&gt;sort&#x3D;sent_a | [optional] 
@@ -13488,7 +13485,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -13511,6 +13508,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -13533,7 +13533,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -13556,6 +13556,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -13591,7 +13594,128 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: */*
+
+
+
+# **get_file_properties_using_get**
+> APIListOfAPIUserFileProperty get_file_properties_using_get(file_id, opts)
+
+Get file properties.
+
+### Example
+```ruby
+# load the gem
+require 'bitbar-cloud-api-client'
+# setup authorization
+BitbarCloudApiClient.configure do |config|
+  # Configure HTTP basic authorization: apiKeyInHeader
+  config.username = 'YOUR USERNAME'
+  config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
+end
+
+api_instance = BitbarCloudApiClient::AllEndpointsApi.new
+
+file_id = 789 # Integer | fileId
+
+opts = { 
+  filter: 'filter_example', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=id_eq_1<br>filter=value_eq_value<br>filter=key_eq_value
+  limit: 20, # Integer | limit parameter define page size
+  offset: 0, # Integer | offset parameter define page number
+  sort: 'sort_example' # String | sort parameter contains list of fields used for sort query result <br> examples: <br> sort=id_a<br>sort=value_a<br>sort=key_a
+}
+
+begin
+  #Get file properties.
+  result = api_instance.get_file_properties_using_get(file_id, opts)
+  p result
+rescue BitbarCloudApiClient::ApiError => e
+  puts "Exception when calling AllEndpointsApi->get_file_properties_using_get: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **file_id** | **Integer**| fileId | 
+ **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;id_eq_1&lt;br&gt;filter&#x3D;value_eq_value&lt;br&gt;filter&#x3D;key_eq_value | [optional] 
+ **limit** | **Integer**| limit parameter define page size | [optional] [default to 20]
+ **offset** | **Integer**| offset parameter define page number | [optional] [default to 0]
+ **sort** | **String**| sort parameter contains list of fields used for sort query result &lt;br&gt; examples: &lt;br&gt; sort&#x3D;id_a&lt;br&gt;sort&#x3D;value_a&lt;br&gt;sort&#x3D;key_a | [optional] 
+
+### Return type
+
+[**APIListOfAPIUserFileProperty**](APIListOfAPIUserFileProperty.md)
+
+### Authorization
+
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: */*
+
+
+
+# **get_file_property_using_get**
+> APIUserFileProperty get_file_property_using_get(file_id, property_id)
+
+Get file property.
+
+### Example
+```ruby
+# load the gem
+require 'bitbar-cloud-api-client'
+# setup authorization
+BitbarCloudApiClient.configure do |config|
+  # Configure HTTP basic authorization: apiKeyInHeader
+  config.username = 'YOUR USERNAME'
+  config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
+end
+
+api_instance = BitbarCloudApiClient::AllEndpointsApi.new
+
+file_id = 789 # Integer | fileId
+
+property_id = 789 # Integer | propertyId
+
+
+begin
+  #Get file property.
+  result = api_instance.get_file_property_using_get(file_id, property_id)
+  p result
+rescue BitbarCloudApiClient::ApiError => e
+  puts "Exception when calling AllEndpointsApi->get_file_property_using_get: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **file_id** | **Integer**| fileId | 
+ **property_id** | **Integer**| propertyId | 
+
+### Return type
+
+[**APIUserFileProperty**](APIUserFileProperty.md)
+
+### Authorization
+
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -13614,6 +13738,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -13652,7 +13779,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -13675,6 +13802,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -13716,7 +13846,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -13739,6 +13869,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -13752,7 +13885,7 @@ run_id = 789 # Integer | runId
 user_id = 789 # Integer | userId
 
 opts = { 
-  filter: 'filter_example', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=size_eq_1<br>filter=createtime_eq_1576134483596<br>filter=name_eq_value<br>filter=mimetype_eq_value<br>filter=inputtype_eq_application<br>filter=state_eq_preparing<br>filter=id_eq_1<br>filter=direction_eq_input
+  filter: 'filter_example', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=size_eq_1<br>filter=createtime_eq_1593583743377<br>filter=name_eq_value<br>filter=mimetype_eq_value<br>filter=inputtype_eq_application<br>filter=state_eq_preparing<br>filter=id_eq_1<br>filter=direction_eq_input
   limit: 20, # Integer | limit parameter define page size
   offset: 0, # Integer | offset parameter define page number
   sort: 'sort_example', # String | sort parameter contains list of fields used for sort query result <br> examples: <br> sort=size_a<br>sort=createTime_a<br>sort=name_a<br>sort=mimetype_a<br>sort=inputType_a<br>sort=state_a<br>sort=id_a<br>sort=direction_a
@@ -13776,7 +13909,7 @@ Name | Type | Description  | Notes
  **project_id** | **Integer**| projectId | 
  **run_id** | **Integer**| runId | 
  **user_id** | **Integer**| userId | 
- **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;size_eq_1&lt;br&gt;filter&#x3D;createtime_eq_1576134483596&lt;br&gt;filter&#x3D;name_eq_value&lt;br&gt;filter&#x3D;mimetype_eq_value&lt;br&gt;filter&#x3D;inputtype_eq_application&lt;br&gt;filter&#x3D;state_eq_preparing&lt;br&gt;filter&#x3D;id_eq_1&lt;br&gt;filter&#x3D;direction_eq_input | [optional] 
+ **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;size_eq_1&lt;br&gt;filter&#x3D;createtime_eq_1593583743377&lt;br&gt;filter&#x3D;name_eq_value&lt;br&gt;filter&#x3D;mimetype_eq_value&lt;br&gt;filter&#x3D;inputtype_eq_application&lt;br&gt;filter&#x3D;state_eq_preparing&lt;br&gt;filter&#x3D;id_eq_1&lt;br&gt;filter&#x3D;direction_eq_input | [optional] 
  **limit** | **Integer**| limit parameter define page size | [optional] [default to 20]
  **offset** | **Integer**| offset parameter define page number | [optional] [default to 0]
  **sort** | **String**| sort parameter contains list of fields used for sort query result &lt;br&gt; examples: &lt;br&gt; sort&#x3D;size_a&lt;br&gt;sort&#x3D;createTime_a&lt;br&gt;sort&#x3D;name_a&lt;br&gt;sort&#x3D;mimetype_a&lt;br&gt;sort&#x3D;inputType_a&lt;br&gt;sort&#x3D;state_a&lt;br&gt;sort&#x3D;id_a&lt;br&gt;sort&#x3D;direction_a | [optional] 
@@ -13788,7 +13921,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -13811,12 +13944,15 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
 
 opts = { 
-  filter: 'filter_example', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=size_eq_1<br>filter=createtime_eq_1576134483901<br>filter=name_eq_value<br>filter=mimetype_eq_value<br>filter=inputtype_eq_application<br>filter=state_eq_preparing<br>filter=id_eq_1<br>filter=direction_eq_input
+  filter: 'filter_example', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=size_eq_1<br>filter=createtime_eq_1593583745674<br>filter=name_eq_value<br>filter=mimetype_eq_value<br>filter=inputtype_eq_application<br>filter=state_eq_preparing<br>filter=id_eq_1<br>filter=direction_eq_input
   limit: 20, # Integer | limit parameter define page size
   offset: 0, # Integer | offset parameter define page number
   sort: 'sort_example', # String | sort parameter contains list of fields used for sort query result <br> examples: <br> sort=size_a<br>sort=createTime_a<br>sort=name_a<br>sort=mimetype_a<br>sort=inputType_a<br>sort=state_a<br>sort=id_a<br>sort=direction_a
@@ -13836,7 +13972,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;size_eq_1&lt;br&gt;filter&#x3D;createtime_eq_1576134483901&lt;br&gt;filter&#x3D;name_eq_value&lt;br&gt;filter&#x3D;mimetype_eq_value&lt;br&gt;filter&#x3D;inputtype_eq_application&lt;br&gt;filter&#x3D;state_eq_preparing&lt;br&gt;filter&#x3D;id_eq_1&lt;br&gt;filter&#x3D;direction_eq_input | [optional] 
+ **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;size_eq_1&lt;br&gt;filter&#x3D;createtime_eq_1593583745674&lt;br&gt;filter&#x3D;name_eq_value&lt;br&gt;filter&#x3D;mimetype_eq_value&lt;br&gt;filter&#x3D;inputtype_eq_application&lt;br&gt;filter&#x3D;state_eq_preparing&lt;br&gt;filter&#x3D;id_eq_1&lt;br&gt;filter&#x3D;direction_eq_input | [optional] 
  **limit** | **Integer**| limit parameter define page size | [optional] [default to 20]
  **offset** | **Integer**| offset parameter define page number | [optional] [default to 0]
  **sort** | **String**| sort parameter contains list of fields used for sort query result &lt;br&gt; examples: &lt;br&gt; sort&#x3D;size_a&lt;br&gt;sort&#x3D;createTime_a&lt;br&gt;sort&#x3D;name_a&lt;br&gt;sort&#x3D;mimetype_a&lt;br&gt;sort&#x3D;inputType_a&lt;br&gt;sort&#x3D;state_a&lt;br&gt;sort&#x3D;id_a&lt;br&gt;sort&#x3D;direction_a | [optional] 
@@ -13848,7 +13984,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -13871,6 +14007,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -13906,7 +14045,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -13929,6 +14068,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -13957,7 +14099,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -13980,6 +14122,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -14018,7 +14163,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -14041,13 +14186,16 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
 
 opts = { 
   days: 30, # Integer | days
-  filter: 'filter_example', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=frameworkname_eq_value<br>filter=releaseversion_eq_value<br>filter=devicemodelname_eq_value<br>filter=ostype_eq_ios<br>filter=useremail_eq_value<br>filter=starttime_eq_1576134482503<br>filter=state_eq_aborted<br>filter=id_eq_1<br>filter=_endtime_eq_1576134482503
+  filter: 'filter_example', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=frameworkname_eq_value<br>filter=releaseversion_eq_value<br>filter=devicemodelname_eq_value<br>filter=ostype_eq_ios<br>filter=useremail_eq_value<br>filter=starttime_eq_1593583743171<br>filter=state_eq_aborted<br>filter=id_eq_1<br>filter=_endtime_eq_1593583743171
   limit: 20, # Integer | limit parameter define page size
   offset: 0, # Integer | offset parameter define page number
   sort: 'sort_example' # String | sort parameter contains list of fields used for sort query result <br> examples: <br> sort=frameworkName_a<br>sort=releaseVersion_a<br>sort=osType_a<br>sort=startTime_a<br>sort=state_a<br>sort=id_a<br>sort=_endTime_a
@@ -14067,7 +14215,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **days** | **Integer**| days | [optional] [default to 30]
- **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;frameworkname_eq_value&lt;br&gt;filter&#x3D;releaseversion_eq_value&lt;br&gt;filter&#x3D;devicemodelname_eq_value&lt;br&gt;filter&#x3D;ostype_eq_ios&lt;br&gt;filter&#x3D;useremail_eq_value&lt;br&gt;filter&#x3D;starttime_eq_1576134482503&lt;br&gt;filter&#x3D;state_eq_aborted&lt;br&gt;filter&#x3D;id_eq_1&lt;br&gt;filter&#x3D;_endtime_eq_1576134482503 | [optional] 
+ **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;frameworkname_eq_value&lt;br&gt;filter&#x3D;releaseversion_eq_value&lt;br&gt;filter&#x3D;devicemodelname_eq_value&lt;br&gt;filter&#x3D;ostype_eq_ios&lt;br&gt;filter&#x3D;useremail_eq_value&lt;br&gt;filter&#x3D;starttime_eq_1593583743171&lt;br&gt;filter&#x3D;state_eq_aborted&lt;br&gt;filter&#x3D;id_eq_1&lt;br&gt;filter&#x3D;_endtime_eq_1593583743171 | [optional] 
  **limit** | **Integer**| limit parameter define page size | [optional] [default to 20]
  **offset** | **Integer**| offset parameter define page number | [optional] [default to 0]
  **sort** | **String**| sort parameter contains list of fields used for sort query result &lt;br&gt; examples: &lt;br&gt; sort&#x3D;frameworkName_a&lt;br&gt;sort&#x3D;releaseVersion_a&lt;br&gt;sort&#x3D;osType_a&lt;br&gt;sort&#x3D;startTime_a&lt;br&gt;sort&#x3D;state_a&lt;br&gt;sort&#x3D;id_a&lt;br&gt;sort&#x3D;_endTime_a | [optional] 
@@ -14078,7 +14226,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -14101,6 +14249,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -14129,7 +14280,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -14152,12 +14303,15 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
 
 opts = { 
-  filter: 'filter_example', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=retryable_eq_true<br>filter=canrunfromui_eq_true<br>filter=skipqueue_eq_true<br>filter=forprojects_eq_true<br>filter=description_eq_value<br>filter=mainuseremail_eq_value<br>filter=type_eq_value<br>filter=accountid_eq_1<br>filter=labelid_eq_1<br>filter=createtime_eq_1576134484201<br>filter=ostype_eq_ios<br>filter=name_eq_value<br>filter=jobconfigid_eq_1<br>filter=id_eq_1<br>filter=labelname_eq_value<br>filter=secured_eq_true<br>filter=skipoldersdk_eq_true
+  filter: 'filter_example', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=retryable_eq_true<br>filter=canrunfromui_eq_true<br>filter=skipqueue_eq_true<br>filter=forprojects_eq_true<br>filter=description_eq_value<br>filter=mainuseremail_eq_value<br>filter=type_eq_value<br>filter=accountid_eq_1<br>filter=labelid_eq_1<br>filter=createtime_eq_1593583741677<br>filter=ostype_eq_ios<br>filter=name_eq_value<br>filter=jobconfigid_eq_1<br>filter=id_eq_1<br>filter=labelname_eq_value<br>filter=secured_eq_true<br>filter=skipoldersdk_eq_true
   limit: 20, # Integer | limit parameter define page size
   offset: 0, # Integer | offset parameter define page number
   sort: 'sort_example' # String | sort parameter contains list of fields used for sort query result <br> examples: <br> sort=retryable_a<br>sort=canRunFromUI_a<br>sort=skipQueue_a<br>sort=forProjects_a<br>sort=description_a<br>sort=mainUserEmail_a<br>sort=type_a<br>sort=accountId_a<br>sort=labelId_a<br>sort=createTime_a<br>sort=osType_a<br>sort=name_a<br>sort=jobConfigId_a<br>sort=id_a<br>sort=labelName_a<br>sort=secured_a<br>sort=skipOlderSdk_a
@@ -14176,7 +14330,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;retryable_eq_true&lt;br&gt;filter&#x3D;canrunfromui_eq_true&lt;br&gt;filter&#x3D;skipqueue_eq_true&lt;br&gt;filter&#x3D;forprojects_eq_true&lt;br&gt;filter&#x3D;description_eq_value&lt;br&gt;filter&#x3D;mainuseremail_eq_value&lt;br&gt;filter&#x3D;type_eq_value&lt;br&gt;filter&#x3D;accountid_eq_1&lt;br&gt;filter&#x3D;labelid_eq_1&lt;br&gt;filter&#x3D;createtime_eq_1576134484201&lt;br&gt;filter&#x3D;ostype_eq_ios&lt;br&gt;filter&#x3D;name_eq_value&lt;br&gt;filter&#x3D;jobconfigid_eq_1&lt;br&gt;filter&#x3D;id_eq_1&lt;br&gt;filter&#x3D;labelname_eq_value&lt;br&gt;filter&#x3D;secured_eq_true&lt;br&gt;filter&#x3D;skipoldersdk_eq_true | [optional] 
+ **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;retryable_eq_true&lt;br&gt;filter&#x3D;canrunfromui_eq_true&lt;br&gt;filter&#x3D;skipqueue_eq_true&lt;br&gt;filter&#x3D;forprojects_eq_true&lt;br&gt;filter&#x3D;description_eq_value&lt;br&gt;filter&#x3D;mainuseremail_eq_value&lt;br&gt;filter&#x3D;type_eq_value&lt;br&gt;filter&#x3D;accountid_eq_1&lt;br&gt;filter&#x3D;labelid_eq_1&lt;br&gt;filter&#x3D;createtime_eq_1593583741677&lt;br&gt;filter&#x3D;ostype_eq_ios&lt;br&gt;filter&#x3D;name_eq_value&lt;br&gt;filter&#x3D;jobconfigid_eq_1&lt;br&gt;filter&#x3D;id_eq_1&lt;br&gt;filter&#x3D;labelname_eq_value&lt;br&gt;filter&#x3D;secured_eq_true&lt;br&gt;filter&#x3D;skipoldersdk_eq_true | [optional] 
  **limit** | **Integer**| limit parameter define page size | [optional] [default to 20]
  **offset** | **Integer**| offset parameter define page number | [optional] [default to 0]
  **sort** | **String**| sort parameter contains list of fields used for sort query result &lt;br&gt; examples: &lt;br&gt; sort&#x3D;retryable_a&lt;br&gt;sort&#x3D;canRunFromUI_a&lt;br&gt;sort&#x3D;skipQueue_a&lt;br&gt;sort&#x3D;forProjects_a&lt;br&gt;sort&#x3D;description_a&lt;br&gt;sort&#x3D;mainUserEmail_a&lt;br&gt;sort&#x3D;type_a&lt;br&gt;sort&#x3D;accountId_a&lt;br&gt;sort&#x3D;labelId_a&lt;br&gt;sort&#x3D;createTime_a&lt;br&gt;sort&#x3D;osType_a&lt;br&gt;sort&#x3D;name_a&lt;br&gt;sort&#x3D;jobConfigId_a&lt;br&gt;sort&#x3D;id_a&lt;br&gt;sort&#x3D;labelName_a&lt;br&gt;sort&#x3D;secured_a&lt;br&gt;sort&#x3D;skipOlderSdk_a | [optional] 
@@ -14187,7 +14341,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -14210,6 +14364,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -14232,7 +14389,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -14255,6 +14412,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -14286,68 +14446,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: */*
-
-
-
-# **get_inspector_device_session_connections_using_get**
-> APIListOfAPIConnection get_inspector_device_session_connections_using_get(device_session_id, opts)
-
-Get connections for device session.
-
-### Example
-```ruby
-# load the gem
-require 'bitbar-cloud-api-client'
-# setup authorization
-BitbarCloudApiClient.configure do |config|
-  # Configure HTTP basic authorization: apiKeyInHeader
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
-end
-
-api_instance = BitbarCloudApiClient::AllEndpointsApi.new
-
-device_session_id = 789 # Integer | deviceSessionId
-
-opts = { 
-  filter: 'filter_example', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=path_eq_value<br>filter=password_eq_value<br>filter=urlschema_eq_value<br>filter=devicesessionid_eq_1<br>filter=port_eq_null<br>filter=createtime_eq_1576134483687<br>filter=host_eq_value<br>filter=id_eq_1<br>filter=_endtime_eq_1576134483687<br>filter=type_eq_value
-  limit: 20, # Integer | limit parameter define page size
-  offset: 0, # Integer | offset parameter define page number
-  sort: 'sort_example' # String | sort parameter contains list of fields used for sort query result <br> examples: <br> sort=path_a<br>sort=password_a<br>sort=urlSchema_a<br>sort=deviceSessionId_a<br>sort=port_a<br>sort=createTime_a<br>sort=host_a<br>sort=id_a<br>sort=_endTime_a<br>sort=type_a
-}
-
-begin
-  #Get connections for device session.
-  result = api_instance.get_inspector_device_session_connections_using_get(device_session_id, opts)
-  p result
-rescue BitbarCloudApiClient::ApiError => e
-  puts "Exception when calling AllEndpointsApi->get_inspector_device_session_connections_using_get: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **device_session_id** | **Integer**| deviceSessionId | 
- **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;path_eq_value&lt;br&gt;filter&#x3D;password_eq_value&lt;br&gt;filter&#x3D;urlschema_eq_value&lt;br&gt;filter&#x3D;devicesessionid_eq_1&lt;br&gt;filter&#x3D;port_eq_null&lt;br&gt;filter&#x3D;createtime_eq_1576134483687&lt;br&gt;filter&#x3D;host_eq_value&lt;br&gt;filter&#x3D;id_eq_1&lt;br&gt;filter&#x3D;_endtime_eq_1576134483687&lt;br&gt;filter&#x3D;type_eq_value | [optional] 
- **limit** | **Integer**| limit parameter define page size | [optional] [default to 20]
- **offset** | **Integer**| offset parameter define page number | [optional] [default to 0]
- **sort** | **String**| sort parameter contains list of fields used for sort query result &lt;br&gt; examples: &lt;br&gt; sort&#x3D;path_a&lt;br&gt;sort&#x3D;password_a&lt;br&gt;sort&#x3D;urlSchema_a&lt;br&gt;sort&#x3D;deviceSessionId_a&lt;br&gt;sort&#x3D;port_a&lt;br&gt;sort&#x3D;createTime_a&lt;br&gt;sort&#x3D;host_a&lt;br&gt;sort&#x3D;id_a&lt;br&gt;sort&#x3D;_endTime_a&lt;br&gt;sort&#x3D;type_a | [optional] 
-
-### Return type
-
-[**APIListOfAPIConnection**](APIListOfAPIConnection.md)
-
-### Authorization
-
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -14370,6 +14469,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -14377,10 +14479,10 @@ api_instance = BitbarCloudApiClient::AllEndpointsApi.new
 user_id = 789 # Integer | userId
 
 opts = { 
-  filter: 'filter_example', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=testrunid_eq_1<br>filter=successratio_eq_1<br>filter=retrystate_eq_none<br>filter=device.id_eq_1<br>filter=userid_eq_1<br>filter=timelimit_eq_1<br>filter=duration_eq_1<br>filter=createtime_eq_1576134483689<br>filter=launchappduration_eq_1<br>filter=starttime_eq_1576134483689<br>filter=state_eq_aborted<br>filter=id_eq_1<br>filter=_endtime_eq_1576134483689<br>filter=projectname_eq_value<br>filter=device.displayname_eq_value<br>filter=testrunname_eq_value<br>filter=projectid_eq_1
+  filter: 'filter_example', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=testrunid_eq_1<br>filter=successratio_eq_1<br>filter=type_eq_automatic<br>filter=retrystate_eq_none<br>filter=device.id_eq_1<br>filter=userid_eq_1<br>filter=timelimit_eq_1<br>filter=duration_eq_1<br>filter=createtime_eq_1593583747969<br>filter=launchappduration_eq_1<br>filter=useremail_eq_value<br>filter=starttime_eq_1593583747969<br>filter=state_eq_aborted<br>filter=id_eq_1<br>filter=_endtime_eq_1593583747969<br>filter=projectname_eq_value<br>filter=device.displayname_eq_value<br>filter=testrunname_eq_null<br>filter=projectid_eq_1
   limit: 20, # Integer | limit parameter define page size
   offset: 0, # Integer | offset parameter define page number
-  sort: 'sort_example' # String | sort parameter contains list of fields used for sort query result <br> examples: <br> sort=testRunId_a<br>sort=isExcluded_a<br>sort=successRatio_a<br>sort=retryState_a<br>sort=device.id_a<br>sort=userId_a<br>sort=timeLimit_a<br>sort=duration_a<br>sort=createTime_a<br>sort=launchAppDuration_a<br>sort=startTime_a<br>sort=state_a<br>sort=id_a<br>sort=_endTime_a<br>sort=projectName_a<br>sort=device.displayName_a<br>sort=testRunName_a<br>sort=projectId_a
+  sort: 'sort_example' # String | sort parameter contains list of fields used for sort query result <br> examples: <br> sort=testRunId_a<br>sort=isExcluded_a<br>sort=successRatio_a<br>sort=type_a<br>sort=retryState_a<br>sort=device.id_a<br>sort=userId_a<br>sort=timeLimit_a<br>sort=duration_a<br>sort=createTime_a<br>sort=launchAppDuration_a<br>sort=userEmail_a<br>sort=startTime_a<br>sort=state_a<br>sort=id_a<br>sort=_endTime_a<br>sort=projectName_a<br>sort=device.displayName_a<br>sort=testRunName_a<br>sort=projectId_a
 }
 
 begin
@@ -14397,10 +14499,10 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **user_id** | **Integer**| userId | 
- **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;testrunid_eq_1&lt;br&gt;filter&#x3D;successratio_eq_1&lt;br&gt;filter&#x3D;retrystate_eq_none&lt;br&gt;filter&#x3D;device.id_eq_1&lt;br&gt;filter&#x3D;userid_eq_1&lt;br&gt;filter&#x3D;timelimit_eq_1&lt;br&gt;filter&#x3D;duration_eq_1&lt;br&gt;filter&#x3D;createtime_eq_1576134483689&lt;br&gt;filter&#x3D;launchappduration_eq_1&lt;br&gt;filter&#x3D;starttime_eq_1576134483689&lt;br&gt;filter&#x3D;state_eq_aborted&lt;br&gt;filter&#x3D;id_eq_1&lt;br&gt;filter&#x3D;_endtime_eq_1576134483689&lt;br&gt;filter&#x3D;projectname_eq_value&lt;br&gt;filter&#x3D;device.displayname_eq_value&lt;br&gt;filter&#x3D;testrunname_eq_value&lt;br&gt;filter&#x3D;projectid_eq_1 | [optional] 
+ **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;testrunid_eq_1&lt;br&gt;filter&#x3D;successratio_eq_1&lt;br&gt;filter&#x3D;type_eq_automatic&lt;br&gt;filter&#x3D;retrystate_eq_none&lt;br&gt;filter&#x3D;device.id_eq_1&lt;br&gt;filter&#x3D;userid_eq_1&lt;br&gt;filter&#x3D;timelimit_eq_1&lt;br&gt;filter&#x3D;duration_eq_1&lt;br&gt;filter&#x3D;createtime_eq_1593583747969&lt;br&gt;filter&#x3D;launchappduration_eq_1&lt;br&gt;filter&#x3D;useremail_eq_value&lt;br&gt;filter&#x3D;starttime_eq_1593583747969&lt;br&gt;filter&#x3D;state_eq_aborted&lt;br&gt;filter&#x3D;id_eq_1&lt;br&gt;filter&#x3D;_endtime_eq_1593583747969&lt;br&gt;filter&#x3D;projectname_eq_value&lt;br&gt;filter&#x3D;device.displayname_eq_value&lt;br&gt;filter&#x3D;testrunname_eq_null&lt;br&gt;filter&#x3D;projectid_eq_1 | [optional] 
  **limit** | **Integer**| limit parameter define page size | [optional] [default to 20]
  **offset** | **Integer**| offset parameter define page number | [optional] [default to 0]
- **sort** | **String**| sort parameter contains list of fields used for sort query result &lt;br&gt; examples: &lt;br&gt; sort&#x3D;testRunId_a&lt;br&gt;sort&#x3D;isExcluded_a&lt;br&gt;sort&#x3D;successRatio_a&lt;br&gt;sort&#x3D;retryState_a&lt;br&gt;sort&#x3D;device.id_a&lt;br&gt;sort&#x3D;userId_a&lt;br&gt;sort&#x3D;timeLimit_a&lt;br&gt;sort&#x3D;duration_a&lt;br&gt;sort&#x3D;createTime_a&lt;br&gt;sort&#x3D;launchAppDuration_a&lt;br&gt;sort&#x3D;startTime_a&lt;br&gt;sort&#x3D;state_a&lt;br&gt;sort&#x3D;id_a&lt;br&gt;sort&#x3D;_endTime_a&lt;br&gt;sort&#x3D;projectName_a&lt;br&gt;sort&#x3D;device.displayName_a&lt;br&gt;sort&#x3D;testRunName_a&lt;br&gt;sort&#x3D;projectId_a | [optional] 
+ **sort** | **String**| sort parameter contains list of fields used for sort query result &lt;br&gt; examples: &lt;br&gt; sort&#x3D;testRunId_a&lt;br&gt;sort&#x3D;isExcluded_a&lt;br&gt;sort&#x3D;successRatio_a&lt;br&gt;sort&#x3D;type_a&lt;br&gt;sort&#x3D;retryState_a&lt;br&gt;sort&#x3D;device.id_a&lt;br&gt;sort&#x3D;userId_a&lt;br&gt;sort&#x3D;timeLimit_a&lt;br&gt;sort&#x3D;duration_a&lt;br&gt;sort&#x3D;createTime_a&lt;br&gt;sort&#x3D;launchAppDuration_a&lt;br&gt;sort&#x3D;userEmail_a&lt;br&gt;sort&#x3D;startTime_a&lt;br&gt;sort&#x3D;state_a&lt;br&gt;sort&#x3D;id_a&lt;br&gt;sort&#x3D;_endTime_a&lt;br&gt;sort&#x3D;projectName_a&lt;br&gt;sort&#x3D;device.displayName_a&lt;br&gt;sort&#x3D;testRunName_a&lt;br&gt;sort&#x3D;projectId_a | [optional] 
 
 ### Return type
 
@@ -14408,7 +14510,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -14431,6 +14533,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -14438,7 +14543,7 @@ api_instance = BitbarCloudApiClient::AllEndpointsApi.new
 user_id = 789 # Integer | userId
 
 opts = { 
-  filter: 'filter_example', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=createtime_eq_1576134485398<br>filter=id_eq_1<br>filter=type_eq_gamebench<br>filter=userid_eq_1
+  filter: 'filter_example', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=createtime_eq_1593583748082<br>filter=id_eq_1<br>filter=type_eq_gamebench<br>filter=userid_eq_1
   limit: 20, # Integer | limit parameter define page size
   offset: 0, # Integer | offset parameter define page number
   sort: 'sort_example' # String | sort parameter contains list of fields used for sort query result <br> examples: <br> sort=createTime_a<br>sort=id_a<br>sort=type_a<br>sort=userId_a
@@ -14458,7 +14563,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **user_id** | **Integer**| userId | 
- **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;createtime_eq_1576134485398&lt;br&gt;filter&#x3D;id_eq_1&lt;br&gt;filter&#x3D;type_eq_gamebench&lt;br&gt;filter&#x3D;userid_eq_1 | [optional] 
+ **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;createtime_eq_1593583748082&lt;br&gt;filter&#x3D;id_eq_1&lt;br&gt;filter&#x3D;type_eq_gamebench&lt;br&gt;filter&#x3D;userid_eq_1 | [optional] 
  **limit** | **Integer**| limit parameter define page size | [optional] [default to 20]
  **offset** | **Integer**| offset parameter define page number | [optional] [default to 0]
  **sort** | **String**| sort parameter contains list of fields used for sort query result &lt;br&gt; examples: &lt;br&gt; sort&#x3D;createTime_a&lt;br&gt;sort&#x3D;id_a&lt;br&gt;sort&#x3D;type_a&lt;br&gt;sort&#x3D;userId_a | [optional] 
@@ -14469,7 +14574,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -14492,12 +14597,15 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
 
 opts = { 
-  filter: 'filter_example', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=devicemodelname_eq_value<br>filter=type_eq_automatic<br>filter=userid_eq_1<br>filter=devicename_eq_value<br>filter=deviceid_eq_1<br>filter=billable_eq_true<br>filter=duration_eq_1<br>filter=createtime_eq_1576134481999<br>filter=devicemodelid_eq_1<br>filter=useremail_eq_value<br>filter=starttime_eq_1576134481999<br>filter=state_eq_aborted<br>filter=id_eq_1<br>filter=_endtime_eq_1576134481999
+  filter: 'filter_example', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=devicemodelname_eq_value<br>filter=type_eq_automatic<br>filter=userid_eq_1<br>filter=devicename_eq_value<br>filter=deviceid_eq_1<br>filter=billable_eq_true<br>filter=duration_eq_1<br>filter=createtime_eq_1593583741786<br>filter=devicemodelid_eq_1<br>filter=useremail_eq_value<br>filter=starttime_eq_1593583741786<br>filter=state_eq_aborted<br>filter=id_eq_1<br>filter=_endtime_eq_1593583741786
   limit: 20, # Integer | limit parameter define page size
   offset: 0, # Integer | offset parameter define page number
   sort: 'sort_example' # String | sort parameter contains list of fields used for sort query result <br> examples: <br> sort=deviceModelName_a<br>sort=type_a<br>sort=userId_a<br>sort=deviceName_a<br>sort=deviceId_a<br>sort=billable_a<br>sort=duration_a<br>sort=createTime_a<br>sort=deviceModelId_a<br>sort=userEmail_a<br>sort=startTime_a<br>sort=state_a<br>sort=id_a<br>sort=_endTime_a
@@ -14516,7 +14624,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;devicemodelname_eq_value&lt;br&gt;filter&#x3D;type_eq_automatic&lt;br&gt;filter&#x3D;userid_eq_1&lt;br&gt;filter&#x3D;devicename_eq_value&lt;br&gt;filter&#x3D;deviceid_eq_1&lt;br&gt;filter&#x3D;billable_eq_true&lt;br&gt;filter&#x3D;duration_eq_1&lt;br&gt;filter&#x3D;createtime_eq_1576134481999&lt;br&gt;filter&#x3D;devicemodelid_eq_1&lt;br&gt;filter&#x3D;useremail_eq_value&lt;br&gt;filter&#x3D;starttime_eq_1576134481999&lt;br&gt;filter&#x3D;state_eq_aborted&lt;br&gt;filter&#x3D;id_eq_1&lt;br&gt;filter&#x3D;_endtime_eq_1576134481999 | [optional] 
+ **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;devicemodelname_eq_value&lt;br&gt;filter&#x3D;type_eq_automatic&lt;br&gt;filter&#x3D;userid_eq_1&lt;br&gt;filter&#x3D;devicename_eq_value&lt;br&gt;filter&#x3D;deviceid_eq_1&lt;br&gt;filter&#x3D;billable_eq_true&lt;br&gt;filter&#x3D;duration_eq_1&lt;br&gt;filter&#x3D;createtime_eq_1593583741786&lt;br&gt;filter&#x3D;devicemodelid_eq_1&lt;br&gt;filter&#x3D;useremail_eq_value&lt;br&gt;filter&#x3D;starttime_eq_1593583741786&lt;br&gt;filter&#x3D;state_eq_aborted&lt;br&gt;filter&#x3D;id_eq_1&lt;br&gt;filter&#x3D;_endtime_eq_1593583741786 | [optional] 
  **limit** | **Integer**| limit parameter define page size | [optional] [default to 20]
  **offset** | **Integer**| offset parameter define page number | [optional] [default to 0]
  **sort** | **String**| sort parameter contains list of fields used for sort query result &lt;br&gt; examples: &lt;br&gt; sort&#x3D;deviceModelName_a&lt;br&gt;sort&#x3D;type_a&lt;br&gt;sort&#x3D;userId_a&lt;br&gt;sort&#x3D;deviceName_a&lt;br&gt;sort&#x3D;deviceId_a&lt;br&gt;sort&#x3D;billable_a&lt;br&gt;sort&#x3D;duration_a&lt;br&gt;sort&#x3D;createTime_a&lt;br&gt;sort&#x3D;deviceModelId_a&lt;br&gt;sort&#x3D;userEmail_a&lt;br&gt;sort&#x3D;startTime_a&lt;br&gt;sort&#x3D;state_a&lt;br&gt;sort&#x3D;id_a&lt;br&gt;sort&#x3D;_endTime_a | [optional] 
@@ -14527,7 +14635,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -14550,6 +14658,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -14572,7 +14683,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -14595,6 +14706,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -14623,7 +14737,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -14646,6 +14760,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -14674,170 +14791,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: */*
-
-
-
-# **get_job_using_get**
-> APIPipelineJob get_job_using_get(job_id)
-
-Get job.
-
-### Example
-```ruby
-# load the gem
-require 'bitbar-cloud-api-client'
-# setup authorization
-BitbarCloudApiClient.configure do |config|
-  # Configure HTTP basic authorization: apiKeyInHeader
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
-end
-
-api_instance = BitbarCloudApiClient::AllEndpointsApi.new
-
-job_id = 789 # Integer | jobId
-
-
-begin
-  #Get job.
-  result = api_instance.get_job_using_get(job_id)
-  p result
-rescue BitbarCloudApiClient::ApiError => e
-  puts "Exception when calling AllEndpointsApi->get_job_using_get: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **job_id** | **Integer**| jobId | 
-
-### Return type
-
-[**APIPipelineJob**](APIPipelineJob.md)
-
-### Authorization
-
-[apiKeyInHeader](../README.md#apiKeyInHeader)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: */*
-
-
-
-# **get_job_using_get1**
-> APIPipelineJob get_job_using_get1(job_id, user_id)
-
-Get job.
-
-### Example
-```ruby
-# load the gem
-require 'bitbar-cloud-api-client'
-# setup authorization
-BitbarCloudApiClient.configure do |config|
-  # Configure HTTP basic authorization: apiKeyInHeader
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
-end
-
-api_instance = BitbarCloudApiClient::AllEndpointsApi.new
-
-job_id = 789 # Integer | jobId
-
-user_id = 789 # Integer | userId
-
-
-begin
-  #Get job.
-  result = api_instance.get_job_using_get1(job_id, user_id)
-  p result
-rescue BitbarCloudApiClient::ApiError => e
-  puts "Exception when calling AllEndpointsApi->get_job_using_get1: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **job_id** | **Integer**| jobId | 
- **user_id** | **Integer**| userId | 
-
-### Return type
-
-[**APIPipelineJob**](APIPipelineJob.md)
-
-### Authorization
-
-[apiKeyInHeader](../README.md#apiKeyInHeader)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: */*
-
-
-
-# **get_jobs_using_get**
-> APIListOfAPIPipelineJob get_jobs_using_get(opts)
-
-Get jobs.
-
-### Example
-```ruby
-# load the gem
-require 'bitbar-cloud-api-client'
-# setup authorization
-BitbarCloudApiClient.configure do |config|
-  # Configure HTTP basic authorization: apiKeyInHeader
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
-end
-
-api_instance = BitbarCloudApiClient::AllEndpointsApi.new
-
-opts = { 
-  filter: 'filter_example', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=createtime_eq_1576134484402<br>filter=name_eq_value<br>filter=id_eq_1<br>filter=type_eq_build<br>filter=userid_eq_1
-  limit: 20, # Integer | limit parameter define page size
-  offset: 0, # Integer | offset parameter define page number
-  sort: 'sort_example' # String | sort parameter contains list of fields used for sort query result <br> examples: <br> sort=createTime_a<br>sort=name_a<br>sort=id_a<br>sort=type_a<br>sort=userId_a
-}
-
-begin
-  #Get jobs.
-  result = api_instance.get_jobs_using_get(opts)
-  p result
-rescue BitbarCloudApiClient::ApiError => e
-  puts "Exception when calling AllEndpointsApi->get_jobs_using_get: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;createtime_eq_1576134484402&lt;br&gt;filter&#x3D;name_eq_value&lt;br&gt;filter&#x3D;id_eq_1&lt;br&gt;filter&#x3D;type_eq_build&lt;br&gt;filter&#x3D;userid_eq_1 | [optional] 
- **limit** | **Integer**| limit parameter define page size | [optional] [default to 20]
- **offset** | **Integer**| offset parameter define page number | [optional] [default to 0]
- **sort** | **String**| sort parameter contains list of fields used for sort query result &lt;br&gt; examples: &lt;br&gt; sort&#x3D;createTime_a&lt;br&gt;sort&#x3D;name_a&lt;br&gt;sort&#x3D;id_a&lt;br&gt;sort&#x3D;type_a&lt;br&gt;sort&#x3D;userId_a | [optional] 
-
-### Return type
-
-[**APIListOfAPIPipelineJob**](APIListOfAPIPipelineJob.md)
-
-### Authorization
-
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -14860,6 +14814,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -14895,7 +14852,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -14918,6 +14875,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -14956,7 +14916,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -14979,6 +14939,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -15014,7 +14977,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -15037,6 +15000,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -15065,7 +15031,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -15088,6 +15054,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -15110,7 +15079,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -15133,12 +15102,15 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
 
 opts = { 
-  filter: 'filter_example', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=expiretime_eq_1576134482100<br>filter=closetime_eq_1576134482100<br>filter=privateinstance_eq_true<br>filter=activatetime_eq_1576134482100<br>filter=useremail_eq_value<br>filter=id_eq_1<br>filter=userid_eq_1<br>filter=status_eq_value
+  filter: 'filter_example', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=expiretime_eq_1593583742072<br>filter=closetime_eq_1593583742072<br>filter=privateinstance_eq_true<br>filter=activatetime_eq_1593583742072<br>filter=useremail_eq_value<br>filter=id_eq_1<br>filter=userid_eq_1<br>filter=status_eq_value
   limit: 20, # Integer | limit parameter define page size
   offset: 0, # Integer | offset parameter define page number
   sort: 'sort_example' # String | sort parameter contains list of fields used for sort query result <br> examples: <br> sort=expireTime_a<br>sort=closeTime_a<br>sort=privateInstance_a<br>sort=activateTime_a<br>sort=userEmail_a<br>sort=id_a<br>sort=userId_a<br>sort=status_a
@@ -15157,7 +15129,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;expiretime_eq_1576134482100&lt;br&gt;filter&#x3D;closetime_eq_1576134482100&lt;br&gt;filter&#x3D;privateinstance_eq_true&lt;br&gt;filter&#x3D;activatetime_eq_1576134482100&lt;br&gt;filter&#x3D;useremail_eq_value&lt;br&gt;filter&#x3D;id_eq_1&lt;br&gt;filter&#x3D;userid_eq_1&lt;br&gt;filter&#x3D;status_eq_value | [optional] 
+ **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;expiretime_eq_1593583742072&lt;br&gt;filter&#x3D;closetime_eq_1593583742072&lt;br&gt;filter&#x3D;privateinstance_eq_true&lt;br&gt;filter&#x3D;activatetime_eq_1593583742072&lt;br&gt;filter&#x3D;useremail_eq_value&lt;br&gt;filter&#x3D;id_eq_1&lt;br&gt;filter&#x3D;userid_eq_1&lt;br&gt;filter&#x3D;status_eq_value | [optional] 
  **limit** | **Integer**| limit parameter define page size | [optional] [default to 20]
  **offset** | **Integer**| offset parameter define page number | [optional] [default to 0]
  **sort** | **String**| sort parameter contains list of fields used for sort query result &lt;br&gt; examples: &lt;br&gt; sort&#x3D;expireTime_a&lt;br&gt;sort&#x3D;closeTime_a&lt;br&gt;sort&#x3D;privateInstance_a&lt;br&gt;sort&#x3D;activateTime_a&lt;br&gt;sort&#x3D;userEmail_a&lt;br&gt;sort&#x3D;id_a&lt;br&gt;sort&#x3D;userId_a&lt;br&gt;sort&#x3D;status_a | [optional] 
@@ -15168,7 +15140,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -15191,6 +15163,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -15226,7 +15201,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -15249,6 +15224,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -15287,7 +15265,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -15310,6 +15288,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -15345,7 +15326,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -15368,6 +15349,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -15396,7 +15380,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -15419,12 +15403,15 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
 
 opts = { 
-  filter: 'filter_example', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=createtime_eq_1576134485502<br>filter=scope_eq_all<br>filter=handlerid_eq_1<br>filter=name_eq_value<br>filter=channel_eq_slack<br>filter=senttime_eq_1576134485502<br>filter=updatetime_eq_1576134485502<br>filter=id_eq_1<br>filter=handleremail_eq_value
+  filter: 'filter_example', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=createtime_eq_1593583742471<br>filter=scope_eq_all<br>filter=handlerid_eq_1<br>filter=name_eq_value<br>filter=channel_eq_slack<br>filter=senttime_eq_1593583742471<br>filter=updatetime_eq_1593583742471<br>filter=id_eq_1<br>filter=handleremail_eq_value
   limit: 20, # Integer | limit parameter define page size
   offset: 0, # Integer | offset parameter define page number
   sort: 'sort_example' # String | sort parameter contains list of fields used for sort query result <br> examples: <br> sort=createTime_a<br>sort=scope_a<br>sort=handlerId_a<br>sort=name_a<br>sort=channel_a<br>sort=sentTime_a<br>sort=updateTime_a<br>sort=id_a<br>sort=handlerEmail_a
@@ -15443,7 +15430,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;createtime_eq_1576134485502&lt;br&gt;filter&#x3D;scope_eq_all&lt;br&gt;filter&#x3D;handlerid_eq_1&lt;br&gt;filter&#x3D;name_eq_value&lt;br&gt;filter&#x3D;channel_eq_slack&lt;br&gt;filter&#x3D;senttime_eq_1576134485502&lt;br&gt;filter&#x3D;updatetime_eq_1576134485502&lt;br&gt;filter&#x3D;id_eq_1&lt;br&gt;filter&#x3D;handleremail_eq_value | [optional] 
+ **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;createtime_eq_1593583742471&lt;br&gt;filter&#x3D;scope_eq_all&lt;br&gt;filter&#x3D;handlerid_eq_1&lt;br&gt;filter&#x3D;name_eq_value&lt;br&gt;filter&#x3D;channel_eq_slack&lt;br&gt;filter&#x3D;senttime_eq_1593583742471&lt;br&gt;filter&#x3D;updatetime_eq_1593583742471&lt;br&gt;filter&#x3D;id_eq_1&lt;br&gt;filter&#x3D;handleremail_eq_value | [optional] 
  **limit** | **Integer**| limit parameter define page size | [optional] [default to 20]
  **offset** | **Integer**| offset parameter define page number | [optional] [default to 0]
  **sort** | **String**| sort parameter contains list of fields used for sort query result &lt;br&gt; examples: &lt;br&gt; sort&#x3D;createTime_a&lt;br&gt;sort&#x3D;scope_a&lt;br&gt;sort&#x3D;handlerId_a&lt;br&gt;sort&#x3D;name_a&lt;br&gt;sort&#x3D;channel_a&lt;br&gt;sort&#x3D;sentTime_a&lt;br&gt;sort&#x3D;updateTime_a&lt;br&gt;sort&#x3D;id_a&lt;br&gt;sort&#x3D;handlerEmail_a | [optional] 
@@ -15454,7 +15441,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -15464,7 +15451,7 @@ Name | Type | Description  | Notes
 
 
 # **get_output_files_for_device_session_by_tag_using_get**
-> APIListOfAPIUserFile get_output_files_for_device_session_by_tag_using_get(device_session_id, opts)
+> APIListOfAPIUserFile get_output_files_for_device_session_by_tag_using_get(device_session_id, project_id, run_id, opts)
 
 Get device session output files.
 
@@ -15477,69 +15464,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
-end
 
-api_instance = BitbarCloudApiClient::AllEndpointsApi.new
-
-device_session_id = 789 # Integer | deviceSessionId
-
-opts = { 
-  filter: 'filter_example', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=size_eq_1<br>filter=createtime_eq_1576134483690<br>filter=name_eq_value<br>filter=mimetype_eq_value<br>filter=inputtype_eq_application<br>filter=state_eq_preparing<br>filter=id_eq_1<br>filter=direction_eq_input
-  limit: 20, # Integer | limit parameter define page size
-  offset: 0, # Integer | offset parameter define page number
-  sort: 'sort_example', # String | sort parameter contains list of fields used for sort query result <br> examples: <br> sort=size_a<br>sort=createTime_a<br>sort=name_a<br>sort=mimetype_a<br>sort=inputType_a<br>sort=state_a<br>sort=id_a<br>sort=direction_a
-  tag: ['tag_example'] # Array<String> | tag[]
-}
-
-begin
-  #Get device session output files.
-  result = api_instance.get_output_files_for_device_session_by_tag_using_get(device_session_id, opts)
-  p result
-rescue BitbarCloudApiClient::ApiError => e
-  puts "Exception when calling AllEndpointsApi->get_output_files_for_device_session_by_tag_using_get: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **device_session_id** | **Integer**| deviceSessionId | 
- **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;size_eq_1&lt;br&gt;filter&#x3D;createtime_eq_1576134483690&lt;br&gt;filter&#x3D;name_eq_value&lt;br&gt;filter&#x3D;mimetype_eq_value&lt;br&gt;filter&#x3D;inputtype_eq_application&lt;br&gt;filter&#x3D;state_eq_preparing&lt;br&gt;filter&#x3D;id_eq_1&lt;br&gt;filter&#x3D;direction_eq_input | [optional] 
- **limit** | **Integer**| limit parameter define page size | [optional] [default to 20]
- **offset** | **Integer**| offset parameter define page number | [optional] [default to 0]
- **sort** | **String**| sort parameter contains list of fields used for sort query result &lt;br&gt; examples: &lt;br&gt; sort&#x3D;size_a&lt;br&gt;sort&#x3D;createTime_a&lt;br&gt;sort&#x3D;name_a&lt;br&gt;sort&#x3D;mimetype_a&lt;br&gt;sort&#x3D;inputType_a&lt;br&gt;sort&#x3D;state_a&lt;br&gt;sort&#x3D;id_a&lt;br&gt;sort&#x3D;direction_a | [optional] 
- **tag** | [**Array&lt;String&gt;**](String.md)| tag[] | [optional] 
-
-### Return type
-
-[**APIListOfAPIUserFile**](APIListOfAPIUserFile.md)
-
-### Authorization
-
-[apiKeyInHeader](../README.md#apiKeyInHeader)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: */*
-
-
-
-# **get_output_files_for_device_session_by_tag_using_get1**
-> APIListOfAPIUserFile get_output_files_for_device_session_by_tag_using_get1(device_session_id, project_id, run_id, opts)
-
-Get device session output files.
-
-### Example
-```ruby
-# load the gem
-require 'bitbar-cloud-api-client'
-# setup authorization
-BitbarCloudApiClient.configure do |config|
-  # Configure HTTP basic authorization: apiKeyInHeader
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -15551,7 +15478,7 @@ project_id = 789 # Integer | projectId
 run_id = 789 # Integer | runId
 
 opts = { 
-  filter: 'filter_example', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=size_eq_1<br>filter=createtime_eq_1576134483692<br>filter=name_eq_value<br>filter=mimetype_eq_value<br>filter=inputtype_eq_application<br>filter=state_eq_preparing<br>filter=id_eq_1<br>filter=direction_eq_input
+  filter: 'filter_example', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=size_eq_1<br>filter=createtime_eq_1593583743378<br>filter=name_eq_value<br>filter=mimetype_eq_value<br>filter=inputtype_eq_application<br>filter=state_eq_preparing<br>filter=id_eq_1<br>filter=direction_eq_input
   limit: 20, # Integer | limit parameter define page size
   offset: 0, # Integer | offset parameter define page number
   sort: 'sort_example', # String | sort parameter contains list of fields used for sort query result <br> examples: <br> sort=size_a<br>sort=createTime_a<br>sort=name_a<br>sort=mimetype_a<br>sort=inputType_a<br>sort=state_a<br>sort=id_a<br>sort=direction_a
@@ -15560,10 +15487,10 @@ opts = {
 
 begin
   #Get device session output files.
-  result = api_instance.get_output_files_for_device_session_by_tag_using_get1(device_session_id, project_id, run_id, opts)
+  result = api_instance.get_output_files_for_device_session_by_tag_using_get(device_session_id, project_id, run_id, opts)
   p result
 rescue BitbarCloudApiClient::ApiError => e
-  puts "Exception when calling AllEndpointsApi->get_output_files_for_device_session_by_tag_using_get1: #{e}"
+  puts "Exception when calling AllEndpointsApi->get_output_files_for_device_session_by_tag_using_get: #{e}"
 end
 ```
 
@@ -15574,7 +15501,7 @@ Name | Type | Description  | Notes
  **device_session_id** | **Integer**| deviceSessionId | 
  **project_id** | **Integer**| projectId | 
  **run_id** | **Integer**| runId | 
- **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;size_eq_1&lt;br&gt;filter&#x3D;createtime_eq_1576134483692&lt;br&gt;filter&#x3D;name_eq_value&lt;br&gt;filter&#x3D;mimetype_eq_value&lt;br&gt;filter&#x3D;inputtype_eq_application&lt;br&gt;filter&#x3D;state_eq_preparing&lt;br&gt;filter&#x3D;id_eq_1&lt;br&gt;filter&#x3D;direction_eq_input | [optional] 
+ **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;size_eq_1&lt;br&gt;filter&#x3D;createtime_eq_1593583743378&lt;br&gt;filter&#x3D;name_eq_value&lt;br&gt;filter&#x3D;mimetype_eq_value&lt;br&gt;filter&#x3D;inputtype_eq_application&lt;br&gt;filter&#x3D;state_eq_preparing&lt;br&gt;filter&#x3D;id_eq_1&lt;br&gt;filter&#x3D;direction_eq_input | [optional] 
  **limit** | **Integer**| limit parameter define page size | [optional] [default to 20]
  **offset** | **Integer**| offset parameter define page number | [optional] [default to 0]
  **sort** | **String**| sort parameter contains list of fields used for sort query result &lt;br&gt; examples: &lt;br&gt; sort&#x3D;size_a&lt;br&gt;sort&#x3D;createTime_a&lt;br&gt;sort&#x3D;name_a&lt;br&gt;sort&#x3D;mimetype_a&lt;br&gt;sort&#x3D;inputType_a&lt;br&gt;sort&#x3D;state_a&lt;br&gt;sort&#x3D;id_a&lt;br&gt;sort&#x3D;direction_a | [optional] 
@@ -15586,7 +15513,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -15595,8 +15522,8 @@ Name | Type | Description  | Notes
 
 
 
-# **get_output_files_for_device_session_by_tag_using_get2**
-> APIListOfAPIUserFile get_output_files_for_device_session_by_tag_using_get2(device_session_id, run_id, opts)
+# **get_output_files_for_device_session_by_tag_using_get1**
+> APIListOfAPIUserFile get_output_files_for_device_session_by_tag_using_get1(device_session_id, run_id, opts)
 
 Get device session output files.
 
@@ -15609,6 +15536,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -15618,7 +15548,7 @@ device_session_id = 789 # Integer | deviceSessionId
 run_id = 789 # Integer | runId
 
 opts = { 
-  filter: 'filter_example', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=size_eq_1<br>filter=createtime_eq_1576134483693<br>filter=name_eq_value<br>filter=mimetype_eq_value<br>filter=inputtype_eq_application<br>filter=state_eq_preparing<br>filter=id_eq_1<br>filter=direction_eq_input
+  filter: 'filter_example', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=size_eq_1<br>filter=createtime_eq_1593583743469<br>filter=name_eq_value<br>filter=mimetype_eq_value<br>filter=inputtype_eq_application<br>filter=state_eq_preparing<br>filter=id_eq_1<br>filter=direction_eq_input
   limit: 20, # Integer | limit parameter define page size
   offset: 0, # Integer | offset parameter define page number
   sort: 'sort_example', # String | sort parameter contains list of fields used for sort query result <br> examples: <br> sort=size_a<br>sort=createTime_a<br>sort=name_a<br>sort=mimetype_a<br>sort=inputType_a<br>sort=state_a<br>sort=id_a<br>sort=direction_a
@@ -15627,7 +15557,74 @@ opts = {
 
 begin
   #Get device session output files.
-  result = api_instance.get_output_files_for_device_session_by_tag_using_get2(device_session_id, run_id, opts)
+  result = api_instance.get_output_files_for_device_session_by_tag_using_get1(device_session_id, run_id, opts)
+  p result
+rescue BitbarCloudApiClient::ApiError => e
+  puts "Exception when calling AllEndpointsApi->get_output_files_for_device_session_by_tag_using_get1: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **device_session_id** | **Integer**| deviceSessionId | 
+ **run_id** | **Integer**| runId | 
+ **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;size_eq_1&lt;br&gt;filter&#x3D;createtime_eq_1593583743469&lt;br&gt;filter&#x3D;name_eq_value&lt;br&gt;filter&#x3D;mimetype_eq_value&lt;br&gt;filter&#x3D;inputtype_eq_application&lt;br&gt;filter&#x3D;state_eq_preparing&lt;br&gt;filter&#x3D;id_eq_1&lt;br&gt;filter&#x3D;direction_eq_input | [optional] 
+ **limit** | **Integer**| limit parameter define page size | [optional] [default to 20]
+ **offset** | **Integer**| offset parameter define page number | [optional] [default to 0]
+ **sort** | **String**| sort parameter contains list of fields used for sort query result &lt;br&gt; examples: &lt;br&gt; sort&#x3D;size_a&lt;br&gt;sort&#x3D;createTime_a&lt;br&gt;sort&#x3D;name_a&lt;br&gt;sort&#x3D;mimetype_a&lt;br&gt;sort&#x3D;inputType_a&lt;br&gt;sort&#x3D;state_a&lt;br&gt;sort&#x3D;id_a&lt;br&gt;sort&#x3D;direction_a | [optional] 
+ **tag** | [**Array&lt;String&gt;**](String.md)| tag[] | [optional] 
+
+### Return type
+
+[**APIListOfAPIUserFile**](APIListOfAPIUserFile.md)
+
+### Authorization
+
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: */*
+
+
+
+# **get_output_files_for_device_session_by_tag_using_get2**
+> APIListOfAPIUserFile get_output_files_for_device_session_by_tag_using_get2(device_session_id, opts)
+
+Get device session output files.
+
+### Example
+```ruby
+# load the gem
+require 'bitbar-cloud-api-client'
+# setup authorization
+BitbarCloudApiClient.configure do |config|
+  # Configure HTTP basic authorization: apiKeyInHeader
+  config.username = 'YOUR USERNAME'
+  config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
+end
+
+api_instance = BitbarCloudApiClient::AllEndpointsApi.new
+
+device_session_id = 789 # Integer | deviceSessionId
+
+opts = { 
+  filter: 'filter_example', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=size_eq_1<br>filter=createtime_eq_1593583745274<br>filter=name_eq_value<br>filter=mimetype_eq_value<br>filter=inputtype_eq_application<br>filter=state_eq_preparing<br>filter=id_eq_1<br>filter=direction_eq_input
+  limit: 20, # Integer | limit parameter define page size
+  offset: 0, # Integer | offset parameter define page number
+  sort: 'sort_example', # String | sort parameter contains list of fields used for sort query result <br> examples: <br> sort=size_a<br>sort=createTime_a<br>sort=name_a<br>sort=mimetype_a<br>sort=inputType_a<br>sort=state_a<br>sort=id_a<br>sort=direction_a
+  tag: ['tag_example'] # Array<String> | tag[]
+}
+
+begin
+  #Get device session output files.
+  result = api_instance.get_output_files_for_device_session_by_tag_using_get2(device_session_id, opts)
   p result
 rescue BitbarCloudApiClient::ApiError => e
   puts "Exception when calling AllEndpointsApi->get_output_files_for_device_session_by_tag_using_get2: #{e}"
@@ -15639,8 +15636,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **device_session_id** | **Integer**| deviceSessionId | 
- **run_id** | **Integer**| runId | 
- **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;size_eq_1&lt;br&gt;filter&#x3D;createtime_eq_1576134483693&lt;br&gt;filter&#x3D;name_eq_value&lt;br&gt;filter&#x3D;mimetype_eq_value&lt;br&gt;filter&#x3D;inputtype_eq_application&lt;br&gt;filter&#x3D;state_eq_preparing&lt;br&gt;filter&#x3D;id_eq_1&lt;br&gt;filter&#x3D;direction_eq_input | [optional] 
+ **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;size_eq_1&lt;br&gt;filter&#x3D;createtime_eq_1593583745274&lt;br&gt;filter&#x3D;name_eq_value&lt;br&gt;filter&#x3D;mimetype_eq_value&lt;br&gt;filter&#x3D;inputtype_eq_application&lt;br&gt;filter&#x3D;state_eq_preparing&lt;br&gt;filter&#x3D;id_eq_1&lt;br&gt;filter&#x3D;direction_eq_input | [optional] 
  **limit** | **Integer**| limit parameter define page size | [optional] [default to 20]
  **offset** | **Integer**| offset parameter define page number | [optional] [default to 0]
  **sort** | **String**| sort parameter contains list of fields used for sort query result &lt;br&gt; examples: &lt;br&gt; sort&#x3D;size_a&lt;br&gt;sort&#x3D;createTime_a&lt;br&gt;sort&#x3D;name_a&lt;br&gt;sort&#x3D;mimetype_a&lt;br&gt;sort&#x3D;inputType_a&lt;br&gt;sort&#x3D;state_a&lt;br&gt;sort&#x3D;id_a&lt;br&gt;sort&#x3D;direction_a | [optional] 
@@ -15652,7 +15648,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -15661,10 +15657,10 @@ Name | Type | Description  | Notes
 
 
 
-# **get_output_files_for_pipeline_build_by_tag_using_get**
-> APIListOfAPIUserFile get_output_files_for_pipeline_build_by_tag_using_get(build_id, job_id, opts)
+# **get_output_files_using_get**
+> APIListOfAPIUserFile get_output_files_using_get(device_session_id, user_id, opts)
 
-Get output files.
+Get files for device session.
 
 ### Example
 ```ruby
@@ -15675,84 +15671,19 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
 
-build_id = 789 # Integer | buildId
-
-job_id = 789 # Integer | jobId
-
-opts = { 
-  filter: 'filter_example', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=size_eq_1<br>filter=createtime_eq_1576134482790<br>filter=name_eq_value<br>filter=mimetype_eq_value<br>filter=inputtype_eq_application<br>filter=state_eq_preparing<br>filter=id_eq_1<br>filter=direction_eq_input
-  limit: 20, # Integer | limit parameter define page size
-  offset: 0, # Integer | offset parameter define page number
-  sort: 'sort_example', # String | sort parameter contains list of fields used for sort query result <br> examples: <br> sort=size_a<br>sort=createTime_a<br>sort=name_a<br>sort=mimetype_a<br>sort=inputType_a<br>sort=state_a<br>sort=id_a<br>sort=direction_a
-  tag: ['tag_example'] # Array<String> | tag[]
-}
-
-begin
-  #Get output files.
-  result = api_instance.get_output_files_for_pipeline_build_by_tag_using_get(build_id, job_id, opts)
-  p result
-rescue BitbarCloudApiClient::ApiError => e
-  puts "Exception when calling AllEndpointsApi->get_output_files_for_pipeline_build_by_tag_using_get: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **build_id** | **Integer**| buildId | 
- **job_id** | **Integer**| jobId | 
- **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;size_eq_1&lt;br&gt;filter&#x3D;createtime_eq_1576134482790&lt;br&gt;filter&#x3D;name_eq_value&lt;br&gt;filter&#x3D;mimetype_eq_value&lt;br&gt;filter&#x3D;inputtype_eq_application&lt;br&gt;filter&#x3D;state_eq_preparing&lt;br&gt;filter&#x3D;id_eq_1&lt;br&gt;filter&#x3D;direction_eq_input | [optional] 
- **limit** | **Integer**| limit parameter define page size | [optional] [default to 20]
- **offset** | **Integer**| offset parameter define page number | [optional] [default to 0]
- **sort** | **String**| sort parameter contains list of fields used for sort query result &lt;br&gt; examples: &lt;br&gt; sort&#x3D;size_a&lt;br&gt;sort&#x3D;createTime_a&lt;br&gt;sort&#x3D;name_a&lt;br&gt;sort&#x3D;mimetype_a&lt;br&gt;sort&#x3D;inputType_a&lt;br&gt;sort&#x3D;state_a&lt;br&gt;sort&#x3D;id_a&lt;br&gt;sort&#x3D;direction_a | [optional] 
- **tag** | [**Array&lt;String&gt;**](String.md)| tag[] | [optional] 
-
-### Return type
-
-[**APIListOfAPIUserFile**](APIListOfAPIUserFile.md)
-
-### Authorization
-
-[apiKeyInHeader](../README.md#apiKeyInHeader)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: */*
-
-
-
-# **get_output_files_for_pipeline_build_by_tag_using_get1**
-> APIListOfAPIUserFile get_output_files_for_pipeline_build_by_tag_using_get1(build_id, job_id, user_id, opts)
-
-Get output files.
-
-### Example
-```ruby
-# load the gem
-require 'bitbar-cloud-api-client'
-# setup authorization
-BitbarCloudApiClient.configure do |config|
-  # Configure HTTP basic authorization: apiKeyInHeader
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
-end
-
-api_instance = BitbarCloudApiClient::AllEndpointsApi.new
-
-build_id = 789 # Integer | buildId
-
-job_id = 789 # Integer | jobId
+device_session_id = 789 # Integer | deviceSessionId
 
 user_id = 789 # Integer | userId
 
 opts = { 
-  filter: 'filter_example', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=size_eq_1<br>filter=createtime_eq_1576134482792<br>filter=name_eq_value<br>filter=mimetype_eq_value<br>filter=inputtype_eq_application<br>filter=state_eq_preparing<br>filter=id_eq_1<br>filter=direction_eq_input
+  filter: 'filter_example', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=size_eq_1<br>filter=createtime_eq_1593583747884<br>filter=name_eq_value<br>filter=mimetype_eq_value<br>filter=inputtype_eq_application<br>filter=state_eq_preparing<br>filter=id_eq_1<br>filter=direction_eq_input
   limit: 20, # Integer | limit parameter define page size
   offset: 0, # Integer | offset parameter define page number
   sort: 'sort_example', # String | sort parameter contains list of fields used for sort query result <br> examples: <br> sort=size_a<br>sort=createTime_a<br>sort=name_a<br>sort=mimetype_a<br>sort=inputType_a<br>sort=state_a<br>sort=id_a<br>sort=direction_a
@@ -15760,11 +15691,11 @@ opts = {
 }
 
 begin
-  #Get output files.
-  result = api_instance.get_output_files_for_pipeline_build_by_tag_using_get1(build_id, job_id, user_id, opts)
+  #Get files for device session.
+  result = api_instance.get_output_files_using_get(device_session_id, user_id, opts)
   p result
 rescue BitbarCloudApiClient::ApiError => e
-  puts "Exception when calling AllEndpointsApi->get_output_files_for_pipeline_build_by_tag_using_get1: #{e}"
+  puts "Exception when calling AllEndpointsApi->get_output_files_using_get: #{e}"
 end
 ```
 
@@ -15772,10 +15703,9 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **build_id** | **Integer**| buildId | 
- **job_id** | **Integer**| jobId | 
+ **device_session_id** | **Integer**| deviceSessionId | 
  **user_id** | **Integer**| userId | 
- **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;size_eq_1&lt;br&gt;filter&#x3D;createtime_eq_1576134482792&lt;br&gt;filter&#x3D;name_eq_value&lt;br&gt;filter&#x3D;mimetype_eq_value&lt;br&gt;filter&#x3D;inputtype_eq_application&lt;br&gt;filter&#x3D;state_eq_preparing&lt;br&gt;filter&#x3D;id_eq_1&lt;br&gt;filter&#x3D;direction_eq_input | [optional] 
+ **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;size_eq_1&lt;br&gt;filter&#x3D;createtime_eq_1593583747884&lt;br&gt;filter&#x3D;name_eq_value&lt;br&gt;filter&#x3D;mimetype_eq_value&lt;br&gt;filter&#x3D;inputtype_eq_application&lt;br&gt;filter&#x3D;state_eq_preparing&lt;br&gt;filter&#x3D;id_eq_1&lt;br&gt;filter&#x3D;direction_eq_input | [optional] 
  **limit** | **Integer**| limit parameter define page size | [optional] [default to 20]
  **offset** | **Integer**| offset parameter define page number | [optional] [default to 0]
  **sort** | **String**| sort parameter contains list of fields used for sort query result &lt;br&gt; examples: &lt;br&gt; sort&#x3D;size_a&lt;br&gt;sort&#x3D;createTime_a&lt;br&gt;sort&#x3D;name_a&lt;br&gt;sort&#x3D;mimetype_a&lt;br&gt;sort&#x3D;inputType_a&lt;br&gt;sort&#x3D;state_a&lt;br&gt;sort&#x3D;id_a&lt;br&gt;sort&#x3D;direction_a | [optional] 
@@ -15787,7 +15717,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -15810,6 +15740,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -15832,110 +15765,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: */*
-
-
-
-# **get_project_application_file_using_get**
-> get_project_application_file_using_get(project_id)
-
-This endpoint is deprecated.
-
-### Example
-```ruby
-# load the gem
-require 'bitbar-cloud-api-client'
-# setup authorization
-BitbarCloudApiClient.configure do |config|
-  # Configure HTTP basic authorization: apiKeyInHeader
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
-end
-
-api_instance = BitbarCloudApiClient::AllEndpointsApi.new
-
-project_id = 789 # Integer | projectId
-
-
-begin
-  #This endpoint is deprecated.
-  api_instance.get_project_application_file_using_get(project_id)
-rescue BitbarCloudApiClient::ApiError => e
-  puts "Exception when calling AllEndpointsApi->get_project_application_file_using_get: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **project_id** | **Integer**| projectId | 
-
-### Return type
-
-nil (empty response body)
-
-### Authorization
-
-[apiKeyInHeader](../README.md#apiKeyInHeader)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: */*
-
-
-
-# **get_project_application_file_using_get1**
-> get_project_application_file_using_get1(project_id, user_id)
-
-This endpoint is deprecated.
-
-### Example
-```ruby
-# load the gem
-require 'bitbar-cloud-api-client'
-# setup authorization
-BitbarCloudApiClient.configure do |config|
-  # Configure HTTP basic authorization: apiKeyInHeader
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
-end
-
-api_instance = BitbarCloudApiClient::AllEndpointsApi.new
-
-project_id = 789 # Integer | projectId
-
-user_id = 789 # Integer | userId
-
-
-begin
-  #This endpoint is deprecated.
-  api_instance.get_project_application_file_using_get1(project_id, user_id)
-rescue BitbarCloudApiClient::ApiError => e
-  puts "Exception when calling AllEndpointsApi->get_project_application_file_using_get1: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **project_id** | **Integer**| projectId | 
- **user_id** | **Integer**| userId | 
-
-### Return type
-
-nil (empty response body)
-
-### Authorization
-
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -15958,6 +15788,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -15991,161 +15824,7 @@ nil (empty response body)
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: */*
-
-
-
-# **get_project_config_using_get**
-> APITestRunConfig get_project_config_using_get(project_id)
-
-This endpoint is deprecated.
-
-### Example
-```ruby
-# load the gem
-require 'bitbar-cloud-api-client'
-# setup authorization
-BitbarCloudApiClient.configure do |config|
-  # Configure HTTP basic authorization: apiKeyInHeader
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
-end
-
-api_instance = BitbarCloudApiClient::AllEndpointsApi.new
-
-project_id = 789 # Integer | projectId
-
-
-begin
-  #This endpoint is deprecated.
-  result = api_instance.get_project_config_using_get(project_id)
-  p result
-rescue BitbarCloudApiClient::ApiError => e
-  puts "Exception when calling AllEndpointsApi->get_project_config_using_get: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **project_id** | **Integer**| projectId | 
-
-### Return type
-
-[**APITestRunConfig**](APITestRunConfig.md)
-
-### Authorization
-
-[apiKeyInHeader](../README.md#apiKeyInHeader)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: */*
-
-
-
-# **get_project_data_file_using_get**
-> get_project_data_file_using_get(project_id)
-
-This endpoint is deprecated.
-
-### Example
-```ruby
-# load the gem
-require 'bitbar-cloud-api-client'
-# setup authorization
-BitbarCloudApiClient.configure do |config|
-  # Configure HTTP basic authorization: apiKeyInHeader
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
-end
-
-api_instance = BitbarCloudApiClient::AllEndpointsApi.new
-
-project_id = 789 # Integer | projectId
-
-
-begin
-  #This endpoint is deprecated.
-  api_instance.get_project_data_file_using_get(project_id)
-rescue BitbarCloudApiClient::ApiError => e
-  puts "Exception when calling AllEndpointsApi->get_project_data_file_using_get: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **project_id** | **Integer**| projectId | 
-
-### Return type
-
-nil (empty response body)
-
-### Authorization
-
-[apiKeyInHeader](../README.md#apiKeyInHeader)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: */*
-
-
-
-# **get_project_data_file_using_get1**
-> get_project_data_file_using_get1(project_id, user_id)
-
-This endpoint is deprecated.
-
-### Example
-```ruby
-# load the gem
-require 'bitbar-cloud-api-client'
-# setup authorization
-BitbarCloudApiClient.configure do |config|
-  # Configure HTTP basic authorization: apiKeyInHeader
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
-end
-
-api_instance = BitbarCloudApiClient::AllEndpointsApi.new
-
-project_id = 789 # Integer | projectId
-
-user_id = 789 # Integer | userId
-
-
-begin
-  #This endpoint is deprecated.
-  api_instance.get_project_data_file_using_get1(project_id, user_id)
-rescue BitbarCloudApiClient::ApiError => e
-  puts "Exception when calling AllEndpointsApi->get_project_data_file_using_get1: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **project_id** | **Integer**| projectId | 
- **user_id** | **Integer**| userId | 
-
-### Return type
-
-nil (empty response body)
-
-### Authorization
-
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -16168,6 +15847,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -16201,7 +15883,7 @@ nil (empty response body)
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -16224,6 +15906,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -16257,7 +15942,7 @@ nil (empty response body)
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -16280,6 +15965,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -16313,7 +16001,7 @@ nil (empty response body)
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -16336,6 +16024,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -16369,7 +16060,7 @@ nil (empty response body)
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -16392,6 +16083,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -16434,7 +16128,7 @@ nil (empty response body)
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -16457,6 +16151,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -16501,7 +16198,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -16524,6 +16221,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -16533,10 +16233,10 @@ project_id = 789 # Integer | projectId
 run_id = 789 # Integer | runId
 
 opts = { 
-  filter: 'filter_example', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=testrunid_eq_1<br>filter=successratio_eq_1<br>filter=retrystate_eq_none<br>filter=device.id_eq_1<br>filter=userid_eq_1<br>filter=timelimit_eq_1<br>filter=duration_eq_1<br>filter=createtime_eq_1576134483695<br>filter=launchappduration_eq_1<br>filter=starttime_eq_1576134483695<br>filter=state_eq_aborted<br>filter=id_eq_1<br>filter=_endtime_eq_1576134483695<br>filter=projectname_eq_value<br>filter=device.displayname_eq_value<br>filter=testrunname_eq_value<br>filter=projectid_eq_1
+  filter: 'filter_example', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=testrunid_eq_1<br>filter=successratio_eq_1<br>filter=type_eq_automatic<br>filter=retrystate_eq_none<br>filter=device.id_eq_1<br>filter=userid_eq_1<br>filter=timelimit_eq_1<br>filter=duration_eq_1<br>filter=createtime_eq_1593583743584<br>filter=launchappduration_eq_1<br>filter=useremail_eq_value<br>filter=starttime_eq_1593583743584<br>filter=state_eq_aborted<br>filter=id_eq_1<br>filter=_endtime_eq_1593583743584<br>filter=projectname_eq_value<br>filter=device.displayname_eq_value<br>filter=testrunname_eq_null<br>filter=projectid_eq_1
   limit: 20, # Integer | limit parameter define page size
   offset: 0, # Integer | offset parameter define page number
-  sort: 'sort_example' # String | sort parameter contains list of fields used for sort query result <br> examples: <br> sort=testRunId_a<br>sort=isExcluded_a<br>sort=successRatio_a<br>sort=retryState_a<br>sort=device.id_a<br>sort=userId_a<br>sort=timeLimit_a<br>sort=duration_a<br>sort=createTime_a<br>sort=launchAppDuration_a<br>sort=startTime_a<br>sort=state_a<br>sort=id_a<br>sort=_endTime_a<br>sort=projectName_a<br>sort=device.displayName_a<br>sort=testRunName_a<br>sort=projectId_a
+  sort: 'sort_example' # String | sort parameter contains list of fields used for sort query result <br> examples: <br> sort=testRunId_a<br>sort=isExcluded_a<br>sort=successRatio_a<br>sort=type_a<br>sort=retryState_a<br>sort=device.id_a<br>sort=userId_a<br>sort=timeLimit_a<br>sort=duration_a<br>sort=createTime_a<br>sort=launchAppDuration_a<br>sort=userEmail_a<br>sort=startTime_a<br>sort=state_a<br>sort=id_a<br>sort=_endTime_a<br>sort=projectName_a<br>sort=device.displayName_a<br>sort=testRunName_a<br>sort=projectId_a
 }
 
 begin
@@ -16554,10 +16254,10 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **project_id** | **Integer**| projectId | 
  **run_id** | **Integer**| runId | 
- **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;testrunid_eq_1&lt;br&gt;filter&#x3D;successratio_eq_1&lt;br&gt;filter&#x3D;retrystate_eq_none&lt;br&gt;filter&#x3D;device.id_eq_1&lt;br&gt;filter&#x3D;userid_eq_1&lt;br&gt;filter&#x3D;timelimit_eq_1&lt;br&gt;filter&#x3D;duration_eq_1&lt;br&gt;filter&#x3D;createtime_eq_1576134483695&lt;br&gt;filter&#x3D;launchappduration_eq_1&lt;br&gt;filter&#x3D;starttime_eq_1576134483695&lt;br&gt;filter&#x3D;state_eq_aborted&lt;br&gt;filter&#x3D;id_eq_1&lt;br&gt;filter&#x3D;_endtime_eq_1576134483695&lt;br&gt;filter&#x3D;projectname_eq_value&lt;br&gt;filter&#x3D;device.displayname_eq_value&lt;br&gt;filter&#x3D;testrunname_eq_value&lt;br&gt;filter&#x3D;projectid_eq_1 | [optional] 
+ **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;testrunid_eq_1&lt;br&gt;filter&#x3D;successratio_eq_1&lt;br&gt;filter&#x3D;type_eq_automatic&lt;br&gt;filter&#x3D;retrystate_eq_none&lt;br&gt;filter&#x3D;device.id_eq_1&lt;br&gt;filter&#x3D;userid_eq_1&lt;br&gt;filter&#x3D;timelimit_eq_1&lt;br&gt;filter&#x3D;duration_eq_1&lt;br&gt;filter&#x3D;createtime_eq_1593583743584&lt;br&gt;filter&#x3D;launchappduration_eq_1&lt;br&gt;filter&#x3D;useremail_eq_value&lt;br&gt;filter&#x3D;starttime_eq_1593583743584&lt;br&gt;filter&#x3D;state_eq_aborted&lt;br&gt;filter&#x3D;id_eq_1&lt;br&gt;filter&#x3D;_endtime_eq_1593583743584&lt;br&gt;filter&#x3D;projectname_eq_value&lt;br&gt;filter&#x3D;device.displayname_eq_value&lt;br&gt;filter&#x3D;testrunname_eq_null&lt;br&gt;filter&#x3D;projectid_eq_1 | [optional] 
  **limit** | **Integer**| limit parameter define page size | [optional] [default to 20]
  **offset** | **Integer**| offset parameter define page number | [optional] [default to 0]
- **sort** | **String**| sort parameter contains list of fields used for sort query result &lt;br&gt; examples: &lt;br&gt; sort&#x3D;testRunId_a&lt;br&gt;sort&#x3D;isExcluded_a&lt;br&gt;sort&#x3D;successRatio_a&lt;br&gt;sort&#x3D;retryState_a&lt;br&gt;sort&#x3D;device.id_a&lt;br&gt;sort&#x3D;userId_a&lt;br&gt;sort&#x3D;timeLimit_a&lt;br&gt;sort&#x3D;duration_a&lt;br&gt;sort&#x3D;createTime_a&lt;br&gt;sort&#x3D;launchAppDuration_a&lt;br&gt;sort&#x3D;startTime_a&lt;br&gt;sort&#x3D;state_a&lt;br&gt;sort&#x3D;id_a&lt;br&gt;sort&#x3D;_endTime_a&lt;br&gt;sort&#x3D;projectName_a&lt;br&gt;sort&#x3D;device.displayName_a&lt;br&gt;sort&#x3D;testRunName_a&lt;br&gt;sort&#x3D;projectId_a | [optional] 
+ **sort** | **String**| sort parameter contains list of fields used for sort query result &lt;br&gt; examples: &lt;br&gt; sort&#x3D;testRunId_a&lt;br&gt;sort&#x3D;isExcluded_a&lt;br&gt;sort&#x3D;successRatio_a&lt;br&gt;sort&#x3D;type_a&lt;br&gt;sort&#x3D;retryState_a&lt;br&gt;sort&#x3D;device.id_a&lt;br&gt;sort&#x3D;userId_a&lt;br&gt;sort&#x3D;timeLimit_a&lt;br&gt;sort&#x3D;duration_a&lt;br&gt;sort&#x3D;createTime_a&lt;br&gt;sort&#x3D;launchAppDuration_a&lt;br&gt;sort&#x3D;userEmail_a&lt;br&gt;sort&#x3D;startTime_a&lt;br&gt;sort&#x3D;state_a&lt;br&gt;sort&#x3D;id_a&lt;br&gt;sort&#x3D;_endTime_a&lt;br&gt;sort&#x3D;projectName_a&lt;br&gt;sort&#x3D;device.displayName_a&lt;br&gt;sort&#x3D;testRunName_a&lt;br&gt;sort&#x3D;projectId_a | [optional] 
 
 ### Return type
 
@@ -16565,585 +16265,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: */*
-
-
-
-# **get_project_file_zip_using_get**
-> get_project_file_zip_using_get(project_id)
-
-This endpoint is deprecated.
-
-### Example
-```ruby
-# load the gem
-require 'bitbar-cloud-api-client'
-# setup authorization
-BitbarCloudApiClient.configure do |config|
-  # Configure HTTP basic authorization: apiKeyInHeader
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
-end
-
-api_instance = BitbarCloudApiClient::AllEndpointsApi.new
-
-project_id = 789 # Integer | projectId
-
-
-begin
-  #This endpoint is deprecated.
-  api_instance.get_project_file_zip_using_get(project_id)
-rescue BitbarCloudApiClient::ApiError => e
-  puts "Exception when calling AllEndpointsApi->get_project_file_zip_using_get: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **project_id** | **Integer**| projectId | 
-
-### Return type
-
-nil (empty response body)
-
-### Authorization
-
-[apiKeyInHeader](../README.md#apiKeyInHeader)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: */*
-
-
-
-# **get_project_file_zip_using_get1**
-> get_project_file_zip_using_get1(project_id, user_id)
-
-This endpoint is deprecated.
-
-### Example
-```ruby
-# load the gem
-require 'bitbar-cloud-api-client'
-# setup authorization
-BitbarCloudApiClient.configure do |config|
-  # Configure HTTP basic authorization: apiKeyInHeader
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
-end
-
-api_instance = BitbarCloudApiClient::AllEndpointsApi.new
-
-project_id = 789 # Integer | projectId
-
-user_id = 789 # Integer | userId
-
-
-begin
-  #This endpoint is deprecated.
-  api_instance.get_project_file_zip_using_get1(project_id, user_id)
-rescue BitbarCloudApiClient::ApiError => e
-  puts "Exception when calling AllEndpointsApi->get_project_file_zip_using_get1: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **project_id** | **Integer**| projectId | 
- **user_id** | **Integer**| userId | 
-
-### Return type
-
-nil (empty response body)
-
-### Authorization
-
-[apiKeyInHeader](../README.md#apiKeyInHeader)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: */*
-
-
-
-# **get_project_files_using_get**
-> APIListOfAPIUserFile get_project_files_using_get(project_id)
-
-This endpoint is deprecated.
-
-### Example
-```ruby
-# load the gem
-require 'bitbar-cloud-api-client'
-# setup authorization
-BitbarCloudApiClient.configure do |config|
-  # Configure HTTP basic authorization: apiKeyInHeader
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
-end
-
-api_instance = BitbarCloudApiClient::AllEndpointsApi.new
-
-project_id = 789 # Integer | projectId
-
-
-begin
-  #This endpoint is deprecated.
-  result = api_instance.get_project_files_using_get(project_id)
-  p result
-rescue BitbarCloudApiClient::ApiError => e
-  puts "Exception when calling AllEndpointsApi->get_project_files_using_get: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **project_id** | **Integer**| projectId | 
-
-### Return type
-
-[**APIListOfAPIUserFile**](APIListOfAPIUserFile.md)
-
-### Authorization
-
-[apiKeyInHeader](../README.md#apiKeyInHeader)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: */*
-
-
-
-# **get_project_files_using_get1**
-> APIListOfAPIUserFile get_project_files_using_get1(project_id, user_id)
-
-This endpoint is deprecated.
-
-### Example
-```ruby
-# load the gem
-require 'bitbar-cloud-api-client'
-# setup authorization
-BitbarCloudApiClient.configure do |config|
-  # Configure HTTP basic authorization: apiKeyInHeader
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
-end
-
-api_instance = BitbarCloudApiClient::AllEndpointsApi.new
-
-project_id = 789 # Integer | projectId
-
-user_id = 789 # Integer | userId
-
-
-begin
-  #This endpoint is deprecated.
-  result = api_instance.get_project_files_using_get1(project_id, user_id)
-  p result
-rescue BitbarCloudApiClient::ApiError => e
-  puts "Exception when calling AllEndpointsApi->get_project_files_using_get1: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **project_id** | **Integer**| projectId | 
- **user_id** | **Integer**| userId | 
-
-### Return type
-
-[**APIListOfAPIUserFile**](APIListOfAPIUserFile.md)
-
-### Authorization
-
-[apiKeyInHeader](../README.md#apiKeyInHeader)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: */*
-
-
-
-# **get_project_test_file_using_get**
-> get_project_test_file_using_get(project_id)
-
-This endpoint is deprecated.
-
-### Example
-```ruby
-# load the gem
-require 'bitbar-cloud-api-client'
-# setup authorization
-BitbarCloudApiClient.configure do |config|
-  # Configure HTTP basic authorization: apiKeyInHeader
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
-end
-
-api_instance = BitbarCloudApiClient::AllEndpointsApi.new
-
-project_id = 789 # Integer | projectId
-
-
-begin
-  #This endpoint is deprecated.
-  api_instance.get_project_test_file_using_get(project_id)
-rescue BitbarCloudApiClient::ApiError => e
-  puts "Exception when calling AllEndpointsApi->get_project_test_file_using_get: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **project_id** | **Integer**| projectId | 
-
-### Return type
-
-nil (empty response body)
-
-### Authorization
-
-[apiKeyInHeader](../README.md#apiKeyInHeader)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: */*
-
-
-
-# **get_project_test_file_using_get1**
-> get_project_test_file_using_get1(project_id, user_id)
-
-This endpoint is deprecated.
-
-### Example
-```ruby
-# load the gem
-require 'bitbar-cloud-api-client'
-# setup authorization
-BitbarCloudApiClient.configure do |config|
-  # Configure HTTP basic authorization: apiKeyInHeader
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
-end
-
-api_instance = BitbarCloudApiClient::AllEndpointsApi.new
-
-project_id = 789 # Integer | projectId
-
-user_id = 789 # Integer | userId
-
-
-begin
-  #This endpoint is deprecated.
-  api_instance.get_project_test_file_using_get1(project_id, user_id)
-rescue BitbarCloudApiClient::ApiError => e
-  puts "Exception when calling AllEndpointsApi->get_project_test_file_using_get1: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **project_id** | **Integer**| projectId | 
- **user_id** | **Integer**| userId | 
-
-### Return type
-
-nil (empty response body)
-
-### Authorization
-
-[apiKeyInHeader](../README.md#apiKeyInHeader)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: */*
-
-
-
-# **get_project_test_run_application_file_using_get**
-> get_project_test_run_application_file_using_get(project_id, run_id)
-
-This endpoint is deprecated.
-
-### Example
-```ruby
-# load the gem
-require 'bitbar-cloud-api-client'
-# setup authorization
-BitbarCloudApiClient.configure do |config|
-  # Configure HTTP basic authorization: apiKeyInHeader
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
-end
-
-api_instance = BitbarCloudApiClient::AllEndpointsApi.new
-
-project_id = 789 # Integer | projectId
-
-run_id = 789 # Integer | runId
-
-
-begin
-  #This endpoint is deprecated.
-  api_instance.get_project_test_run_application_file_using_get(project_id, run_id)
-rescue BitbarCloudApiClient::ApiError => e
-  puts "Exception when calling AllEndpointsApi->get_project_test_run_application_file_using_get: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **project_id** | **Integer**| projectId | 
- **run_id** | **Integer**| runId | 
-
-### Return type
-
-nil (empty response body)
-
-### Authorization
-
-[apiKeyInHeader](../README.md#apiKeyInHeader)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: */*
-
-
-
-# **get_project_test_run_config_using_get**
-> APITestRunConfig get_project_test_run_config_using_get(project_id, run_id)
-
-This endpoint is deprecated.
-
-### Example
-```ruby
-# load the gem
-require 'bitbar-cloud-api-client'
-# setup authorization
-BitbarCloudApiClient.configure do |config|
-  # Configure HTTP basic authorization: apiKeyInHeader
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
-end
-
-api_instance = BitbarCloudApiClient::AllEndpointsApi.new
-
-project_id = 789 # Integer | projectId
-
-run_id = 789 # Integer | runId
-
-
-begin
-  #This endpoint is deprecated.
-  result = api_instance.get_project_test_run_config_using_get(project_id, run_id)
-  p result
-rescue BitbarCloudApiClient::ApiError => e
-  puts "Exception when calling AllEndpointsApi->get_project_test_run_config_using_get: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **project_id** | **Integer**| projectId | 
- **run_id** | **Integer**| runId | 
-
-### Return type
-
-[**APITestRunConfig**](APITestRunConfig.md)
-
-### Authorization
-
-[apiKeyInHeader](../README.md#apiKeyInHeader)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: */*
-
-
-
-# **get_project_test_run_data_file_using_get**
-> get_project_test_run_data_file_using_get(project_id, run_id)
-
-This endpoint is deprecated.
-
-### Example
-```ruby
-# load the gem
-require 'bitbar-cloud-api-client'
-# setup authorization
-BitbarCloudApiClient.configure do |config|
-  # Configure HTTP basic authorization: apiKeyInHeader
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
-end
-
-api_instance = BitbarCloudApiClient::AllEndpointsApi.new
-
-project_id = 789 # Integer | projectId
-
-run_id = 789 # Integer | runId
-
-
-begin
-  #This endpoint is deprecated.
-  api_instance.get_project_test_run_data_file_using_get(project_id, run_id)
-rescue BitbarCloudApiClient::ApiError => e
-  puts "Exception when calling AllEndpointsApi->get_project_test_run_data_file_using_get: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **project_id** | **Integer**| projectId | 
- **run_id** | **Integer**| runId | 
-
-### Return type
-
-nil (empty response body)
-
-### Authorization
-
-[apiKeyInHeader](../README.md#apiKeyInHeader)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: */*
-
-
-
-# **get_project_test_run_file_zip_using_get**
-> get_project_test_run_file_zip_using_get(project_id, run_id)
-
-This endpoint is deprecated.
-
-### Example
-```ruby
-# load the gem
-require 'bitbar-cloud-api-client'
-# setup authorization
-BitbarCloudApiClient.configure do |config|
-  # Configure HTTP basic authorization: apiKeyInHeader
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
-end
-
-api_instance = BitbarCloudApiClient::AllEndpointsApi.new
-
-project_id = 789 # Integer | projectId
-
-run_id = 789 # Integer | runId
-
-
-begin
-  #This endpoint is deprecated.
-  api_instance.get_project_test_run_file_zip_using_get(project_id, run_id)
-rescue BitbarCloudApiClient::ApiError => e
-  puts "Exception when calling AllEndpointsApi->get_project_test_run_file_zip_using_get: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **project_id** | **Integer**| projectId | 
- **run_id** | **Integer**| runId | 
-
-### Return type
-
-nil (empty response body)
-
-### Authorization
-
-[apiKeyInHeader](../README.md#apiKeyInHeader)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: */*
-
-
-
-# **get_project_test_run_files_using_get**
-> APIListOfAPIUserFile get_project_test_run_files_using_get(project_id, run_id)
-
-This endpoint is deprecated.
-
-### Example
-```ruby
-# load the gem
-require 'bitbar-cloud-api-client'
-# setup authorization
-BitbarCloudApiClient.configure do |config|
-  # Configure HTTP basic authorization: apiKeyInHeader
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
-end
-
-api_instance = BitbarCloudApiClient::AllEndpointsApi.new
-
-project_id = 789 # Integer | projectId
-
-run_id = 789 # Integer | runId
-
-
-begin
-  #This endpoint is deprecated.
-  result = api_instance.get_project_test_run_files_using_get(project_id, run_id)
-  p result
-rescue BitbarCloudApiClient::ApiError => e
-  puts "Exception when calling AllEndpointsApi->get_project_test_run_files_using_get: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **project_id** | **Integer**| projectId | 
- **run_id** | **Integer**| runId | 
-
-### Return type
-
-[**APIListOfAPIUserFile**](APIListOfAPIUserFile.md)
-
-### Authorization
-
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -17166,6 +16288,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -17207,60 +16332,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: */*
-
-
-
-# **get_project_test_run_test_file_using_get**
-> get_project_test_run_test_file_using_get(project_id, run_id)
-
-This endpoint is deprecated.
-
-### Example
-```ruby
-# load the gem
-require 'bitbar-cloud-api-client'
-# setup authorization
-BitbarCloudApiClient.configure do |config|
-  # Configure HTTP basic authorization: apiKeyInHeader
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
-end
-
-api_instance = BitbarCloudApiClient::AllEndpointsApi.new
-
-project_id = 789 # Integer | projectId
-
-run_id = 789 # Integer | runId
-
-
-begin
-  #This endpoint is deprecated.
-  api_instance.get_project_test_run_test_file_using_get(project_id, run_id)
-rescue BitbarCloudApiClient::ApiError => e
-  puts "Exception when calling AllEndpointsApi->get_project_test_run_test_file_using_get: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **project_id** | **Integer**| projectId | 
- **run_id** | **Integer**| runId | 
-
-### Return type
-
-nil (empty response body)
-
-### Authorization
-
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -17283,6 +16355,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -17314,7 +16389,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -17337,6 +16412,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -17344,7 +16422,7 @@ api_instance = BitbarCloudApiClient::AllEndpointsApi.new
 project_id = 789 # Integer | projectId
 
 opts = { 
-  filter: 'filter_example', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=frameworkid_eq_1<br>filter=frameworkname_eq_value<br>filter=common_eq_null<br>filter=createtime_eq_1576134485003<br>filter=displayname_eq_value<br>filter=successratio_eq_1<br>filter=starttime_eq_1576134485003<br>filter=id_eq_1<br>filter=userid_eq_1<br>filter=projectid_eq_1
+  filter: 'filter_example', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=frameworkid_eq_1<br>filter=frameworkname_eq_value<br>filter=common_eq_null<br>filter=createtime_eq_1593583747577<br>filter=displayname_eq_value<br>filter=successratio_eq_1<br>filter=starttime_eq_1593583747577<br>filter=id_eq_1<br>filter=userid_eq_1<br>filter=projectid_eq_1
   limit: 20, # Integer | limit parameter define page size
   offset: 0, # Integer | offset parameter define page number
   sort: 'sort_example' # String | sort parameter contains list of fields used for sort query result <br> examples: <br> sort=frameworkId_a<br>sort=frameworkName_a<br>sort=common_a<br>sort=deviceCount_a<br>sort=createTime_a<br>sort=displayName_a<br>sort=executionRatio_a<br>sort=successRatio_a<br>sort=startTime_a<br>sort=state_a<br>sort=id_a<br>sort=userId_a<br>sort=projectId_a
@@ -17364,7 +16442,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **project_id** | **Integer**| projectId | 
- **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;frameworkid_eq_1&lt;br&gt;filter&#x3D;frameworkname_eq_value&lt;br&gt;filter&#x3D;common_eq_null&lt;br&gt;filter&#x3D;createtime_eq_1576134485003&lt;br&gt;filter&#x3D;displayname_eq_value&lt;br&gt;filter&#x3D;successratio_eq_1&lt;br&gt;filter&#x3D;starttime_eq_1576134485003&lt;br&gt;filter&#x3D;id_eq_1&lt;br&gt;filter&#x3D;userid_eq_1&lt;br&gt;filter&#x3D;projectid_eq_1 | [optional] 
+ **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;frameworkid_eq_1&lt;br&gt;filter&#x3D;frameworkname_eq_value&lt;br&gt;filter&#x3D;common_eq_null&lt;br&gt;filter&#x3D;createtime_eq_1593583747577&lt;br&gt;filter&#x3D;displayname_eq_value&lt;br&gt;filter&#x3D;successratio_eq_1&lt;br&gt;filter&#x3D;starttime_eq_1593583747577&lt;br&gt;filter&#x3D;id_eq_1&lt;br&gt;filter&#x3D;userid_eq_1&lt;br&gt;filter&#x3D;projectid_eq_1 | [optional] 
  **limit** | **Integer**| limit parameter define page size | [optional] [default to 20]
  **offset** | **Integer**| offset parameter define page number | [optional] [default to 0]
  **sort** | **String**| sort parameter contains list of fields used for sort query result &lt;br&gt; examples: &lt;br&gt; sort&#x3D;frameworkId_a&lt;br&gt;sort&#x3D;frameworkName_a&lt;br&gt;sort&#x3D;common_a&lt;br&gt;sort&#x3D;deviceCount_a&lt;br&gt;sort&#x3D;createTime_a&lt;br&gt;sort&#x3D;displayName_a&lt;br&gt;sort&#x3D;executionRatio_a&lt;br&gt;sort&#x3D;successRatio_a&lt;br&gt;sort&#x3D;startTime_a&lt;br&gt;sort&#x3D;state_a&lt;br&gt;sort&#x3D;id_a&lt;br&gt;sort&#x3D;userId_a&lt;br&gt;sort&#x3D;projectId_a | [optional] 
@@ -17375,7 +16453,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -17398,6 +16476,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -17426,7 +16507,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -17449,6 +16530,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -17477,7 +16561,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -17500,6 +16584,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -17522,7 +16609,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -17545,15 +16632,18 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
 
 opts = { 
-  filter: 'filter_example', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=archivetime_eq_1576134484591<br>filter=common_eq_null<br>filter=createtime_eq_1576134484591<br>filter=ostype_eq_ios<br>filter=name_eq_value<br>filter=description_eq_value<br>filter=readonly_eq_true<br>filter=id_eq_1<br>filter=sharedbyemail_eq_value
+  filter: 'filter_example', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=archivetime_eq_1593583746467<br>filter=common_eq_null<br>filter=createtime_eq_1593583746467<br>filter=ostype_eq_ios<br>filter=name_eq_value<br>filter=description_eq_value<br>filter=readonly_eq_true<br>filter=id_eq_1<br>filter=sharedbyemail_eq_value
   limit: 20, # Integer | limit parameter define page size
   offset: 0, # Integer | offset parameter define page number
-  sort: 'sort_example' # String | sort parameter contains list of fields used for sort query result <br> examples: <br> sort=archiveTime_a<br>sort=common_a<br>sort=createTime_a<br>sort=osType_a<br>sort=name_a<br>sort=description_a<br>sort=id_a<br>sort=type_a<br>sort=sharedByEmail_a
+  sort: 'sort_example' # String | sort parameter contains list of fields used for sort query result <br> examples: <br> sort=archiveTime_a<br>sort=common_a<br>sort=createTime_a<br>sort=osType_a<br>sort=name_a<br>sort=description_a<br>sort=id_a<br>sort=sharedByEmail_a
 }
 
 begin
@@ -17569,10 +16659,10 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;archivetime_eq_1576134484591&lt;br&gt;filter&#x3D;common_eq_null&lt;br&gt;filter&#x3D;createtime_eq_1576134484591&lt;br&gt;filter&#x3D;ostype_eq_ios&lt;br&gt;filter&#x3D;name_eq_value&lt;br&gt;filter&#x3D;description_eq_value&lt;br&gt;filter&#x3D;readonly_eq_true&lt;br&gt;filter&#x3D;id_eq_1&lt;br&gt;filter&#x3D;sharedbyemail_eq_value | [optional] 
+ **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;archivetime_eq_1593583746467&lt;br&gt;filter&#x3D;common_eq_null&lt;br&gt;filter&#x3D;createtime_eq_1593583746467&lt;br&gt;filter&#x3D;ostype_eq_ios&lt;br&gt;filter&#x3D;name_eq_value&lt;br&gt;filter&#x3D;description_eq_value&lt;br&gt;filter&#x3D;readonly_eq_true&lt;br&gt;filter&#x3D;id_eq_1&lt;br&gt;filter&#x3D;sharedbyemail_eq_value | [optional] 
  **limit** | **Integer**| limit parameter define page size | [optional] [default to 20]
  **offset** | **Integer**| offset parameter define page number | [optional] [default to 0]
- **sort** | **String**| sort parameter contains list of fields used for sort query result &lt;br&gt; examples: &lt;br&gt; sort&#x3D;archiveTime_a&lt;br&gt;sort&#x3D;common_a&lt;br&gt;sort&#x3D;createTime_a&lt;br&gt;sort&#x3D;osType_a&lt;br&gt;sort&#x3D;name_a&lt;br&gt;sort&#x3D;description_a&lt;br&gt;sort&#x3D;id_a&lt;br&gt;sort&#x3D;type_a&lt;br&gt;sort&#x3D;sharedByEmail_a | [optional] 
+ **sort** | **String**| sort parameter contains list of fields used for sort query result &lt;br&gt; examples: &lt;br&gt; sort&#x3D;archiveTime_a&lt;br&gt;sort&#x3D;common_a&lt;br&gt;sort&#x3D;createTime_a&lt;br&gt;sort&#x3D;osType_a&lt;br&gt;sort&#x3D;name_a&lt;br&gt;sort&#x3D;description_a&lt;br&gt;sort&#x3D;id_a&lt;br&gt;sort&#x3D;sharedByEmail_a | [optional] 
 
 ### Return type
 
@@ -17580,7 +16670,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -17603,12 +16693,15 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
 
 opts = { 
-  filter: 'filter_example', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=updatedbydisplayname_eq_value<br>filter=name_eq_value<br>filter=fromtime_eq_1576134482207<br>filter=description_eq_value<br>filter=updatetime_eq_1576134482207<br>filter=id_eq_1<br>filter=updatedbyid_eq_1<br>filter=value_eq_value<br>filter=totime_eq_1576134482207
+  filter: 'filter_example', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=updatedbydisplayname_eq_value<br>filter=name_eq_value<br>filter=fromtime_eq_1593583742672<br>filter=description_eq_value<br>filter=updatetime_eq_1593583742672<br>filter=id_eq_1<br>filter=updatedbyid_eq_1<br>filter=value_eq_value<br>filter=totime_eq_1593583742672
   limit: 20, # Integer | limit parameter define page size
   offset: 0, # Integer | offset parameter define page number
   sort: 'sort_example' # String | sort parameter contains list of fields used for sort query result <br> examples: <br> sort=updatedByDisplayName_a<br>sort=name_a<br>sort=fromTime_a<br>sort=description_a<br>sort=updateTime_a<br>sort=id_a<br>sort=updatedById_a<br>sort=value_a<br>sort=toTime_a
@@ -17627,7 +16720,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;updatedbydisplayname_eq_value&lt;br&gt;filter&#x3D;name_eq_value&lt;br&gt;filter&#x3D;fromtime_eq_1576134482207&lt;br&gt;filter&#x3D;description_eq_value&lt;br&gt;filter&#x3D;updatetime_eq_1576134482207&lt;br&gt;filter&#x3D;id_eq_1&lt;br&gt;filter&#x3D;updatedbyid_eq_1&lt;br&gt;filter&#x3D;value_eq_value&lt;br&gt;filter&#x3D;totime_eq_1576134482207 | [optional] 
+ **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;updatedbydisplayname_eq_value&lt;br&gt;filter&#x3D;name_eq_value&lt;br&gt;filter&#x3D;fromtime_eq_1593583742672&lt;br&gt;filter&#x3D;description_eq_value&lt;br&gt;filter&#x3D;updatetime_eq_1593583742672&lt;br&gt;filter&#x3D;id_eq_1&lt;br&gt;filter&#x3D;updatedbyid_eq_1&lt;br&gt;filter&#x3D;value_eq_value&lt;br&gt;filter&#x3D;totime_eq_1593583742672 | [optional] 
  **limit** | **Integer**| limit parameter define page size | [optional] [default to 20]
  **offset** | **Integer**| offset parameter define page number | [optional] [default to 0]
  **sort** | **String**| sort parameter contains list of fields used for sort query result &lt;br&gt; examples: &lt;br&gt; sort&#x3D;updatedByDisplayName_a&lt;br&gt;sort&#x3D;name_a&lt;br&gt;sort&#x3D;fromTime_a&lt;br&gt;sort&#x3D;description_a&lt;br&gt;sort&#x3D;updateTime_a&lt;br&gt;sort&#x3D;id_a&lt;br&gt;sort&#x3D;updatedById_a&lt;br&gt;sort&#x3D;value_a&lt;br&gt;sort&#x3D;toTime_a | [optional] 
@@ -17638,7 +16731,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -17661,6 +16754,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -17691,68 +16787,7 @@ nil (empty response body)
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: */*
-
-
-
-# **get_receipts_using_get**
-> APIListOfAPIAccountService get_receipts_using_get(user_id, opts)
-
-Get receipt.
-
-### Example
-```ruby
-# load the gem
-require 'bitbar-cloud-api-client'
-# setup authorization
-BitbarCloudApiClient.configure do |config|
-  # Configure HTTP basic authorization: apiKeyInHeader
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
-end
-
-api_instance = BitbarCloudApiClient::AllEndpointsApi.new
-
-user_id = 789 # Integer | userId
-
-opts = { 
-  filter: 'filter_example', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=accountid_eq_1<br>filter=deactivatereason_eq_initial_failure<br>filter=price_eq_1<br>filter=chargetype_eq_usage<br>filter=paymentmethod_eq_paypal<br>filter=autorenew_eq_true<br>filter=active_eq_true<br>filter=starttime_eq_1576134485787<br>filter=id_eq_1<br>filter=_endtime_eq_1576134485787<br>filter=activatedbyname_eq_value<br>filter=servicename_eq_value<br>filter=deactivatedbyname_eq_value
-  limit: 20, # Integer | limit parameter define page size
-  offset: 0, # Integer | offset parameter define page number
-  sort: 'sort_example' # String | sort parameter contains list of fields used for sort query result <br> examples: <br> sort=accountId_a<br>sort=price_a<br>sort=chargeType_a<br>sort=paymentMethod_a<br>sort=autoRenew_a<br>sort=active_a<br>sort=startTime_a<br>sort=id_a<br>sort=_endTime_a<br>sort=activatedByName_a<br>sort=serviceName_a<br>sort=deactivatedByName_a
-}
-
-begin
-  #Get receipt.
-  result = api_instance.get_receipts_using_get(user_id, opts)
-  p result
-rescue BitbarCloudApiClient::ApiError => e
-  puts "Exception when calling AllEndpointsApi->get_receipts_using_get: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **user_id** | **Integer**| userId | 
- **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;accountid_eq_1&lt;br&gt;filter&#x3D;deactivatereason_eq_initial_failure&lt;br&gt;filter&#x3D;price_eq_1&lt;br&gt;filter&#x3D;chargetype_eq_usage&lt;br&gt;filter&#x3D;paymentmethod_eq_paypal&lt;br&gt;filter&#x3D;autorenew_eq_true&lt;br&gt;filter&#x3D;active_eq_true&lt;br&gt;filter&#x3D;starttime_eq_1576134485787&lt;br&gt;filter&#x3D;id_eq_1&lt;br&gt;filter&#x3D;_endtime_eq_1576134485787&lt;br&gt;filter&#x3D;activatedbyname_eq_value&lt;br&gt;filter&#x3D;servicename_eq_value&lt;br&gt;filter&#x3D;deactivatedbyname_eq_value | [optional] 
- **limit** | **Integer**| limit parameter define page size | [optional] [default to 20]
- **offset** | **Integer**| offset parameter define page number | [optional] [default to 0]
- **sort** | **String**| sort parameter contains list of fields used for sort query result &lt;br&gt; examples: &lt;br&gt; sort&#x3D;accountId_a&lt;br&gt;sort&#x3D;price_a&lt;br&gt;sort&#x3D;chargeType_a&lt;br&gt;sort&#x3D;paymentMethod_a&lt;br&gt;sort&#x3D;autoRenew_a&lt;br&gt;sort&#x3D;active_a&lt;br&gt;sort&#x3D;startTime_a&lt;br&gt;sort&#x3D;id_a&lt;br&gt;sort&#x3D;_endTime_a&lt;br&gt;sort&#x3D;activatedByName_a&lt;br&gt;sort&#x3D;serviceName_a&lt;br&gt;sort&#x3D;deactivatedByName_a | [optional] 
-
-### Return type
-
-[**APIListOfAPIAccountService**](APIListOfAPIAccountService.md)
-
-### Authorization
-
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -17775,6 +16810,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -17806,7 +16844,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -17829,6 +16867,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -17863,7 +16904,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -17886,6 +16927,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -17924,7 +16968,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -17947,6 +16991,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -17988,7 +17035,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -18011,6 +17058,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -18048,7 +17098,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -18073,12 +17123,15 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
 
 opts = { 
-  filter: 'filter_example', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=size_eq_1<br>filter=createtime_eq_1576134482387<br>filter=name_eq_value<br>filter=mimetype_eq_value<br>filter=inputtype_eq_application<br>filter=state_eq_preparing<br>filter=id_eq_1<br>filter=direction_eq_input
+  filter: 'filter_example', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=size_eq_1<br>filter=createtime_eq_1593583742870<br>filter=name_eq_value<br>filter=mimetype_eq_value<br>filter=inputtype_eq_application<br>filter=state_eq_preparing<br>filter=id_eq_1<br>filter=direction_eq_input
   limit: 20, # Integer | limit parameter define page size
   offset: 0, # Integer | offset parameter define page number
   sort: 'sort_example' # String | sort parameter contains list of fields used for sort query result <br> examples: <br> sort=size_a<br>sort=createTime_a<br>sort=name_a<br>sort=mimetype_a<br>sort=inputType_a<br>sort=state_a<br>sort=id_a<br>sort=direction_a
@@ -18097,7 +17150,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;size_eq_1&lt;br&gt;filter&#x3D;createtime_eq_1576134482387&lt;br&gt;filter&#x3D;name_eq_value&lt;br&gt;filter&#x3D;mimetype_eq_value&lt;br&gt;filter&#x3D;inputtype_eq_application&lt;br&gt;filter&#x3D;state_eq_preparing&lt;br&gt;filter&#x3D;id_eq_1&lt;br&gt;filter&#x3D;direction_eq_input | [optional] 
+ **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;size_eq_1&lt;br&gt;filter&#x3D;createtime_eq_1593583742870&lt;br&gt;filter&#x3D;name_eq_value&lt;br&gt;filter&#x3D;mimetype_eq_value&lt;br&gt;filter&#x3D;inputtype_eq_application&lt;br&gt;filter&#x3D;state_eq_preparing&lt;br&gt;filter&#x3D;id_eq_1&lt;br&gt;filter&#x3D;direction_eq_input | [optional] 
  **limit** | **Integer**| limit parameter define page size | [optional] [default to 20]
  **offset** | **Integer**| offset parameter define page number | [optional] [default to 0]
  **sort** | **String**| sort parameter contains list of fields used for sort query result &lt;br&gt; examples: &lt;br&gt; sort&#x3D;size_a&lt;br&gt;sort&#x3D;createTime_a&lt;br&gt;sort&#x3D;name_a&lt;br&gt;sort&#x3D;mimetype_a&lt;br&gt;sort&#x3D;inputType_a&lt;br&gt;sort&#x3D;state_a&lt;br&gt;sort&#x3D;id_a&lt;br&gt;sort&#x3D;direction_a | [optional] 
@@ -18108,7 +17161,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -18131,6 +17184,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -18153,7 +17209,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -18163,7 +17219,7 @@ This endpoint does not need any parameter.
 
 
 # **get_scopes_using_get1**
-> APIListOfAPIEnum get_scopes_using_get1(user_id)
+> APIListOfAPIEnum get_scopes_using_get1
 
 Get notification scopes.
 
@@ -18176,16 +17232,16 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
 
-user_id = 789 # Integer | userId
-
-
 begin
   #Get notification scopes.
-  result = api_instance.get_scopes_using_get1(user_id)
+  result = api_instance.get_scopes_using_get1
   p result
 rescue BitbarCloudApiClient::ApiError => e
   puts "Exception when calling AllEndpointsApi->get_scopes_using_get1: #{e}"
@@ -18193,10 +17249,7 @@ end
 ```
 
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **user_id** | **Integer**| userId | 
+This endpoint does not need any parameter.
 
 ### Return type
 
@@ -18204,227 +17257,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: */*
-
-
-
-# **get_screenshot_for_device_session_using_get**
-> get_screenshot_for_device_session_using_get(device_session_id, screenshot_id)
-
-Download device session screenshot.
-
-### Example
-```ruby
-# load the gem
-require 'bitbar-cloud-api-client'
-# setup authorization
-BitbarCloudApiClient.configure do |config|
-  # Configure HTTP basic authorization: apiKeyInHeader
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
-end
-
-api_instance = BitbarCloudApiClient::AllEndpointsApi.new
-
-device_session_id = 789 # Integer | deviceSessionId
-
-screenshot_id = 789 # Integer | screenshotId
-
-
-begin
-  #Download device session screenshot.
-  api_instance.get_screenshot_for_device_session_using_get(device_session_id, screenshot_id)
-rescue BitbarCloudApiClient::ApiError => e
-  puts "Exception when calling AllEndpointsApi->get_screenshot_for_device_session_using_get: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **device_session_id** | **Integer**| deviceSessionId | 
- **screenshot_id** | **Integer**| screenshotId | 
-
-### Return type
-
-nil (empty response body)
-
-### Authorization
-
-[apiKeyInHeader](../README.md#apiKeyInHeader)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: */*
-
-
-
-# **get_screenshot_for_device_session_using_get1**
-> APIUserFile get_screenshot_for_device_session_using_get1(device_session_id, screenshot_id)
-
-Get device session screenshot.
-
-### Example
-```ruby
-# load the gem
-require 'bitbar-cloud-api-client'
-# setup authorization
-BitbarCloudApiClient.configure do |config|
-  # Configure HTTP basic authorization: apiKeyInHeader
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
-end
-
-api_instance = BitbarCloudApiClient::AllEndpointsApi.new
-
-device_session_id = 789 # Integer | deviceSessionId
-
-screenshot_id = 789 # Integer | screenshotId
-
-
-begin
-  #Get device session screenshot.
-  result = api_instance.get_screenshot_for_device_session_using_get1(device_session_id, screenshot_id)
-  p result
-rescue BitbarCloudApiClient::ApiError => e
-  puts "Exception when calling AllEndpointsApi->get_screenshot_for_device_session_using_get1: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **device_session_id** | **Integer**| deviceSessionId | 
- **screenshot_id** | **Integer**| screenshotId | 
-
-### Return type
-
-[**APIUserFile**](APIUserFile.md)
-
-### Authorization
-
-[apiKeyInHeader](../README.md#apiKeyInHeader)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: */*
-
-
-
-# **get_screenshot_for_device_session_using_get2**
-> get_screenshot_for_device_session_using_get2(device_session_id, screenshot_id, user_id)
-
-Download device session screenshot.
-
-### Example
-```ruby
-# load the gem
-require 'bitbar-cloud-api-client'
-# setup authorization
-BitbarCloudApiClient.configure do |config|
-  # Configure HTTP basic authorization: apiKeyInHeader
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
-end
-
-api_instance = BitbarCloudApiClient::AllEndpointsApi.new
-
-device_session_id = 789 # Integer | deviceSessionId
-
-screenshot_id = 789 # Integer | screenshotId
-
-user_id = 789 # Integer | userId
-
-
-begin
-  #Download device session screenshot.
-  api_instance.get_screenshot_for_device_session_using_get2(device_session_id, screenshot_id, user_id)
-rescue BitbarCloudApiClient::ApiError => e
-  puts "Exception when calling AllEndpointsApi->get_screenshot_for_device_session_using_get2: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **device_session_id** | **Integer**| deviceSessionId | 
- **screenshot_id** | **Integer**| screenshotId | 
- **user_id** | **Integer**| userId | 
-
-### Return type
-
-nil (empty response body)
-
-### Authorization
-
-[apiKeyInHeader](../README.md#apiKeyInHeader)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: */*
-
-
-
-# **get_screenshot_for_device_session_using_get3**
-> APIUserFile get_screenshot_for_device_session_using_get3(device_session_id, screenshot_id, user_id)
-
-Get device session screenshot.
-
-### Example
-```ruby
-# load the gem
-require 'bitbar-cloud-api-client'
-# setup authorization
-BitbarCloudApiClient.configure do |config|
-  # Configure HTTP basic authorization: apiKeyInHeader
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
-end
-
-api_instance = BitbarCloudApiClient::AllEndpointsApi.new
-
-device_session_id = 789 # Integer | deviceSessionId
-
-screenshot_id = 789 # Integer | screenshotId
-
-user_id = 789 # Integer | userId
-
-
-begin
-  #Get device session screenshot.
-  result = api_instance.get_screenshot_for_device_session_using_get3(device_session_id, screenshot_id, user_id)
-  p result
-rescue BitbarCloudApiClient::ApiError => e
-  puts "Exception when calling AllEndpointsApi->get_screenshot_for_device_session_using_get3: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **device_session_id** | **Integer**| deviceSessionId | 
- **screenshot_id** | **Integer**| screenshotId | 
- **user_id** | **Integer**| userId | 
-
-### Return type
-
-[**APIUserFile**](APIUserFile.md)
-
-### Authorization
-
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -18447,6 +17280,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -18478,7 +17314,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -18501,6 +17337,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -18529,7 +17368,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -18552,6 +17391,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -18586,132 +17428,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: */*
-
-
-
-# **get_screenshots_for_device_session_using_get**
-> APIListOfAPIUserFile get_screenshots_for_device_session_using_get(device_session_id, opts)
-
-Get screenshots for device session.
-
-### Example
-```ruby
-# load the gem
-require 'bitbar-cloud-api-client'
-# setup authorization
-BitbarCloudApiClient.configure do |config|
-  # Configure HTTP basic authorization: apiKeyInHeader
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
-end
-
-api_instance = BitbarCloudApiClient::AllEndpointsApi.new
-
-device_session_id = 789 # Integer | deviceSessionId
-
-opts = { 
-  filter: 'filter_example', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=size_eq_1<br>filter=createtime_eq_1576134483700<br>filter=name_eq_value<br>filter=mimetype_eq_value<br>filter=inputtype_eq_application<br>filter=state_eq_preparing<br>filter=id_eq_1<br>filter=direction_eq_input
-  limit: 20, # Integer | limit parameter define page size
-  offset: 0, # Integer | offset parameter define page number
-  sort: 'sort_example' # String | sort parameter contains list of fields used for sort query result <br> examples: <br> sort=size_a<br>sort=createTime_a<br>sort=name_a<br>sort=mimetype_a<br>sort=inputType_a<br>sort=state_a<br>sort=id_a<br>sort=direction_a
-}
-
-begin
-  #Get screenshots for device session.
-  result = api_instance.get_screenshots_for_device_session_using_get(device_session_id, opts)
-  p result
-rescue BitbarCloudApiClient::ApiError => e
-  puts "Exception when calling AllEndpointsApi->get_screenshots_for_device_session_using_get: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **device_session_id** | **Integer**| deviceSessionId | 
- **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;size_eq_1&lt;br&gt;filter&#x3D;createtime_eq_1576134483700&lt;br&gt;filter&#x3D;name_eq_value&lt;br&gt;filter&#x3D;mimetype_eq_value&lt;br&gt;filter&#x3D;inputtype_eq_application&lt;br&gt;filter&#x3D;state_eq_preparing&lt;br&gt;filter&#x3D;id_eq_1&lt;br&gt;filter&#x3D;direction_eq_input | [optional] 
- **limit** | **Integer**| limit parameter define page size | [optional] [default to 20]
- **offset** | **Integer**| offset parameter define page number | [optional] [default to 0]
- **sort** | **String**| sort parameter contains list of fields used for sort query result &lt;br&gt; examples: &lt;br&gt; sort&#x3D;size_a&lt;br&gt;sort&#x3D;createTime_a&lt;br&gt;sort&#x3D;name_a&lt;br&gt;sort&#x3D;mimetype_a&lt;br&gt;sort&#x3D;inputType_a&lt;br&gt;sort&#x3D;state_a&lt;br&gt;sort&#x3D;id_a&lt;br&gt;sort&#x3D;direction_a | [optional] 
-
-### Return type
-
-[**APIListOfAPIUserFile**](APIListOfAPIUserFile.md)
-
-### Authorization
-
-[apiKeyInHeader](../README.md#apiKeyInHeader)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: */*
-
-
-
-# **get_screenshots_for_device_session_using_get1**
-> APIListOfAPIUserFile get_screenshots_for_device_session_using_get1(device_session_id, user_id, opts)
-
-Get screenshots for device session.
-
-### Example
-```ruby
-# load the gem
-require 'bitbar-cloud-api-client'
-# setup authorization
-BitbarCloudApiClient.configure do |config|
-  # Configure HTTP basic authorization: apiKeyInHeader
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
-end
-
-api_instance = BitbarCloudApiClient::AllEndpointsApi.new
-
-device_session_id = 789 # Integer | deviceSessionId
-
-user_id = 789 # Integer | userId
-
-opts = { 
-  filter: 'filter_example', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=size_eq_1<br>filter=createtime_eq_1576134483701<br>filter=name_eq_value<br>filter=mimetype_eq_value<br>filter=inputtype_eq_application<br>filter=state_eq_preparing<br>filter=id_eq_1<br>filter=direction_eq_input
-  limit: 20, # Integer | limit parameter define page size
-  offset: 0, # Integer | offset parameter define page number
-  sort: 'sort_example' # String | sort parameter contains list of fields used for sort query result <br> examples: <br> sort=size_a<br>sort=createTime_a<br>sort=name_a<br>sort=mimetype_a<br>sort=inputType_a<br>sort=state_a<br>sort=id_a<br>sort=direction_a
-}
-
-begin
-  #Get screenshots for device session.
-  result = api_instance.get_screenshots_for_device_session_using_get1(device_session_id, user_id, opts)
-  p result
-rescue BitbarCloudApiClient::ApiError => e
-  puts "Exception when calling AllEndpointsApi->get_screenshots_for_device_session_using_get1: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **device_session_id** | **Integer**| deviceSessionId | 
- **user_id** | **Integer**| userId | 
- **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;size_eq_1&lt;br&gt;filter&#x3D;createtime_eq_1576134483701&lt;br&gt;filter&#x3D;name_eq_value&lt;br&gt;filter&#x3D;mimetype_eq_value&lt;br&gt;filter&#x3D;inputtype_eq_application&lt;br&gt;filter&#x3D;state_eq_preparing&lt;br&gt;filter&#x3D;id_eq_1&lt;br&gt;filter&#x3D;direction_eq_input | [optional] 
- **limit** | **Integer**| limit parameter define page size | [optional] [default to 20]
- **offset** | **Integer**| offset parameter define page number | [optional] [default to 0]
- **sort** | **String**| sort parameter contains list of fields used for sort query result &lt;br&gt; examples: &lt;br&gt; sort&#x3D;size_a&lt;br&gt;sort&#x3D;createTime_a&lt;br&gt;sort&#x3D;name_a&lt;br&gt;sort&#x3D;mimetype_a&lt;br&gt;sort&#x3D;inputType_a&lt;br&gt;sort&#x3D;state_a&lt;br&gt;sort&#x3D;id_a&lt;br&gt;sort&#x3D;direction_a | [optional] 
-
-### Return type
-
-[**APIListOfAPIUserFile**](APIListOfAPIUserFile.md)
-
-### Authorization
-
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -18734,6 +17451,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -18756,7 +17476,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -18779,6 +17499,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -18807,7 +17530,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -18830,13 +17553,16 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
 
 opts = { 
   active_only: false, # BOOLEAN | activeOnly
-  filter: 'filter_example', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=archivetime_eq_1576134482490<br>filter=includedhours_eq_1<br>filter=name_eq_value<br>filter=chargetype_eq_usage<br>filter=priceperhour_eq_1<br>filter=description_eq_value<br>filter=autorenew_eq_true<br>filter=activatetime_eq_1576134482490<br>filter=id_eq_1<br>filter=centprice_eq_1<br>filter=customplan_eq_true<br>filter=activated_eq_true
+  filter: 'filter_example', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=archivetime_eq_1593583742981<br>filter=includedhours_eq_1<br>filter=name_eq_value<br>filter=chargetype_eq_usage_mobile<br>filter=priceperhour_eq_1<br>filter=description_eq_value<br>filter=autorenew_eq_true<br>filter=activatetime_eq_1593583742981<br>filter=id_eq_1<br>filter=centprice_eq_1<br>filter=customplan_eq_true<br>filter=activated_eq_true
   in_use: false, # BOOLEAN | inUse
   limit: 20, # Integer | limit parameter define page size
   not_archived: false, # BOOLEAN | notArchived
@@ -18858,7 +17584,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **active_only** | **BOOLEAN**| activeOnly | [optional] [default to false]
- **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;archivetime_eq_1576134482490&lt;br&gt;filter&#x3D;includedhours_eq_1&lt;br&gt;filter&#x3D;name_eq_value&lt;br&gt;filter&#x3D;chargetype_eq_usage&lt;br&gt;filter&#x3D;priceperhour_eq_1&lt;br&gt;filter&#x3D;description_eq_value&lt;br&gt;filter&#x3D;autorenew_eq_true&lt;br&gt;filter&#x3D;activatetime_eq_1576134482490&lt;br&gt;filter&#x3D;id_eq_1&lt;br&gt;filter&#x3D;centprice_eq_1&lt;br&gt;filter&#x3D;customplan_eq_true&lt;br&gt;filter&#x3D;activated_eq_true | [optional] 
+ **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;archivetime_eq_1593583742981&lt;br&gt;filter&#x3D;includedhours_eq_1&lt;br&gt;filter&#x3D;name_eq_value&lt;br&gt;filter&#x3D;chargetype_eq_usage_mobile&lt;br&gt;filter&#x3D;priceperhour_eq_1&lt;br&gt;filter&#x3D;description_eq_value&lt;br&gt;filter&#x3D;autorenew_eq_true&lt;br&gt;filter&#x3D;activatetime_eq_1593583742981&lt;br&gt;filter&#x3D;id_eq_1&lt;br&gt;filter&#x3D;centprice_eq_1&lt;br&gt;filter&#x3D;customplan_eq_true&lt;br&gt;filter&#x3D;activated_eq_true | [optional] 
  **in_use** | **BOOLEAN**| inUse | [optional] [default to false]
  **limit** | **Integer**| limit parameter define page size | [optional] [default to 20]
  **not_archived** | **BOOLEAN**| notArchived | [optional] [default to false]
@@ -18871,7 +17597,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -18894,6 +17620,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -18923,7 +17652,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -18946,6 +17675,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -18973,7 +17705,7 @@ nil (empty response body)
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -18996,6 +17728,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -19024,7 +17759,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -19047,6 +17782,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -19069,7 +17807,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -19092,6 +17830,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -19114,172 +17855,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: */*
-
-
-
-# **get_test_run_application_file_using_get**
-> get_test_run_application_file_using_get(run_id, opts)
-
-This endpoint is deprecated.
-
-### Example
-```ruby
-# load the gem
-require 'bitbar-cloud-api-client'
-# setup authorization
-BitbarCloudApiClient.configure do |config|
-  # Configure HTTP basic authorization: apiKeyInHeader
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
-end
-
-api_instance = BitbarCloudApiClient::AllEndpointsApi.new
-
-run_id = 789 # Integer | runId
-
-opts = { 
-  project_id: 789 # Integer | projectId
-}
-
-begin
-  #This endpoint is deprecated.
-  api_instance.get_test_run_application_file_using_get(run_id, opts)
-rescue BitbarCloudApiClient::ApiError => e
-  puts "Exception when calling AllEndpointsApi->get_test_run_application_file_using_get: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **run_id** | **Integer**| runId | 
- **project_id** | **Integer**| projectId | [optional] 
-
-### Return type
-
-nil (empty response body)
-
-### Authorization
-
-[apiKeyInHeader](../README.md#apiKeyInHeader)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: */*
-
-
-
-# **get_test_run_application_file_using_get1**
-> get_test_run_application_file_using_get1(project_id, run_id, user_id)
-
-This endpoint is deprecated.
-
-### Example
-```ruby
-# load the gem
-require 'bitbar-cloud-api-client'
-# setup authorization
-BitbarCloudApiClient.configure do |config|
-  # Configure HTTP basic authorization: apiKeyInHeader
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
-end
-
-api_instance = BitbarCloudApiClient::AllEndpointsApi.new
-
-project_id = 789 # Integer | projectId
-
-run_id = 789 # Integer | runId
-
-user_id = 789 # Integer | userId
-
-
-begin
-  #This endpoint is deprecated.
-  api_instance.get_test_run_application_file_using_get1(project_id, run_id, user_id)
-rescue BitbarCloudApiClient::ApiError => e
-  puts "Exception when calling AllEndpointsApi->get_test_run_application_file_using_get1: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **project_id** | **Integer**| projectId | 
- **run_id** | **Integer**| runId | 
- **user_id** | **Integer**| userId | 
-
-### Return type
-
-nil (empty response body)
-
-### Authorization
-
-[apiKeyInHeader](../README.md#apiKeyInHeader)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: */*
-
-
-
-# **get_test_run_config_using_get**
-> APITestRunConfig get_test_run_config_using_get(run_id, opts)
-
-This endpoint is deprecated.
-
-### Example
-```ruby
-# load the gem
-require 'bitbar-cloud-api-client'
-# setup authorization
-BitbarCloudApiClient.configure do |config|
-  # Configure HTTP basic authorization: apiKeyInHeader
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
-end
-
-api_instance = BitbarCloudApiClient::AllEndpointsApi.new
-
-run_id = 789 # Integer | runId
-
-opts = { 
-  project_id: 789 # Integer | projectId
-}
-
-begin
-  #This endpoint is deprecated.
-  result = api_instance.get_test_run_config_using_get(run_id, opts)
-  p result
-rescue BitbarCloudApiClient::ApiError => e
-  puts "Exception when calling AllEndpointsApi->get_test_run_config_using_get: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **run_id** | **Integer**| runId | 
- **project_id** | **Integer**| projectId | [optional] 
-
-### Return type
-
-[**APITestRunConfig**](APITestRunConfig.md)
-
-### Authorization
-
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -19291,7 +17867,7 @@ Name | Type | Description  | Notes
 # **get_test_run_data_availability_with_project_using_get**
 > APITestRunDataAvailability get_test_run_data_availability_with_project_using_get(project_id, run_id)
 
-This endpoint is deprecated.
+Get test run data availability.
 
 ### Example
 ```ruby
@@ -19302,6 +17878,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -19312,7 +17891,7 @@ run_id = 789 # Integer | runId
 
 
 begin
-  #This endpoint is deprecated.
+  #Get test run data availability.
   result = api_instance.get_test_run_data_availability_with_project_using_get(project_id, run_id)
   p result
 rescue BitbarCloudApiClient::ApiError => e
@@ -19333,7 +17912,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -19345,7 +17924,7 @@ Name | Type | Description  | Notes
 # **get_test_run_data_availability_with_test_run_using_get**
 > APITestRunDataAvailability get_test_run_data_availability_with_test_run_using_get(run_id, opts)
 
-This endpoint is deprecated.
+Get test run data availability.
 
 ### Example
 ```ruby
@@ -19356,6 +17935,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -19368,7 +17950,7 @@ opts = {
 }
 
 begin
-  #This endpoint is deprecated.
+  #Get test run data availability.
   result = api_instance.get_test_run_data_availability_with_test_run_using_get(run_id, opts)
   p result
 rescue BitbarCloudApiClient::ApiError => e
@@ -19390,7 +17972,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -19402,7 +17984,7 @@ Name | Type | Description  | Notes
 # **get_test_run_data_availability_with_user_using_get**
 > APITestRunDataAvailability get_test_run_data_availability_with_user_using_get(project_id, run_id, user_id)
 
-This endpoint is deprecated.
+Get test run data availability.
 
 ### Example
 ```ruby
@@ -19413,6 +17995,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -19425,7 +18010,7 @@ user_id = 789 # Integer | userId
 
 
 begin
-  #This endpoint is deprecated.
+  #Get test run data availability.
   result = api_instance.get_test_run_data_availability_with_user_using_get(project_id, run_id, user_id)
   p result
 rescue BitbarCloudApiClient::ApiError => e
@@ -19447,347 +18032,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: */*
-
-
-
-# **get_test_run_data_file_using_get**
-> get_test_run_data_file_using_get(run_id, opts)
-
-This endpoint is deprecated.
-
-### Example
-```ruby
-# load the gem
-require 'bitbar-cloud-api-client'
-# setup authorization
-BitbarCloudApiClient.configure do |config|
-  # Configure HTTP basic authorization: apiKeyInHeader
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
-end
-
-api_instance = BitbarCloudApiClient::AllEndpointsApi.new
-
-run_id = 789 # Integer | runId
-
-opts = { 
-  project_id: 789 # Integer | projectId
-}
-
-begin
-  #This endpoint is deprecated.
-  api_instance.get_test_run_data_file_using_get(run_id, opts)
-rescue BitbarCloudApiClient::ApiError => e
-  puts "Exception when calling AllEndpointsApi->get_test_run_data_file_using_get: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **run_id** | **Integer**| runId | 
- **project_id** | **Integer**| projectId | [optional] 
-
-### Return type
-
-nil (empty response body)
-
-### Authorization
-
-[apiKeyInHeader](../README.md#apiKeyInHeader)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: */*
-
-
-
-# **get_test_run_data_file_using_get1**
-> get_test_run_data_file_using_get1(project_id, run_id, user_id)
-
-This endpoint is deprecated.
-
-### Example
-```ruby
-# load the gem
-require 'bitbar-cloud-api-client'
-# setup authorization
-BitbarCloudApiClient.configure do |config|
-  # Configure HTTP basic authorization: apiKeyInHeader
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
-end
-
-api_instance = BitbarCloudApiClient::AllEndpointsApi.new
-
-project_id = 789 # Integer | projectId
-
-run_id = 789 # Integer | runId
-
-user_id = 789 # Integer | userId
-
-
-begin
-  #This endpoint is deprecated.
-  api_instance.get_test_run_data_file_using_get1(project_id, run_id, user_id)
-rescue BitbarCloudApiClient::ApiError => e
-  puts "Exception when calling AllEndpointsApi->get_test_run_data_file_using_get1: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **project_id** | **Integer**| projectId | 
- **run_id** | **Integer**| runId | 
- **user_id** | **Integer**| userId | 
-
-### Return type
-
-nil (empty response body)
-
-### Authorization
-
-[apiKeyInHeader](../README.md#apiKeyInHeader)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: */*
-
-
-
-# **get_test_run_file_zip_using_get**
-> get_test_run_file_zip_using_get(run_id, opts)
-
-This endpoint is deprecated.
-
-### Example
-```ruby
-# load the gem
-require 'bitbar-cloud-api-client'
-# setup authorization
-BitbarCloudApiClient.configure do |config|
-  # Configure HTTP basic authorization: apiKeyInHeader
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
-end
-
-api_instance = BitbarCloudApiClient::AllEndpointsApi.new
-
-run_id = 789 # Integer | runId
-
-opts = { 
-  project_id: 789 # Integer | projectId
-}
-
-begin
-  #This endpoint is deprecated.
-  api_instance.get_test_run_file_zip_using_get(run_id, opts)
-rescue BitbarCloudApiClient::ApiError => e
-  puts "Exception when calling AllEndpointsApi->get_test_run_file_zip_using_get: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **run_id** | **Integer**| runId | 
- **project_id** | **Integer**| projectId | [optional] 
-
-### Return type
-
-nil (empty response body)
-
-### Authorization
-
-[apiKeyInHeader](../README.md#apiKeyInHeader)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: */*
-
-
-
-# **get_test_run_file_zip_using_get1**
-> get_test_run_file_zip_using_get1(project_id, run_id, user_id)
-
-This endpoint is deprecated.
-
-### Example
-```ruby
-# load the gem
-require 'bitbar-cloud-api-client'
-# setup authorization
-BitbarCloudApiClient.configure do |config|
-  # Configure HTTP basic authorization: apiKeyInHeader
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
-end
-
-api_instance = BitbarCloudApiClient::AllEndpointsApi.new
-
-project_id = 789 # Integer | projectId
-
-run_id = 789 # Integer | runId
-
-user_id = 789 # Integer | userId
-
-
-begin
-  #This endpoint is deprecated.
-  api_instance.get_test_run_file_zip_using_get1(project_id, run_id, user_id)
-rescue BitbarCloudApiClient::ApiError => e
-  puts "Exception when calling AllEndpointsApi->get_test_run_file_zip_using_get1: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **project_id** | **Integer**| projectId | 
- **run_id** | **Integer**| runId | 
- **user_id** | **Integer**| userId | 
-
-### Return type
-
-nil (empty response body)
-
-### Authorization
-
-[apiKeyInHeader](../README.md#apiKeyInHeader)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: */*
-
-
-
-# **get_test_run_files_using_get**
-> APIListOfAPIUserFile get_test_run_files_using_get(run_id, opts)
-
-This endpoint is deprecated.
-
-### Example
-```ruby
-# load the gem
-require 'bitbar-cloud-api-client'
-# setup authorization
-BitbarCloudApiClient.configure do |config|
-  # Configure HTTP basic authorization: apiKeyInHeader
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
-end
-
-api_instance = BitbarCloudApiClient::AllEndpointsApi.new
-
-run_id = 789 # Integer | runId
-
-opts = { 
-  filter: 'filter_example', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=size_eq_1<br>filter=createtime_eq_1576134483999<br>filter=name_eq_value<br>filter=mimetype_eq_value<br>filter=inputtype_eq_application<br>filter=state_eq_preparing<br>filter=id_eq_1<br>filter=direction_eq_input
-  limit: 20, # Integer | limit parameter define page size
-  offset: 0, # Integer | offset parameter define page number
-  project_id: 789, # Integer | projectId
-  sort: 'sort_example' # String | sort parameter contains list of fields used for sort query result <br> examples: <br> sort=size_a<br>sort=createTime_a<br>sort=name_a<br>sort=mimetype_a<br>sort=inputType_a<br>sort=state_a<br>sort=id_a<br>sort=direction_a
-}
-
-begin
-  #This endpoint is deprecated.
-  result = api_instance.get_test_run_files_using_get(run_id, opts)
-  p result
-rescue BitbarCloudApiClient::ApiError => e
-  puts "Exception when calling AllEndpointsApi->get_test_run_files_using_get: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **run_id** | **Integer**| runId | 
- **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;size_eq_1&lt;br&gt;filter&#x3D;createtime_eq_1576134483999&lt;br&gt;filter&#x3D;name_eq_value&lt;br&gt;filter&#x3D;mimetype_eq_value&lt;br&gt;filter&#x3D;inputtype_eq_application&lt;br&gt;filter&#x3D;state_eq_preparing&lt;br&gt;filter&#x3D;id_eq_1&lt;br&gt;filter&#x3D;direction_eq_input | [optional] 
- **limit** | **Integer**| limit parameter define page size | [optional] [default to 20]
- **offset** | **Integer**| offset parameter define page number | [optional] [default to 0]
- **project_id** | **Integer**| projectId | [optional] 
- **sort** | **String**| sort parameter contains list of fields used for sort query result &lt;br&gt; examples: &lt;br&gt; sort&#x3D;size_a&lt;br&gt;sort&#x3D;createTime_a&lt;br&gt;sort&#x3D;name_a&lt;br&gt;sort&#x3D;mimetype_a&lt;br&gt;sort&#x3D;inputType_a&lt;br&gt;sort&#x3D;state_a&lt;br&gt;sort&#x3D;id_a&lt;br&gt;sort&#x3D;direction_a | [optional] 
-
-### Return type
-
-[**APIListOfAPIUserFile**](APIListOfAPIUserFile.md)
-
-### Authorization
-
-[apiKeyInHeader](../README.md#apiKeyInHeader)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: */*
-
-
-
-# **get_test_run_files_using_get1**
-> APIListOfAPIUserFile get_test_run_files_using_get1(project_id, run_id, user_id)
-
-This endpoint is deprecated.
-
-### Example
-```ruby
-# load the gem
-require 'bitbar-cloud-api-client'
-# setup authorization
-BitbarCloudApiClient.configure do |config|
-  # Configure HTTP basic authorization: apiKeyInHeader
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
-end
-
-api_instance = BitbarCloudApiClient::AllEndpointsApi.new
-
-project_id = 789 # Integer | projectId
-
-run_id = 789 # Integer | runId
-
-user_id = 789 # Integer | userId
-
-
-begin
-  #This endpoint is deprecated.
-  result = api_instance.get_test_run_files_using_get1(project_id, run_id, user_id)
-  p result
-rescue BitbarCloudApiClient::ApiError => e
-  puts "Exception when calling AllEndpointsApi->get_test_run_files_using_get1: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **project_id** | **Integer**| projectId | 
- **run_id** | **Integer**| runId | 
- **user_id** | **Integer**| userId | 
-
-### Return type
-
-[**APIListOfAPIUserFile**](APIListOfAPIUserFile.md)
-
-### Authorization
-
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -19810,6 +18055,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -19854,7 +18102,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -19877,6 +18125,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -19918,7 +18169,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -19941,6 +18192,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -19988,7 +18242,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -20011,6 +18265,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -20045,7 +18302,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -20068,6 +18325,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -20105,7 +18365,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -20128,6 +18388,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -20163,7 +18426,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -20186,6 +18449,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -20226,7 +18492,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -20249,6 +18515,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -20293,117 +18562,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: */*
-
-
-
-# **get_test_run_test_file_using_get**
-> get_test_run_test_file_using_get(run_id, opts)
-
-This endpoint is deprecated.
-
-### Example
-```ruby
-# load the gem
-require 'bitbar-cloud-api-client'
-# setup authorization
-BitbarCloudApiClient.configure do |config|
-  # Configure HTTP basic authorization: apiKeyInHeader
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
-end
-
-api_instance = BitbarCloudApiClient::AllEndpointsApi.new
-
-run_id = 789 # Integer | runId
-
-opts = { 
-  project_id: 789 # Integer | projectId
-}
-
-begin
-  #This endpoint is deprecated.
-  api_instance.get_test_run_test_file_using_get(run_id, opts)
-rescue BitbarCloudApiClient::ApiError => e
-  puts "Exception when calling AllEndpointsApi->get_test_run_test_file_using_get: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **run_id** | **Integer**| runId | 
- **project_id** | **Integer**| projectId | [optional] 
-
-### Return type
-
-nil (empty response body)
-
-### Authorization
-
-[apiKeyInHeader](../README.md#apiKeyInHeader)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: */*
-
-
-
-# **get_test_run_test_file_using_get1**
-> get_test_run_test_file_using_get1(project_id, run_id, user_id)
-
-This endpoint is deprecated.
-
-### Example
-```ruby
-# load the gem
-require 'bitbar-cloud-api-client'
-# setup authorization
-BitbarCloudApiClient.configure do |config|
-  # Configure HTTP basic authorization: apiKeyInHeader
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
-end
-
-api_instance = BitbarCloudApiClient::AllEndpointsApi.new
-
-project_id = 789 # Integer | projectId
-
-run_id = 789 # Integer | runId
-
-user_id = 789 # Integer | userId
-
-
-begin
-  #This endpoint is deprecated.
-  api_instance.get_test_run_test_file_using_get1(project_id, run_id, user_id)
-rescue BitbarCloudApiClient::ApiError => e
-  puts "Exception when calling AllEndpointsApi->get_test_run_test_file_using_get1: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **project_id** | **Integer**| projectId | 
- **run_id** | **Integer**| runId | 
- **user_id** | **Integer**| userId | 
-
-### Return type
-
-nil (empty response body)
-
-### Authorization
-
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -20426,6 +18585,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -20458,7 +18620,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -20481,12 +18643,15 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
 
 opts = { 
-  filter: 'filter_example', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=frameworkid_eq_1<br>filter=frameworkname_eq_value<br>filter=common_eq_null<br>filter=createtime_eq_1576134485210<br>filter=displayname_eq_value<br>filter=successratio_eq_1<br>filter=starttime_eq_1576134485210<br>filter=id_eq_1<br>filter=userid_eq_1<br>filter=projectid_eq_1
+  filter: 'filter_example', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=frameworkid_eq_1<br>filter=frameworkname_eq_value<br>filter=common_eq_null<br>filter=createtime_eq_1593583747580<br>filter=displayname_eq_value<br>filter=successratio_eq_1<br>filter=starttime_eq_1593583747580<br>filter=id_eq_1<br>filter=userid_eq_1<br>filter=projectid_eq_1
   limit: 20, # Integer | limit parameter define page size
   offset: 0, # Integer | offset parameter define page number
   sort: 'sort_example' # String | sort parameter contains list of fields used for sort query result <br> examples: <br> sort=frameworkId_a<br>sort=frameworkName_a<br>sort=common_a<br>sort=deviceCount_a<br>sort=createTime_a<br>sort=displayName_a<br>sort=executionRatio_a<br>sort=successRatio_a<br>sort=startTime_a<br>sort=state_a<br>sort=id_a<br>sort=userId_a<br>sort=projectId_a
@@ -20505,7 +18670,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;frameworkid_eq_1&lt;br&gt;filter&#x3D;frameworkname_eq_value&lt;br&gt;filter&#x3D;common_eq_null&lt;br&gt;filter&#x3D;createtime_eq_1576134485210&lt;br&gt;filter&#x3D;displayname_eq_value&lt;br&gt;filter&#x3D;successratio_eq_1&lt;br&gt;filter&#x3D;starttime_eq_1576134485210&lt;br&gt;filter&#x3D;id_eq_1&lt;br&gt;filter&#x3D;userid_eq_1&lt;br&gt;filter&#x3D;projectid_eq_1 | [optional] 
+ **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;frameworkid_eq_1&lt;br&gt;filter&#x3D;frameworkname_eq_value&lt;br&gt;filter&#x3D;common_eq_null&lt;br&gt;filter&#x3D;createtime_eq_1593583747580&lt;br&gt;filter&#x3D;displayname_eq_value&lt;br&gt;filter&#x3D;successratio_eq_1&lt;br&gt;filter&#x3D;starttime_eq_1593583747580&lt;br&gt;filter&#x3D;id_eq_1&lt;br&gt;filter&#x3D;userid_eq_1&lt;br&gt;filter&#x3D;projectid_eq_1 | [optional] 
  **limit** | **Integer**| limit parameter define page size | [optional] [default to 20]
  **offset** | **Integer**| offset parameter define page number | [optional] [default to 0]
  **sort** | **String**| sort parameter contains list of fields used for sort query result &lt;br&gt; examples: &lt;br&gt; sort&#x3D;frameworkId_a&lt;br&gt;sort&#x3D;frameworkName_a&lt;br&gt;sort&#x3D;common_a&lt;br&gt;sort&#x3D;deviceCount_a&lt;br&gt;sort&#x3D;createTime_a&lt;br&gt;sort&#x3D;displayName_a&lt;br&gt;sort&#x3D;executionRatio_a&lt;br&gt;sort&#x3D;successRatio_a&lt;br&gt;sort&#x3D;startTime_a&lt;br&gt;sort&#x3D;state_a&lt;br&gt;sort&#x3D;id_a&lt;br&gt;sort&#x3D;userId_a&lt;br&gt;sort&#x3D;projectId_a | [optional] 
@@ -20516,7 +18681,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -20539,6 +18704,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -20546,7 +18714,7 @@ api_instance = BitbarCloudApiClient::AllEndpointsApi.new
 user_id = 789 # Integer | userId
 
 opts = { 
-  filter: 'filter_example', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=accountid_eq_1<br>filter=deactivatereason_eq_initial_failure<br>filter=price_eq_1<br>filter=chargetype_eq_usage<br>filter=paymentmethod_eq_paypal<br>filter=autorenew_eq_true<br>filter=active_eq_true<br>filter=starttime_eq_1576134485599<br>filter=id_eq_1<br>filter=_endtime_eq_1576134485599<br>filter=activatedbyname_eq_value<br>filter=servicename_eq_value<br>filter=deactivatedbyname_eq_value
+  filter: 'filter_example', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=accountid_eq_1<br>filter=deactivatereason_eq_initial_failure<br>filter=price_eq_1<br>filter=chargetype_eq_usage_mobile<br>filter=paymentmethod_eq_paypal<br>filter=autorenew_eq_true<br>filter=active_eq_true<br>filter=starttime_eq_1593583748389<br>filter=id_eq_1<br>filter=_endtime_eq_1593583748389<br>filter=activatedbyname_eq_value<br>filter=servicename_eq_value<br>filter=deactivatedbyname_eq_value
   limit: 20, # Integer | limit parameter define page size
   offset: 0, # Integer | offset parameter define page number
   sort: 'sort_example' # String | sort parameter contains list of fields used for sort query result <br> examples: <br> sort=accountId_a<br>sort=price_a<br>sort=chargeType_a<br>sort=paymentMethod_a<br>sort=autoRenew_a<br>sort=active_a<br>sort=startTime_a<br>sort=id_a<br>sort=_endTime_a<br>sort=activatedByName_a<br>sort=serviceName_a<br>sort=deactivatedByName_a
@@ -20566,7 +18734,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **user_id** | **Integer**| userId | 
- **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;accountid_eq_1&lt;br&gt;filter&#x3D;deactivatereason_eq_initial_failure&lt;br&gt;filter&#x3D;price_eq_1&lt;br&gt;filter&#x3D;chargetype_eq_usage&lt;br&gt;filter&#x3D;paymentmethod_eq_paypal&lt;br&gt;filter&#x3D;autorenew_eq_true&lt;br&gt;filter&#x3D;active_eq_true&lt;br&gt;filter&#x3D;starttime_eq_1576134485599&lt;br&gt;filter&#x3D;id_eq_1&lt;br&gt;filter&#x3D;_endtime_eq_1576134485599&lt;br&gt;filter&#x3D;activatedbyname_eq_value&lt;br&gt;filter&#x3D;servicename_eq_value&lt;br&gt;filter&#x3D;deactivatedbyname_eq_value | [optional] 
+ **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;accountid_eq_1&lt;br&gt;filter&#x3D;deactivatereason_eq_initial_failure&lt;br&gt;filter&#x3D;price_eq_1&lt;br&gt;filter&#x3D;chargetype_eq_usage_mobile&lt;br&gt;filter&#x3D;paymentmethod_eq_paypal&lt;br&gt;filter&#x3D;autorenew_eq_true&lt;br&gt;filter&#x3D;active_eq_true&lt;br&gt;filter&#x3D;starttime_eq_1593583748389&lt;br&gt;filter&#x3D;id_eq_1&lt;br&gt;filter&#x3D;_endtime_eq_1593583748389&lt;br&gt;filter&#x3D;activatedbyname_eq_value&lt;br&gt;filter&#x3D;servicename_eq_value&lt;br&gt;filter&#x3D;deactivatedbyname_eq_value | [optional] 
  **limit** | **Integer**| limit parameter define page size | [optional] [default to 20]
  **offset** | **Integer**| offset parameter define page number | [optional] [default to 0]
  **sort** | **String**| sort parameter contains list of fields used for sort query result &lt;br&gt; examples: &lt;br&gt; sort&#x3D;accountId_a&lt;br&gt;sort&#x3D;price_a&lt;br&gt;sort&#x3D;chargeType_a&lt;br&gt;sort&#x3D;paymentMethod_a&lt;br&gt;sort&#x3D;autoRenew_a&lt;br&gt;sort&#x3D;active_a&lt;br&gt;sort&#x3D;startTime_a&lt;br&gt;sort&#x3D;id_a&lt;br&gt;sort&#x3D;_endTime_a&lt;br&gt;sort&#x3D;activatedByName_a&lt;br&gt;sort&#x3D;serviceName_a&lt;br&gt;sort&#x3D;deactivatedByName_a | [optional] 
@@ -20577,68 +18745,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: */*
-
-
-
-# **get_user_available_services_using_get**
-> APIListOfAPIService get_user_available_services_using_get(user_id, opts)
-
-Get available services.
-
-### Example
-```ruby
-# load the gem
-require 'bitbar-cloud-api-client'
-# setup authorization
-BitbarCloudApiClient.configure do |config|
-  # Configure HTTP basic authorization: apiKeyInHeader
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
-end
-
-api_instance = BitbarCloudApiClient::AllEndpointsApi.new
-
-user_id = 789 # Integer | userId
-
-opts = { 
-  filter: 'filter_example', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=archivetime_eq_1576134485600<br>filter=includedhours_eq_1<br>filter=name_eq_value<br>filter=chargetype_eq_usage<br>filter=priceperhour_eq_1<br>filter=description_eq_value<br>filter=autorenew_eq_true<br>filter=activatetime_eq_1576134485600<br>filter=id_eq_1<br>filter=centprice_eq_1<br>filter=customplan_eq_true<br>filter=activated_eq_true
-  limit: 20, # Integer | limit parameter define page size
-  offset: 0, # Integer | offset parameter define page number
-  sort: 'sort_example' # String | sort parameter contains list of fields used for sort query result <br> examples: <br> sort=archiveTime_a<br>sort=includedHours_a<br>sort=name_a<br>sort=chargeType_a<br>sort=pricePerHour_a<br>sort=description_a<br>sort=autoRenew_a<br>sort=activateTime_a<br>sort=id_a<br>sort=centPrice_a<br>sort=customPlan_a<br>sort=activated_a
-}
-
-begin
-  #Get available services.
-  result = api_instance.get_user_available_services_using_get(user_id, opts)
-  p result
-rescue BitbarCloudApiClient::ApiError => e
-  puts "Exception when calling AllEndpointsApi->get_user_available_services_using_get: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **user_id** | **Integer**| userId | 
- **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;archivetime_eq_1576134485600&lt;br&gt;filter&#x3D;includedhours_eq_1&lt;br&gt;filter&#x3D;name_eq_value&lt;br&gt;filter&#x3D;chargetype_eq_usage&lt;br&gt;filter&#x3D;priceperhour_eq_1&lt;br&gt;filter&#x3D;description_eq_value&lt;br&gt;filter&#x3D;autorenew_eq_true&lt;br&gt;filter&#x3D;activatetime_eq_1576134485600&lt;br&gt;filter&#x3D;id_eq_1&lt;br&gt;filter&#x3D;centprice_eq_1&lt;br&gt;filter&#x3D;customplan_eq_true&lt;br&gt;filter&#x3D;activated_eq_true | [optional] 
- **limit** | **Integer**| limit parameter define page size | [optional] [default to 20]
- **offset** | **Integer**| offset parameter define page number | [optional] [default to 0]
- **sort** | **String**| sort parameter contains list of fields used for sort query result &lt;br&gt; examples: &lt;br&gt; sort&#x3D;archiveTime_a&lt;br&gt;sort&#x3D;includedHours_a&lt;br&gt;sort&#x3D;name_a&lt;br&gt;sort&#x3D;chargeType_a&lt;br&gt;sort&#x3D;pricePerHour_a&lt;br&gt;sort&#x3D;description_a&lt;br&gt;sort&#x3D;autoRenew_a&lt;br&gt;sort&#x3D;activateTime_a&lt;br&gt;sort&#x3D;id_a&lt;br&gt;sort&#x3D;centPrice_a&lt;br&gt;sort&#x3D;customPlan_a&lt;br&gt;sort&#x3D;activated_a | [optional] 
-
-### Return type
-
-[**APIListOfAPIService**](APIListOfAPIService.md)
-
-### Authorization
-
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -20661,6 +18768,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -20668,7 +18778,7 @@ api_instance = BitbarCloudApiClient::AllEndpointsApi.new
 user_id = 789 # Integer | userId
 
 opts = { 
-  filter: 'filter_example', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=additionalhoursprice_eq_1<br>filter=mail_eq_value<br>filter=totalprice_eq_1<br>filter=startbillingperiod_eq_1576134482689<br>filter=userid_eq_1<br>filter=_endbillingperiod_eq_1576134482689<br>filter=subscriptionend_eq_1576134482689<br>filter=serviceprice_eq_1<br>filter=createtime_eq_1576134482689<br>filter=subscriptionstart_eq_1576134482689<br>filter=paid_eq_true<br>filter=lastpaymentdate_eq_1576134482689<br>filter=paymentmethod_eq_paypal<br>filter=additionalhours_eq_1<br>filter=id_eq_1<br>filter=plan_eq_value
+  filter: 'filter_example', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=additionalhoursprice_eq_1<br>filter=mail_eq_value<br>filter=totalprice_eq_1<br>filter=startbillingperiod_eq_1593583743674<br>filter=userid_eq_1<br>filter=_endbillingperiod_eq_1593583743674<br>filter=subscriptionend_eq_1593583743674<br>filter=serviceprice_eq_1<br>filter=createtime_eq_1593583743674<br>filter=subscriptionstart_eq_1593583743674<br>filter=paid_eq_true<br>filter=lastpaymentdate_eq_1593583743674<br>filter=paymentmethod_eq_paypal<br>filter=additionalhours_eq_1<br>filter=id_eq_1<br>filter=plan_eq_value
   limit: 20, # Integer | limit parameter define page size
   offset: 0, # Integer | offset parameter define page number
   sort: 'sort_example' # String | sort parameter contains list of fields used for sort query result <br> examples: <br> sort=additionalHoursPrice_a<br>sort=mail_a<br>sort=totalPrice_a<br>sort=startBillingPeriod_a<br>sort=userId_a<br>sort=_endBillingPeriod_a<br>sort=subscriptionEnd_a<br>sort=servicePrice_a<br>sort=createTime_a<br>sort=subscriptionStart_a<br>sort=lastPaymentDate_a<br>sort=paymentMethod_a<br>sort=additionalHours_a<br>sort=id_a<br>sort=paymentDate_a<br>sort=additionalHoursPaymentDate_a<br>sort=plan_a
@@ -20688,7 +18798,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **user_id** | **Integer**| userId | 
- **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;additionalhoursprice_eq_1&lt;br&gt;filter&#x3D;mail_eq_value&lt;br&gt;filter&#x3D;totalprice_eq_1&lt;br&gt;filter&#x3D;startbillingperiod_eq_1576134482689&lt;br&gt;filter&#x3D;userid_eq_1&lt;br&gt;filter&#x3D;_endbillingperiod_eq_1576134482689&lt;br&gt;filter&#x3D;subscriptionend_eq_1576134482689&lt;br&gt;filter&#x3D;serviceprice_eq_1&lt;br&gt;filter&#x3D;createtime_eq_1576134482689&lt;br&gt;filter&#x3D;subscriptionstart_eq_1576134482689&lt;br&gt;filter&#x3D;paid_eq_true&lt;br&gt;filter&#x3D;lastpaymentdate_eq_1576134482689&lt;br&gt;filter&#x3D;paymentmethod_eq_paypal&lt;br&gt;filter&#x3D;additionalhours_eq_1&lt;br&gt;filter&#x3D;id_eq_1&lt;br&gt;filter&#x3D;plan_eq_value | [optional] 
+ **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;additionalhoursprice_eq_1&lt;br&gt;filter&#x3D;mail_eq_value&lt;br&gt;filter&#x3D;totalprice_eq_1&lt;br&gt;filter&#x3D;startbillingperiod_eq_1593583743674&lt;br&gt;filter&#x3D;userid_eq_1&lt;br&gt;filter&#x3D;_endbillingperiod_eq_1593583743674&lt;br&gt;filter&#x3D;subscriptionend_eq_1593583743674&lt;br&gt;filter&#x3D;serviceprice_eq_1&lt;br&gt;filter&#x3D;createtime_eq_1593583743674&lt;br&gt;filter&#x3D;subscriptionstart_eq_1593583743674&lt;br&gt;filter&#x3D;paid_eq_true&lt;br&gt;filter&#x3D;lastpaymentdate_eq_1593583743674&lt;br&gt;filter&#x3D;paymentmethod_eq_paypal&lt;br&gt;filter&#x3D;additionalhours_eq_1&lt;br&gt;filter&#x3D;id_eq_1&lt;br&gt;filter&#x3D;plan_eq_value | [optional] 
  **limit** | **Integer**| limit parameter define page size | [optional] [default to 20]
  **offset** | **Integer**| offset parameter define page number | [optional] [default to 0]
  **sort** | **String**| sort parameter contains list of fields used for sort query result &lt;br&gt; examples: &lt;br&gt; sort&#x3D;additionalHoursPrice_a&lt;br&gt;sort&#x3D;mail_a&lt;br&gt;sort&#x3D;totalPrice_a&lt;br&gt;sort&#x3D;startBillingPeriod_a&lt;br&gt;sort&#x3D;userId_a&lt;br&gt;sort&#x3D;_endBillingPeriod_a&lt;br&gt;sort&#x3D;subscriptionEnd_a&lt;br&gt;sort&#x3D;servicePrice_a&lt;br&gt;sort&#x3D;createTime_a&lt;br&gt;sort&#x3D;subscriptionStart_a&lt;br&gt;sort&#x3D;lastPaymentDate_a&lt;br&gt;sort&#x3D;paymentMethod_a&lt;br&gt;sort&#x3D;additionalHours_a&lt;br&gt;sort&#x3D;id_a&lt;br&gt;sort&#x3D;paymentDate_a&lt;br&gt;sort&#x3D;additionalHoursPaymentDate_a&lt;br&gt;sort&#x3D;plan_a | [optional] 
@@ -20699,68 +18809,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: */*
-
-
-
-# **get_user_builds_using_get**
-> APIListOfAPIPipelineBuild get_user_builds_using_get(user_id, opts)
-
-Get builds.
-
-### Example
-```ruby
-# load the gem
-require 'bitbar-cloud-api-client'
-# setup authorization
-BitbarCloudApiClient.configure do |config|
-  # Configure HTTP basic authorization: apiKeyInHeader
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
-end
-
-api_instance = BitbarCloudApiClient::AllEndpointsApi.new
-
-user_id = 789 # Integer | userId
-
-opts = { 
-  filter: 'filter_example', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=duration_eq_1<br>filter=createtime_eq_1576134482793<br>filter=pipelinejobid_eq_1<br>filter=state_eq_created<br>filter=id_eq_1<br>filter=userid_eq_1<br>filter=buildnumber_eq_1<br>filter=status_eq_undefined
-  limit: 20, # Integer | limit parameter define page size
-  offset: 0, # Integer | offset parameter define page number
-  sort: 'sort_example' # String | sort parameter contains list of fields used for sort query result <br> examples: <br> sort=duration_a<br>sort=createTime_a<br>sort=pipelineJobId_a<br>sort=state_a<br>sort=id_a<br>sort=userId_a<br>sort=buildNumber_a<br>sort=status_a
-}
-
-begin
-  #Get builds.
-  result = api_instance.get_user_builds_using_get(user_id, opts)
-  p result
-rescue BitbarCloudApiClient::ApiError => e
-  puts "Exception when calling AllEndpointsApi->get_user_builds_using_get: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **user_id** | **Integer**| userId | 
- **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;duration_eq_1&lt;br&gt;filter&#x3D;createtime_eq_1576134482793&lt;br&gt;filter&#x3D;pipelinejobid_eq_1&lt;br&gt;filter&#x3D;state_eq_created&lt;br&gt;filter&#x3D;id_eq_1&lt;br&gt;filter&#x3D;userid_eq_1&lt;br&gt;filter&#x3D;buildnumber_eq_1&lt;br&gt;filter&#x3D;status_eq_undefined | [optional] 
- **limit** | **Integer**| limit parameter define page size | [optional] [default to 20]
- **offset** | **Integer**| offset parameter define page number | [optional] [default to 0]
- **sort** | **String**| sort parameter contains list of fields used for sort query result &lt;br&gt; examples: &lt;br&gt; sort&#x3D;duration_a&lt;br&gt;sort&#x3D;createTime_a&lt;br&gt;sort&#x3D;pipelineJobId_a&lt;br&gt;sort&#x3D;state_a&lt;br&gt;sort&#x3D;id_a&lt;br&gt;sort&#x3D;userId_a&lt;br&gt;sort&#x3D;buildNumber_a&lt;br&gt;sort&#x3D;status_a | [optional] 
-
-### Return type
-
-[**APIListOfAPIPipelineBuild**](APIListOfAPIPipelineBuild.md)
-
-### Authorization
-
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -20783,6 +18832,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -20811,7 +18863,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -20834,6 +18886,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -20870,7 +18925,7 @@ nil (empty response body)
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -20893,6 +18948,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -20924,7 +18982,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -20947,6 +19005,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -20987,7 +19048,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -21010,6 +19071,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -21046,7 +19110,7 @@ nil (empty response body)
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -21069,6 +19133,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -21105,7 +19172,7 @@ nil (empty response body)
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -21128,6 +19195,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -21164,7 +19234,7 @@ nil (empty response body)
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -21187,6 +19257,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -21223,75 +19296,7 @@ nil (empty response body)
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: */*
-
-
-
-# **get_user_device_session_screenshot_using_get**
-> get_user_device_session_screenshot_using_get(device_session_id, project_id, run_id, screenshot_id, user_id, opts)
-
-Get device session screenshot.
-
-### Example
-```ruby
-# load the gem
-require 'bitbar-cloud-api-client'
-# setup authorization
-BitbarCloudApiClient.configure do |config|
-  # Configure HTTP basic authorization: apiKeyInHeader
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
-end
-
-api_instance = BitbarCloudApiClient::AllEndpointsApi.new
-
-device_session_id = 789 # Integer | deviceSessionId
-
-project_id = 789 # Integer | projectId
-
-run_id = 789 # Integer | runId
-
-screenshot_id = 789 # Integer | screenshotId
-
-user_id = 789 # Integer | userId
-
-opts = { 
-  height: 56, # Integer | height
-  width: 56 # Integer | width
-}
-
-begin
-  #Get device session screenshot.
-  api_instance.get_user_device_session_screenshot_using_get(device_session_id, project_id, run_id, screenshot_id, user_id, opts)
-rescue BitbarCloudApiClient::ApiError => e
-  puts "Exception when calling AllEndpointsApi->get_user_device_session_screenshot_using_get: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **device_session_id** | **Integer**| deviceSessionId | 
- **project_id** | **Integer**| projectId | 
- **run_id** | **Integer**| runId | 
- **screenshot_id** | **Integer**| screenshotId | 
- **user_id** | **Integer**| userId | 
- **height** | **Integer**| height | [optional] 
- **width** | **Integer**| width | [optional] 
-
-### Return type
-
-nil (empty response body)
-
-### Authorization
-
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -21314,6 +19319,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -21361,7 +19369,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -21384,6 +19392,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -21424,7 +19435,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -21447,6 +19458,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -21484,7 +19498,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -21507,6 +19521,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -21514,12 +19531,14 @@ api_instance = BitbarCloudApiClient::AllEndpointsApi.new
 user_id = 789 # Integer | userId
 
 opts = { 
-  filter: 'filter_example', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=displayname_eq_value<br>filter=faileddevicesessions_eq_1<br>filter=totaldevicesessions_eq_1<br>filter=ostype_eq_ios<br>filter=devicesession.starttime_eq_1576134485690<br>filter=creditsprice_eq_1<br>filter=devicesession.userid_eq_1<br>filter=id_eq_1
+  filter: 'filter_example', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=devicesession.createtime_eq_1593583748409<br>filter=common_eq_null<br>filter=displayname_eq_value<br>filter=ostype_eq_ios<br>filter=creditsprice_eq_1<br>filter=devicesession.userid_eq_1<br>filter=id_eq_1
+  for_whole_account: false, # BOOLEAN | forWholeAccount
   limit: 20, # Integer | limit parameter define page size
   offset: 0, # Integer | offset parameter define page number
-  sort: 'sort_example', # String | sort parameter contains list of fields used for sort query result <br> examples: <br> sort=displayName_a<br>sort=failedDeviceSessions_a<br>sort=totalDeviceSessions_a<br>sort=osType_a<br>sort=deviceSession.startTime_a<br>sort=creditsPrice_a<br>sort=deviceSession.userId_a<br>sort=id_a
-  start_time: 789, # Integer | startTime
-  with_additional_users: false # BOOLEAN | withAdditionalUsers
+  skip_common_project: false, # BOOLEAN | skipCommonProject
+  skip_shared: false, # BOOLEAN | skipShared
+  sort: 'sort_example', # String | sort parameter contains list of fields used for sort query result <br> examples: <br> sort=deviceSession.createTime_a<br>sort=displayName_a<br>sort=failedDeviceSessions_a<br>sort=totalDeviceSessions_a<br>sort=osType_a<br>sort=creditsPrice_a<br>sort=deviceSession.userId_a<br>sort=id_a
+  start_time: 789 # Integer | startTime
 }
 
 begin
@@ -21536,12 +19555,14 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **user_id** | **Integer**| userId | 
- **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;displayname_eq_value&lt;br&gt;filter&#x3D;faileddevicesessions_eq_1&lt;br&gt;filter&#x3D;totaldevicesessions_eq_1&lt;br&gt;filter&#x3D;ostype_eq_ios&lt;br&gt;filter&#x3D;devicesession.starttime_eq_1576134485690&lt;br&gt;filter&#x3D;creditsprice_eq_1&lt;br&gt;filter&#x3D;devicesession.userid_eq_1&lt;br&gt;filter&#x3D;id_eq_1 | [optional] 
+ **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;devicesession.createtime_eq_1593583748409&lt;br&gt;filter&#x3D;common_eq_null&lt;br&gt;filter&#x3D;displayname_eq_value&lt;br&gt;filter&#x3D;ostype_eq_ios&lt;br&gt;filter&#x3D;creditsprice_eq_1&lt;br&gt;filter&#x3D;devicesession.userid_eq_1&lt;br&gt;filter&#x3D;id_eq_1 | [optional] 
+ **for_whole_account** | **BOOLEAN**| forWholeAccount | [optional] [default to false]
  **limit** | **Integer**| limit parameter define page size | [optional] [default to 20]
  **offset** | **Integer**| offset parameter define page number | [optional] [default to 0]
- **sort** | **String**| sort parameter contains list of fields used for sort query result &lt;br&gt; examples: &lt;br&gt; sort&#x3D;displayName_a&lt;br&gt;sort&#x3D;failedDeviceSessions_a&lt;br&gt;sort&#x3D;totalDeviceSessions_a&lt;br&gt;sort&#x3D;osType_a&lt;br&gt;sort&#x3D;deviceSession.startTime_a&lt;br&gt;sort&#x3D;creditsPrice_a&lt;br&gt;sort&#x3D;deviceSession.userId_a&lt;br&gt;sort&#x3D;id_a | [optional] 
+ **skip_common_project** | **BOOLEAN**| skipCommonProject | [optional] [default to false]
+ **skip_shared** | **BOOLEAN**| skipShared | [optional] [default to false]
+ **sort** | **String**| sort parameter contains list of fields used for sort query result &lt;br&gt; examples: &lt;br&gt; sort&#x3D;deviceSession.createTime_a&lt;br&gt;sort&#x3D;displayName_a&lt;br&gt;sort&#x3D;failedDeviceSessions_a&lt;br&gt;sort&#x3D;totalDeviceSessions_a&lt;br&gt;sort&#x3D;osType_a&lt;br&gt;sort&#x3D;creditsPrice_a&lt;br&gt;sort&#x3D;deviceSession.userId_a&lt;br&gt;sort&#x3D;id_a | [optional] 
  **start_time** | **Integer**| startTime | [optional] 
- **with_additional_users** | **BOOLEAN**| withAdditionalUsers | [optional] [default to false]
 
 ### Return type
 
@@ -21549,7 +19570,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -21572,6 +19593,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -21600,7 +19624,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -21623,6 +19647,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -21654,7 +19681,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -21679,6 +19706,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -21686,7 +19716,7 @@ api_instance = BitbarCloudApiClient::AllEndpointsApi.new
 user_id = 789 # Integer | userId
 
 opts = { 
-  filter: 'filter_example', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=size_eq_1<br>filter=createtime_eq_1576134484086<br>filter=name_eq_value<br>filter=mimetype_eq_value<br>filter=inputtype_eq_application<br>filter=state_eq_preparing<br>filter=id_eq_1<br>filter=direction_eq_input
+  filter: 'filter_example', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=size_eq_1<br>filter=createtime_eq_1593583745677<br>filter=name_eq_value<br>filter=mimetype_eq_value<br>filter=inputtype_eq_application<br>filter=state_eq_preparing<br>filter=id_eq_1<br>filter=direction_eq_input
   limit: 20, # Integer | limit parameter define page size
   offset: 0, # Integer | offset parameter define page number
   sort: 'sort_example', # String | sort parameter contains list of fields used for sort query result <br> examples: <br> sort=size_a<br>sort=createTime_a<br>sort=name_a<br>sort=mimetype_a<br>sort=inputType_a<br>sort=state_a<br>sort=id_a<br>sort=direction_a
@@ -21707,7 +19737,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **user_id** | **Integer**| userId | 
- **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;size_eq_1&lt;br&gt;filter&#x3D;createtime_eq_1576134484086&lt;br&gt;filter&#x3D;name_eq_value&lt;br&gt;filter&#x3D;mimetype_eq_value&lt;br&gt;filter&#x3D;inputtype_eq_application&lt;br&gt;filter&#x3D;state_eq_preparing&lt;br&gt;filter&#x3D;id_eq_1&lt;br&gt;filter&#x3D;direction_eq_input | [optional] 
+ **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;size_eq_1&lt;br&gt;filter&#x3D;createtime_eq_1593583745677&lt;br&gt;filter&#x3D;name_eq_value&lt;br&gt;filter&#x3D;mimetype_eq_value&lt;br&gt;filter&#x3D;inputtype_eq_application&lt;br&gt;filter&#x3D;state_eq_preparing&lt;br&gt;filter&#x3D;id_eq_1&lt;br&gt;filter&#x3D;direction_eq_input | [optional] 
  **limit** | **Integer**| limit parameter define page size | [optional] [default to 20]
  **offset** | **Integer**| offset parameter define page number | [optional] [default to 0]
  **sort** | **String**| sort parameter contains list of fields used for sort query result &lt;br&gt; examples: &lt;br&gt; sort&#x3D;size_a&lt;br&gt;sort&#x3D;createTime_a&lt;br&gt;sort&#x3D;name_a&lt;br&gt;sort&#x3D;mimetype_a&lt;br&gt;sort&#x3D;inputType_a&lt;br&gt;sort&#x3D;state_a&lt;br&gt;sort&#x3D;id_a&lt;br&gt;sort&#x3D;direction_a | [optional] 
@@ -21719,7 +19749,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -21742,6 +19772,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -21776,71 +19809,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: */*
-
-
-
-# **get_user_inspector_device_session_connections_using_get**
-> APIListOfAPIConnection get_user_inspector_device_session_connections_using_get(device_session_id, user_id, opts)
-
-Get connections for device session.
-
-### Example
-```ruby
-# load the gem
-require 'bitbar-cloud-api-client'
-# setup authorization
-BitbarCloudApiClient.configure do |config|
-  # Configure HTTP basic authorization: apiKeyInHeader
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
-end
-
-api_instance = BitbarCloudApiClient::AllEndpointsApi.new
-
-device_session_id = 789 # Integer | deviceSessionId
-
-user_id = 789 # Integer | userId
-
-opts = { 
-  filter: 'filter_example', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=path_eq_value<br>filter=password_eq_value<br>filter=urlschema_eq_value<br>filter=devicesessionid_eq_1<br>filter=port_eq_null<br>filter=createtime_eq_1576134483705<br>filter=host_eq_value<br>filter=id_eq_1<br>filter=_endtime_eq_1576134483705<br>filter=type_eq_value
-  limit: 20, # Integer | limit parameter define page size
-  offset: 0, # Integer | offset parameter define page number
-  sort: 'sort_example' # String | sort parameter contains list of fields used for sort query result <br> examples: <br> sort=path_a<br>sort=password_a<br>sort=urlSchema_a<br>sort=deviceSessionId_a<br>sort=port_a<br>sort=createTime_a<br>sort=host_a<br>sort=id_a<br>sort=_endTime_a<br>sort=type_a
-}
-
-begin
-  #Get connections for device session.
-  result = api_instance.get_user_inspector_device_session_connections_using_get(device_session_id, user_id, opts)
-  p result
-rescue BitbarCloudApiClient::ApiError => e
-  puts "Exception when calling AllEndpointsApi->get_user_inspector_device_session_connections_using_get: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **device_session_id** | **Integer**| deviceSessionId | 
- **user_id** | **Integer**| userId | 
- **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;path_eq_value&lt;br&gt;filter&#x3D;password_eq_value&lt;br&gt;filter&#x3D;urlschema_eq_value&lt;br&gt;filter&#x3D;devicesessionid_eq_1&lt;br&gt;filter&#x3D;port_eq_null&lt;br&gt;filter&#x3D;createtime_eq_1576134483705&lt;br&gt;filter&#x3D;host_eq_value&lt;br&gt;filter&#x3D;id_eq_1&lt;br&gt;filter&#x3D;_endtime_eq_1576134483705&lt;br&gt;filter&#x3D;type_eq_value | [optional] 
- **limit** | **Integer**| limit parameter define page size | [optional] [default to 20]
- **offset** | **Integer**| offset parameter define page number | [optional] [default to 0]
- **sort** | **String**| sort parameter contains list of fields used for sort query result &lt;br&gt; examples: &lt;br&gt; sort&#x3D;path_a&lt;br&gt;sort&#x3D;password_a&lt;br&gt;sort&#x3D;urlSchema_a&lt;br&gt;sort&#x3D;deviceSessionId_a&lt;br&gt;sort&#x3D;port_a&lt;br&gt;sort&#x3D;createTime_a&lt;br&gt;sort&#x3D;host_a&lt;br&gt;sort&#x3D;id_a&lt;br&gt;sort&#x3D;_endTime_a&lt;br&gt;sort&#x3D;type_a | [optional] 
-
-### Return type
-
-[**APIListOfAPIConnection**](APIListOfAPIConnection.md)
-
-### Authorization
-
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -21863,6 +19832,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -21894,68 +19866,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: */*
-
-
-
-# **get_user_jobs_using_get**
-> APIListOfAPIPipelineJob get_user_jobs_using_get(user_id, opts)
-
-Get jobs.
-
-### Example
-```ruby
-# load the gem
-require 'bitbar-cloud-api-client'
-# setup authorization
-BitbarCloudApiClient.configure do |config|
-  # Configure HTTP basic authorization: apiKeyInHeader
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
-end
-
-api_instance = BitbarCloudApiClient::AllEndpointsApi.new
-
-user_id = 789 # Integer | userId
-
-opts = { 
-  filter: 'filter_example', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=createtime_eq_1576134484403<br>filter=name_eq_value<br>filter=id_eq_1<br>filter=type_eq_build<br>filter=userid_eq_1
-  limit: 20, # Integer | limit parameter define page size
-  offset: 0, # Integer | offset parameter define page number
-  sort: 'sort_example' # String | sort parameter contains list of fields used for sort query result <br> examples: <br> sort=createTime_a<br>sort=name_a<br>sort=id_a<br>sort=type_a<br>sort=userId_a
-}
-
-begin
-  #Get jobs.
-  result = api_instance.get_user_jobs_using_get(user_id, opts)
-  p result
-rescue BitbarCloudApiClient::ApiError => e
-  puts "Exception when calling AllEndpointsApi->get_user_jobs_using_get: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **user_id** | **Integer**| userId | 
- **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;createtime_eq_1576134484403&lt;br&gt;filter&#x3D;name_eq_value&lt;br&gt;filter&#x3D;id_eq_1&lt;br&gt;filter&#x3D;type_eq_build&lt;br&gt;filter&#x3D;userid_eq_1 | [optional] 
- **limit** | **Integer**| limit parameter define page size | [optional] [default to 20]
- **offset** | **Integer**| offset parameter define page number | [optional] [default to 0]
- **sort** | **String**| sort parameter contains list of fields used for sort query result &lt;br&gt; examples: &lt;br&gt; sort&#x3D;createTime_a&lt;br&gt;sort&#x3D;name_a&lt;br&gt;sort&#x3D;id_a&lt;br&gt;sort&#x3D;type_a&lt;br&gt;sort&#x3D;userId_a | [optional] 
-
-### Return type
-
-[**APIListOfAPIPipelineJob**](APIListOfAPIPipelineJob.md)
-
-### Authorization
-
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -21978,6 +19889,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -21985,7 +19899,7 @@ api_instance = BitbarCloudApiClient::AllEndpointsApi.new
 user_id = 789 # Integer | userId
 
 opts = { 
-  filter: 'filter_example', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=expiretime_eq_1576134485400<br>filter=closetime_eq_1576134485400<br>filter=privateinstance_eq_true<br>filter=activatetime_eq_1576134485400<br>filter=useremail_eq_value<br>filter=id_eq_1<br>filter=userid_eq_1<br>filter=status_eq_value
+  filter: 'filter_example', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=expiretime_eq_1593583743276<br>filter=closetime_eq_1593583743276<br>filter=privateinstance_eq_true<br>filter=activatetime_eq_1593583743276<br>filter=useremail_eq_value<br>filter=id_eq_1<br>filter=userid_eq_1<br>filter=status_eq_value
   limit: 20, # Integer | limit parameter define page size
   offset: 0, # Integer | offset parameter define page number
   sort: 'sort_example' # String | sort parameter contains list of fields used for sort query result <br> examples: <br> sort=expireTime_a<br>sort=closeTime_a<br>sort=privateInstance_a<br>sort=activateTime_a<br>sort=userEmail_a<br>sort=id_a<br>sort=userId_a<br>sort=status_a
@@ -22005,7 +19919,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **user_id** | **Integer**| userId | 
- **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;expiretime_eq_1576134485400&lt;br&gt;filter&#x3D;closetime_eq_1576134485400&lt;br&gt;filter&#x3D;privateinstance_eq_true&lt;br&gt;filter&#x3D;activatetime_eq_1576134485400&lt;br&gt;filter&#x3D;useremail_eq_value&lt;br&gt;filter&#x3D;id_eq_1&lt;br&gt;filter&#x3D;userid_eq_1&lt;br&gt;filter&#x3D;status_eq_value | [optional] 
+ **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;expiretime_eq_1593583743276&lt;br&gt;filter&#x3D;closetime_eq_1593583743276&lt;br&gt;filter&#x3D;privateinstance_eq_true&lt;br&gt;filter&#x3D;activatetime_eq_1593583743276&lt;br&gt;filter&#x3D;useremail_eq_value&lt;br&gt;filter&#x3D;id_eq_1&lt;br&gt;filter&#x3D;userid_eq_1&lt;br&gt;filter&#x3D;status_eq_value | [optional] 
  **limit** | **Integer**| limit parameter define page size | [optional] [default to 20]
  **offset** | **Integer**| offset parameter define page number | [optional] [default to 0]
  **sort** | **String**| sort parameter contains list of fields used for sort query result &lt;br&gt; examples: &lt;br&gt; sort&#x3D;expireTime_a&lt;br&gt;sort&#x3D;closeTime_a&lt;br&gt;sort&#x3D;privateInstance_a&lt;br&gt;sort&#x3D;activateTime_a&lt;br&gt;sort&#x3D;userEmail_a&lt;br&gt;sort&#x3D;id_a&lt;br&gt;sort&#x3D;userId_a&lt;br&gt;sort&#x3D;status_a | [optional] 
@@ -22016,7 +19930,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -22039,6 +19953,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -22070,7 +19987,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -22093,6 +20010,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -22131,61 +20051,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: */*
-
-
-
-# **get_user_project_config_using_get**
-> APITestRunConfig get_user_project_config_using_get(project_id, user_id)
-
-This endpoint is deprecated.
-
-### Example
-```ruby
-# load the gem
-require 'bitbar-cloud-api-client'
-# setup authorization
-BitbarCloudApiClient.configure do |config|
-  # Configure HTTP basic authorization: apiKeyInHeader
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
-end
-
-api_instance = BitbarCloudApiClient::AllEndpointsApi.new
-
-project_id = 789 # Integer | projectId
-
-user_id = 789 # Integer | userId
-
-
-begin
-  #This endpoint is deprecated.
-  result = api_instance.get_user_project_config_using_get(project_id, user_id)
-  p result
-rescue BitbarCloudApiClient::ApiError => e
-  puts "Exception when calling AllEndpointsApi->get_user_project_config_using_get: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **project_id** | **Integer**| projectId | 
- **user_id** | **Integer**| userId | 
-
-### Return type
-
-[**APITestRunConfig**](APITestRunConfig.md)
-
-### Authorization
-
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -22208,6 +20074,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -22217,7 +20086,7 @@ project_id = 789 # Integer | projectId
 user_id = 789 # Integer | userId
 
 opts = { 
-  filter: 'filter_example', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=frameworkid_eq_1<br>filter=frameworkname_eq_value<br>filter=common_eq_null<br>filter=createtime_eq_1576134485211<br>filter=displayname_eq_value<br>filter=successratio_eq_1<br>filter=starttime_eq_1576134485211<br>filter=id_eq_1<br>filter=userid_eq_1<br>filter=projectid_eq_1
+  filter: 'filter_example', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=frameworkid_eq_1<br>filter=frameworkname_eq_value<br>filter=common_eq_null<br>filter=createtime_eq_1593583747582<br>filter=displayname_eq_value<br>filter=successratio_eq_1<br>filter=starttime_eq_1593583747582<br>filter=id_eq_1<br>filter=userid_eq_1<br>filter=projectid_eq_1
   limit: 20, # Integer | limit parameter define page size
   offset: 0, # Integer | offset parameter define page number
   sort: 'sort_example' # String | sort parameter contains list of fields used for sort query result <br> examples: <br> sort=frameworkId_a<br>sort=frameworkName_a<br>sort=common_a<br>sort=deviceCount_a<br>sort=createTime_a<br>sort=displayName_a<br>sort=executionRatio_a<br>sort=successRatio_a<br>sort=startTime_a<br>sort=state_a<br>sort=id_a<br>sort=userId_a<br>sort=projectId_a
@@ -22238,7 +20107,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **project_id** | **Integer**| projectId | 
  **user_id** | **Integer**| userId | 
- **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;frameworkid_eq_1&lt;br&gt;filter&#x3D;frameworkname_eq_value&lt;br&gt;filter&#x3D;common_eq_null&lt;br&gt;filter&#x3D;createtime_eq_1576134485211&lt;br&gt;filter&#x3D;displayname_eq_value&lt;br&gt;filter&#x3D;successratio_eq_1&lt;br&gt;filter&#x3D;starttime_eq_1576134485211&lt;br&gt;filter&#x3D;id_eq_1&lt;br&gt;filter&#x3D;userid_eq_1&lt;br&gt;filter&#x3D;projectid_eq_1 | [optional] 
+ **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;frameworkid_eq_1&lt;br&gt;filter&#x3D;frameworkname_eq_value&lt;br&gt;filter&#x3D;common_eq_null&lt;br&gt;filter&#x3D;createtime_eq_1593583747582&lt;br&gt;filter&#x3D;displayname_eq_value&lt;br&gt;filter&#x3D;successratio_eq_1&lt;br&gt;filter&#x3D;starttime_eq_1593583747582&lt;br&gt;filter&#x3D;id_eq_1&lt;br&gt;filter&#x3D;userid_eq_1&lt;br&gt;filter&#x3D;projectid_eq_1 | [optional] 
  **limit** | **Integer**| limit parameter define page size | [optional] [default to 20]
  **offset** | **Integer**| offset parameter define page number | [optional] [default to 0]
  **sort** | **String**| sort parameter contains list of fields used for sort query result &lt;br&gt; examples: &lt;br&gt; sort&#x3D;frameworkId_a&lt;br&gt;sort&#x3D;frameworkName_a&lt;br&gt;sort&#x3D;common_a&lt;br&gt;sort&#x3D;deviceCount_a&lt;br&gt;sort&#x3D;createTime_a&lt;br&gt;sort&#x3D;displayName_a&lt;br&gt;sort&#x3D;executionRatio_a&lt;br&gt;sort&#x3D;successRatio_a&lt;br&gt;sort&#x3D;startTime_a&lt;br&gt;sort&#x3D;state_a&lt;br&gt;sort&#x3D;id_a&lt;br&gt;sort&#x3D;userId_a&lt;br&gt;sort&#x3D;projectId_a | [optional] 
@@ -22249,7 +20118,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -22272,6 +20141,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -22303,7 +20175,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -22326,6 +20198,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -22333,14 +20208,14 @@ api_instance = BitbarCloudApiClient::AllEndpointsApi.new
 user_id = 789 # Integer | userId
 
 opts = { 
-  filter: 'filter_example', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=archivetime_eq_1576134484593<br>filter=common_eq_null<br>filter=createtime_eq_1576134484593<br>filter=ostype_eq_ios<br>filter=name_eq_value<br>filter=description_eq_value<br>filter=readonly_eq_true<br>filter=id_eq_1<br>filter=sharedbyemail_eq_value
+  filter: 'filter_example', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=archivetime_eq_1593583746470<br>filter=common_eq_null<br>filter=createtime_eq_1593583746470<br>filter=ostype_eq_ios<br>filter=name_eq_value<br>filter=description_eq_value<br>filter=readonly_eq_true<br>filter=id_eq_1<br>filter=sharedbyemail_eq_value
+  for_whole_account: false, # BOOLEAN | forWholeAccount
   limit: 20, # Integer | limit parameter define page size
   offset: 0, # Integer | offset parameter define page number
   show_statistics: false, # BOOLEAN | showStatistics
   skip_common_project: false, # BOOLEAN | skipCommonProject
   skip_shared: false, # BOOLEAN | skipShared
-  sort: 'sort_example', # String | sort parameter contains list of fields used for sort query result <br> examples: <br> sort=archiveTime_a<br>sort=common_a<br>sort=createTime_a<br>sort=osType_a<br>sort=name_a<br>sort=description_a<br>sort=id_a<br>sort=type_a<br>sort=sharedByEmail_a
-  with_additional_users: false # BOOLEAN | withAdditionalUsers
+  sort: 'sort_example' # String | sort parameter contains list of fields used for sort query result <br> examples: <br> sort=archiveTime_a<br>sort=common_a<br>sort=createTime_a<br>sort=osType_a<br>sort=name_a<br>sort=description_a<br>sort=id_a<br>sort=sharedByEmail_a
 }
 
 begin
@@ -22357,14 +20232,14 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **user_id** | **Integer**| userId | 
- **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;archivetime_eq_1576134484593&lt;br&gt;filter&#x3D;common_eq_null&lt;br&gt;filter&#x3D;createtime_eq_1576134484593&lt;br&gt;filter&#x3D;ostype_eq_ios&lt;br&gt;filter&#x3D;name_eq_value&lt;br&gt;filter&#x3D;description_eq_value&lt;br&gt;filter&#x3D;readonly_eq_true&lt;br&gt;filter&#x3D;id_eq_1&lt;br&gt;filter&#x3D;sharedbyemail_eq_value | [optional] 
+ **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;archivetime_eq_1593583746470&lt;br&gt;filter&#x3D;common_eq_null&lt;br&gt;filter&#x3D;createtime_eq_1593583746470&lt;br&gt;filter&#x3D;ostype_eq_ios&lt;br&gt;filter&#x3D;name_eq_value&lt;br&gt;filter&#x3D;description_eq_value&lt;br&gt;filter&#x3D;readonly_eq_true&lt;br&gt;filter&#x3D;id_eq_1&lt;br&gt;filter&#x3D;sharedbyemail_eq_value | [optional] 
+ **for_whole_account** | **BOOLEAN**| forWholeAccount | [optional] [default to false]
  **limit** | **Integer**| limit parameter define page size | [optional] [default to 20]
  **offset** | **Integer**| offset parameter define page number | [optional] [default to 0]
  **show_statistics** | **BOOLEAN**| showStatistics | [optional] [default to false]
  **skip_common_project** | **BOOLEAN**| skipCommonProject | [optional] [default to false]
  **skip_shared** | **BOOLEAN**| skipShared | [optional] [default to false]
- **sort** | **String**| sort parameter contains list of fields used for sort query result &lt;br&gt; examples: &lt;br&gt; sort&#x3D;archiveTime_a&lt;br&gt;sort&#x3D;common_a&lt;br&gt;sort&#x3D;createTime_a&lt;br&gt;sort&#x3D;osType_a&lt;br&gt;sort&#x3D;name_a&lt;br&gt;sort&#x3D;description_a&lt;br&gt;sort&#x3D;id_a&lt;br&gt;sort&#x3D;type_a&lt;br&gt;sort&#x3D;sharedByEmail_a | [optional] 
- **with_additional_users** | **BOOLEAN**| withAdditionalUsers | [optional] [default to false]
+ **sort** | **String**| sort parameter contains list of fields used for sort query result &lt;br&gt; examples: &lt;br&gt; sort&#x3D;archiveTime_a&lt;br&gt;sort&#x3D;common_a&lt;br&gt;sort&#x3D;createTime_a&lt;br&gt;sort&#x3D;osType_a&lt;br&gt;sort&#x3D;name_a&lt;br&gt;sort&#x3D;description_a&lt;br&gt;sort&#x3D;id_a&lt;br&gt;sort&#x3D;sharedByEmail_a | [optional] 
 
 ### Return type
 
@@ -22372,68 +20247,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: */*
-
-
-
-# **get_user_purchases_using_get**
-> APIListOfAPIAccountService get_user_purchases_using_get(user_id, opts)
-
-Get purchased services.
-
-### Example
-```ruby
-# load the gem
-require 'bitbar-cloud-api-client'
-# setup authorization
-BitbarCloudApiClient.configure do |config|
-  # Configure HTTP basic authorization: apiKeyInHeader
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
-end
-
-api_instance = BitbarCloudApiClient::AllEndpointsApi.new
-
-user_id = 789 # Integer | userId
-
-opts = { 
-  filter: 'filter_example', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=accountid_eq_1<br>filter=deactivatereason_eq_initial_failure<br>filter=price_eq_1<br>filter=chargetype_eq_usage<br>filter=paymentmethod_eq_paypal<br>filter=autorenew_eq_true<br>filter=active_eq_true<br>filter=starttime_eq_1576134485601<br>filter=id_eq_1<br>filter=_endtime_eq_1576134485601<br>filter=activatedbyname_eq_value<br>filter=servicename_eq_value<br>filter=deactivatedbyname_eq_value
-  limit: 20, # Integer | limit parameter define page size
-  offset: 0, # Integer | offset parameter define page number
-  sort: 'sort_example' # String | sort parameter contains list of fields used for sort query result <br> examples: <br> sort=accountId_a<br>sort=price_a<br>sort=chargeType_a<br>sort=paymentMethod_a<br>sort=autoRenew_a<br>sort=active_a<br>sort=startTime_a<br>sort=id_a<br>sort=_endTime_a<br>sort=activatedByName_a<br>sort=serviceName_a<br>sort=deactivatedByName_a
-}
-
-begin
-  #Get purchased services.
-  result = api_instance.get_user_purchases_using_get(user_id, opts)
-  p result
-rescue BitbarCloudApiClient::ApiError => e
-  puts "Exception when calling AllEndpointsApi->get_user_purchases_using_get: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **user_id** | **Integer**| userId | 
- **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;accountid_eq_1&lt;br&gt;filter&#x3D;deactivatereason_eq_initial_failure&lt;br&gt;filter&#x3D;price_eq_1&lt;br&gt;filter&#x3D;chargetype_eq_usage&lt;br&gt;filter&#x3D;paymentmethod_eq_paypal&lt;br&gt;filter&#x3D;autorenew_eq_true&lt;br&gt;filter&#x3D;active_eq_true&lt;br&gt;filter&#x3D;starttime_eq_1576134485601&lt;br&gt;filter&#x3D;id_eq_1&lt;br&gt;filter&#x3D;_endtime_eq_1576134485601&lt;br&gt;filter&#x3D;activatedbyname_eq_value&lt;br&gt;filter&#x3D;servicename_eq_value&lt;br&gt;filter&#x3D;deactivatedbyname_eq_value | [optional] 
- **limit** | **Integer**| limit parameter define page size | [optional] [default to 20]
- **offset** | **Integer**| offset parameter define page number | [optional] [default to 0]
- **sort** | **String**| sort parameter contains list of fields used for sort query result &lt;br&gt; examples: &lt;br&gt; sort&#x3D;accountId_a&lt;br&gt;sort&#x3D;price_a&lt;br&gt;sort&#x3D;chargeType_a&lt;br&gt;sort&#x3D;paymentMethod_a&lt;br&gt;sort&#x3D;autoRenew_a&lt;br&gt;sort&#x3D;active_a&lt;br&gt;sort&#x3D;startTime_a&lt;br&gt;sort&#x3D;id_a&lt;br&gt;sort&#x3D;_endTime_a&lt;br&gt;sort&#x3D;activatedByName_a&lt;br&gt;sort&#x3D;serviceName_a&lt;br&gt;sort&#x3D;deactivatedByName_a | [optional] 
-
-### Return type
-
-[**APIListOfAPIAccountService**](APIListOfAPIAccountService.md)
-
-### Authorization
-
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -22456,6 +20270,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -22484,7 +20301,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -22507,6 +20324,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -22535,7 +20355,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -22558,6 +20378,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -22565,7 +20388,7 @@ api_instance = BitbarCloudApiClient::AllEndpointsApi.new
 user_id = 789 # Integer | userId
 
 opts = { 
-  filter: 'filter_example', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=accountid_eq_1<br>filter=deactivatereason_eq_initial_failure<br>filter=price_eq_1<br>filter=chargetype_eq_usage<br>filter=paymentmethod_eq_paypal<br>filter=autorenew_eq_true<br>filter=active_eq_true<br>filter=starttime_eq_1576134479392<br>filter=id_eq_1<br>filter=_endtime_eq_1576134479392<br>filter=activatedbyname_eq_value<br>filter=servicename_eq_value<br>filter=deactivatedbyname_eq_value
+  filter: 'filter_example', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=accountid_eq_1<br>filter=deactivatereason_eq_initial_failure<br>filter=price_eq_1<br>filter=chargetype_eq_usage_mobile<br>filter=paymentmethod_eq_paypal<br>filter=autorenew_eq_true<br>filter=active_eq_true<br>filter=starttime_eq_1593583738274<br>filter=id_eq_1<br>filter=_endtime_eq_1593583738274<br>filter=activatedbyname_eq_value<br>filter=servicename_eq_value<br>filter=deactivatedbyname_eq_value
   limit: 20, # Integer | limit parameter define page size
   offset: 0, # Integer | offset parameter define page number
   sort: 'sort_example' # String | sort parameter contains list of fields used for sort query result <br> examples: <br> sort=accountId_a<br>sort=price_a<br>sort=chargeType_a<br>sort=paymentMethod_a<br>sort=autoRenew_a<br>sort=active_a<br>sort=startTime_a<br>sort=id_a<br>sort=_endTime_a<br>sort=activatedByName_a<br>sort=serviceName_a<br>sort=deactivatedByName_a
@@ -22585,7 +20408,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **user_id** | **Integer**| userId | 
- **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;accountid_eq_1&lt;br&gt;filter&#x3D;deactivatereason_eq_initial_failure&lt;br&gt;filter&#x3D;price_eq_1&lt;br&gt;filter&#x3D;chargetype_eq_usage&lt;br&gt;filter&#x3D;paymentmethod_eq_paypal&lt;br&gt;filter&#x3D;autorenew_eq_true&lt;br&gt;filter&#x3D;active_eq_true&lt;br&gt;filter&#x3D;starttime_eq_1576134479392&lt;br&gt;filter&#x3D;id_eq_1&lt;br&gt;filter&#x3D;_endtime_eq_1576134479392&lt;br&gt;filter&#x3D;activatedbyname_eq_value&lt;br&gt;filter&#x3D;servicename_eq_value&lt;br&gt;filter&#x3D;deactivatedbyname_eq_value | [optional] 
+ **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;accountid_eq_1&lt;br&gt;filter&#x3D;deactivatereason_eq_initial_failure&lt;br&gt;filter&#x3D;price_eq_1&lt;br&gt;filter&#x3D;chargetype_eq_usage_mobile&lt;br&gt;filter&#x3D;paymentmethod_eq_paypal&lt;br&gt;filter&#x3D;autorenew_eq_true&lt;br&gt;filter&#x3D;active_eq_true&lt;br&gt;filter&#x3D;starttime_eq_1593583738274&lt;br&gt;filter&#x3D;id_eq_1&lt;br&gt;filter&#x3D;_endtime_eq_1593583738274&lt;br&gt;filter&#x3D;activatedbyname_eq_value&lt;br&gt;filter&#x3D;servicename_eq_value&lt;br&gt;filter&#x3D;deactivatedbyname_eq_value | [optional] 
  **limit** | **Integer**| limit parameter define page size | [optional] [default to 20]
  **offset** | **Integer**| offset parameter define page number | [optional] [default to 0]
  **sort** | **String**| sort parameter contains list of fields used for sort query result &lt;br&gt; examples: &lt;br&gt; sort&#x3D;accountId_a&lt;br&gt;sort&#x3D;price_a&lt;br&gt;sort&#x3D;chargeType_a&lt;br&gt;sort&#x3D;paymentMethod_a&lt;br&gt;sort&#x3D;autoRenew_a&lt;br&gt;sort&#x3D;active_a&lt;br&gt;sort&#x3D;startTime_a&lt;br&gt;sort&#x3D;id_a&lt;br&gt;sort&#x3D;_endTime_a&lt;br&gt;sort&#x3D;activatedByName_a&lt;br&gt;sort&#x3D;serviceName_a&lt;br&gt;sort&#x3D;deactivatedByName_a | [optional] 
@@ -22596,68 +20419,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: */*
-
-
-
-# **get_user_services_using_get1**
-> APIListOfAPIAccountService get_user_services_using_get1(user_id, opts)
-
-Get account services.
-
-### Example
-```ruby
-# load the gem
-require 'bitbar-cloud-api-client'
-# setup authorization
-BitbarCloudApiClient.configure do |config|
-  # Configure HTTP basic authorization: apiKeyInHeader
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
-end
-
-api_instance = BitbarCloudApiClient::AllEndpointsApi.new
-
-user_id = 789 # Integer | userId
-
-opts = { 
-  filter: 'filter_example', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=accountid_eq_1<br>filter=deactivatereason_eq_initial_failure<br>filter=price_eq_1<br>filter=chargetype_eq_usage<br>filter=paymentmethod_eq_paypal<br>filter=autorenew_eq_true<br>filter=active_eq_true<br>filter=starttime_eq_1576134479394<br>filter=id_eq_1<br>filter=_endtime_eq_1576134479394<br>filter=activatedbyname_eq_value<br>filter=servicename_eq_value<br>filter=deactivatedbyname_eq_value
-  limit: 20, # Integer | limit parameter define page size
-  offset: 0, # Integer | offset parameter define page number
-  sort: 'sort_example' # String | sort parameter contains list of fields used for sort query result <br> examples: <br> sort=accountId_a<br>sort=price_a<br>sort=chargeType_a<br>sort=paymentMethod_a<br>sort=autoRenew_a<br>sort=active_a<br>sort=startTime_a<br>sort=id_a<br>sort=_endTime_a<br>sort=activatedByName_a<br>sort=serviceName_a<br>sort=deactivatedByName_a
-}
-
-begin
-  #Get account services.
-  result = api_instance.get_user_services_using_get1(user_id, opts)
-  p result
-rescue BitbarCloudApiClient::ApiError => e
-  puts "Exception when calling AllEndpointsApi->get_user_services_using_get1: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **user_id** | **Integer**| userId | 
- **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;accountid_eq_1&lt;br&gt;filter&#x3D;deactivatereason_eq_initial_failure&lt;br&gt;filter&#x3D;price_eq_1&lt;br&gt;filter&#x3D;chargetype_eq_usage&lt;br&gt;filter&#x3D;paymentmethod_eq_paypal&lt;br&gt;filter&#x3D;autorenew_eq_true&lt;br&gt;filter&#x3D;active_eq_true&lt;br&gt;filter&#x3D;starttime_eq_1576134479394&lt;br&gt;filter&#x3D;id_eq_1&lt;br&gt;filter&#x3D;_endtime_eq_1576134479394&lt;br&gt;filter&#x3D;activatedbyname_eq_value&lt;br&gt;filter&#x3D;servicename_eq_value&lt;br&gt;filter&#x3D;deactivatedbyname_eq_value | [optional] 
- **limit** | **Integer**| limit parameter define page size | [optional] [default to 20]
- **offset** | **Integer**| offset parameter define page number | [optional] [default to 0]
- **sort** | **String**| sort parameter contains list of fields used for sort query result &lt;br&gt; examples: &lt;br&gt; sort&#x3D;accountId_a&lt;br&gt;sort&#x3D;price_a&lt;br&gt;sort&#x3D;chargeType_a&lt;br&gt;sort&#x3D;paymentMethod_a&lt;br&gt;sort&#x3D;autoRenew_a&lt;br&gt;sort&#x3D;active_a&lt;br&gt;sort&#x3D;startTime_a&lt;br&gt;sort&#x3D;id_a&lt;br&gt;sort&#x3D;_endTime_a&lt;br&gt;sort&#x3D;activatedByName_a&lt;br&gt;sort&#x3D;serviceName_a&lt;br&gt;sort&#x3D;deactivatedByName_a | [optional] 
-
-### Return type
-
-[**APIListOfAPIAccountService**](APIListOfAPIAccountService.md)
-
-### Authorization
-
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -22680,6 +20442,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -22687,8 +20452,10 @@ api_instance = BitbarCloudApiClient::AllEndpointsApi.new
 user_id = 789 # Integer | userId
 
 opts = { 
-  start_time: 789, # Integer | startTime
-  with_additional_users: false # BOOLEAN | withAdditionalUsers
+  for_whole_account: false, # BOOLEAN | forWholeAccount
+  skip_common_project: false, # BOOLEAN | skipCommonProject
+  skip_shared: false, # BOOLEAN | skipShared
+  start_time: 789 # Integer | startTime
 }
 
 begin
@@ -22705,8 +20472,10 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **user_id** | **Integer**| userId | 
+ **for_whole_account** | **BOOLEAN**| forWholeAccount | [optional] [default to false]
+ **skip_common_project** | **BOOLEAN**| skipCommonProject | [optional] [default to false]
+ **skip_shared** | **BOOLEAN**| skipShared | [optional] [default to false]
  **start_time** | **Integer**| startTime | [optional] 
- **with_additional_users** | **BOOLEAN**| withAdditionalUsers | [optional] [default to false]
 
 ### Return type
 
@@ -22714,64 +20483,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: */*
-
-
-
-# **get_user_test_run_config_using_get**
-> APITestRunConfig get_user_test_run_config_using_get(project_id, run_id, user_id)
-
-This endpoint is deprecated.
-
-### Example
-```ruby
-# load the gem
-require 'bitbar-cloud-api-client'
-# setup authorization
-BitbarCloudApiClient.configure do |config|
-  # Configure HTTP basic authorization: apiKeyInHeader
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
-end
-
-api_instance = BitbarCloudApiClient::AllEndpointsApi.new
-
-project_id = 789 # Integer | projectId
-
-run_id = 789 # Integer | runId
-
-user_id = 789 # Integer | userId
-
-
-begin
-  #This endpoint is deprecated.
-  result = api_instance.get_user_test_run_config_using_get(project_id, run_id, user_id)
-  p result
-rescue BitbarCloudApiClient::ApiError => e
-  puts "Exception when calling AllEndpointsApi->get_user_test_run_config_using_get: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **project_id** | **Integer**| projectId | 
- **run_id** | **Integer**| runId | 
- **user_id** | **Integer**| userId | 
-
-### Return type
-
-[**APITestRunConfig**](APITestRunConfig.md)
-
-### Authorization
-
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -22794,6 +20506,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -22828,7 +20543,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -22851,6 +20566,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -22858,7 +20576,8 @@ api_instance = BitbarCloudApiClient::AllEndpointsApi.new
 user_id = 789 # Integer | userId
 
 opts = { 
-  filter: 'filter_example', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=frameworkid_eq_1<br>filter=frameworkname_eq_value<br>filter=common_eq_null<br>filter=createtime_eq_1576134485214<br>filter=displayname_eq_value<br>filter=successratio_eq_1<br>filter=starttime_eq_1576134485214<br>filter=id_eq_1<br>filter=userid_eq_1<br>filter=projectid_eq_1
+  filter: 'filter_example', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=frameworkid_eq_1<br>filter=frameworkname_eq_value<br>filter=common_eq_null<br>filter=createtime_eq_1593583747585<br>filter=displayname_eq_value<br>filter=successratio_eq_1<br>filter=starttime_eq_1593583747585<br>filter=id_eq_1<br>filter=userid_eq_1<br>filter=projectid_eq_1
+  for_whole_account: false, # BOOLEAN | forWholeAccount
   limit: 20, # Integer | limit parameter define page size
   offset: 0, # Integer | offset parameter define page number
   skip_common_project: false, # BOOLEAN | skipCommonProject
@@ -22880,7 +20599,8 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **user_id** | **Integer**| userId | 
- **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;frameworkid_eq_1&lt;br&gt;filter&#x3D;frameworkname_eq_value&lt;br&gt;filter&#x3D;common_eq_null&lt;br&gt;filter&#x3D;createtime_eq_1576134485214&lt;br&gt;filter&#x3D;displayname_eq_value&lt;br&gt;filter&#x3D;successratio_eq_1&lt;br&gt;filter&#x3D;starttime_eq_1576134485214&lt;br&gt;filter&#x3D;id_eq_1&lt;br&gt;filter&#x3D;userid_eq_1&lt;br&gt;filter&#x3D;projectid_eq_1 | [optional] 
+ **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;frameworkid_eq_1&lt;br&gt;filter&#x3D;frameworkname_eq_value&lt;br&gt;filter&#x3D;common_eq_null&lt;br&gt;filter&#x3D;createtime_eq_1593583747585&lt;br&gt;filter&#x3D;displayname_eq_value&lt;br&gt;filter&#x3D;successratio_eq_1&lt;br&gt;filter&#x3D;starttime_eq_1593583747585&lt;br&gt;filter&#x3D;id_eq_1&lt;br&gt;filter&#x3D;userid_eq_1&lt;br&gt;filter&#x3D;projectid_eq_1 | [optional] 
+ **for_whole_account** | **BOOLEAN**| forWholeAccount | [optional] [default to false]
  **limit** | **Integer**| limit parameter define page size | [optional] [default to 20]
  **offset** | **Integer**| offset parameter define page number | [optional] [default to 0]
  **skip_common_project** | **BOOLEAN**| skipCommonProject | [optional] [default to false]
@@ -22893,7 +20613,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -22916,6 +20636,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -22944,7 +20667,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -22967,6 +20690,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -22998,7 +20724,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -23021,6 +20747,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -23055,7 +20784,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -23078,6 +20807,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -23106,7 +20838,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -23129,6 +20861,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -23136,11 +20871,11 @@ api_instance = BitbarCloudApiClient::AllEndpointsApi.new
 user_id = 789 # Integer | userId
 
 opts = { 
-  filter: 'filter_example', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=starttime_eq_1576134485389<br>filter=id_eq_1<br>filter=_endtime_eq_1576134485389<br>filter=username_eq_value<br>filter=userid_eq_1
+  filter: 'filter_example', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=starttime_eq_1593583748068<br>filter=id_eq_1<br>filter=_endtime_eq_1593583748068<br>filter=username_eq_value<br>filter=userid_eq_1
+  for_whole_account: false, # BOOLEAN | forWholeAccount
   limit: 20, # Integer | limit parameter define page size
   offset: 0, # Integer | offset parameter define page number
-  sort: 'sort_example', # String | sort parameter contains list of fields used for sort query result <br> examples: <br> sort=createTime_a<br>sort=id_a<br>sort=userName_a<br>sort=type_a
-  with_additional_users: false # BOOLEAN | withAdditionalUsers
+  sort: 'sort_example' # String | sort parameter contains list of fields used for sort query result <br> examples: <br> sort=createTime_a<br>sort=id_a<br>sort=userName_a<br>sort=type_a
 }
 
 begin
@@ -23157,11 +20892,11 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **user_id** | **Integer**| userId | 
- **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;starttime_eq_1576134485389&lt;br&gt;filter&#x3D;id_eq_1&lt;br&gt;filter&#x3D;_endtime_eq_1576134485389&lt;br&gt;filter&#x3D;username_eq_value&lt;br&gt;filter&#x3D;userid_eq_1 | [optional] 
+ **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;starttime_eq_1593583748068&lt;br&gt;filter&#x3D;id_eq_1&lt;br&gt;filter&#x3D;_endtime_eq_1593583748068&lt;br&gt;filter&#x3D;username_eq_value&lt;br&gt;filter&#x3D;userid_eq_1 | [optional] 
+ **for_whole_account** | **BOOLEAN**| forWholeAccount | [optional] [default to false]
  **limit** | **Integer**| limit parameter define page size | [optional] [default to 20]
  **offset** | **Integer**| offset parameter define page number | [optional] [default to 0]
  **sort** | **String**| sort parameter contains list of fields used for sort query result &lt;br&gt; examples: &lt;br&gt; sort&#x3D;createTime_a&lt;br&gt;sort&#x3D;id_a&lt;br&gt;sort&#x3D;userName_a&lt;br&gt;sort&#x3D;type_a | [optional] 
- **with_additional_users** | **BOOLEAN**| withAdditionalUsers | [optional] [default to false]
 
 ### Return type
 
@@ -23169,7 +20904,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -23192,6 +20927,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -23199,11 +20937,11 @@ api_instance = BitbarCloudApiClient::AllEndpointsApi.new
 user_id = 789 # Integer | userId
 
 opts = { 
-  filter: 'filter_example', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=starttime_eq_1576134485388<br>filter=id_eq_1<br>filter=_endtime_eq_1576134485388<br>filter=username_eq_value<br>filter=userid_eq_1
+  filter: 'filter_example', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=starttime_eq_1593583747982<br>filter=id_eq_1<br>filter=_endtime_eq_1593583747982<br>filter=username_eq_value<br>filter=userid_eq_1
+  for_whole_account: false, # BOOLEAN | forWholeAccount
   limit: 20, # Integer | limit parameter define page size
   offset: 0, # Integer | offset parameter define page number
-  sort: 'sort_example', # String | sort parameter contains list of fields used for sort query result <br> examples: <br> sort=createTime_a<br>sort=id_a<br>sort=userName_a<br>sort=type_a
-  with_additional_users: false # BOOLEAN | withAdditionalUsers
+  sort: 'sort_example' # String | sort parameter contains list of fields used for sort query result <br> examples: <br> sort=createTime_a<br>sort=id_a<br>sort=userName_a<br>sort=type_a
 }
 
 begin
@@ -23220,11 +20958,11 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **user_id** | **Integer**| userId | 
- **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;starttime_eq_1576134485388&lt;br&gt;filter&#x3D;id_eq_1&lt;br&gt;filter&#x3D;_endtime_eq_1576134485388&lt;br&gt;filter&#x3D;username_eq_value&lt;br&gt;filter&#x3D;userid_eq_1 | [optional] 
+ **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;starttime_eq_1593583747982&lt;br&gt;filter&#x3D;id_eq_1&lt;br&gt;filter&#x3D;_endtime_eq_1593583747982&lt;br&gt;filter&#x3D;username_eq_value&lt;br&gt;filter&#x3D;userid_eq_1 | [optional] 
+ **for_whole_account** | **BOOLEAN**| forWholeAccount | [optional] [default to false]
  **limit** | **Integer**| limit parameter define page size | [optional] [default to 20]
  **offset** | **Integer**| offset parameter define page number | [optional] [default to 0]
  **sort** | **String**| sort parameter contains list of fields used for sort query result &lt;br&gt; examples: &lt;br&gt; sort&#x3D;createTime_a&lt;br&gt;sort&#x3D;id_a&lt;br&gt;sort&#x3D;userName_a&lt;br&gt;sort&#x3D;type_a | [optional] 
- **with_additional_users** | **BOOLEAN**| withAdditionalUsers | [optional] [default to false]
 
 ### Return type
 
@@ -23232,7 +20970,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -23255,6 +20993,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -23293,7 +21034,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -23316,6 +21057,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -23357,7 +21101,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -23380,12 +21124,15 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
 
 opts = { 
-  filter: 'filter_example', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=lastname_eq_value<br>filter=country_eq_value<br>filter=code_eq_value<br>filter=address_eq_value<br>filter=lastlaunchedtesttime_eq_1576134485789<br>filter=city_eq_value<br>filter=vatid_eq_value<br>filter=timezone_eq_value<br>filter=mainuseremail_eq_value<br>filter=lastlogintime_eq_1576134485789<br>filter=firstname_eq_value<br>filter=accountid_eq_1<br>filter=serviceids_eq_1<br>filter=mainuserid_eq_1<br>filter=phone_eq_value<br>filter=deletetime_eq_1576134485789<br>filter=createtime_eq_1576134485789<br>filter=accountserviceids_eq_1<br>filter=organization_eq_value<br>filter=ismainuser_eq_true<br>filter=state_eq_value<br>filter=id_eq_1<br>filter=email_eq_value<br>filter=status_eq_inactive
+  filter: 'filter_example', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=lastname_eq_value<br>filter=country_eq_value<br>filter=code_eq_value<br>filter=address_eq_value<br>filter=lastlaunchedtesttime_eq_1593583748374<br>filter=city_eq_value<br>filter=vatid_eq_value<br>filter=timezone_eq_value<br>filter=mainuseremail_eq_value<br>filter=lastlogintime_eq_1593583748374<br>filter=firstname_eq_value<br>filter=accountid_eq_1<br>filter=serviceids_eq_1<br>filter=mainuserid_eq_1<br>filter=phone_eq_value<br>filter=deletetime_eq_1593583748374<br>filter=createtime_eq_1593583748374<br>filter=accountserviceids_eq_1<br>filter=organization_eq_value<br>filter=ismainuser_eq_true<br>filter=state_eq_value<br>filter=id_eq_1<br>filter=email_eq_value<br>filter=status_eq_inactive
   limit: 20, # Integer | limit parameter define page size
   offset: 0, # Integer | offset parameter define page number
   only_main_users: false, # BOOLEAN | onlyMainUsers
@@ -23408,7 +21155,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;lastname_eq_value&lt;br&gt;filter&#x3D;country_eq_value&lt;br&gt;filter&#x3D;code_eq_value&lt;br&gt;filter&#x3D;address_eq_value&lt;br&gt;filter&#x3D;lastlaunchedtesttime_eq_1576134485789&lt;br&gt;filter&#x3D;city_eq_value&lt;br&gt;filter&#x3D;vatid_eq_value&lt;br&gt;filter&#x3D;timezone_eq_value&lt;br&gt;filter&#x3D;mainuseremail_eq_value&lt;br&gt;filter&#x3D;lastlogintime_eq_1576134485789&lt;br&gt;filter&#x3D;firstname_eq_value&lt;br&gt;filter&#x3D;accountid_eq_1&lt;br&gt;filter&#x3D;serviceids_eq_1&lt;br&gt;filter&#x3D;mainuserid_eq_1&lt;br&gt;filter&#x3D;phone_eq_value&lt;br&gt;filter&#x3D;deletetime_eq_1576134485789&lt;br&gt;filter&#x3D;createtime_eq_1576134485789&lt;br&gt;filter&#x3D;accountserviceids_eq_1&lt;br&gt;filter&#x3D;organization_eq_value&lt;br&gt;filter&#x3D;ismainuser_eq_true&lt;br&gt;filter&#x3D;state_eq_value&lt;br&gt;filter&#x3D;id_eq_1&lt;br&gt;filter&#x3D;email_eq_value&lt;br&gt;filter&#x3D;status_eq_inactive | [optional] 
+ **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;lastname_eq_value&lt;br&gt;filter&#x3D;country_eq_value&lt;br&gt;filter&#x3D;code_eq_value&lt;br&gt;filter&#x3D;address_eq_value&lt;br&gt;filter&#x3D;lastlaunchedtesttime_eq_1593583748374&lt;br&gt;filter&#x3D;city_eq_value&lt;br&gt;filter&#x3D;vatid_eq_value&lt;br&gt;filter&#x3D;timezone_eq_value&lt;br&gt;filter&#x3D;mainuseremail_eq_value&lt;br&gt;filter&#x3D;lastlogintime_eq_1593583748374&lt;br&gt;filter&#x3D;firstname_eq_value&lt;br&gt;filter&#x3D;accountid_eq_1&lt;br&gt;filter&#x3D;serviceids_eq_1&lt;br&gt;filter&#x3D;mainuserid_eq_1&lt;br&gt;filter&#x3D;phone_eq_value&lt;br&gt;filter&#x3D;deletetime_eq_1593583748374&lt;br&gt;filter&#x3D;createtime_eq_1593583748374&lt;br&gt;filter&#x3D;accountserviceids_eq_1&lt;br&gt;filter&#x3D;organization_eq_value&lt;br&gt;filter&#x3D;ismainuser_eq_true&lt;br&gt;filter&#x3D;state_eq_value&lt;br&gt;filter&#x3D;id_eq_1&lt;br&gt;filter&#x3D;email_eq_value&lt;br&gt;filter&#x3D;status_eq_inactive | [optional] 
  **limit** | **Integer**| limit parameter define page size | [optional] [default to 20]
  **offset** | **Integer**| offset parameter define page number | [optional] [default to 0]
  **only_main_users** | **BOOLEAN**| onlyMainUsers | [optional] [default to false]
@@ -23423,7 +21170,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -23446,6 +21193,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -23474,7 +21224,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -23497,6 +21247,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -23528,7 +21281,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -23538,9 +21291,9 @@ Name | Type | Description  | Notes
 
 
 # **get_using_get2**
-> APIBuildExecutor get_using_get2(id)
+> APICountryVatRate get_using_get2(id)
 
-Get build executor.
+Get country vat rate.
 
 ### Example
 ```ruby
@@ -23551,6 +21304,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -23559,7 +21315,7 @@ id = 789 # Integer | id
 
 
 begin
-  #Get build executor.
+  #Get country vat rate.
   result = api_instance.get_using_get2(id)
   p result
 rescue BitbarCloudApiClient::ApiError => e
@@ -23575,11 +21331,11 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**APIBuildExecutor**](APIBuildExecutor.md)
+[**APICountryVatRate**](APICountryVatRate.md)
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -23588,10 +21344,10 @@ Name | Type | Description  | Notes
 
 
 
-# **get_using_get3**
-> APICountryVatRate get_using_get3(id)
+# **load_user_preferences_using_get**
+> APIUserPreference load_user_preferences_using_get(user_id)
 
-Get country vat rate.
+Load user preferences.
 
 ### Example
 ```ruby
@@ -23602,19 +21358,22 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
 
-id = 789 # Integer | id
+user_id = 789 # Integer | userId
 
 
 begin
-  #Get country vat rate.
-  result = api_instance.get_using_get3(id)
+  #Load user preferences.
+  result = api_instance.load_user_preferences_using_get(user_id)
   p result
 rescue BitbarCloudApiClient::ApiError => e
-  puts "Exception when calling AllEndpointsApi->get_using_get3: #{e}"
+  puts "Exception when calling AllEndpointsApi->load_user_preferences_using_get: #{e}"
 end
 ```
 
@@ -23622,15 +21381,15 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Integer**| id | 
+ **user_id** | **Integer**| userId | 
 
 ### Return type
 
-[**APICountryVatRate**](APICountryVatRate.md)
+[**APIUserPreference**](APIUserPreference.md)
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -23653,6 +21412,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -23681,7 +21443,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -23704,6 +21466,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -23732,7 +21497,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -23755,6 +21520,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -23786,7 +21554,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -23796,7 +21564,7 @@ Name | Type | Description  | Notes
 
 
 # **register_using_post1**
-> APIUser register_using_post1(email, opts)
+> register_using_post1(email)
 
 Register new user.
 
@@ -23809,20 +21577,19 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
 
 email = 'email_example' # String | email
 
-opts = { 
-  token: 'token_example' # String | token
-}
 
 begin
   #Register new user.
-  result = api_instance.register_using_post1(email, opts)
-  p result
+  api_instance.register_using_post1(email)
 rescue BitbarCloudApiClient::ApiError => e
   puts "Exception when calling AllEndpointsApi->register_using_post1: #{e}"
 end
@@ -23833,15 +21600,14 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **email** | **String**| email | 
- **token** | **String**| token | [optional] 
 
 ### Return type
 
-[**APIUser**](APIUser.md)
+nil (empty response body)
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -23864,6 +21630,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -23892,7 +21661,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -23915,6 +21684,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -23946,7 +21718,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -23969,6 +21741,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -24004,7 +21779,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -24027,6 +21802,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -24062,7 +21840,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -24085,6 +21863,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -24120,7 +21901,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -24143,6 +21924,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -24178,7 +21962,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -24201,6 +21985,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -24236,7 +22023,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -24259,6 +22046,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -24295,7 +22085,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -24318,6 +22108,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -24354,7 +22147,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -24377,6 +22170,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -24413,7 +22209,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -24436,6 +22232,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -24472,7 +22271,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -24495,6 +22294,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -24531,7 +22333,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -24554,6 +22356,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -24592,7 +22397,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -24615,6 +22420,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -24653,7 +22461,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -24676,6 +22484,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -24714,7 +22525,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -24724,112 +22535,7 @@ Name | Type | Description  | Notes
 
 
 # **request_user_test_run_screenshots_using_post**
-> APIUserFile request_user_test_run_screenshots_using_post(device_session_id)
-
-Generate zipped screenshots file.
-
-### Example
-```ruby
-# load the gem
-require 'bitbar-cloud-api-client'
-# setup authorization
-BitbarCloudApiClient.configure do |config|
-  # Configure HTTP basic authorization: apiKeyInHeader
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
-end
-
-api_instance = BitbarCloudApiClient::AllEndpointsApi.new
-
-device_session_id = 789 # Integer | deviceSessionId
-
-
-begin
-  #Generate zipped screenshots file.
-  result = api_instance.request_user_test_run_screenshots_using_post(device_session_id)
-  p result
-rescue BitbarCloudApiClient::ApiError => e
-  puts "Exception when calling AllEndpointsApi->request_user_test_run_screenshots_using_post: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **device_session_id** | **Integer**| deviceSessionId | 
-
-### Return type
-
-[**APIUserFile**](APIUserFile.md)
-
-### Authorization
-
-[apiKeyInHeader](../README.md#apiKeyInHeader)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: */*
-
-
-
-# **request_user_test_run_screenshots_using_post1**
-> APIUserFile request_user_test_run_screenshots_using_post1(device_session_id, user_id)
-
-Generate zipped screenshots file.
-
-### Example
-```ruby
-# load the gem
-require 'bitbar-cloud-api-client'
-# setup authorization
-BitbarCloudApiClient.configure do |config|
-  # Configure HTTP basic authorization: apiKeyInHeader
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
-end
-
-api_instance = BitbarCloudApiClient::AllEndpointsApi.new
-
-device_session_id = 789 # Integer | deviceSessionId
-
-user_id = 789 # Integer | userId
-
-
-begin
-  #Generate zipped screenshots file.
-  result = api_instance.request_user_test_run_screenshots_using_post1(device_session_id, user_id)
-  p result
-rescue BitbarCloudApiClient::ApiError => e
-  puts "Exception when calling AllEndpointsApi->request_user_test_run_screenshots_using_post1: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **device_session_id** | **Integer**| deviceSessionId | 
- **user_id** | **Integer**| userId | 
-
-### Return type
-
-[**APIUserFile**](APIUserFile.md)
-
-### Authorization
-
-[apiKeyInHeader](../README.md#apiKeyInHeader)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: */*
-
-
-
-# **request_user_test_run_screenshots_using_post2**
-> APIUserFile request_user_test_run_screenshots_using_post2(project_id, run_id, user_id, opts)
+> APIUserFile request_user_test_run_screenshots_using_post(project_id, run_id, user_id, opts)
 
 Generate screenshot zip.
 
@@ -24842,6 +22548,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -24858,10 +22567,10 @@ opts = {
 
 begin
   #Generate screenshot zip.
-  result = api_instance.request_user_test_run_screenshots_using_post2(project_id, run_id, user_id, opts)
+  result = api_instance.request_user_test_run_screenshots_using_post(project_id, run_id, user_id, opts)
   p result
 rescue BitbarCloudApiClient::ApiError => e
-  puts "Exception when calling AllEndpointsApi->request_user_test_run_screenshots_using_post2: #{e}"
+  puts "Exception when calling AllEndpointsApi->request_user_test_run_screenshots_using_post: #{e}"
 end
 ```
 
@@ -24880,7 +22589,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -24903,6 +22612,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -24931,7 +22643,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -24954,6 +22666,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -24985,7 +22700,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -25008,6 +22723,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -25036,7 +22754,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -25059,6 +22777,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -25087,7 +22808,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -25110,6 +22831,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -25138,7 +22862,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -25161,6 +22885,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -25189,7 +22916,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -25212,6 +22939,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -25246,7 +22976,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -25269,6 +22999,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -25306,7 +23039,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -25329,6 +23062,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -25361,7 +23097,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -25384,6 +23120,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -25419,7 +23158,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -25442,6 +23181,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -25476,7 +23218,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -25499,6 +23241,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -25537,7 +23282,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -25560,6 +23305,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -25588,7 +23336,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -25597,162 +23345,8 @@ Name | Type | Description  | Notes
 
 
 
-# **run_project_using_post**
-> APITestRun run_project_using_post(project_id, opts)
-
-This endpoint is deprecated.
-
-### Example
-```ruby
-# load the gem
-require 'bitbar-cloud-api-client'
-# setup authorization
-BitbarCloudApiClient.configure do |config|
-  # Configure HTTP basic authorization: apiKeyInHeader
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
-end
-
-api_instance = BitbarCloudApiClient::AllEndpointsApi.new
-
-project_id = 789 # Integer | projectId
-
-opts = { 
-  app_crawler_run: true, # BOOLEAN | appCrawlerRun
-  app_file_id: 789, # Integer | appFileId
-  appium_broker_address: 'appium_broker_address_example', # String | appiumBrokerAddress
-  application_password: 'application_password_example', # String | applicationPassword
-  application_username: 'application_username_example', # String | applicationUsername
-  data_file_id: 789, # Integer | dataFileId
-  device_language_code: 'device_language_code_example', # String | deviceLanguageCode
-  device_name_pattern: 'device_name_pattern_example', # String | deviceNamePattern
-  hook_url: 'hook_url_example', # String | hookURL
-  instrumentation_runner: 'instrumentation_runner_example', # String | instrumentationRunner
-  limitation_type: 'limitation_type_example', # String | limitationType
-  limitation_value: 'limitation_value_example', # String | limitationValue
-  max_auto_retries_count: 56, # Integer | maxAutoRetriesCount
-  mode: 'mode_example', # String | mode
-  name: 'name_example', # String | name
-  scheduler: 'scheduler_example', # String | scheduler
-  screenshot_dir: 'screenshot_dir_example', # String | screenshotDir
-  test_file_id: 789, # Integer | testFileId
-  test_run_id: 789, # Integer | testRunId
-  timeout: 789, # Integer | timeout
-  used_device_group_id: 789, # Integer | usedDeviceGroupId
-  used_device_ids: [56], # Array<Integer> | usedDeviceIds[]
-  video_recording_enabled: true, # BOOLEAN | videoRecordingEnabled
-  with_annotation: 'with_annotation_example', # String | withAnnotation
-  without_annotation: 'without_annotation_example' # String | withoutAnnotation
-}
-
-begin
-  #This endpoint is deprecated.
-  result = api_instance.run_project_using_post(project_id, opts)
-  p result
-rescue BitbarCloudApiClient::ApiError => e
-  puts "Exception when calling AllEndpointsApi->run_project_using_post: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **project_id** | **Integer**| projectId | 
- **app_crawler_run** | **BOOLEAN**| appCrawlerRun | [optional] 
- **app_file_id** | **Integer**| appFileId | [optional] 
- **appium_broker_address** | **String**| appiumBrokerAddress | [optional] 
- **application_password** | **String**| applicationPassword | [optional] 
- **application_username** | **String**| applicationUsername | [optional] 
- **data_file_id** | **Integer**| dataFileId | [optional] 
- **device_language_code** | **String**| deviceLanguageCode | [optional] 
- **device_name_pattern** | **String**| deviceNamePattern | [optional] 
- **hook_url** | **String**| hookURL | [optional] 
- **instrumentation_runner** | **String**| instrumentationRunner | [optional] 
- **limitation_type** | **String**| limitationType | [optional] 
- **limitation_value** | **String**| limitationValue | [optional] 
- **max_auto_retries_count** | **Integer**| maxAutoRetriesCount | [optional] 
- **mode** | **String**| mode | [optional] 
- **name** | **String**| name | [optional] 
- **scheduler** | **String**| scheduler | [optional] 
- **screenshot_dir** | **String**| screenshotDir | [optional] 
- **test_file_id** | **Integer**| testFileId | [optional] 
- **test_run_id** | **Integer**| testRunId | [optional] 
- **timeout** | **Integer**| timeout | [optional] 
- **used_device_group_id** | **Integer**| usedDeviceGroupId | [optional] 
- **used_device_ids** | [**Array&lt;Integer&gt;**](Integer.md)| usedDeviceIds[] | [optional] 
- **video_recording_enabled** | **BOOLEAN**| videoRecordingEnabled | [optional] 
- **with_annotation** | **String**| withAnnotation | [optional] 
- **without_annotation** | **String**| withoutAnnotation | [optional] 
-
-### Return type
-
-[**APITestRun**](APITestRun.md)
-
-### Authorization
-
-[apiKeyInHeader](../README.md#apiKeyInHeader)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: */*
-
-
-
-# **run_project_using_post1**
-> APITestRun run_project_using_post1(configuration)
-
-Run test run.
-
-### Example
-```ruby
-# load the gem
-require 'bitbar-cloud-api-client'
-# setup authorization
-BitbarCloudApiClient.configure do |config|
-  # Configure HTTP basic authorization: apiKeyInHeader
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
-end
-
-api_instance = BitbarCloudApiClient::AllEndpointsApi.new
-
-configuration = BitbarCloudApiClient::APITestRunConfig.new # APITestRunConfig | configuration
-
-
-begin
-  #Run test run.
-  result = api_instance.run_project_using_post1(configuration)
-  p result
-rescue BitbarCloudApiClient::ApiError => e
-  puts "Exception when calling AllEndpointsApi->run_project_using_post1: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **configuration** | [**APITestRunConfig**](APITestRunConfig.md)| configuration | 
-
-### Return type
-
-[**APITestRun**](APITestRun.md)
-
-### Authorization
-
-[apiKeyInHeader](../README.md#apiKeyInHeader)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: */*
-
-
-
 # **run_test_run_using_post**
-> APITestRun run_test_run_using_post(configuration, user_id)
+> APITestRun run_test_run_using_post(configuration)
 
 Run test run.
 
@@ -25765,18 +23359,19 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
 
 configuration = BitbarCloudApiClient::APITestRunConfig.new # APITestRunConfig | configuration
 
-user_id = 789 # Integer | userId
-
 
 begin
   #Run test run.
-  result = api_instance.run_test_run_using_post(configuration, user_id)
+  result = api_instance.run_test_run_using_post(configuration)
   p result
 rescue BitbarCloudApiClient::ApiError => e
   puts "Exception when calling AllEndpointsApi->run_test_run_using_post: #{e}"
@@ -25788,7 +23383,6 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **configuration** | [**APITestRunConfig**](APITestRunConfig.md)| configuration | 
- **user_id** | **Integer**| userId | 
 
 ### Return type
 
@@ -25796,7 +23390,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -25805,10 +23399,10 @@ Name | Type | Description  | Notes
 
 
 
-# **run_user_project_using_post**
-> APITestRun run_user_project_using_post(project_id, user_id, opts)
+# **run_test_run_using_post1**
+> APITestRun run_test_run_using_post1(configuration, user_id)
 
-This endpoint is deprecated.
+Run test run.
 
 ### Example
 ```ruby
@@ -25819,48 +23413,24 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
 
-project_id = 789 # Integer | projectId
+configuration = BitbarCloudApiClient::APITestRunConfig.new # APITestRunConfig | configuration
 
 user_id = 789 # Integer | userId
 
-opts = { 
-  app_crawler_run: true, # BOOLEAN | appCrawlerRun
-  app_file_id: 789, # Integer | appFileId
-  appium_broker_address: 'appium_broker_address_example', # String | appiumBrokerAddress
-  application_password: 'application_password_example', # String | applicationPassword
-  application_username: 'application_username_example', # String | applicationUsername
-  data_file_id: 789, # Integer | dataFileId
-  device_language_code: 'device_language_code_example', # String | deviceLanguageCode
-  device_name_pattern: 'device_name_pattern_example', # String | deviceNamePattern
-  hook_url: 'hook_url_example', # String | hookURL
-  instrumentation_runner: 'instrumentation_runner_example', # String | instrumentationRunner
-  limitation_type: 'limitation_type_example', # String | limitationType
-  limitation_value: 'limitation_value_example', # String | limitationValue
-  max_auto_retries_count: 56, # Integer | maxAutoRetriesCount
-  mode: 'mode_example', # String | mode
-  name: 'name_example', # String | name
-  scheduler: 'scheduler_example', # String | scheduler
-  screenshot_dir: 'screenshot_dir_example', # String | screenshotDir
-  test_file_id: 789, # Integer | testFileId
-  test_run_id: 789, # Integer | testRunId
-  timeout: 789, # Integer | timeout
-  used_device_group_id: 789, # Integer | usedDeviceGroupId
-  used_device_ids: [56], # Array<Integer> | usedDeviceIds[]
-  video_recording_enabled: true, # BOOLEAN | videoRecordingEnabled
-  with_annotation: 'with_annotation_example', # String | withAnnotation
-  without_annotation: 'without_annotation_example' # String | withoutAnnotation
-}
 
 begin
-  #This endpoint is deprecated.
-  result = api_instance.run_user_project_using_post(project_id, user_id, opts)
+  #Run test run.
+  result = api_instance.run_test_run_using_post1(configuration, user_id)
   p result
 rescue BitbarCloudApiClient::ApiError => e
-  puts "Exception when calling AllEndpointsApi->run_user_project_using_post: #{e}"
+  puts "Exception when calling AllEndpointsApi->run_test_run_using_post1: #{e}"
 end
 ```
 
@@ -25868,33 +23438,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **project_id** | **Integer**| projectId | 
+ **configuration** | [**APITestRunConfig**](APITestRunConfig.md)| configuration | 
  **user_id** | **Integer**| userId | 
- **app_crawler_run** | **BOOLEAN**| appCrawlerRun | [optional] 
- **app_file_id** | **Integer**| appFileId | [optional] 
- **appium_broker_address** | **String**| appiumBrokerAddress | [optional] 
- **application_password** | **String**| applicationPassword | [optional] 
- **application_username** | **String**| applicationUsername | [optional] 
- **data_file_id** | **Integer**| dataFileId | [optional] 
- **device_language_code** | **String**| deviceLanguageCode | [optional] 
- **device_name_pattern** | **String**| deviceNamePattern | [optional] 
- **hook_url** | **String**| hookURL | [optional] 
- **instrumentation_runner** | **String**| instrumentationRunner | [optional] 
- **limitation_type** | **String**| limitationType | [optional] 
- **limitation_value** | **String**| limitationValue | [optional] 
- **max_auto_retries_count** | **Integer**| maxAutoRetriesCount | [optional] 
- **mode** | **String**| mode | [optional] 
- **name** | **String**| name | [optional] 
- **scheduler** | **String**| scheduler | [optional] 
- **screenshot_dir** | **String**| screenshotDir | [optional] 
- **test_file_id** | **Integer**| testFileId | [optional] 
- **test_run_id** | **Integer**| testRunId | [optional] 
- **timeout** | **Integer**| timeout | [optional] 
- **used_device_group_id** | **Integer**| usedDeviceGroupId | [optional] 
- **used_device_ids** | [**Array&lt;Integer&gt;**](Integer.md)| usedDeviceIds[] | [optional] 
- **video_recording_enabled** | **BOOLEAN**| videoRecordingEnabled | [optional] 
- **with_annotation** | **String**| withAnnotation | [optional] 
- **without_annotation** | **String**| withoutAnnotation | [optional] 
 
 ### Return type
 
@@ -25902,11 +23447,82 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
  - **Content-Type**: application/json
+ - **Accept**: */*
+
+
+
+# **serve_screenshot_using_get**
+> serve_screenshot_using_get(device_session_id, project_id, run_id, screenshot_id, user_id, opts)
+
+Get device session screenshot.
+
+### Example
+```ruby
+# load the gem
+require 'bitbar-cloud-api-client'
+# setup authorization
+BitbarCloudApiClient.configure do |config|
+  # Configure HTTP basic authorization: apiKeyInHeader
+  config.username = 'YOUR USERNAME'
+  config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
+end
+
+api_instance = BitbarCloudApiClient::AllEndpointsApi.new
+
+device_session_id = 789 # Integer | deviceSessionId
+
+project_id = 789 # Integer | projectId
+
+run_id = 789 # Integer | runId
+
+screenshot_id = 789 # Integer | screenshotId
+
+user_id = 789 # Integer | userId
+
+opts = { 
+  height: 56, # Integer | height
+  width: 56 # Integer | width
+}
+
+begin
+  #Get device session screenshot.
+  api_instance.serve_screenshot_using_get(device_session_id, project_id, run_id, screenshot_id, user_id, opts)
+rescue BitbarCloudApiClient::ApiError => e
+  puts "Exception when calling AllEndpointsApi->serve_screenshot_using_get: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **device_session_id** | **Integer**| deviceSessionId | 
+ **project_id** | **Integer**| projectId | 
+ **run_id** | **Integer**| runId | 
+ **screenshot_id** | **Integer**| screenshotId | 
+ **user_id** | **Integer**| userId | 
+ **height** | **Integer**| height | [optional] 
+ **width** | **Integer**| width | [optional] 
+
+### Return type
+
+nil (empty response body)
+
+### Authorization
+
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
  - **Accept**: */*
 
 
@@ -25925,6 +23541,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -25956,7 +23575,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -25979,6 +23598,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -26010,7 +23632,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -26033,6 +23655,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -26064,7 +23689,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -26087,6 +23712,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -26121,7 +23749,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -26144,6 +23772,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -26181,7 +23812,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -26204,6 +23835,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -26238,7 +23872,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -26261,6 +23895,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -26298,7 +23935,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -26321,6 +23958,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -26355,7 +23995,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -26378,6 +24018,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -26415,7 +24058,64 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: */*
+
+
+
+# **store_user_preferences_using_post**
+> APIUserPreference store_user_preferences_using_post(preference, user_id)
+
+Store user preferences.
+
+### Example
+```ruby
+# load the gem
+require 'bitbar-cloud-api-client'
+# setup authorization
+BitbarCloudApiClient.configure do |config|
+  # Configure HTTP basic authorization: apiKeyInHeader
+  config.username = 'YOUR USERNAME'
+  config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
+end
+
+api_instance = BitbarCloudApiClient::AllEndpointsApi.new
+
+preference = BitbarCloudApiClient::APIUserPreference.new # APIUserPreference | preference
+
+user_id = 789 # Integer | userId
+
+
+begin
+  #Store user preferences.
+  result = api_instance.store_user_preferences_using_post(preference, user_id)
+  p result
+rescue BitbarCloudApiClient::ApiError => e
+  puts "Exception when calling AllEndpointsApi->store_user_preferences_using_post: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **preference** | [**APIUserPreference**](APIUserPreference.md)| preference | 
+ **user_id** | **Integer**| userId | 
+
+### Return type
+
+[**APIUserPreference**](APIUserPreference.md)
+
+### Authorization
+
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -26438,6 +24138,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -26469,7 +24172,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -26492,6 +24195,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -26520,7 +24226,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -26543,6 +24249,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -26574,7 +24283,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -26597,6 +24306,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -26624,7 +24336,7 @@ nil (empty response body)
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -26647,6 +24359,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -26684,68 +24399,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: */*
-
-
-
-# **update_build_using_post**
-> APIPipelineBuild update_build_using_post(build_id, job_id, user_id, opts)
-
-Update build.
-
-### Example
-```ruby
-# load the gem
-require 'bitbar-cloud-api-client'
-# setup authorization
-BitbarCloudApiClient.configure do |config|
-  # Configure HTTP basic authorization: apiKeyInHeader
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
-end
-
-api_instance = BitbarCloudApiClient::AllEndpointsApi.new
-
-build_id = 789 # Integer | buildId
-
-job_id = 789 # Integer | jobId
-
-user_id = 789 # Integer | userId
-
-opts = { 
-  build_number: 789 # Integer | buildNumber
-}
-
-begin
-  #Update build.
-  result = api_instance.update_build_using_post(build_id, job_id, user_id, opts)
-  p result
-rescue BitbarCloudApiClient::ApiError => e
-  puts "Exception when calling AllEndpointsApi->update_build_using_post: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **build_id** | **Integer**| buildId | 
- **job_id** | **Integer**| jobId | 
- **user_id** | **Integer**| userId | 
- **build_number** | **Integer**| buildNumber | [optional] 
-
-### Return type
-
-[**APIPipelineBuild**](APIPipelineBuild.md)
-
-### Authorization
-
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -26768,6 +24422,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -26804,7 +24461,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -26827,6 +24484,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -26864,7 +24524,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -26887,6 +24547,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -26929,7 +24592,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -26952,6 +24615,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -26980,7 +24646,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -27003,6 +24669,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -27047,7 +24716,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -27070,6 +24739,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -27118,7 +24790,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -27141,6 +24813,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -27172,7 +24847,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -27195,6 +24870,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -27229,7 +24907,67 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: */*
+
+
+
+# **update_file_property_using_post**
+> APIUserFileProperty update_file_property_using_post(file_id, property_id, value)
+
+Update file property.
+
+### Example
+```ruby
+# load the gem
+require 'bitbar-cloud-api-client'
+# setup authorization
+BitbarCloudApiClient.configure do |config|
+  # Configure HTTP basic authorization: apiKeyInHeader
+  config.username = 'YOUR USERNAME'
+  config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
+end
+
+api_instance = BitbarCloudApiClient::AllEndpointsApi.new
+
+file_id = 789 # Integer | fileId
+
+property_id = 789 # Integer | propertyId
+
+value = 'value_example' # String | value
+
+
+begin
+  #Update file property.
+  result = api_instance.update_file_property_using_post(file_id, property_id, value)
+  p result
+rescue BitbarCloudApiClient::ApiError => e
+  puts "Exception when calling AllEndpointsApi->update_file_property_using_post: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **file_id** | **Integer**| fileId | 
+ **property_id** | **Integer**| propertyId | 
+ **value** | **String**| value | 
+
+### Return type
+
+[**APIUserFileProperty**](APIUserFileProperty.md)
+
+### Authorization
+
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -27252,6 +24990,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -27283,7 +25024,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -27306,6 +25047,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -27374,7 +25118,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -27397,6 +25141,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -27428,124 +25175,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: */*
-
-
-
-# **update_job_using_post**
-> APIPipelineJob update_job_using_post(job_id, opts)
-
-Update job.
-
-### Example
-```ruby
-# load the gem
-require 'bitbar-cloud-api-client'
-# setup authorization
-BitbarCloudApiClient.configure do |config|
-  # Configure HTTP basic authorization: apiKeyInHeader
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
-end
-
-api_instance = BitbarCloudApiClient::AllEndpointsApi.new
-
-job_id = 789 # Integer | jobId
-
-opts = { 
-  content: 'content_example', # String | content
-  name: 'name_example' # String | name
-}
-
-begin
-  #Update job.
-  result = api_instance.update_job_using_post(job_id, opts)
-  p result
-rescue BitbarCloudApiClient::ApiError => e
-  puts "Exception when calling AllEndpointsApi->update_job_using_post: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **job_id** | **Integer**| jobId | 
- **content** | **String**| content | [optional] 
- **name** | **String**| name | [optional] 
-
-### Return type
-
-[**APIPipelineJob**](APIPipelineJob.md)
-
-### Authorization
-
-[apiKeyInHeader](../README.md#apiKeyInHeader)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: */*
-
-
-
-# **update_job_using_post1**
-> APIPipelineJob update_job_using_post1(job_id, user_id, opts)
-
-Update job.
-
-### Example
-```ruby
-# load the gem
-require 'bitbar-cloud-api-client'
-# setup authorization
-BitbarCloudApiClient.configure do |config|
-  # Configure HTTP basic authorization: apiKeyInHeader
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
-end
-
-api_instance = BitbarCloudApiClient::AllEndpointsApi.new
-
-job_id = 789 # Integer | jobId
-
-user_id = 789 # Integer | userId
-
-opts = { 
-  content: 'content_example', # String | content
-  name: 'name_example' # String | name
-}
-
-begin
-  #Update job.
-  result = api_instance.update_job_using_post1(job_id, user_id, opts)
-  p result
-rescue BitbarCloudApiClient::ApiError => e
-  puts "Exception when calling AllEndpointsApi->update_job_using_post1: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **job_id** | **Integer**| jobId | 
- **user_id** | **Integer**| userId | 
- **content** | **String**| content | [optional] 
- **name** | **String**| name | [optional] 
-
-### Return type
-
-[**APIPipelineJob**](APIPipelineJob.md)
-
-### Authorization
-
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -27568,6 +25198,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -27602,7 +25235,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -27625,6 +25258,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -27663,96 +25299,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: */*
-
-
-
-# **update_project_config_using_post**
-> APITestRunConfig update_project_config_using_post(project_id, opts)
-
-This endpoint is deprecated.
-
-### Example
-```ruby
-# load the gem
-require 'bitbar-cloud-api-client'
-# setup authorization
-BitbarCloudApiClient.configure do |config|
-  # Configure HTTP basic authorization: apiKeyInHeader
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
-end
-
-api_instance = BitbarCloudApiClient::AllEndpointsApi.new
-
-project_id = 789 # Integer | projectId
-
-opts = { 
-  app_crawler_run: true, # BOOLEAN | appCrawlerRun
-  appium_broker_address: 'appium_broker_address_example', # String | appiumBrokerAddress
-  application_password: 'application_password_example', # String | applicationPassword
-  application_username: 'application_username_example', # String | applicationUsername
-  device_language_code: 'device_language_code_example', # String | deviceLanguageCode
-  hook_url: 'hook_url_example', # String | hookURL
-  instrumentation_runner: 'instrumentation_runner_example', # String | instrumentationRunner
-  limitation_type: 'limitation_type_example', # String | limitationType
-  limitation_value: 'limitation_value_example', # String | limitationValue
-  max_auto_retries_count: 56, # Integer | maxAutoRetriesCount
-  mode: 'mode_example', # String | mode
-  scheduler: 'scheduler_example', # String | scheduler
-  screenshot_dir: 'screenshot_dir_example', # String | screenshotDir
-  timeout: 789, # Integer | timeout
-  used_device_group_id: 789, # Integer | usedDeviceGroupId
-  video_recording_enabled: true, # BOOLEAN | videoRecordingEnabled
-  with_annotation: 'with_annotation_example', # String | withAnnotation
-  without_annotation: 'without_annotation_example' # String | withoutAnnotation
-}
-
-begin
-  #This endpoint is deprecated.
-  result = api_instance.update_project_config_using_post(project_id, opts)
-  p result
-rescue BitbarCloudApiClient::ApiError => e
-  puts "Exception when calling AllEndpointsApi->update_project_config_using_post: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **project_id** | **Integer**| projectId | 
- **app_crawler_run** | **BOOLEAN**| appCrawlerRun | [optional] 
- **appium_broker_address** | **String**| appiumBrokerAddress | [optional] 
- **application_password** | **String**| applicationPassword | [optional] 
- **application_username** | **String**| applicationUsername | [optional] 
- **device_language_code** | **String**| deviceLanguageCode | [optional] 
- **hook_url** | **String**| hookURL | [optional] 
- **instrumentation_runner** | **String**| instrumentationRunner | [optional] 
- **limitation_type** | **String**| limitationType | [optional] 
- **limitation_value** | **String**| limitationValue | [optional] 
- **max_auto_retries_count** | **Integer**| maxAutoRetriesCount | [optional] 
- **mode** | **String**| mode | [optional] 
- **scheduler** | **String**| scheduler | [optional] 
- **screenshot_dir** | **String**| screenshotDir | [optional] 
- **timeout** | **Integer**| timeout | [optional] 
- **used_device_group_id** | **Integer**| usedDeviceGroupId | [optional] 
- **video_recording_enabled** | **BOOLEAN**| videoRecordingEnabled | [optional] 
- **with_annotation** | **String**| withAnnotation | [optional] 
- **without_annotation** | **String**| withoutAnnotation | [optional] 
-
-### Return type
-
-[**APITestRunConfig**](APITestRunConfig.md)
-
-### Authorization
-
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -27775,6 +25322,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -27809,7 +25359,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -27832,6 +25382,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -27844,7 +25397,8 @@ opts = {
   common: true, # BOOLEAN | common
   description: 'description_example', # String | description
   email: 'email_example', # String | email
-  name: 'name_example' # String | name
+  name: 'name_example', # String | name
+  read_only: true # BOOLEAN | readOnly
 }
 
 begin
@@ -27867,6 +25421,7 @@ Name | Type | Description  | Notes
  **description** | **String**| description | [optional] 
  **email** | **String**| email | [optional] 
  **name** | **String**| name | [optional] 
+ **read_only** | **BOOLEAN**| readOnly | [optional] 
 
 ### Return type
 
@@ -27874,7 +25429,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -27897,6 +25452,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -27939,7 +25497,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -27962,6 +25520,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -27997,7 +25558,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -28020,6 +25581,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -28056,7 +25620,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -28079,6 +25643,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -28118,7 +25685,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -28141,6 +25708,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -28172,7 +25742,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -28195,6 +25765,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -28229,7 +25802,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -28252,6 +25825,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -28289,99 +25865,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: */*
-
-
-
-# **update_user_project_config_using_post**
-> APITestRunConfig update_user_project_config_using_post(project_id, user_id, opts)
-
-This endpoint is deprecated.
-
-### Example
-```ruby
-# load the gem
-require 'bitbar-cloud-api-client'
-# setup authorization
-BitbarCloudApiClient.configure do |config|
-  # Configure HTTP basic authorization: apiKeyInHeader
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
-end
-
-api_instance = BitbarCloudApiClient::AllEndpointsApi.new
-
-project_id = 789 # Integer | projectId
-
-user_id = 789 # Integer | userId
-
-opts = { 
-  app_crawler_run: true, # BOOLEAN | appCrawlerRun
-  appium_broker_address: 'appium_broker_address_example', # String | appiumBrokerAddress
-  application_password: 'application_password_example', # String | applicationPassword
-  application_username: 'application_username_example', # String | applicationUsername
-  device_language_code: 'device_language_code_example', # String | deviceLanguageCode
-  hook_url: 'hook_url_example', # String | hookURL
-  instrumentation_runner: 'instrumentation_runner_example', # String | instrumentationRunner
-  limitation_type: 'limitation_type_example', # String | limitationType
-  limitation_value: 'limitation_value_example', # String | limitationValue
-  max_auto_retries_count: 56, # Integer | maxAutoRetriesCount
-  mode: 'mode_example', # String | mode
-  scheduler: 'scheduler_example', # String | scheduler
-  screenshot_dir: 'screenshot_dir_example', # String | screenshotDir
-  timeout: 789, # Integer | timeout
-  used_device_group_id: 789, # Integer | usedDeviceGroupId
-  video_recording_enabled: true, # BOOLEAN | videoRecordingEnabled
-  with_annotation: 'with_annotation_example', # String | withAnnotation
-  without_annotation: 'without_annotation_example' # String | withoutAnnotation
-}
-
-begin
-  #This endpoint is deprecated.
-  result = api_instance.update_user_project_config_using_post(project_id, user_id, opts)
-  p result
-rescue BitbarCloudApiClient::ApiError => e
-  puts "Exception when calling AllEndpointsApi->update_user_project_config_using_post: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **project_id** | **Integer**| projectId | 
- **user_id** | **Integer**| userId | 
- **app_crawler_run** | **BOOLEAN**| appCrawlerRun | [optional] 
- **appium_broker_address** | **String**| appiumBrokerAddress | [optional] 
- **application_password** | **String**| applicationPassword | [optional] 
- **application_username** | **String**| applicationUsername | [optional] 
- **device_language_code** | **String**| deviceLanguageCode | [optional] 
- **hook_url** | **String**| hookURL | [optional] 
- **instrumentation_runner** | **String**| instrumentationRunner | [optional] 
- **limitation_type** | **String**| limitationType | [optional] 
- **limitation_value** | **String**| limitationValue | [optional] 
- **max_auto_retries_count** | **Integer**| maxAutoRetriesCount | [optional] 
- **mode** | **String**| mode | [optional] 
- **scheduler** | **String**| scheduler | [optional] 
- **screenshot_dir** | **String**| screenshotDir | [optional] 
- **timeout** | **Integer**| timeout | [optional] 
- **used_device_group_id** | **Integer**| usedDeviceGroupId | [optional] 
- **video_recording_enabled** | **BOOLEAN**| videoRecordingEnabled | [optional] 
- **with_annotation** | **String**| withAnnotation | [optional] 
- **without_annotation** | **String**| withoutAnnotation | [optional] 
-
-### Return type
-
-[**APITestRunConfig**](APITestRunConfig.md)
-
-### Authorization
-
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -28404,6 +25888,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -28447,7 +25934,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -28470,6 +25957,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -28507,7 +25997,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -28530,6 +26020,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -28594,7 +26087,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -28617,6 +26110,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -28649,7 +26145,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -28672,6 +26168,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -28706,7 +26205,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -28729,6 +26228,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -28766,7 +26268,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -28776,61 +26278,7 @@ Name | Type | Description  | Notes
 
 
 # **update_using_post2**
-> APIBuildExecutor update_using_post2(build_executor, id)
-
-Update build executor.
-
-### Example
-```ruby
-# load the gem
-require 'bitbar-cloud-api-client'
-# setup authorization
-BitbarCloudApiClient.configure do |config|
-  # Configure HTTP basic authorization: apiKeyInHeader
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
-end
-
-api_instance = BitbarCloudApiClient::AllEndpointsApi.new
-
-build_executor = BitbarCloudApiClient::APIBuildExecutor.new # APIBuildExecutor | buildExecutor
-
-id = 789 # Integer | id
-
-
-begin
-  #Update build executor.
-  result = api_instance.update_using_post2(build_executor, id)
-  p result
-rescue BitbarCloudApiClient::ApiError => e
-  puts "Exception when calling AllEndpointsApi->update_using_post2: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **build_executor** | [**APIBuildExecutor**](APIBuildExecutor.md)| buildExecutor | 
- **id** | **Integer**| id | 
-
-### Return type
-
-[**APIBuildExecutor**](APIBuildExecutor.md)
-
-### Authorization
-
-[apiKeyInHeader](../README.md#apiKeyInHeader)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: */*
-
-
-
-# **update_using_post3**
-> APICountryVatRate update_using_post3(id, opts)
+> APICountryVatRate update_using_post2(id, opts)
 
 Update country vat rate.
 
@@ -28843,6 +26291,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -28856,10 +26307,10 @@ opts = {
 
 begin
   #Update country vat rate.
-  result = api_instance.update_using_post3(id, opts)
+  result = api_instance.update_using_post2(id, opts)
   p result
 rescue BitbarCloudApiClient::ApiError => e
-  puts "Exception when calling AllEndpointsApi->update_using_post3: #{e}"
+  puts "Exception when calling AllEndpointsApi->update_using_post2: #{e}"
 end
 ```
 
@@ -28877,7 +26328,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -28900,6 +26351,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -28928,7 +26382,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -28951,6 +26405,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -28983,7 +26440,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -29006,6 +26463,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -29037,7 +26497,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -29060,6 +26520,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -29088,7 +26551,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -29097,10 +26560,10 @@ Name | Type | Description  | Notes
 
 
 
-# **upload_project_application_file_using_post**
-> APIUserFile upload_project_application_file_using_post(file, project_id)
+# **validate_credentials_using_post**
+> validate_credentials_using_post(email, password)
 
-This endpoint is deprecated.
+Validate credentials.
 
 ### Example
 ```ruby
@@ -29111,21 +26574,23 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
 
-file = File.new('/path/to/file.txt') # File | file
+email = 'email_example' # String | email
 
-project_id = 789 # Integer | projectId
+password = 'password_example' # String | password
 
 
 begin
-  #This endpoint is deprecated.
-  result = api_instance.upload_project_application_file_using_post(file, project_id)
-  p result
+  #Validate credentials.
+  api_instance.validate_credentials_using_post(email, password)
 rescue BitbarCloudApiClient::ApiError => e
-  puts "Exception when calling AllEndpointsApi->upload_project_application_file_using_post: #{e}"
+  puts "Exception when calling AllEndpointsApi->validate_credentials_using_post: #{e}"
 end
 ```
 
@@ -29133,299 +26598,20 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **file** | **File**| file | 
- **project_id** | **Integer**| projectId | 
+ **email** | **String**| email | 
+ **password** | **String**| password | 
 
 ### Return type
 
-[**APIUserFile**](APIUserFile.md)
+nil (empty response body)
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
- - **Content-Type**: multipart/form-data
- - **Accept**: */*
-
-
-
-# **upload_project_application_file_using_post1**
-> APIUserFile upload_project_application_file_using_post1(file, project_id, user_id)
-
-This endpoint is deprecated.
-
-### Example
-```ruby
-# load the gem
-require 'bitbar-cloud-api-client'
-# setup authorization
-BitbarCloudApiClient.configure do |config|
-  # Configure HTTP basic authorization: apiKeyInHeader
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
-end
-
-api_instance = BitbarCloudApiClient::AllEndpointsApi.new
-
-file = File.new('/path/to/file.txt') # File | file
-
-project_id = 789 # Integer | projectId
-
-user_id = 789 # Integer | userId
-
-
-begin
-  #This endpoint is deprecated.
-  result = api_instance.upload_project_application_file_using_post1(file, project_id, user_id)
-  p result
-rescue BitbarCloudApiClient::ApiError => e
-  puts "Exception when calling AllEndpointsApi->upload_project_application_file_using_post1: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **file** | **File**| file | 
- **project_id** | **Integer**| projectId | 
- **user_id** | **Integer**| userId | 
-
-### Return type
-
-[**APIUserFile**](APIUserFile.md)
-
-### Authorization
-
-[apiKeyInHeader](../README.md#apiKeyInHeader)
-
-### HTTP request headers
-
- - **Content-Type**: multipart/form-data
- - **Accept**: */*
-
-
-
-# **upload_project_data_file_using_post**
-> APIUserFile upload_project_data_file_using_post(file, project_id)
-
-This endpoint is deprecated.
-
-### Example
-```ruby
-# load the gem
-require 'bitbar-cloud-api-client'
-# setup authorization
-BitbarCloudApiClient.configure do |config|
-  # Configure HTTP basic authorization: apiKeyInHeader
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
-end
-
-api_instance = BitbarCloudApiClient::AllEndpointsApi.new
-
-file = File.new('/path/to/file.txt') # File | file
-
-project_id = 789 # Integer | projectId
-
-
-begin
-  #This endpoint is deprecated.
-  result = api_instance.upload_project_data_file_using_post(file, project_id)
-  p result
-rescue BitbarCloudApiClient::ApiError => e
-  puts "Exception when calling AllEndpointsApi->upload_project_data_file_using_post: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **file** | **File**| file | 
- **project_id** | **Integer**| projectId | 
-
-### Return type
-
-[**APIUserFile**](APIUserFile.md)
-
-### Authorization
-
-[apiKeyInHeader](../README.md#apiKeyInHeader)
-
-### HTTP request headers
-
- - **Content-Type**: multipart/form-data
- - **Accept**: */*
-
-
-
-# **upload_project_data_file_using_post1**
-> APIUserFile upload_project_data_file_using_post1(file, project_id, user_id)
-
-This endpoint is deprecated.
-
-### Example
-```ruby
-# load the gem
-require 'bitbar-cloud-api-client'
-# setup authorization
-BitbarCloudApiClient.configure do |config|
-  # Configure HTTP basic authorization: apiKeyInHeader
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
-end
-
-api_instance = BitbarCloudApiClient::AllEndpointsApi.new
-
-file = File.new('/path/to/file.txt') # File | file
-
-project_id = 789 # Integer | projectId
-
-user_id = 789 # Integer | userId
-
-
-begin
-  #This endpoint is deprecated.
-  result = api_instance.upload_project_data_file_using_post1(file, project_id, user_id)
-  p result
-rescue BitbarCloudApiClient::ApiError => e
-  puts "Exception when calling AllEndpointsApi->upload_project_data_file_using_post1: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **file** | **File**| file | 
- **project_id** | **Integer**| projectId | 
- **user_id** | **Integer**| userId | 
-
-### Return type
-
-[**APIUserFile**](APIUserFile.md)
-
-### Authorization
-
-[apiKeyInHeader](../README.md#apiKeyInHeader)
-
-### HTTP request headers
-
- - **Content-Type**: multipart/form-data
- - **Accept**: */*
-
-
-
-# **upload_project_test_file_using_post**
-> APIUserFile upload_project_test_file_using_post(file, project_id)
-
-This endpoint is deprecated.
-
-### Example
-```ruby
-# load the gem
-require 'bitbar-cloud-api-client'
-# setup authorization
-BitbarCloudApiClient.configure do |config|
-  # Configure HTTP basic authorization: apiKeyInHeader
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
-end
-
-api_instance = BitbarCloudApiClient::AllEndpointsApi.new
-
-file = File.new('/path/to/file.txt') # File | file
-
-project_id = 789 # Integer | projectId
-
-
-begin
-  #This endpoint is deprecated.
-  result = api_instance.upload_project_test_file_using_post(file, project_id)
-  p result
-rescue BitbarCloudApiClient::ApiError => e
-  puts "Exception when calling AllEndpointsApi->upload_project_test_file_using_post: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **file** | **File**| file | 
- **project_id** | **Integer**| projectId | 
-
-### Return type
-
-[**APIUserFile**](APIUserFile.md)
-
-### Authorization
-
-[apiKeyInHeader](../README.md#apiKeyInHeader)
-
-### HTTP request headers
-
- - **Content-Type**: multipart/form-data
- - **Accept**: */*
-
-
-
-# **upload_project_test_file_using_post1**
-> APIUserFile upload_project_test_file_using_post1(file, project_id, user_id)
-
-This endpoint is deprecated.
-
-### Example
-```ruby
-# load the gem
-require 'bitbar-cloud-api-client'
-# setup authorization
-BitbarCloudApiClient.configure do |config|
-  # Configure HTTP basic authorization: apiKeyInHeader
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
-end
-
-api_instance = BitbarCloudApiClient::AllEndpointsApi.new
-
-file = File.new('/path/to/file.txt') # File | file
-
-project_id = 789 # Integer | projectId
-
-user_id = 789 # Integer | userId
-
-
-begin
-  #This endpoint is deprecated.
-  result = api_instance.upload_project_test_file_using_post1(file, project_id, user_id)
-  p result
-rescue BitbarCloudApiClient::ApiError => e
-  puts "Exception when calling AllEndpointsApi->upload_project_test_file_using_post1: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **file** | **File**| file | 
- **project_id** | **Integer**| projectId | 
- **user_id** | **Integer**| userId | 
-
-### Return type
-
-[**APIUserFile**](APIUserFile.md)
-
-### Authorization
-
-[apiKeyInHeader](../README.md#apiKeyInHeader)
-
-### HTTP request headers
-
- - **Content-Type**: multipart/form-data
+ - **Content-Type**: application/json
  - **Accept**: */*
 
 
@@ -29444,6 +26630,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -29480,7 +26669,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -29503,6 +26692,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -29542,7 +26734,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -29565,6 +26757,9 @@ BitbarCloudApiClient.configure do |config|
   # Configure HTTP basic authorization: apiKeyInHeader
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
+
+  # Configure OAuth2 access token for authorization: oAuth2
+  config.access_token = 'YOUR ACCESS TOKEN'
 end
 
 api_instance = BitbarCloudApiClient::AllEndpointsApi.new
@@ -29596,7 +26791,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader)
+[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 

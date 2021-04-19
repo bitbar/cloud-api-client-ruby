@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**create_time** | **DateTime** |  | [optional] 
+**create_time** | **Integer** |  | [optional] 
 **direct_url** | **String** |  | [optional] 
 **direction** | **String** |  | [optional] 
 **duplicate** | **BOOLEAN** |  | [optional] 
