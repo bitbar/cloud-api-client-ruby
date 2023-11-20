@@ -1,21 +1,20 @@
 # BitbarCloudApiClient::NotificationsApi
 
-All URIs are relative to *https://cloud.bitbar.com*
+All URIs are relative to *https://cloud.bitbar.com/cloud*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**create_user_notification_using_post**](NotificationsApi.md#create_user_notification_using_post) | **POST** /api/v2/users/{userId}/notifications | Create notification.
-[**delete_user_notification_email_using_delete**](NotificationsApi.md#delete_user_notification_email_using_delete) | **DELETE** /api/v2/users/{userId}/notifications/{id} | Delete notification.
-[**get_channels_using_get1**](NotificationsApi.md#get_channels_using_get1) | **GET** /api/v2/users/*/notifications/channels | Get notification channels.
-[**get_scopes_using_get1**](NotificationsApi.md#get_scopes_using_get1) | **GET** /api/v2/users/*/notifications/scopes | Get notification scopes.
-[**get_user_notification_using_get**](NotificationsApi.md#get_user_notification_using_get) | **GET** /api/v2/users/{userId}/notifications/{id} | Get notification.
-[**get_user_notifications_using_get**](NotificationsApi.md#get_user_notifications_using_get) | **GET** /api/v2/users/{userId}/notifications | Get notifications.
-[**test_user_notification_using_post**](NotificationsApi.md#test_user_notification_using_post) | **POST** /api/v2/users/{userId}/notifications/{id}/test | Test notification.
-[**update_user_notification_using_post**](NotificationsApi.md#update_user_notification_using_post) | **POST** /api/v2/users/{userId}/notifications/{id} | Update notification.
+[**create_user_notification**](NotificationsApi.md#create_user_notification) | **POST** /api/v2/users/{userId}/notifications | Create notification.
+[**delete_user_notification_email**](NotificationsApi.md#delete_user_notification_email) | **DELETE** /api/v2/users/{userId}/notifications/{id} | Delete notification.
+[**get_channels**](NotificationsApi.md#get_channels) | **GET** /api/v2/users/*/notifications/channels | Get notification channels.
+[**get_scopes**](NotificationsApi.md#get_scopes) | **GET** /api/v2/users/*/notifications/scopes | Get notification scopes.
+[**get_user_notification**](NotificationsApi.md#get_user_notification) | **GET** /api/v2/users/{userId}/notifications/{id} | Get notification.
+[**get_user_notifications**](NotificationsApi.md#get_user_notifications) | **GET** /api/v2/users/{userId}/notifications | Get notifications.
+[**test_user_notification**](NotificationsApi.md#test_user_notification) | **POST** /api/v2/users/{userId}/notifications/{id}/test | Test notification.
+[**update_user_notification**](NotificationsApi.md#update_user_notification) | **POST** /api/v2/users/{userId}/notifications/{id} | Update notification.
 
-
-# **create_user_notification_using_post**
-> APINotification create_user_notification_using_post(channel, destination, scope, user_id, opts)
+# **create_user_notification**
+> APINotification create_user_notification(user_id, destination, channel, scope, opts)
 
 Create notification.
 
@@ -23,36 +22,22 @@ Create notification.
 ```ruby
 # load the gem
 require 'bitbar-cloud-api-client'
-# setup authorization
-BitbarCloudApiClient.configure do |config|
-  # Configure HTTP basic authorization: apiKeyInHeader
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
-
-  # Configure OAuth2 access token for authorization: oAuth2
-  config.access_token = 'YOUR ACCESS TOKEN'
-end
 
 api_instance = BitbarCloudApiClient::NotificationsApi.new
-
-channel = 'channel_example' # String | channel
-
-destination = 'destination_example' # String | destination
-
-scope = 'scope_example' # String | scope
-
-user_id = 789 # Integer | userId
-
+user_id = 789 # Integer | 
+destination = 'destination_example' # String | 
+channel = 'channel_example' # String | 
+scope = 'scope_example' # String | 
 opts = { 
-  project_id: 789 # Integer | projectId
+  project_id: 789 # Integer | 
 }
 
 begin
   #Create notification.
-  result = api_instance.create_user_notification_using_post(channel, destination, scope, user_id, opts)
+  result = api_instance.create_user_notification(user_id, destination, channel, scope, opts)
   p result
 rescue BitbarCloudApiClient::ApiError => e
-  puts "Exception when calling NotificationsApi->create_user_notification_using_post: #{e}"
+  puts "Exception when calling NotificationsApi->create_user_notification: #{e}"
 end
 ```
 
@@ -60,11 +45,11 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **channel** | **String**| channel | 
- **destination** | **String**| destination | 
- **scope** | **String**| scope | 
- **user_id** | **Integer**| userId | 
- **project_id** | **Integer**| projectId | [optional] 
+ **user_id** | **Integer**|  | 
+ **destination** | **String**|  | 
+ **channel** | **String**|  | 
+ **scope** | **String**|  | 
+ **project_id** | **Integer**|  | [optional] 
 
 ### Return type
 
@@ -72,17 +57,17 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
+No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: */*
 
 
 
-# **delete_user_notification_email_using_delete**
-> delete_user_notification_email_using_delete(id, user_id)
+# **delete_user_notification_email**
+> delete_user_notification_email(user_id, id)
 
 Delete notification.
 
@@ -90,28 +75,17 @@ Delete notification.
 ```ruby
 # load the gem
 require 'bitbar-cloud-api-client'
-# setup authorization
-BitbarCloudApiClient.configure do |config|
-  # Configure HTTP basic authorization: apiKeyInHeader
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
-
-  # Configure OAuth2 access token for authorization: oAuth2
-  config.access_token = 'YOUR ACCESS TOKEN'
-end
 
 api_instance = BitbarCloudApiClient::NotificationsApi.new
-
-id = 789 # Integer | id
-
-user_id = 789 # Integer | userId
+user_id = 789 # Integer | 
+id = 789 # Integer | 
 
 
 begin
   #Delete notification.
-  api_instance.delete_user_notification_email_using_delete(id, user_id)
+  api_instance.delete_user_notification_email(user_id, id)
 rescue BitbarCloudApiClient::ApiError => e
-  puts "Exception when calling NotificationsApi->delete_user_notification_email_using_delete: #{e}"
+  puts "Exception when calling NotificationsApi->delete_user_notification_email: #{e}"
 end
 ```
 
@@ -119,8 +93,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Integer**| id | 
- **user_id** | **Integer**| userId | 
+ **user_id** | **Integer**|  | 
+ **id** | **Integer**|  | 
 
 ### Return type
 
@@ -128,7 +102,7 @@ nil (empty response body)
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -137,8 +111,8 @@ nil (empty response body)
 
 
 
-# **get_channels_using_get1**
-> APIListOfAPIEnum get_channels_using_get1
+# **get_channels**
+> APIListAPIEnum get_channels
 
 Get notification channels.
 
@@ -146,24 +120,15 @@ Get notification channels.
 ```ruby
 # load the gem
 require 'bitbar-cloud-api-client'
-# setup authorization
-BitbarCloudApiClient.configure do |config|
-  # Configure HTTP basic authorization: apiKeyInHeader
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
-
-  # Configure OAuth2 access token for authorization: oAuth2
-  config.access_token = 'YOUR ACCESS TOKEN'
-end
 
 api_instance = BitbarCloudApiClient::NotificationsApi.new
 
 begin
   #Get notification channels.
-  result = api_instance.get_channels_using_get1
+  result = api_instance.get_channels
   p result
 rescue BitbarCloudApiClient::ApiError => e
-  puts "Exception when calling NotificationsApi->get_channels_using_get1: #{e}"
+  puts "Exception when calling NotificationsApi->get_channels: #{e}"
 end
 ```
 
@@ -172,11 +137,11 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**APIListOfAPIEnum**](APIListOfAPIEnum.md)
+[**APIListAPIEnum**](APIListAPIEnum.md)
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -185,8 +150,8 @@ This endpoint does not need any parameter.
 
 
 
-# **get_scopes_using_get1**
-> APIListOfAPIEnum get_scopes_using_get1
+# **get_scopes**
+> APIListAPIEnum get_scopes
 
 Get notification scopes.
 
@@ -194,24 +159,15 @@ Get notification scopes.
 ```ruby
 # load the gem
 require 'bitbar-cloud-api-client'
-# setup authorization
-BitbarCloudApiClient.configure do |config|
-  # Configure HTTP basic authorization: apiKeyInHeader
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
-
-  # Configure OAuth2 access token for authorization: oAuth2
-  config.access_token = 'YOUR ACCESS TOKEN'
-end
 
 api_instance = BitbarCloudApiClient::NotificationsApi.new
 
 begin
   #Get notification scopes.
-  result = api_instance.get_scopes_using_get1
+  result = api_instance.get_scopes
   p result
 rescue BitbarCloudApiClient::ApiError => e
-  puts "Exception when calling NotificationsApi->get_scopes_using_get1: #{e}"
+  puts "Exception when calling NotificationsApi->get_scopes: #{e}"
 end
 ```
 
@@ -220,11 +176,11 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**APIListOfAPIEnum**](APIListOfAPIEnum.md)
+[**APIListAPIEnum**](APIListAPIEnum.md)
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -233,8 +189,8 @@ This endpoint does not need any parameter.
 
 
 
-# **get_user_notification_using_get**
-> APINotification get_user_notification_using_get(id, user_id)
+# **get_user_notification**
+> APINotification get_user_notification(user_id, id)
 
 Get notification.
 
@@ -242,29 +198,18 @@ Get notification.
 ```ruby
 # load the gem
 require 'bitbar-cloud-api-client'
-# setup authorization
-BitbarCloudApiClient.configure do |config|
-  # Configure HTTP basic authorization: apiKeyInHeader
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
-
-  # Configure OAuth2 access token for authorization: oAuth2
-  config.access_token = 'YOUR ACCESS TOKEN'
-end
 
 api_instance = BitbarCloudApiClient::NotificationsApi.new
-
-id = 789 # Integer | id
-
-user_id = 789 # Integer | userId
+user_id = 789 # Integer | 
+id = 789 # Integer | 
 
 
 begin
   #Get notification.
-  result = api_instance.get_user_notification_using_get(id, user_id)
+  result = api_instance.get_user_notification(user_id, id)
   p result
 rescue BitbarCloudApiClient::ApiError => e
-  puts "Exception when calling NotificationsApi->get_user_notification_using_get: #{e}"
+  puts "Exception when calling NotificationsApi->get_user_notification: #{e}"
 end
 ```
 
@@ -272,8 +217,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Integer**| id | 
- **user_id** | **Integer**| userId | 
+ **user_id** | **Integer**|  | 
+ **id** | **Integer**|  | 
 
 ### Return type
 
@@ -281,7 +226,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -290,8 +235,8 @@ Name | Type | Description  | Notes
 
 
 
-# **get_user_notifications_using_get**
-> APIListOfAPINotification get_user_notifications_using_get(user_id, opts)
+# **get_user_notifications**
+> APIListAPINotification get_user_notifications(user_id, opts)
 
 Get notifications.
 
@@ -299,33 +244,22 @@ Get notifications.
 ```ruby
 # load the gem
 require 'bitbar-cloud-api-client'
-# setup authorization
-BitbarCloudApiClient.configure do |config|
-  # Configure HTTP basic authorization: apiKeyInHeader
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
-
-  # Configure OAuth2 access token for authorization: oAuth2
-  config.access_token = 'YOUR ACCESS TOKEN'
-end
 
 api_instance = BitbarCloudApiClient::NotificationsApi.new
-
-user_id = 789 # Integer | userId
-
+user_id = 789 # Integer | 
 opts = { 
-  filter: 'filter_example', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=scope_eq_all<br>filter=channel_eq_slack<br>filter=id_eq_1<br>filter=userid_eq_1<br>filter=projectid_eq_1
-  limit: 20, # Integer | limit parameter define page size
-  offset: 0, # Integer | offset parameter define page number
-  sort: 'sort_example' # String | sort parameter contains list of fields used for sort query result <br> examples: <br> sort=scope_a<br>sort=channel_a<br>sort=id_a<br>sort=userId_a<br>sort=projectId_a
+  sort: '', # String | sort parameter contains list of fields used for sort query result <br> examples: <br> sort=scope_a<br>sort=channel_a<br>sort=id_a<br>sort=projectId_a<br>sort=userId_a
+  filter: '', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=scope_eq_all<br>filter=channel_eq_slack<br>filter=id_eq_1<br>filter=projectid_eq_1<br>filter=userid_eq_1
+  offset: '0', # String | offset parameter define page number
+  limit: '20' # String | limit parameter define page size
 }
 
 begin
   #Get notifications.
-  result = api_instance.get_user_notifications_using_get(user_id, opts)
+  result = api_instance.get_user_notifications(user_id, opts)
   p result
 rescue BitbarCloudApiClient::ApiError => e
-  puts "Exception when calling NotificationsApi->get_user_notifications_using_get: #{e}"
+  puts "Exception when calling NotificationsApi->get_user_notifications: #{e}"
 end
 ```
 
@@ -333,19 +267,19 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **user_id** | **Integer**| userId | 
- **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;scope_eq_all&lt;br&gt;filter&#x3D;channel_eq_slack&lt;br&gt;filter&#x3D;id_eq_1&lt;br&gt;filter&#x3D;userid_eq_1&lt;br&gt;filter&#x3D;projectid_eq_1 | [optional] 
- **limit** | **Integer**| limit parameter define page size | [optional] [default to 20]
- **offset** | **Integer**| offset parameter define page number | [optional] [default to 0]
- **sort** | **String**| sort parameter contains list of fields used for sort query result &lt;br&gt; examples: &lt;br&gt; sort&#x3D;scope_a&lt;br&gt;sort&#x3D;channel_a&lt;br&gt;sort&#x3D;id_a&lt;br&gt;sort&#x3D;userId_a&lt;br&gt;sort&#x3D;projectId_a | [optional] 
+ **user_id** | **Integer**|  | 
+ **sort** | **String**| sort parameter contains list of fields used for sort query result &lt;br&gt; examples: &lt;br&gt; sort&#x3D;scope_a&lt;br&gt;sort&#x3D;channel_a&lt;br&gt;sort&#x3D;id_a&lt;br&gt;sort&#x3D;projectId_a&lt;br&gt;sort&#x3D;userId_a | [optional] 
+ **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;scope_eq_all&lt;br&gt;filter&#x3D;channel_eq_slack&lt;br&gt;filter&#x3D;id_eq_1&lt;br&gt;filter&#x3D;projectid_eq_1&lt;br&gt;filter&#x3D;userid_eq_1 | [optional] 
+ **offset** | **String**| offset parameter define page number | [optional] [default to 0]
+ **limit** | **String**| limit parameter define page size | [optional] [default to 20]
 
 ### Return type
 
-[**APIListOfAPINotification**](APIListOfAPINotification.md)
+[**APIListAPINotification**](APIListAPINotification.md)
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -354,8 +288,8 @@ Name | Type | Description  | Notes
 
 
 
-# **test_user_notification_using_post**
-> APIMessage test_user_notification_using_post(id, user_id)
+# **test_user_notification**
+> APIMessage test_user_notification(user_id, id)
 
 Test notification.
 
@@ -363,29 +297,18 @@ Test notification.
 ```ruby
 # load the gem
 require 'bitbar-cloud-api-client'
-# setup authorization
-BitbarCloudApiClient.configure do |config|
-  # Configure HTTP basic authorization: apiKeyInHeader
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
-
-  # Configure OAuth2 access token for authorization: oAuth2
-  config.access_token = 'YOUR ACCESS TOKEN'
-end
 
 api_instance = BitbarCloudApiClient::NotificationsApi.new
-
-id = 789 # Integer | id
-
-user_id = 789 # Integer | userId
+user_id = 789 # Integer | 
+id = 789 # Integer | 
 
 
 begin
   #Test notification.
-  result = api_instance.test_user_notification_using_post(id, user_id)
+  result = api_instance.test_user_notification(user_id, id)
   p result
 rescue BitbarCloudApiClient::ApiError => e
-  puts "Exception when calling NotificationsApi->test_user_notification_using_post: #{e}"
+  puts "Exception when calling NotificationsApi->test_user_notification: #{e}"
 end
 ```
 
@@ -393,8 +316,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Integer**| id | 
- **user_id** | **Integer**| userId | 
+ **user_id** | **Integer**|  | 
+ **id** | **Integer**|  | 
 
 ### Return type
 
@@ -402,17 +325,17 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
+No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: */*
 
 
 
-# **update_user_notification_using_post**
-> APINotification update_user_notification_using_post(id, user_id, opts)
+# **update_user_notification**
+> APINotification update_user_notification(user_id, id, opts)
 
 Update notification.
 
@@ -420,33 +343,21 @@ Update notification.
 ```ruby
 # load the gem
 require 'bitbar-cloud-api-client'
-# setup authorization
-BitbarCloudApiClient.configure do |config|
-  # Configure HTTP basic authorization: apiKeyInHeader
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
-
-  # Configure OAuth2 access token for authorization: oAuth2
-  config.access_token = 'YOUR ACCESS TOKEN'
-end
 
 api_instance = BitbarCloudApiClient::NotificationsApi.new
-
-id = 789 # Integer | id
-
-user_id = 789 # Integer | userId
-
+user_id = 789 # Integer | 
+id = 789 # Integer | 
 opts = { 
-  destination: 'destination_example', # String | destination
-  scope: 'scope_example' # String | scope
+  destination: 'destination_example', # String | 
+  scope: 'scope_example' # String | 
 }
 
 begin
   #Update notification.
-  result = api_instance.update_user_notification_using_post(id, user_id, opts)
+  result = api_instance.update_user_notification(user_id, id, opts)
   p result
 rescue BitbarCloudApiClient::ApiError => e
-  puts "Exception when calling NotificationsApi->update_user_notification_using_post: #{e}"
+  puts "Exception when calling NotificationsApi->update_user_notification: #{e}"
 end
 ```
 
@@ -454,10 +365,10 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Integer**| id | 
- **user_id** | **Integer**| userId | 
- **destination** | **String**| destination | [optional] 
- **scope** | **String**| scope | [optional] 
+ **user_id** | **Integer**|  | 
+ **id** | **Integer**|  | 
+ **destination** | **String**|  | [optional] 
+ **scope** | **String**|  | [optional] 
 
 ### Return type
 
@@ -465,11 +376,11 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
+No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: */*
 
 

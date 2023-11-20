@@ -3,11 +3,10 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**billable_seconds** | **Integer** |  | [optional] 
 **id** | **Integer** |  | [optional] 
-**non_billable_seconds** | **Integer** |  | [optional] 
-**os_type** | **String** |  | [optional] 
 **self_uri** | **String** |  | [optional] 
 **type** | **String** |  | [optional] 
-
+**os_type** | **String** |  | [optional] 
+**billable_seconds** | **Integer** |  | [optional] 
+**non_billable_seconds** | **Integer** |  | [optional] 
 

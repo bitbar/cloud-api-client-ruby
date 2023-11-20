@@ -3,6 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**id** | **Integer** |  | [optional] 
+**self_uri** | **String** |  | [optional] 
 **alarm_on** | **BOOLEAN** |  | [optional] 
 **asl_on** | **BOOLEAN** |  | [optional] 
 **battery_level** | **Integer** |  | [optional] 
@@ -16,7 +18,6 @@ Name | Type | Description | Notes
 **email_account** | **String** |  | [optional] 
 **external_storage** | **Integer** |  | [optional] 
 **flash_on** | **BOOLEAN** |  | [optional] 
-**id** | **Integer** |  | [optional] 
 **internal_storage** | **Integer** |  | [optional] 
 **internet_access** | **BOOLEAN** |  | [optional] 
 **location_service_on** | **BOOLEAN** |  | [optional] 
@@ -24,12 +25,10 @@ Name | Type | Description | Notes
 **monitoring_on** | **BOOLEAN** |  | [optional] 
 **screen_locked** | **BOOLEAN** |  | [optional] 
 **sdcard_present** | **BOOLEAN** |  | [optional] 
-**self_uri** | **String** |  | [optional] 
 **ssid** | **String** |  | [optional] 
 **state** | **String** |  | [optional] 
 **tds_version** | **String** |  | [optional] 
 **test_executing** | **BOOLEAN** |  | [optional] 
 **tethering_on** | **BOOLEAN** |  | [optional] 
-**update_time** | **Integer** |  | [optional] 
-
+**update_time** | **DateTime** |  | [optional] 
 

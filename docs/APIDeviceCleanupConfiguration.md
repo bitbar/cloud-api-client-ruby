@@ -3,16 +3,15 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**id** | **Integer** |  | [optional] 
+**self_uri** | **String** |  | [optional] 
 **content** | **String** |  | [optional] 
-**create_time** | **Integer** |  | [optional] 
+**create_time** | **DateTime** |  | [optional] 
 **created_by_email** | **String** |  | [optional] 
 **created_by_id** | **Integer** |  | [optional] 
-**discriminator** | **String** |  | [optional] 
+**os_type** | **String** |  | [optional] 
+**last_modification_time** | **DateTime** |  | [optional] 
 **enabled** | **BOOLEAN** |  | [optional] 
 **global** | **BOOLEAN** |  | [optional] 
-**id** | **Integer** |  | [optional] 
-**last_modification_time** | **Integer** |  | [optional] 
-**os_type** | **String** |  | [optional] 
-**self_uri** | **String** |  | [optional] 
-
+**discriminator** | **String** |  | [optional] 
 

@@ -1,22 +1,21 @@
 # BitbarCloudApiClient::FilesApi
 
-All URIs are relative to *https://cloud.bitbar.com*
+All URIs are relative to *https://cloud.bitbar.com/cloud*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**delete_file_using_delete2**](FilesApi.md#delete_file_using_delete2) | **DELETE** /api/v2/users/{userId}/files/{fileId} | Delete file.
-[**download_icon_file_using_get1**](FilesApi.md#download_icon_file_using_get1) | **GET** /api/v2/users/{userId}/files/{fileId}/icon | Download icon of file.
-[**download_user_file_using_get1**](FilesApi.md#download_user_file_using_get1) | **GET** /api/v2/users/{userId}/files/{fileId}/file | Download file.
-[**get_file_tags_using_get1**](FilesApi.md#get_file_tags_using_get1) | **GET** /api/v2/users/{userId}/files/{fileId}/tags | Get file tags.
-[**get_user_file_using_get1**](FilesApi.md#get_user_file_using_get1) | **GET** /api/v2/users/{userId}/files/{fileId} | Get file.
-[**get_user_files_using_get**](FilesApi.md#get_user_files_using_get) | **GET** /api/v2/users/{userId}/files | Get files.
-[**update_file_name_using_post1**](FilesApi.md#update_file_name_using_post1) | **POST** /api/v2/users/{userId}/files/{fileId} | Update file name.
-[**update_user_file_using_post1**](FilesApi.md#update_user_file_using_post1) | **POST** /api/v2/users/{userId}/files/{fileId}/file | Update file content.
-[**upload_file_using_post2**](FilesApi.md#upload_file_using_post2) | **POST** /api/v2/users/{userId}/files | Upload file.
+[**delete_file**](FilesApi.md#delete_file) | **DELETE** /api/v2/users/{userId}/files/{fileId} | Delete file.
+[**download_icon_file**](FilesApi.md#download_icon_file) | **GET** /api/v2/users/{userId}/files/{fileId}/icon | Download icon of file.
+[**download_user_file**](FilesApi.md#download_user_file) | **GET** /api/v2/users/{userId}/files/{fileId}/file | Download file.
+[**get_file_tags**](FilesApi.md#get_file_tags) | **GET** /api/v2/users/{userId}/files/{fileId}/tags | Get file tags.
+[**get_user_file**](FilesApi.md#get_user_file) | **GET** /api/v2/users/{userId}/files/{fileId} | Get file.
+[**get_user_files**](FilesApi.md#get_user_files) | **GET** /api/v2/users/{userId}/files | Get files.
+[**update_file_name**](FilesApi.md#update_file_name) | **POST** /api/v2/users/{userId}/files/{fileId} | Update file name.
+[**update_user_file**](FilesApi.md#update_user_file) | **POST** /api/v2/users/{userId}/files/{fileId}/file | Update file content.
+[**upload_file**](FilesApi.md#upload_file) | **POST** /api/v2/users/{userId}/files | Upload file.
 
-
-# **delete_file_using_delete2**
-> delete_file_using_delete2(file_id, user_id)
+# **delete_file**
+> delete_file(user_id, file_id)
 
 Delete file.
 
@@ -24,28 +23,17 @@ Delete file.
 ```ruby
 # load the gem
 require 'bitbar-cloud-api-client'
-# setup authorization
-BitbarCloudApiClient.configure do |config|
-  # Configure HTTP basic authorization: apiKeyInHeader
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
-
-  # Configure OAuth2 access token for authorization: oAuth2
-  config.access_token = 'YOUR ACCESS TOKEN'
-end
 
 api_instance = BitbarCloudApiClient::FilesApi.new
-
-file_id = 789 # Integer | fileId
-
-user_id = 789 # Integer | userId
+user_id = 789 # Integer | 
+file_id = 789 # Integer | 
 
 
 begin
   #Delete file.
-  api_instance.delete_file_using_delete2(file_id, user_id)
+  api_instance.delete_file(user_id, file_id)
 rescue BitbarCloudApiClient::ApiError => e
-  puts "Exception when calling FilesApi->delete_file_using_delete2: #{e}"
+  puts "Exception when calling FilesApi->delete_file: #{e}"
 end
 ```
 
@@ -53,8 +41,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **file_id** | **Integer**| fileId | 
- **user_id** | **Integer**| userId | 
+ **user_id** | **Integer**|  | 
+ **file_id** | **Integer**|  | 
 
 ### Return type
 
@@ -62,7 +50,7 @@ nil (empty response body)
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -71,8 +59,8 @@ nil (empty response body)
 
 
 
-# **download_icon_file_using_get1**
-> download_icon_file_using_get1(file_id, user_id)
+# **download_icon_file**
+> download_icon_file(user_id, file_id)
 
 Download icon of file.
 
@@ -80,28 +68,17 @@ Download icon of file.
 ```ruby
 # load the gem
 require 'bitbar-cloud-api-client'
-# setup authorization
-BitbarCloudApiClient.configure do |config|
-  # Configure HTTP basic authorization: apiKeyInHeader
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
-
-  # Configure OAuth2 access token for authorization: oAuth2
-  config.access_token = 'YOUR ACCESS TOKEN'
-end
 
 api_instance = BitbarCloudApiClient::FilesApi.new
-
-file_id = 789 # Integer | fileId
-
-user_id = 789 # Integer | userId
+user_id = 789 # Integer | 
+file_id = 789 # Integer | 
 
 
 begin
   #Download icon of file.
-  api_instance.download_icon_file_using_get1(file_id, user_id)
+  api_instance.download_icon_file(user_id, file_id)
 rescue BitbarCloudApiClient::ApiError => e
-  puts "Exception when calling FilesApi->download_icon_file_using_get1: #{e}"
+  puts "Exception when calling FilesApi->download_icon_file: #{e}"
 end
 ```
 
@@ -109,8 +86,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **file_id** | **Integer**| fileId | 
- **user_id** | **Integer**| userId | 
+ **user_id** | **Integer**|  | 
+ **file_id** | **Integer**|  | 
 
 ### Return type
 
@@ -118,7 +95,7 @@ nil (empty response body)
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -127,8 +104,8 @@ nil (empty response body)
 
 
 
-# **download_user_file_using_get1**
-> download_user_file_using_get1(file_id, user_id, opts)
+# **download_user_file**
+> download_user_file(user_id, file_id, opts)
 
 Download file.
 
@@ -136,33 +113,20 @@ Download file.
 ```ruby
 # load the gem
 require 'bitbar-cloud-api-client'
-# setup authorization
-BitbarCloudApiClient.configure do |config|
-  # Configure HTTP basic authorization: apiKeyInHeader
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
-
-  # Configure OAuth2 access token for authorization: oAuth2
-  config.access_token = 'YOUR ACCESS TOKEN'
-end
 
 api_instance = BitbarCloudApiClient::FilesApi.new
-
-file_id = 789 # Integer | fileId
-
-user_id = 789 # Integer | userId
-
+user_id = 789 # Integer | 
+file_id = 789 # Integer | 
 opts = { 
-  attachment: true, # BOOLEAN | attachment
-  height: 56, # Integer | height
-  width: 56 # Integer | width
+  width: 56, # Integer | 
+  height: 56 # Integer | 
 }
 
 begin
   #Download file.
-  api_instance.download_user_file_using_get1(file_id, user_id, opts)
+  api_instance.download_user_file(user_id, file_id, opts)
 rescue BitbarCloudApiClient::ApiError => e
-  puts "Exception when calling FilesApi->download_user_file_using_get1: #{e}"
+  puts "Exception when calling FilesApi->download_user_file: #{e}"
 end
 ```
 
@@ -170,11 +134,10 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **file_id** | **Integer**| fileId | 
- **user_id** | **Integer**| userId | 
- **attachment** | **BOOLEAN**| attachment | [optional] [default to true]
- **height** | **Integer**| height | [optional] 
- **width** | **Integer**| width | [optional] 
+ **user_id** | **Integer**|  | 
+ **file_id** | **Integer**|  | 
+ **width** | **Integer**|  | [optional] 
+ **height** | **Integer**|  | [optional] 
 
 ### Return type
 
@@ -182,7 +145,7 @@ nil (empty response body)
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -191,8 +154,8 @@ nil (empty response body)
 
 
 
-# **get_file_tags_using_get1**
-> APIListOfAPIUserFileTag get_file_tags_using_get1(file_id, user_id, opts)
+# **get_file_tags**
+> APIListAPIUserFileTag get_file_tags(user_id, file_id, opts)
 
 Get file tags.
 
@@ -200,35 +163,23 @@ Get file tags.
 ```ruby
 # load the gem
 require 'bitbar-cloud-api-client'
-# setup authorization
-BitbarCloudApiClient.configure do |config|
-  # Configure HTTP basic authorization: apiKeyInHeader
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
-
-  # Configure OAuth2 access token for authorization: oAuth2
-  config.access_token = 'YOUR ACCESS TOKEN'
-end
 
 api_instance = BitbarCloudApiClient::FilesApi.new
-
-file_id = 789 # Integer | fileId
-
-user_id = 789 # Integer | userId
-
+user_id = 789 # Integer | 
+file_id = 789 # Integer | 
 opts = { 
-  filter: 'filter_example', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=name_eq_value<br>filter=id_eq_1
-  limit: 20, # Integer | limit parameter define page size
-  offset: 0, # Integer | offset parameter define page number
-  sort: 'sort_example' # String | sort parameter contains list of fields used for sort query result <br> examples: <br> sort=name_a<br>sort=id_a
+  sort: '', # String | sort parameter contains list of fields used for sort query result <br> examples: <br> sort=name_a<br>sort=id_a
+  filter: '', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=name_eq_value<br>filter=id_eq_1
+  offset: '0', # String | offset parameter define page number
+  limit: '20' # String | limit parameter define page size
 }
 
 begin
   #Get file tags.
-  result = api_instance.get_file_tags_using_get1(file_id, user_id, opts)
+  result = api_instance.get_file_tags(user_id, file_id, opts)
   p result
 rescue BitbarCloudApiClient::ApiError => e
-  puts "Exception when calling FilesApi->get_file_tags_using_get1: #{e}"
+  puts "Exception when calling FilesApi->get_file_tags: #{e}"
 end
 ```
 
@@ -236,20 +187,20 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **file_id** | **Integer**| fileId | 
- **user_id** | **Integer**| userId | 
- **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;name_eq_value&lt;br&gt;filter&#x3D;id_eq_1 | [optional] 
- **limit** | **Integer**| limit parameter define page size | [optional] [default to 20]
- **offset** | **Integer**| offset parameter define page number | [optional] [default to 0]
+ **user_id** | **Integer**|  | 
+ **file_id** | **Integer**|  | 
  **sort** | **String**| sort parameter contains list of fields used for sort query result &lt;br&gt; examples: &lt;br&gt; sort&#x3D;name_a&lt;br&gt;sort&#x3D;id_a | [optional] 
+ **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;name_eq_value&lt;br&gt;filter&#x3D;id_eq_1 | [optional] 
+ **offset** | **String**| offset parameter define page number | [optional] [default to 0]
+ **limit** | **String**| limit parameter define page size | [optional] [default to 20]
 
 ### Return type
 
-[**APIListOfAPIUserFileTag**](APIListOfAPIUserFileTag.md)
+[**APIListAPIUserFileTag**](APIListAPIUserFileTag.md)
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -258,8 +209,8 @@ Name | Type | Description  | Notes
 
 
 
-# **get_user_file_using_get1**
-> APIUserFile get_user_file_using_get1(file_id, user_id)
+# **get_user_file**
+> APIUserFile get_user_file(user_id, file_id)
 
 Get file.
 
@@ -267,29 +218,18 @@ Get file.
 ```ruby
 # load the gem
 require 'bitbar-cloud-api-client'
-# setup authorization
-BitbarCloudApiClient.configure do |config|
-  # Configure HTTP basic authorization: apiKeyInHeader
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
-
-  # Configure OAuth2 access token for authorization: oAuth2
-  config.access_token = 'YOUR ACCESS TOKEN'
-end
 
 api_instance = BitbarCloudApiClient::FilesApi.new
-
-file_id = 789 # Integer | fileId
-
-user_id = 789 # Integer | userId
+user_id = 789 # Integer | 
+file_id = 789 # Integer | 
 
 
 begin
   #Get file.
-  result = api_instance.get_user_file_using_get1(file_id, user_id)
+  result = api_instance.get_user_file(user_id, file_id)
   p result
 rescue BitbarCloudApiClient::ApiError => e
-  puts "Exception when calling FilesApi->get_user_file_using_get1: #{e}"
+  puts "Exception when calling FilesApi->get_user_file: #{e}"
 end
 ```
 
@@ -297,8 +237,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **file_id** | **Integer**| fileId | 
- **user_id** | **Integer**| userId | 
+ **user_id** | **Integer**|  | 
+ **file_id** | **Integer**|  | 
 
 ### Return type
 
@@ -306,7 +246,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -315,8 +255,8 @@ Name | Type | Description  | Notes
 
 
 
-# **get_user_files_using_get**
-> APIListOfAPIUserFile get_user_files_using_get(user_id, opts)
+# **get_user_files**
+> APIListAPIUserFile get_user_files(user_id, opts)
 
 Get files.
 
@@ -326,34 +266,23 @@ Owned files
 ```ruby
 # load the gem
 require 'bitbar-cloud-api-client'
-# setup authorization
-BitbarCloudApiClient.configure do |config|
-  # Configure HTTP basic authorization: apiKeyInHeader
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
-
-  # Configure OAuth2 access token for authorization: oAuth2
-  config.access_token = 'YOUR ACCESS TOKEN'
-end
 
 api_instance = BitbarCloudApiClient::FilesApi.new
-
-user_id = 789 # Integer | userId
-
+user_id = 789 # Integer | 
 opts = { 
-  filter: 'filter_example', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=size_eq_1<br>filter=createtime_eq_1593583745677<br>filter=name_eq_value<br>filter=mimetype_eq_value<br>filter=inputtype_eq_application<br>filter=state_eq_preparing<br>filter=id_eq_1<br>filter=direction_eq_input
-  limit: 20, # Integer | limit parameter define page size
-  offset: 0, # Integer | offset parameter define page number
-  sort: 'sort_example', # String | sort parameter contains list of fields used for sort query result <br> examples: <br> sort=size_a<br>sort=createTime_a<br>sort=name_a<br>sort=mimetype_a<br>sort=inputType_a<br>sort=state_a<br>sort=id_a<br>sort=direction_a
-  tag: ['tag_example'] # Array<String> | tag[]
+  tag: ['tag_example'], # Array<String> | 
+  sort: '', # String | sort parameter contains list of fields used for sort query result <br> examples: <br> sort=size_a<br>sort=createTime_a<br>sort=name_a<br>sort=inputType_a<br>sort=mimetype_a<br>sort=userEmail_a<br>sort=id_a<br>sort=state_a<br>sort=direction_a
+  filter: '', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=size_eq_1<br>filter=createtime_eq_1700230364193<br>filter=name_eq_value<br>filter=inputtype_eq_application<br>filter=mimetype_eq_value<br>filter=useremail_eq_value<br>filter=id_eq_1<br>filter=state_eq_preparing<br>filter=direction_eq_input
+  offset: '0', # String | offset parameter define page number
+  limit: '20' # String | limit parameter define page size
 }
 
 begin
   #Get files.
-  result = api_instance.get_user_files_using_get(user_id, opts)
+  result = api_instance.get_user_files(user_id, opts)
   p result
 rescue BitbarCloudApiClient::ApiError => e
-  puts "Exception when calling FilesApi->get_user_files_using_get: #{e}"
+  puts "Exception when calling FilesApi->get_user_files: #{e}"
 end
 ```
 
@@ -361,20 +290,20 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **user_id** | **Integer**| userId | 
- **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;size_eq_1&lt;br&gt;filter&#x3D;createtime_eq_1593583745677&lt;br&gt;filter&#x3D;name_eq_value&lt;br&gt;filter&#x3D;mimetype_eq_value&lt;br&gt;filter&#x3D;inputtype_eq_application&lt;br&gt;filter&#x3D;state_eq_preparing&lt;br&gt;filter&#x3D;id_eq_1&lt;br&gt;filter&#x3D;direction_eq_input | [optional] 
- **limit** | **Integer**| limit parameter define page size | [optional] [default to 20]
- **offset** | **Integer**| offset parameter define page number | [optional] [default to 0]
- **sort** | **String**| sort parameter contains list of fields used for sort query result &lt;br&gt; examples: &lt;br&gt; sort&#x3D;size_a&lt;br&gt;sort&#x3D;createTime_a&lt;br&gt;sort&#x3D;name_a&lt;br&gt;sort&#x3D;mimetype_a&lt;br&gt;sort&#x3D;inputType_a&lt;br&gt;sort&#x3D;state_a&lt;br&gt;sort&#x3D;id_a&lt;br&gt;sort&#x3D;direction_a | [optional] 
- **tag** | [**Array&lt;String&gt;**](String.md)| tag[] | [optional] 
+ **user_id** | **Integer**|  | 
+ **tag** | [**Array&lt;String&gt;**](String.md)|  | [optional] 
+ **sort** | **String**| sort parameter contains list of fields used for sort query result &lt;br&gt; examples: &lt;br&gt; sort&#x3D;size_a&lt;br&gt;sort&#x3D;createTime_a&lt;br&gt;sort&#x3D;name_a&lt;br&gt;sort&#x3D;inputType_a&lt;br&gt;sort&#x3D;mimetype_a&lt;br&gt;sort&#x3D;userEmail_a&lt;br&gt;sort&#x3D;id_a&lt;br&gt;sort&#x3D;state_a&lt;br&gt;sort&#x3D;direction_a | [optional] 
+ **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;size_eq_1&lt;br&gt;filter&#x3D;createtime_eq_1700230364193&lt;br&gt;filter&#x3D;name_eq_value&lt;br&gt;filter&#x3D;inputtype_eq_application&lt;br&gt;filter&#x3D;mimetype_eq_value&lt;br&gt;filter&#x3D;useremail_eq_value&lt;br&gt;filter&#x3D;id_eq_1&lt;br&gt;filter&#x3D;state_eq_preparing&lt;br&gt;filter&#x3D;direction_eq_input | [optional] 
+ **offset** | **String**| offset parameter define page number | [optional] [default to 0]
+ **limit** | **String**| limit parameter define page size | [optional] [default to 20]
 
 ### Return type
 
-[**APIListOfAPIUserFile**](APIListOfAPIUserFile.md)
+[**APIListAPIUserFile**](APIListAPIUserFile.md)
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -383,8 +312,8 @@ Name | Type | Description  | Notes
 
 
 
-# **update_file_name_using_post1**
-> APIUserFile update_file_name_using_post1(file_id, name, user_id)
+# **update_file_name**
+> APIUserFile update_file_name(user_id, file_id, name)
 
 Update file name.
 
@@ -392,31 +321,19 @@ Update file name.
 ```ruby
 # load the gem
 require 'bitbar-cloud-api-client'
-# setup authorization
-BitbarCloudApiClient.configure do |config|
-  # Configure HTTP basic authorization: apiKeyInHeader
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
-
-  # Configure OAuth2 access token for authorization: oAuth2
-  config.access_token = 'YOUR ACCESS TOKEN'
-end
 
 api_instance = BitbarCloudApiClient::FilesApi.new
-
-file_id = 789 # Integer | fileId
-
-name = 'name_example' # String | name
-
-user_id = 789 # Integer | userId
+user_id = 789 # Integer | 
+file_id = 789 # Integer | 
+name = 'name_example' # String | 
 
 
 begin
   #Update file name.
-  result = api_instance.update_file_name_using_post1(file_id, name, user_id)
+  result = api_instance.update_file_name(user_id, file_id, name)
   p result
 rescue BitbarCloudApiClient::ApiError => e
-  puts "Exception when calling FilesApi->update_file_name_using_post1: #{e}"
+  puts "Exception when calling FilesApi->update_file_name: #{e}"
 end
 ```
 
@@ -424,9 +341,9 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **file_id** | **Integer**| fileId | 
- **name** | **String**| name | 
- **user_id** | **Integer**| userId | 
+ **user_id** | **Integer**|  | 
+ **file_id** | **Integer**|  | 
+ **name** | **String**|  | 
 
 ### Return type
 
@@ -434,7 +351,56 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: */*
+
+
+
+# **update_user_file**
+> APIUserFile update_user_file(user_idfile_id, opts)
+
+Update file content.
+
+### Example
+```ruby
+# load the gem
+require 'bitbar-cloud-api-client'
+
+api_instance = BitbarCloudApiClient::FilesApi.new
+user_id = 789 # Integer | 
+file_id = 789 # Integer | 
+opts = { 
+  body: BitbarCloudApiClient::FileIdFileBody.new # FileIdFileBody | 
+}
+
+begin
+  #Update file content.
+  result = api_instance.update_user_file(user_idfile_id, opts)
+  p result
+rescue BitbarCloudApiClient::ApiError => e
+  puts "Exception when calling FilesApi->update_user_file: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **user_id** | **Integer**|  | 
+ **file_id** | **Integer**|  | 
+ **body** | [**FileIdFileBody**](FileIdFileBody.md)|  | [optional] 
+
+### Return type
+
+[**APIUserFile**](APIUserFile.md)
+
+### Authorization
+
+No authorization required
 
 ### HTTP request headers
 
@@ -443,68 +409,8 @@ Name | Type | Description  | Notes
 
 
 
-# **update_user_file_using_post1**
-> APIUserFile update_user_file_using_post1(file, file_id, user_id)
-
-Update file content.
-
-### Example
-```ruby
-# load the gem
-require 'bitbar-cloud-api-client'
-# setup authorization
-BitbarCloudApiClient.configure do |config|
-  # Configure HTTP basic authorization: apiKeyInHeader
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
-
-  # Configure OAuth2 access token for authorization: oAuth2
-  config.access_token = 'YOUR ACCESS TOKEN'
-end
-
-api_instance = BitbarCloudApiClient::FilesApi.new
-
-file = File.new('/path/to/file.txt') # File | file
-
-file_id = 789 # Integer | fileId
-
-user_id = 789 # Integer | userId
-
-
-begin
-  #Update file content.
-  result = api_instance.update_user_file_using_post1(file, file_id, user_id)
-  p result
-rescue BitbarCloudApiClient::ApiError => e
-  puts "Exception when calling FilesApi->update_user_file_using_post1: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **file** | **File**| file | 
- **file_id** | **Integer**| fileId | 
- **user_id** | **Integer**| userId | 
-
-### Return type
-
-[**APIUserFile**](APIUserFile.md)
-
-### Authorization
-
-[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
-
-### HTTP request headers
-
- - **Content-Type**: multipart/form-data
- - **Accept**: */*
-
-
-
-# **upload_file_using_post2**
-> APIUserFile upload_file_using_post2(file, user_id)
+# **upload_file**
+> APIUserFile upload_file(user_id, opts)
 
 Upload file.
 
@@ -512,29 +418,19 @@ Upload file.
 ```ruby
 # load the gem
 require 'bitbar-cloud-api-client'
-# setup authorization
-BitbarCloudApiClient.configure do |config|
-  # Configure HTTP basic authorization: apiKeyInHeader
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
-
-  # Configure OAuth2 access token for authorization: oAuth2
-  config.access_token = 'YOUR ACCESS TOKEN'
-end
 
 api_instance = BitbarCloudApiClient::FilesApi.new
-
-file = File.new('/path/to/file.txt') # File | file
-
-user_id = 789 # Integer | userId
-
+user_id = 789 # Integer | 
+opts = { 
+  body: BitbarCloudApiClient::UserIdFilesBody.new # UserIdFilesBody | 
+}
 
 begin
   #Upload file.
-  result = api_instance.upload_file_using_post2(file, user_id)
+  result = api_instance.upload_file(user_id, opts)
   p result
 rescue BitbarCloudApiClient::ApiError => e
-  puts "Exception when calling FilesApi->upload_file_using_post2: #{e}"
+  puts "Exception when calling FilesApi->upload_file: #{e}"
 end
 ```
 
@@ -542,8 +438,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **file** | **File**| file | 
- **user_id** | **Integer**| userId | 
+ **user_id** | **Integer**|  | 
+ **body** | [**UserIdFilesBody**](UserIdFilesBody.md)|  | [optional] 
 
 ### Return type
 
@@ -551,11 +447,11 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
+No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: multipart/form-data
+ - **Content-Type**: application/json
  - **Accept**: */*
 
 

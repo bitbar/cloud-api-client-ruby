@@ -1,24 +1,23 @@
 # BitbarCloudApiClient::DeviceGroupsApi
 
-All URIs are relative to *https://cloud.bitbar.com*
+All URIs are relative to *https://cloud.bitbar.com/cloud*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**add_device_to_device_group_using_post1**](DeviceGroupsApi.md#add_device_to_device_group_using_post1) | **POST** /api/v2/users/{userId}/device-groups/{deviceGroupId}/devices | Add device to device group.
-[**add_selector_to_device_group_using_post1**](DeviceGroupsApi.md#add_selector_to_device_group_using_post1) | **POST** /api/v2/users/{userId}/device-groups/{deviceGroupId}/selectors | Add selectors to device group.
-[**create_user_device_group_using_post**](DeviceGroupsApi.md#create_user_device_group_using_post) | **POST** /api/v2/users/{userId}/device-groups | Create device group.
-[**delete_device_from_device_group_using_delete1**](DeviceGroupsApi.md#delete_device_from_device_group_using_delete1) | **DELETE** /api/v2/users/{userId}/device-groups/{deviceGroupId}/devices/{deviceId} | Delete device from device group.
-[**delete_selector_from_device_group_using_delete1**](DeviceGroupsApi.md#delete_selector_from_device_group_using_delete1) | **DELETE** /api/v2/users/{userId}/device-groups/{deviceGroupId}/selectors/{selectorId} | Delete selector from device group.
-[**delete_user_device_group_using_delete**](DeviceGroupsApi.md#delete_user_device_group_using_delete) | **DELETE** /api/v2/users/{userId}/device-groups/{deviceGroupId} | Delete device group.
-[**get_device_group_devices_using_get1**](DeviceGroupsApi.md#get_device_group_devices_using_get1) | **GET** /api/v2/users/{userId}/device-groups/{deviceGroupId}/devices | Get device group devices.
-[**get_device_group_selectors_using_get1**](DeviceGroupsApi.md#get_device_group_selectors_using_get1) | **GET** /api/v2/users/{userId}/device-groups/{deviceGroupId}/selectors | Get device group selectors.
-[**get_user_device_group_using_get**](DeviceGroupsApi.md#get_user_device_group_using_get) | **GET** /api/v2/users/{userId}/device-groups/{deviceGroupId} | Get device group.
-[**get_user_device_groups_using_get**](DeviceGroupsApi.md#get_user_device_groups_using_get) | **GET** /api/v2/users/{userId}/device-groups | Get device groups.
-[**update_user_device_group_using_post1**](DeviceGroupsApi.md#update_user_device_group_using_post1) | **POST** /api/v2/users/{userId}/device-groups/{deviceGroupId} | Update device group.
+[**add_device_to_device_group**](DeviceGroupsApi.md#add_device_to_device_group) | **POST** /api/v2/users/{userId}/device-groups/{deviceGroupId}/devices | Add device to device group.
+[**add_selector_to_device_group**](DeviceGroupsApi.md#add_selector_to_device_group) | **POST** /api/v2/users/{userId}/device-groups/{deviceGroupId}/selectors | Add selectors to device group.
+[**create_user_device_group**](DeviceGroupsApi.md#create_user_device_group) | **POST** /api/v2/users/{userId}/device-groups | Create device group.
+[**delete_device_from_device_group**](DeviceGroupsApi.md#delete_device_from_device_group) | **DELETE** /api/v2/users/{userId}/device-groups/{deviceGroupId}/devices/{deviceId} | Delete device from device group.
+[**delete_selector_from_device_group**](DeviceGroupsApi.md#delete_selector_from_device_group) | **DELETE** /api/v2/users/{userId}/device-groups/{deviceGroupId}/selectors/{selectorId} | Delete selector from device group.
+[**delete_user_device_group**](DeviceGroupsApi.md#delete_user_device_group) | **DELETE** /api/v2/users/{userId}/device-groups/{deviceGroupId} | Delete device group.
+[**get_device_group_devices**](DeviceGroupsApi.md#get_device_group_devices) | **GET** /api/v2/users/{userId}/device-groups/{deviceGroupId}/devices | Get device group devices.
+[**get_device_group_selectors**](DeviceGroupsApi.md#get_device_group_selectors) | **GET** /api/v2/users/{userId}/device-groups/{deviceGroupId}/selectors | Get device group selectors.
+[**get_user_device_group**](DeviceGroupsApi.md#get_user_device_group) | **GET** /api/v2/users/{userId}/device-groups/{deviceGroupId} | Get device group.
+[**get_user_device_groups**](DeviceGroupsApi.md#get_user_device_groups) | **GET** /api/v2/users/{userId}/device-groups | Get device groups.
+[**update_user_device_group**](DeviceGroupsApi.md#update_user_device_group) | **POST** /api/v2/users/{userId}/device-groups/{deviceGroupId} | Update device group.
 
-
-# **add_device_to_device_group_using_post1**
-> APIDeviceGroup add_device_to_device_group_using_post1(device_group_id, user_id, opts)
+# **add_device_to_device_group**
+> APIDeviceGroup add_device_to_device_group(user_id, device_group_id, opts)
 
 Add device to device group.
 
@@ -26,33 +25,21 @@ Add device to device group.
 ```ruby
 # load the gem
 require 'bitbar-cloud-api-client'
-# setup authorization
-BitbarCloudApiClient.configure do |config|
-  # Configure HTTP basic authorization: apiKeyInHeader
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
-
-  # Configure OAuth2 access token for authorization: oAuth2
-  config.access_token = 'YOUR ACCESS TOKEN'
-end
 
 api_instance = BitbarCloudApiClient::DeviceGroupsApi.new
-
-device_group_id = 789 # Integer | deviceGroupId
-
-user_id = 789 # Integer | userId
-
+user_id = 789 # Integer | 
+device_group_id = 789 # Integer | 
 opts = { 
-  device_id: [56], # Array<Integer> | deviceId
-  device_ids: [56] # Array<Integer> | deviceIds[]
+  device_id: [56], # Array<Integer> | 
+  device_ids: [56] # Array<Integer> | 
 }
 
 begin
   #Add device to device group.
-  result = api_instance.add_device_to_device_group_using_post1(device_group_id, user_id, opts)
+  result = api_instance.add_device_to_device_group(user_id, device_group_id, opts)
   p result
 rescue BitbarCloudApiClient::ApiError => e
-  puts "Exception when calling DeviceGroupsApi->add_device_to_device_group_using_post1: #{e}"
+  puts "Exception when calling DeviceGroupsApi->add_device_to_device_group: #{e}"
 end
 ```
 
@@ -60,10 +47,10 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **device_group_id** | **Integer**| deviceGroupId | 
- **user_id** | **Integer**| userId | 
- **device_id** | [**Array&lt;Integer&gt;**](Integer.md)| deviceId | [optional] 
- **device_ids** | [**Array&lt;Integer&gt;**](Integer.md)| deviceIds[] | [optional] 
+ **user_id** | **Integer**|  | 
+ **device_group_id** | **Integer**|  | 
+ **device_id** | [**Array&lt;Integer&gt;**](Integer.md)|  | [optional] 
+ **device_ids** | [**Array&lt;Integer&gt;**](Integer.md)|  | [optional] 
 
 ### Return type
 
@@ -71,17 +58,17 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
+No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: */*
 
 
 
-# **add_selector_to_device_group_using_post1**
-> APIDeviceGroup add_selector_to_device_group_using_post1(device_group_id, selector_ids, user_id, opts)
+# **add_selector_to_device_group**
+> APIDeviceGroup add_selector_to_device_group(user_id, device_group_id, selector_ids, opts)
 
 Add selectors to device group.
 
@@ -89,37 +76,24 @@ Add selectors to device group.
 ```ruby
 # load the gem
 require 'bitbar-cloud-api-client'
-# setup authorization
-BitbarCloudApiClient.configure do |config|
-  # Configure HTTP basic authorization: apiKeyInHeader
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
-
-  # Configure OAuth2 access token for authorization: oAuth2
-  config.access_token = 'YOUR ACCESS TOKEN'
-end
 
 api_instance = BitbarCloudApiClient::DeviceGroupsApi.new
-
-device_group_id = 789 # Integer | deviceGroupId
-
-selector_ids = [56] # Array<Integer> | selectorIds[]
-
-user_id = 789 # Integer | userId
-
+user_id = 789 # Integer | 
+device_group_id = 789 # Integer | 
+selector_ids = [56] # Array<Integer> | 
 opts = { 
-  filter: 'filter_example', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=displayname_eq_value<br>filter=ostype_eq_ios<br>filter=name_eq_value<br>filter=id_eq_1<br>filter=userid_eq_1
-  limit: 20, # Integer | limit parameter define page size
-  offset: 0, # Integer | offset parameter define page number
-  sort: 'sort_example' # String | sort parameter contains list of fields used for sort query result <br> examples: <br> sort=displayName_a<br>sort=osType_a<br>sort=name_a<br>sort=id_a<br>sort=userId_a
+  sort: '', # String | sort parameter contains list of fields used for sort query result <br> examples: <br> sort=displayName_a<br>sort=name_a<br>sort=osType_a<br>sort=id_a<br>sort=userId_a
+  filter: '', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=displayname_eq_value<br>filter=name_eq_value<br>filter=ostype_eq_ios<br>filter=id_eq_1<br>filter=userid_eq_1
+  offset: '0', # String | offset parameter define page number
+  limit: '20' # String | limit parameter define page size
 }
 
 begin
   #Add selectors to device group.
-  result = api_instance.add_selector_to_device_group_using_post1(device_group_id, selector_ids, user_id, opts)
+  result = api_instance.add_selector_to_device_group(user_id, device_group_id, selector_ids, opts)
   p result
 rescue BitbarCloudApiClient::ApiError => e
-  puts "Exception when calling DeviceGroupsApi->add_selector_to_device_group_using_post1: #{e}"
+  puts "Exception when calling DeviceGroupsApi->add_selector_to_device_group: #{e}"
 end
 ```
 
@@ -127,13 +101,13 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **device_group_id** | **Integer**| deviceGroupId | 
- **selector_ids** | [**Array&lt;Integer&gt;**](Integer.md)| selectorIds[] | 
- **user_id** | **Integer**| userId | 
- **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;displayname_eq_value&lt;br&gt;filter&#x3D;ostype_eq_ios&lt;br&gt;filter&#x3D;name_eq_value&lt;br&gt;filter&#x3D;id_eq_1&lt;br&gt;filter&#x3D;userid_eq_1 | [optional] 
- **limit** | **Integer**| limit parameter define page size | [optional] [default to 20]
- **offset** | **Integer**| offset parameter define page number | [optional] [default to 0]
- **sort** | **String**| sort parameter contains list of fields used for sort query result &lt;br&gt; examples: &lt;br&gt; sort&#x3D;displayName_a&lt;br&gt;sort&#x3D;osType_a&lt;br&gt;sort&#x3D;name_a&lt;br&gt;sort&#x3D;id_a&lt;br&gt;sort&#x3D;userId_a | [optional] 
+ **user_id** | **Integer**|  | 
+ **device_group_id** | **Integer**|  | 
+ **selector_ids** | [**Array&lt;Integer&gt;**](Integer.md)|  | 
+ **sort** | **String**| sort parameter contains list of fields used for sort query result &lt;br&gt; examples: &lt;br&gt; sort&#x3D;displayName_a&lt;br&gt;sort&#x3D;name_a&lt;br&gt;sort&#x3D;osType_a&lt;br&gt;sort&#x3D;id_a&lt;br&gt;sort&#x3D;userId_a | [optional] 
+ **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;displayname_eq_value&lt;br&gt;filter&#x3D;name_eq_value&lt;br&gt;filter&#x3D;ostype_eq_ios&lt;br&gt;filter&#x3D;id_eq_1&lt;br&gt;filter&#x3D;userid_eq_1 | [optional] 
+ **offset** | **String**| offset parameter define page number | [optional] [default to 0]
+ **limit** | **String**| limit parameter define page size | [optional] [default to 20]
 
 ### Return type
 
@@ -141,17 +115,17 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
+No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: */*
 
 
 
-# **create_user_device_group_using_post**
-> APIDeviceGroup create_user_device_group_using_post(user_id, opts)
+# **create_user_device_group**
+> APIDeviceGroup create_user_device_group(user_id, opts)
 
 Create device group.
 
@@ -159,32 +133,23 @@ Create device group.
 ```ruby
 # load the gem
 require 'bitbar-cloud-api-client'
-# setup authorization
-BitbarCloudApiClient.configure do |config|
-  # Configure HTTP basic authorization: apiKeyInHeader
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
-
-  # Configure OAuth2 access token for authorization: oAuth2
-  config.access_token = 'YOUR ACCESS TOKEN'
-end
 
 api_instance = BitbarCloudApiClient::DeviceGroupsApi.new
-
-user_id = 789 # Integer | userId
-
+user_id = 789 # Integer | 
 opts = { 
-  display_name: 'display_name_example', # String | displayName
-  name: 'name_example', # String | name
-  os_type: 'ANDROID' # String | osType
+  name: 'name_example', # String | 
+  display_name: 'display_name_example', # String | 
+  os_type: 'ANDROID', # String | 
+  device_ids: [56], # Array<Integer> | 
+  selector_ids: [56] # Array<Integer> | 
 }
 
 begin
   #Create device group.
-  result = api_instance.create_user_device_group_using_post(user_id, opts)
+  result = api_instance.create_user_device_group(user_id, opts)
   p result
 rescue BitbarCloudApiClient::ApiError => e
-  puts "Exception when calling DeviceGroupsApi->create_user_device_group_using_post: #{e}"
+  puts "Exception when calling DeviceGroupsApi->create_user_device_group: #{e}"
 end
 ```
 
@@ -192,10 +157,12 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **user_id** | **Integer**| userId | 
- **display_name** | **String**| displayName | [optional] 
- **name** | **String**| name | [optional] 
- **os_type** | **String**| osType | [optional] [default to ANDROID]
+ **user_id** | **Integer**|  | 
+ **name** | **String**|  | [optional] 
+ **display_name** | **String**|  | [optional] 
+ **os_type** | **String**|  | [optional] [default to ANDROID]
+ **device_ids** | [**Array&lt;Integer&gt;**](Integer.md)|  | [optional] 
+ **selector_ids** | [**Array&lt;Integer&gt;**](Integer.md)|  | [optional] 
 
 ### Return type
 
@@ -203,17 +170,17 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
+No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: */*
 
 
 
-# **delete_device_from_device_group_using_delete1**
-> delete_device_from_device_group_using_delete1(device_group_id, device_id, user_id)
+# **delete_device_from_device_group**
+> delete_device_from_device_group(user_id, device_group_id, device_id)
 
 Delete device from device group.
 
@@ -221,30 +188,18 @@ Delete device from device group.
 ```ruby
 # load the gem
 require 'bitbar-cloud-api-client'
-# setup authorization
-BitbarCloudApiClient.configure do |config|
-  # Configure HTTP basic authorization: apiKeyInHeader
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
-
-  # Configure OAuth2 access token for authorization: oAuth2
-  config.access_token = 'YOUR ACCESS TOKEN'
-end
 
 api_instance = BitbarCloudApiClient::DeviceGroupsApi.new
-
-device_group_id = 789 # Integer | deviceGroupId
-
-device_id = 789 # Integer | deviceId
-
-user_id = 789 # Integer | userId
+user_id = 789 # Integer | 
+device_group_id = 789 # Integer | 
+device_id = 789 # Integer | 
 
 
 begin
   #Delete device from device group.
-  api_instance.delete_device_from_device_group_using_delete1(device_group_id, device_id, user_id)
+  api_instance.delete_device_from_device_group(user_id, device_group_id, device_id)
 rescue BitbarCloudApiClient::ApiError => e
-  puts "Exception when calling DeviceGroupsApi->delete_device_from_device_group_using_delete1: #{e}"
+  puts "Exception when calling DeviceGroupsApi->delete_device_from_device_group: #{e}"
 end
 ```
 
@@ -252,9 +207,9 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **device_group_id** | **Integer**| deviceGroupId | 
- **device_id** | **Integer**| deviceId | 
- **user_id** | **Integer**| userId | 
+ **user_id** | **Integer**|  | 
+ **device_group_id** | **Integer**|  | 
+ **device_id** | **Integer**|  | 
 
 ### Return type
 
@@ -262,7 +217,7 @@ nil (empty response body)
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -271,8 +226,8 @@ nil (empty response body)
 
 
 
-# **delete_selector_from_device_group_using_delete1**
-> delete_selector_from_device_group_using_delete1(device_group_id, selector_id, user_id)
+# **delete_selector_from_device_group**
+> delete_selector_from_device_group(user_id, device_group_id, selector_id)
 
 Delete selector from device group.
 
@@ -280,30 +235,18 @@ Delete selector from device group.
 ```ruby
 # load the gem
 require 'bitbar-cloud-api-client'
-# setup authorization
-BitbarCloudApiClient.configure do |config|
-  # Configure HTTP basic authorization: apiKeyInHeader
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
-
-  # Configure OAuth2 access token for authorization: oAuth2
-  config.access_token = 'YOUR ACCESS TOKEN'
-end
 
 api_instance = BitbarCloudApiClient::DeviceGroupsApi.new
-
-device_group_id = 789 # Integer | deviceGroupId
-
-selector_id = 789 # Integer | selectorId
-
-user_id = 789 # Integer | userId
+user_id = 789 # Integer | 
+device_group_id = 789 # Integer | 
+selector_id = 789 # Integer | 
 
 
 begin
   #Delete selector from device group.
-  api_instance.delete_selector_from_device_group_using_delete1(device_group_id, selector_id, user_id)
+  api_instance.delete_selector_from_device_group(user_id, device_group_id, selector_id)
 rescue BitbarCloudApiClient::ApiError => e
-  puts "Exception when calling DeviceGroupsApi->delete_selector_from_device_group_using_delete1: #{e}"
+  puts "Exception when calling DeviceGroupsApi->delete_selector_from_device_group: #{e}"
 end
 ```
 
@@ -311,9 +254,9 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **device_group_id** | **Integer**| deviceGroupId | 
- **selector_id** | **Integer**| selectorId | 
- **user_id** | **Integer**| userId | 
+ **user_id** | **Integer**|  | 
+ **device_group_id** | **Integer**|  | 
+ **selector_id** | **Integer**|  | 
 
 ### Return type
 
@@ -321,7 +264,7 @@ nil (empty response body)
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -330,8 +273,8 @@ nil (empty response body)
 
 
 
-# **delete_user_device_group_using_delete**
-> delete_user_device_group_using_delete(device_group_id, user_id)
+# **delete_user_device_group**
+> delete_user_device_group(user_id, device_group_id)
 
 Delete device group.
 
@@ -339,28 +282,17 @@ Delete device group.
 ```ruby
 # load the gem
 require 'bitbar-cloud-api-client'
-# setup authorization
-BitbarCloudApiClient.configure do |config|
-  # Configure HTTP basic authorization: apiKeyInHeader
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
-
-  # Configure OAuth2 access token for authorization: oAuth2
-  config.access_token = 'YOUR ACCESS TOKEN'
-end
 
 api_instance = BitbarCloudApiClient::DeviceGroupsApi.new
-
-device_group_id = 789 # Integer | deviceGroupId
-
-user_id = 789 # Integer | userId
+user_id = 789 # Integer | 
+device_group_id = 789 # Integer | 
 
 
 begin
   #Delete device group.
-  api_instance.delete_user_device_group_using_delete(device_group_id, user_id)
+  api_instance.delete_user_device_group(user_id, device_group_id)
 rescue BitbarCloudApiClient::ApiError => e
-  puts "Exception when calling DeviceGroupsApi->delete_user_device_group_using_delete: #{e}"
+  puts "Exception when calling DeviceGroupsApi->delete_user_device_group: #{e}"
 end
 ```
 
@@ -368,8 +300,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **device_group_id** | **Integer**| deviceGroupId | 
- **user_id** | **Integer**| userId | 
+ **user_id** | **Integer**|  | 
+ **device_group_id** | **Integer**|  | 
 
 ### Return type
 
@@ -377,7 +309,7 @@ nil (empty response body)
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -386,8 +318,8 @@ nil (empty response body)
 
 
 
-# **get_device_group_devices_using_get1**
-> APIListOfAPIDevice get_device_group_devices_using_get1(device_group_id, user_id, opts)
+# **get_device_group_devices**
+> APIListAPIDevice get_device_group_devices(user_id, device_group_id, opts)
 
 Get device group devices.
 
@@ -395,36 +327,24 @@ Get device group devices.
 ```ruby
 # load the gem
 require 'bitbar-cloud-api-client'
-# setup authorization
-BitbarCloudApiClient.configure do |config|
-  # Configure HTTP basic authorization: apiKeyInHeader
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
-
-  # Configure OAuth2 access token for authorization: oAuth2
-  config.access_token = 'YOUR ACCESS TOKEN'
-end
 
 api_instance = BitbarCloudApiClient::DeviceGroupsApi.new
-
-device_group_id = 789 # Integer | deviceGroupId
-
-user_id = 789 # Integer | userId
-
+user_id = 789 # Integer | 
+device_group_id = 789 # Integer | 
 opts = { 
-  filter: 'filter_example', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=accountid_eq_1<br>filter=displayname_eq_value<br>filter=ostype_eq_ios<br>filter=creditsprice_eq_1<br>filter=online_eq_true<br>filter=id_eq_1<br>filter=device.archivetime_eq_1593583744176<br>filter=locked_eq_true<br>filter=enabled_eq_true
-  limit: 20, # Integer | limit parameter define page size
-  offset: 0, # Integer | offset parameter define page number
-  sort: 'sort_example', # String | sort parameter contains list of fields used for sort query result <br> examples: <br> sort=accountId_a<br>sort=displayName_a<br>sort=osType_a<br>sort=creditsPrice_a<br>sort=id_a<br>sort=device.archiveTime_a<br>sort=locked_a<br>sort=enabled_a
-  with_properties: false # BOOLEAN | withProperties
+  with_properties: false, # BOOLEAN | 
+  sort: '', # String | sort parameter contains list of fields used for sort query result <br> examples: <br> sort=accountId_a<br>sort=displayName_a<br>sort=creditsPrice_a<br>sort=osType_a<br>sort=device.archiveTime_a<br>sort=id_a<br>sort=locked_a<br>sort=enabled_a<br>sort=platform_a<br>sort=manufacturer_a
+  filter: '', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=accountid_eq_1<br>filter=displayname_eq_value<br>filter=creditsprice_eq_1<br>filter=ostype_eq_ios<br>filter=online_eq_true<br>filter=location_eq_value<br>filter=device.archivetime_eq_1700230364388<br>filter=id_eq_1<br>filter=locked_eq_true<br>filter=enabled_eq_true<br>filter=platform_eq_ios<br>filter=manufacturer_eq_value
+  offset: '0', # String | offset parameter define page number
+  limit: '20' # String | limit parameter define page size
 }
 
 begin
   #Get device group devices.
-  result = api_instance.get_device_group_devices_using_get1(device_group_id, user_id, opts)
+  result = api_instance.get_device_group_devices(user_id, device_group_id, opts)
   p result
 rescue BitbarCloudApiClient::ApiError => e
-  puts "Exception when calling DeviceGroupsApi->get_device_group_devices_using_get1: #{e}"
+  puts "Exception when calling DeviceGroupsApi->get_device_group_devices: #{e}"
 end
 ```
 
@@ -432,21 +352,21 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **device_group_id** | **Integer**| deviceGroupId | 
- **user_id** | **Integer**| userId | 
- **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;accountid_eq_1&lt;br&gt;filter&#x3D;displayname_eq_value&lt;br&gt;filter&#x3D;ostype_eq_ios&lt;br&gt;filter&#x3D;creditsprice_eq_1&lt;br&gt;filter&#x3D;online_eq_true&lt;br&gt;filter&#x3D;id_eq_1&lt;br&gt;filter&#x3D;device.archivetime_eq_1593583744176&lt;br&gt;filter&#x3D;locked_eq_true&lt;br&gt;filter&#x3D;enabled_eq_true | [optional] 
- **limit** | **Integer**| limit parameter define page size | [optional] [default to 20]
- **offset** | **Integer**| offset parameter define page number | [optional] [default to 0]
- **sort** | **String**| sort parameter contains list of fields used for sort query result &lt;br&gt; examples: &lt;br&gt; sort&#x3D;accountId_a&lt;br&gt;sort&#x3D;displayName_a&lt;br&gt;sort&#x3D;osType_a&lt;br&gt;sort&#x3D;creditsPrice_a&lt;br&gt;sort&#x3D;id_a&lt;br&gt;sort&#x3D;device.archiveTime_a&lt;br&gt;sort&#x3D;locked_a&lt;br&gt;sort&#x3D;enabled_a | [optional] 
- **with_properties** | **BOOLEAN**| withProperties | [optional] [default to false]
+ **user_id** | **Integer**|  | 
+ **device_group_id** | **Integer**|  | 
+ **with_properties** | **BOOLEAN**|  | [optional] [default to false]
+ **sort** | **String**| sort parameter contains list of fields used for sort query result &lt;br&gt; examples: &lt;br&gt; sort&#x3D;accountId_a&lt;br&gt;sort&#x3D;displayName_a&lt;br&gt;sort&#x3D;creditsPrice_a&lt;br&gt;sort&#x3D;osType_a&lt;br&gt;sort&#x3D;device.archiveTime_a&lt;br&gt;sort&#x3D;id_a&lt;br&gt;sort&#x3D;locked_a&lt;br&gt;sort&#x3D;enabled_a&lt;br&gt;sort&#x3D;platform_a&lt;br&gt;sort&#x3D;manufacturer_a | [optional] 
+ **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;accountid_eq_1&lt;br&gt;filter&#x3D;displayname_eq_value&lt;br&gt;filter&#x3D;creditsprice_eq_1&lt;br&gt;filter&#x3D;ostype_eq_ios&lt;br&gt;filter&#x3D;online_eq_true&lt;br&gt;filter&#x3D;location_eq_value&lt;br&gt;filter&#x3D;device.archivetime_eq_1700230364388&lt;br&gt;filter&#x3D;id_eq_1&lt;br&gt;filter&#x3D;locked_eq_true&lt;br&gt;filter&#x3D;enabled_eq_true&lt;br&gt;filter&#x3D;platform_eq_ios&lt;br&gt;filter&#x3D;manufacturer_eq_value | [optional] 
+ **offset** | **String**| offset parameter define page number | [optional] [default to 0]
+ **limit** | **String**| limit parameter define page size | [optional] [default to 20]
 
 ### Return type
 
-[**APIListOfAPIDevice**](APIListOfAPIDevice.md)
+[**APIListAPIDevice**](APIListAPIDevice.md)
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -455,8 +375,8 @@ Name | Type | Description  | Notes
 
 
 
-# **get_device_group_selectors_using_get1**
-> APIListOfAPIDeviceProperty get_device_group_selectors_using_get1(device_group_id, user_id, opts)
+# **get_device_group_selectors**
+> APIListAPIDeviceProperty get_device_group_selectors(user_id, device_group_id, opts)
 
 Get device group selectors.
 
@@ -464,35 +384,23 @@ Get device group selectors.
 ```ruby
 # load the gem
 require 'bitbar-cloud-api-client'
-# setup authorization
-BitbarCloudApiClient.configure do |config|
-  # Configure HTTP basic authorization: apiKeyInHeader
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
-
-  # Configure OAuth2 access token for authorization: oAuth2
-  config.access_token = 'YOUR ACCESS TOKEN'
-end
 
 api_instance = BitbarCloudApiClient::DeviceGroupsApi.new
-
-device_group_id = 789 # Integer | deviceGroupId
-
-user_id = 789 # Integer | userId
-
+user_id = 789 # Integer | 
+device_group_id = 789 # Integer | 
 opts = { 
-  filter: 'filter_example', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=propertygroupname_eq_value<br>filter=displayname_eq_value<br>filter=name_eq_value<br>filter=propertygroupid_eq_1<br>filter=id_eq_1<br>filter=labelgroupname_eq_value
-  limit: 20, # Integer | limit parameter define page size
-  offset: 0, # Integer | offset parameter define page number
-  sort: 'sort_example' # String | sort parameter contains list of fields used for sort query result <br> examples: <br> sort=propertyGroupName_a<br>sort=displayName_a<br>sort=name_a<br>sort=propertyGroupId_a<br>sort=id_a<br>sort=labelGroupName_a
+  sort: '', # String | sort parameter contains list of fields used for sort query result <br> examples: <br> sort=propertyGroupName_a<br>sort=displayName_a<br>sort=name_a<br>sort=propertyGroupId_a<br>sort=id_a<br>sort=labelGroupName_a
+  filter: '', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=propertygroupname_eq_value<br>filter=displayname_eq_value<br>filter=name_eq_value<br>filter=propertygroupid_eq_1<br>filter=id_eq_1<br>filter=labelgroupname_eq_value
+  offset: '0', # String | offset parameter define page number
+  limit: '20' # String | limit parameter define page size
 }
 
 begin
   #Get device group selectors.
-  result = api_instance.get_device_group_selectors_using_get1(device_group_id, user_id, opts)
+  result = api_instance.get_device_group_selectors(user_id, device_group_id, opts)
   p result
 rescue BitbarCloudApiClient::ApiError => e
-  puts "Exception when calling DeviceGroupsApi->get_device_group_selectors_using_get1: #{e}"
+  puts "Exception when calling DeviceGroupsApi->get_device_group_selectors: #{e}"
 end
 ```
 
@@ -500,20 +408,20 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **device_group_id** | **Integer**| deviceGroupId | 
- **user_id** | **Integer**| userId | 
- **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;propertygroupname_eq_value&lt;br&gt;filter&#x3D;displayname_eq_value&lt;br&gt;filter&#x3D;name_eq_value&lt;br&gt;filter&#x3D;propertygroupid_eq_1&lt;br&gt;filter&#x3D;id_eq_1&lt;br&gt;filter&#x3D;labelgroupname_eq_value | [optional] 
- **limit** | **Integer**| limit parameter define page size | [optional] [default to 20]
- **offset** | **Integer**| offset parameter define page number | [optional] [default to 0]
+ **user_id** | **Integer**|  | 
+ **device_group_id** | **Integer**|  | 
  **sort** | **String**| sort parameter contains list of fields used for sort query result &lt;br&gt; examples: &lt;br&gt; sort&#x3D;propertyGroupName_a&lt;br&gt;sort&#x3D;displayName_a&lt;br&gt;sort&#x3D;name_a&lt;br&gt;sort&#x3D;propertyGroupId_a&lt;br&gt;sort&#x3D;id_a&lt;br&gt;sort&#x3D;labelGroupName_a | [optional] 
+ **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;propertygroupname_eq_value&lt;br&gt;filter&#x3D;displayname_eq_value&lt;br&gt;filter&#x3D;name_eq_value&lt;br&gt;filter&#x3D;propertygroupid_eq_1&lt;br&gt;filter&#x3D;id_eq_1&lt;br&gt;filter&#x3D;labelgroupname_eq_value | [optional] 
+ **offset** | **String**| offset parameter define page number | [optional] [default to 0]
+ **limit** | **String**| limit parameter define page size | [optional] [default to 20]
 
 ### Return type
 
-[**APIListOfAPIDeviceProperty**](APIListOfAPIDeviceProperty.md)
+[**APIListAPIDeviceProperty**](APIListAPIDeviceProperty.md)
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -522,8 +430,8 @@ Name | Type | Description  | Notes
 
 
 
-# **get_user_device_group_using_get**
-> APIDeviceGroup get_user_device_group_using_get(device_group_id, user_id)
+# **get_user_device_group**
+> APIDeviceGroup get_user_device_group(user_id, device_group_id)
 
 Get device group.
 
@@ -531,29 +439,18 @@ Get device group.
 ```ruby
 # load the gem
 require 'bitbar-cloud-api-client'
-# setup authorization
-BitbarCloudApiClient.configure do |config|
-  # Configure HTTP basic authorization: apiKeyInHeader
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
-
-  # Configure OAuth2 access token for authorization: oAuth2
-  config.access_token = 'YOUR ACCESS TOKEN'
-end
 
 api_instance = BitbarCloudApiClient::DeviceGroupsApi.new
-
-device_group_id = 789 # Integer | deviceGroupId
-
-user_id = 789 # Integer | userId
+user_id = 789 # Integer | 
+device_group_id = 789 # Integer | 
 
 
 begin
   #Get device group.
-  result = api_instance.get_user_device_group_using_get(device_group_id, user_id)
+  result = api_instance.get_user_device_group(user_id, device_group_id)
   p result
 rescue BitbarCloudApiClient::ApiError => e
-  puts "Exception when calling DeviceGroupsApi->get_user_device_group_using_get: #{e}"
+  puts "Exception when calling DeviceGroupsApi->get_user_device_group: #{e}"
 end
 ```
 
@@ -561,8 +458,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **device_group_id** | **Integer**| deviceGroupId | 
- **user_id** | **Integer**| userId | 
+ **user_id** | **Integer**|  | 
+ **device_group_id** | **Integer**|  | 
 
 ### Return type
 
@@ -570,7 +467,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -579,8 +476,8 @@ Name | Type | Description  | Notes
 
 
 
-# **get_user_device_groups_using_get**
-> APIListOfAPIDeviceGroup get_user_device_groups_using_get(user_id, opts)
+# **get_user_device_groups**
+> APIListAPIDeviceGroup get_user_device_groups(user_id, opts)
 
 Get device groups.
 
@@ -588,34 +485,23 @@ Get device groups.
 ```ruby
 # load the gem
 require 'bitbar-cloud-api-client'
-# setup authorization
-BitbarCloudApiClient.configure do |config|
-  # Configure HTTP basic authorization: apiKeyInHeader
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
-
-  # Configure OAuth2 access token for authorization: oAuth2
-  config.access_token = 'YOUR ACCESS TOKEN'
-end
 
 api_instance = BitbarCloudApiClient::DeviceGroupsApi.new
-
-user_id = 789 # Integer | userId
-
+user_id = 789 # Integer | 
 opts = { 
-  filter: 'filter_example', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=displayname_eq_value<br>filter=ostype_eq_ios<br>filter=name_eq_value<br>filter=id_eq_1<br>filter=userid_eq_1
-  limit: 20, # Integer | limit parameter define page size
-  offset: 0, # Integer | offset parameter define page number
-  sort: 'sort_example', # String | sort parameter contains list of fields used for sort query result <br> examples: <br> sort=displayName_a<br>sort=osType_a<br>sort=name_a<br>sort=id_a<br>sort=userId_a
-  with_public: false # BOOLEAN | withPublic
+  with_public: false, # BOOLEAN | 
+  sort: '', # String | sort parameter contains list of fields used for sort query result <br> examples: <br> sort=displayName_a<br>sort=name_a<br>sort=osType_a<br>sort=id_a<br>sort=userId_a
+  filter: '', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=displayname_eq_value<br>filter=name_eq_value<br>filter=ostype_eq_ios<br>filter=id_eq_1<br>filter=userid_eq_1
+  offset: '0', # String | offset parameter define page number
+  limit: '20' # String | limit parameter define page size
 }
 
 begin
   #Get device groups.
-  result = api_instance.get_user_device_groups_using_get(user_id, opts)
+  result = api_instance.get_user_device_groups(user_id, opts)
   p result
 rescue BitbarCloudApiClient::ApiError => e
-  puts "Exception when calling DeviceGroupsApi->get_user_device_groups_using_get: #{e}"
+  puts "Exception when calling DeviceGroupsApi->get_user_device_groups: #{e}"
 end
 ```
 
@@ -623,20 +509,20 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **user_id** | **Integer**| userId | 
- **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;displayname_eq_value&lt;br&gt;filter&#x3D;ostype_eq_ios&lt;br&gt;filter&#x3D;name_eq_value&lt;br&gt;filter&#x3D;id_eq_1&lt;br&gt;filter&#x3D;userid_eq_1 | [optional] 
- **limit** | **Integer**| limit parameter define page size | [optional] [default to 20]
- **offset** | **Integer**| offset parameter define page number | [optional] [default to 0]
- **sort** | **String**| sort parameter contains list of fields used for sort query result &lt;br&gt; examples: &lt;br&gt; sort&#x3D;displayName_a&lt;br&gt;sort&#x3D;osType_a&lt;br&gt;sort&#x3D;name_a&lt;br&gt;sort&#x3D;id_a&lt;br&gt;sort&#x3D;userId_a | [optional] 
- **with_public** | **BOOLEAN**| withPublic | [optional] [default to false]
+ **user_id** | **Integer**|  | 
+ **with_public** | **BOOLEAN**|  | [optional] [default to false]
+ **sort** | **String**| sort parameter contains list of fields used for sort query result &lt;br&gt; examples: &lt;br&gt; sort&#x3D;displayName_a&lt;br&gt;sort&#x3D;name_a&lt;br&gt;sort&#x3D;osType_a&lt;br&gt;sort&#x3D;id_a&lt;br&gt;sort&#x3D;userId_a | [optional] 
+ **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;displayname_eq_value&lt;br&gt;filter&#x3D;name_eq_value&lt;br&gt;filter&#x3D;ostype_eq_ios&lt;br&gt;filter&#x3D;id_eq_1&lt;br&gt;filter&#x3D;userid_eq_1 | [optional] 
+ **offset** | **String**| offset parameter define page number | [optional] [default to 0]
+ **limit** | **String**| limit parameter define page size | [optional] [default to 20]
 
 ### Return type
 
-[**APIListOfAPIDeviceGroup**](APIListOfAPIDeviceGroup.md)
+[**APIListAPIDeviceGroup**](APIListAPIDeviceGroup.md)
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -645,8 +531,8 @@ Name | Type | Description  | Notes
 
 
 
-# **update_user_device_group_using_post1**
-> APIDeviceGroup update_user_device_group_using_post1(device_group_id, user_id, opts)
+# **update_user_device_group**
+> APIDeviceGroup update_user_device_group(user_id, device_group_id, opts)
 
 Update device group.
 
@@ -654,34 +540,22 @@ Update device group.
 ```ruby
 # load the gem
 require 'bitbar-cloud-api-client'
-# setup authorization
-BitbarCloudApiClient.configure do |config|
-  # Configure HTTP basic authorization: apiKeyInHeader
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
-
-  # Configure OAuth2 access token for authorization: oAuth2
-  config.access_token = 'YOUR ACCESS TOKEN'
-end
 
 api_instance = BitbarCloudApiClient::DeviceGroupsApi.new
-
-device_group_id = 789 # Integer | deviceGroupId
-
-user_id = 789 # Integer | userId
-
+user_id = 789 # Integer | 
+device_group_id = 789 # Integer | 
 opts = { 
-  display_name: 'display_name_example', # String | displayName
-  name: 'name_example', # String | name
-  os_type: 'os_type_example' # String | osType
+  name: 'name_example', # String | 
+  display_name: 'display_name_example', # String | 
+  os_type: 'os_type_example' # String | 
 }
 
 begin
   #Update device group.
-  result = api_instance.update_user_device_group_using_post1(device_group_id, user_id, opts)
+  result = api_instance.update_user_device_group(user_id, device_group_id, opts)
   p result
 rescue BitbarCloudApiClient::ApiError => e
-  puts "Exception when calling DeviceGroupsApi->update_user_device_group_using_post1: #{e}"
+  puts "Exception when calling DeviceGroupsApi->update_user_device_group: #{e}"
 end
 ```
 
@@ -689,11 +563,11 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **device_group_id** | **Integer**| deviceGroupId | 
- **user_id** | **Integer**| userId | 
- **display_name** | **String**| displayName | [optional] 
- **name** | **String**| name | [optional] 
- **os_type** | **String**| osType | [optional] 
+ **user_id** | **Integer**|  | 
+ **device_group_id** | **Integer**|  | 
+ **name** | **String**|  | [optional] 
+ **display_name** | **String**|  | [optional] 
+ **os_type** | **String**|  | [optional] 
 
 ### Return type
 
@@ -701,11 +575,11 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
+No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: */*
 
 

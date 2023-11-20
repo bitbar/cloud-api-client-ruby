@@ -4,9 +4,9 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **Integer** |  | [optional] 
-**name** | **String** |  | [optional] 
 **self_uri** | **String** |  | [optional] 
+**name** | **String** |  | [optional] 
+**display_name** | **String** |  | [optional] 
 **value** | **String** |  | [optional] 
 **versions** | **Array&lt;String&gt;** |  | [optional] 
-
 

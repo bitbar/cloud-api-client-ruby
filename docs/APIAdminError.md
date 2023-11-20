@@ -4,8 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **Integer** |  | [optional] 
-**quantity** | **Integer** |  | [optional] 
 **self_uri** | **String** |  | [optional] 
+**quantity** | **Integer** |  | [optional] 
 **type** | **String** |  | [optional] 
-
 
