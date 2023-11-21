@@ -7,4 +7,3 @@ Name | Type | Description | Notes
 **self_uri** | **String** |  | [optional] 
 **value** | **String** |  | [optional] 
 
-

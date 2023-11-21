@@ -3,11 +3,11 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**browsers** | [**Array&lt;APIDesktopBrowser&gt;**](APIDesktopBrowser.md) |  | [optional] 
 **id** | **Integer** |  | [optional] 
-**name** | **String** |  | [optional] 
-**resolutions** | **Array&lt;String&gt;** |  | [optional] 
 **self_uri** | **String** |  | [optional] 
+**name** | **String** |  | [optional] 
 **value** | **String** |  | [optional] 
-
+**browsers** | [**Array&lt;APIDesktopBrowser&gt;**](APIDesktopBrowser.md) |  | [optional] 
+**resolutions** | **Array&lt;String&gt;** |  | [optional] 
+**version** | **String** |  | [optional] 
 

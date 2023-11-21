@@ -3,16 +3,16 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**body** | **String** |  | [optional] 
-**create_time** | **Integer** |  | [optional] 
-**deprecated_resource** | **BOOLEAN** |  | [optional] 
-**http_method** | **String** |  | [optional] 
 **id** | **Integer** |  | [optional] 
-**parameters** | **String** |  | [optional] 
 **self_uri** | **String** |  | [optional] 
-**uri** | **String** |  | [optional] 
+**create_time** | **DateTime** |  | [optional] 
+**http_method** | **String** |  | [optional] 
 **user_agent** | **String** |  | [optional] 
+**parameters** | **String** |  | [optional] 
+**uri** | **String** |  | [optional] 
 **user_email** | **String** |  | [optional] 
 **user_id** | **Integer** |  | [optional] 
-
+**body** | **String** |  | [optional] 
+**accept** | **String** |  | [optional] 
+**deprecated_resource** | **BOOLEAN** |  | [optional] 
 

@@ -1,16 +1,15 @@
 # BitbarCloudApiClient::CloudInfoApi
 
-All URIs are relative to *https://cloud.bitbar.com*
+All URIs are relative to *https://cloud.bitbar.com/cloud*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**get_enums_using_get**](CloudInfoApi.md#get_enums_using_get) | **GET** /api/v2/enums | Get enums.
-[**get_health_check_using_get**](CloudInfoApi.md#get_health_check_using_get) | **GET** /api/v2/health | Get health check.
-[**get_status_using_get**](CloudInfoApi.md#get_status_using_get) | **GET** /api/v2/info | Get basic cloud info.
+[**get_enums**](CloudInfoApi.md#get_enums) | **GET** /api/v2/enums | Get enums.
+[**get_health_check**](CloudInfoApi.md#get_health_check) | **GET** /api/v2/health | Get health check.
+[**get_status**](CloudInfoApi.md#get_status) | **GET** /api/v2/info | Get basic cloud info.
 
-
-# **get_enums_using_get**
-> Hash&lt;String, Array&lt;String&gt;&gt; get_enums_using_get
+# **get_enums**
+> Hash&lt;String, Array&lt;String&gt;&gt; get_enums
 
 Get enums.
 
@@ -18,24 +17,15 @@ Get enums.
 ```ruby
 # load the gem
 require 'bitbar-cloud-api-client'
-# setup authorization
-BitbarCloudApiClient.configure do |config|
-  # Configure HTTP basic authorization: apiKeyInHeader
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
-
-  # Configure OAuth2 access token for authorization: oAuth2
-  config.access_token = 'YOUR ACCESS TOKEN'
-end
 
 api_instance = BitbarCloudApiClient::CloudInfoApi.new
 
 begin
   #Get enums.
-  result = api_instance.get_enums_using_get
+  result = api_instance.get_enums
   p result
 rescue BitbarCloudApiClient::ApiError => e
-  puts "Exception when calling CloudInfoApi->get_enums_using_get: #{e}"
+  puts "Exception when calling CloudInfoApi->get_enums: #{e}"
 end
 ```
 
@@ -48,7 +38,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -57,8 +47,8 @@ This endpoint does not need any parameter.
 
 
 
-# **get_health_check_using_get**
-> APIHealthCheck get_health_check_using_get
+# **get_health_check**
+> APIHealthCheck get_health_check
 
 Get health check.
 
@@ -66,24 +56,15 @@ Get health check.
 ```ruby
 # load the gem
 require 'bitbar-cloud-api-client'
-# setup authorization
-BitbarCloudApiClient.configure do |config|
-  # Configure HTTP basic authorization: apiKeyInHeader
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
-
-  # Configure OAuth2 access token for authorization: oAuth2
-  config.access_token = 'YOUR ACCESS TOKEN'
-end
 
 api_instance = BitbarCloudApiClient::CloudInfoApi.new
 
 begin
   #Get health check.
-  result = api_instance.get_health_check_using_get
+  result = api_instance.get_health_check
   p result
 rescue BitbarCloudApiClient::ApiError => e
-  puts "Exception when calling CloudInfoApi->get_health_check_using_get: #{e}"
+  puts "Exception when calling CloudInfoApi->get_health_check: #{e}"
 end
 ```
 
@@ -96,7 +77,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -105,8 +86,8 @@ This endpoint does not need any parameter.
 
 
 
-# **get_status_using_get**
-> APICloudInfo get_status_using_get
+# **get_status**
+> APICloudInfo get_status
 
 Get basic cloud info.
 
@@ -114,24 +95,15 @@ Get basic cloud info.
 ```ruby
 # load the gem
 require 'bitbar-cloud-api-client'
-# setup authorization
-BitbarCloudApiClient.configure do |config|
-  # Configure HTTP basic authorization: apiKeyInHeader
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
-
-  # Configure OAuth2 access token for authorization: oAuth2
-  config.access_token = 'YOUR ACCESS TOKEN'
-end
 
 api_instance = BitbarCloudApiClient::CloudInfoApi.new
 
 begin
   #Get basic cloud info.
-  result = api_instance.get_status_using_get
+  result = api_instance.get_status
   p result
 rescue BitbarCloudApiClient::ApiError => e
-  puts "Exception when calling CloudInfoApi->get_status_using_get: #{e}"
+  puts "Exception when calling CloudInfoApi->get_status: #{e}"
 end
 ```
 
@@ -144,7 +116,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
+No authorization required
 
 ### HTTP request headers
 

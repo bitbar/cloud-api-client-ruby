@@ -3,14 +3,19 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**active_users_count** | **Integer** |  | [optional] 
 **id** | **Integer** |  | [optional] 
-**inspector_sessions_count** | **Integer** |  | [optional] 
-**remote_sessions_count** | **Integer** |  | [optional] 
-**running_device_models_count** | **Integer** |  | [optional] 
-**running_test_runs_count** | **Integer** |  | [optional] 
 **self_uri** | **String** |  | [optional] 
-**waiting_device_models_count** | **Integer** |  | [optional] 
+**active_users_count** | **Integer** |  | [optional] 
+**offline_cluster_count** | **Integer** |  | [optional] 
+**offline_device_count** | **Integer** |  | [optional] 
+**offline_device_model_count** | **Integer** |  | [optional] 
+**running_inspector_sessions_count** | **Integer** |  | [optional] 
+**running_test_runs_count** | **Integer** |  | [optional] 
+**total_cluster_count** | **Integer** |  | [optional] 
+**total_device_count** | **Integer** |  | [optional] 
+**total_device_model_count** | **Integer** |  | [optional] 
+**total_inspector_sessions_count** | **Integer** |  | [optional] 
+**total_test_run_count** | **Integer** |  | [optional] 
+**total_user_count** | **Integer** |  | [optional] 
 **waiting_test_runs_count** | **Integer** |  | [optional] 
-
 

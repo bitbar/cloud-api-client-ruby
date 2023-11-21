@@ -3,10 +3,9 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**device_limit** | **Integer** |  | [optional] 
-**device_limited** | **BOOLEAN** |  | [optional] 
 **enabled** | **BOOLEAN** |  | [optional] 
+**device_limit** | **Integer** |  | [optional] 
 **project_limit** | **Integer** |  | [optional] 
+**device_limited** | **BOOLEAN** |  | [optional] 
 **project_limited** | **BOOLEAN** |  | [optional] 
-
 

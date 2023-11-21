@@ -1,21 +1,20 @@
 # BitbarCloudApiClient::UsageAndStatisticsApi
 
-All URIs are relative to *https://cloud.bitbar.com*
+All URIs are relative to *https://cloud.bitbar.com/cloud*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**get_device_statistics_using_get**](UsageAndStatisticsApi.md#get_device_statistics_using_get) | **GET** /api/v2/device-statistics | Get device statistics.
-[**get_device_statistics_using_get1**](UsageAndStatisticsApi.md#get_device_statistics_using_get1) | **GET** /api/v2/users/{userId}/device-statistics | Get device statistics.
-[**get_user_device_usage_statistics_using_get**](UsageAndStatisticsApi.md#get_user_device_usage_statistics_using_get) | **GET** /api/v2/users/{userId}/device-usage | Get device usage statistics.
-[**get_user_reserved_device_time_using_get**](UsageAndStatisticsApi.md#get_user_reserved_device_time_using_get) | **GET** /api/v2/users/{userId}/device-time/reserved | Get reserved device time.
-[**get_user_statistics_using_get**](UsageAndStatisticsApi.md#get_user_statistics_using_get) | **GET** /api/v2/users/{userId}/statistics | Get statistics.
-[**get_user_used_device_time_using_get**](UsageAndStatisticsApi.md#get_user_used_device_time_using_get) | **GET** /api/v2/users/{userId}/device-time/used | Get used device time.
-[**get_users_device_time_history_summary_using_get**](UsageAndStatisticsApi.md#get_users_device_time_history_summary_using_get) | **GET** /api/v2/users/{userId}/device-time-summary | Get device time history.
-[**get_users_device_time_history_using_get**](UsageAndStatisticsApi.md#get_users_device_time_history_using_get) | **GET** /api/v2/users/{userId}/device-time | Get device time history.
+[**get_device_statistics**](UsageAndStatisticsApi.md#get_device_statistics) | **GET** /api/v2/users/{userId}/device-statistics | Get device statistics.
+[**get_device_statistics1**](UsageAndStatisticsApi.md#get_device_statistics1) | **GET** /api/v2/device-statistics | Get device statistics.
+[**get_user_device_usage_statistics**](UsageAndStatisticsApi.md#get_user_device_usage_statistics) | **GET** /api/v2/users/{userId}/device-usage | Get device usage statistics.
+[**get_user_reserved_device_time**](UsageAndStatisticsApi.md#get_user_reserved_device_time) | **GET** /api/v2/users/{userId}/device-time/reserved | Get reserved device time.
+[**get_user_statistics**](UsageAndStatisticsApi.md#get_user_statistics) | **GET** /api/v2/users/{userId}/statistics | Get statistics.
+[**get_user_used_device_time**](UsageAndStatisticsApi.md#get_user_used_device_time) | **GET** /api/v2/users/{userId}/device-time/used | Get used device time.
+[**get_users_device_time_history**](UsageAndStatisticsApi.md#get_users_device_time_history) | **GET** /api/v2/users/{userId}/device-time | Get device time history.
+[**get_users_device_time_history_summary**](UsageAndStatisticsApi.md#get_users_device_time_history_summary) | **GET** /api/v2/users/{userId}/device-time-summary | Get device time history.
 
-
-# **get_device_statistics_using_get**
-> APIListOfAPIDeviceStatistic get_device_statistics_using_get(opts)
+# **get_device_statistics**
+> APIListAPIDeviceStatistic get_device_statistics(user_id, opts)
 
 Get device statistics.
 
@@ -23,33 +22,26 @@ Get device statistics.
 ```ruby
 # load the gem
 require 'bitbar-cloud-api-client'
-# setup authorization
-BitbarCloudApiClient.configure do |config|
-  # Configure HTTP basic authorization: apiKeyInHeader
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
-
-  # Configure OAuth2 access token for authorization: oAuth2
-  config.access_token = 'YOUR ACCESS TOKEN'
-end
 
 api_instance = BitbarCloudApiClient::UsageAndStatisticsApi.new
-
+user_id = 789 # Integer | 
 opts = { 
-  filter: 'filter_example', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=testrunid_eq_1<br>filter=releaseversion_eq_value<br>filter=devicename_eq_value<br>filter=common_eq_null<br>filter=createtime_eq_1593583748399<br>filter=ostype_eq_ios<br>filter=id_eq_1<br>filter=projectid_eq_1
-  limit: 20, # Integer | limit parameter define page size
-  mode: 'DEVICE_NAME', # String | mode
-  offset: 0, # Integer | offset parameter define page number
-  skip_common_project: false, # BOOLEAN | skipCommonProject
-  sort: 'sort_example' # String | sort parameter contains list of fields used for sort query result <br> examples: <br> sort=failedRatio_a<br>sort=passedTests_a<br>sort=releaseVersion_a<br>sort=failedTests_a<br>sort=passedRatio_a<br>sort=deviceName_a<br>sort=usageCount_a<br>sort=totalTests_a<br>sort=failedDevices_a<br>sort=usageMillis_a<br>sort=osType_a<br>sort=id_a<br>sort=projectId_a
+  for_whole_account: false, # BOOLEAN | 
+  skip_common_project: false, # BOOLEAN | 
+  skip_shared: false, # BOOLEAN | 
+  mode: 'DEVICE_NAME', # String | 
+  sort: '', # String | sort parameter contains list of fields used for sort query result <br> examples: <br> sort=failedRatio_a<br>sort=passedTests_a<br>sort=releaseVersion_a<br>sort=failedTests_a<br>sort=passedRatio_a<br>sort=deviceName_a<br>sort=usageCount_a<br>sort=totalTests_a<br>sort=failedDevices_a<br>sort=osType_a<br>sort=usageMillis_a<br>sort=id_a<br>sort=projectId_a
+  filter: '', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=releaseversion_eq_value<br>filter=testrunid_eq_1<br>filter=devicename_eq_value<br>filter=common_eq_true<br>filter=createtime_eq_1700230364268<br>filter=ostype_eq_ios<br>filter=id_eq_1<br>filter=projectid_eq_1
+  offset: '0', # String | offset parameter define page number
+  limit: '20' # String | limit parameter define page size
 }
 
 begin
   #Get device statistics.
-  result = api_instance.get_device_statistics_using_get(opts)
+  result = api_instance.get_device_statistics(user_id, opts)
   p result
 rescue BitbarCloudApiClient::ApiError => e
-  puts "Exception when calling UsageAndStatisticsApi->get_device_statistics_using_get: #{e}"
+  puts "Exception when calling UsageAndStatisticsApi->get_device_statistics: #{e}"
 end
 ```
 
@@ -57,20 +49,23 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;testrunid_eq_1&lt;br&gt;filter&#x3D;releaseversion_eq_value&lt;br&gt;filter&#x3D;devicename_eq_value&lt;br&gt;filter&#x3D;common_eq_null&lt;br&gt;filter&#x3D;createtime_eq_1593583748399&lt;br&gt;filter&#x3D;ostype_eq_ios&lt;br&gt;filter&#x3D;id_eq_1&lt;br&gt;filter&#x3D;projectid_eq_1 | [optional] 
- **limit** | **Integer**| limit parameter define page size | [optional] [default to 20]
- **mode** | **String**| mode | [optional] [default to DEVICE_NAME]
- **offset** | **Integer**| offset parameter define page number | [optional] [default to 0]
- **skip_common_project** | **BOOLEAN**| skipCommonProject | [optional] [default to false]
- **sort** | **String**| sort parameter contains list of fields used for sort query result &lt;br&gt; examples: &lt;br&gt; sort&#x3D;failedRatio_a&lt;br&gt;sort&#x3D;passedTests_a&lt;br&gt;sort&#x3D;releaseVersion_a&lt;br&gt;sort&#x3D;failedTests_a&lt;br&gt;sort&#x3D;passedRatio_a&lt;br&gt;sort&#x3D;deviceName_a&lt;br&gt;sort&#x3D;usageCount_a&lt;br&gt;sort&#x3D;totalTests_a&lt;br&gt;sort&#x3D;failedDevices_a&lt;br&gt;sort&#x3D;usageMillis_a&lt;br&gt;sort&#x3D;osType_a&lt;br&gt;sort&#x3D;id_a&lt;br&gt;sort&#x3D;projectId_a | [optional] 
+ **user_id** | **Integer**|  | 
+ **for_whole_account** | **BOOLEAN**|  | [optional] [default to false]
+ **skip_common_project** | **BOOLEAN**|  | [optional] [default to false]
+ **skip_shared** | **BOOLEAN**|  | [optional] [default to false]
+ **mode** | **String**|  | [optional] [default to DEVICE_NAME]
+ **sort** | **String**| sort parameter contains list of fields used for sort query result &lt;br&gt; examples: &lt;br&gt; sort&#x3D;failedRatio_a&lt;br&gt;sort&#x3D;passedTests_a&lt;br&gt;sort&#x3D;releaseVersion_a&lt;br&gt;sort&#x3D;failedTests_a&lt;br&gt;sort&#x3D;passedRatio_a&lt;br&gt;sort&#x3D;deviceName_a&lt;br&gt;sort&#x3D;usageCount_a&lt;br&gt;sort&#x3D;totalTests_a&lt;br&gt;sort&#x3D;failedDevices_a&lt;br&gt;sort&#x3D;osType_a&lt;br&gt;sort&#x3D;usageMillis_a&lt;br&gt;sort&#x3D;id_a&lt;br&gt;sort&#x3D;projectId_a | [optional] 
+ **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;releaseversion_eq_value&lt;br&gt;filter&#x3D;testrunid_eq_1&lt;br&gt;filter&#x3D;devicename_eq_value&lt;br&gt;filter&#x3D;common_eq_true&lt;br&gt;filter&#x3D;createtime_eq_1700230364268&lt;br&gt;filter&#x3D;ostype_eq_ios&lt;br&gt;filter&#x3D;id_eq_1&lt;br&gt;filter&#x3D;projectid_eq_1 | [optional] 
+ **offset** | **String**| offset parameter define page number | [optional] [default to 0]
+ **limit** | **String**| limit parameter define page size | [optional] [default to 20]
 
 ### Return type
 
-[**APIListOfAPIDeviceStatistic**](APIListOfAPIDeviceStatistic.md)
+[**APIListAPIDeviceStatistic**](APIListAPIDeviceStatistic.md)
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -79,8 +74,8 @@ Name | Type | Description  | Notes
 
 
 
-# **get_device_statistics_using_get1**
-> APIListOfAPIDeviceStatistic get_device_statistics_using_get1(user_id, opts)
+# **get_device_statistics1**
+> APIListAPIDeviceStatistic get_device_statistics1(opts)
 
 Get device statistics.
 
@@ -88,37 +83,23 @@ Get device statistics.
 ```ruby
 # load the gem
 require 'bitbar-cloud-api-client'
-# setup authorization
-BitbarCloudApiClient.configure do |config|
-  # Configure HTTP basic authorization: apiKeyInHeader
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
-
-  # Configure OAuth2 access token for authorization: oAuth2
-  config.access_token = 'YOUR ACCESS TOKEN'
-end
 
 api_instance = BitbarCloudApiClient::UsageAndStatisticsApi.new
-
-user_id = 789 # Integer | userId
-
 opts = { 
-  filter: 'filter_example', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=testrunid_eq_1<br>filter=releaseversion_eq_value<br>filter=devicename_eq_value<br>filter=common_eq_null<br>filter=createtime_eq_1593583748401<br>filter=ostype_eq_ios<br>filter=id_eq_1<br>filter=projectid_eq_1
-  for_whole_account: false, # BOOLEAN | forWholeAccount
-  limit: 20, # Integer | limit parameter define page size
-  mode: 'DEVICE_NAME', # String | mode
-  offset: 0, # Integer | offset parameter define page number
-  skip_common_project: false, # BOOLEAN | skipCommonProject
-  skip_shared: false, # BOOLEAN | skipShared
-  sort: 'sort_example' # String | sort parameter contains list of fields used for sort query result <br> examples: <br> sort=failedRatio_a<br>sort=passedTests_a<br>sort=releaseVersion_a<br>sort=failedTests_a<br>sort=passedRatio_a<br>sort=deviceName_a<br>sort=usageCount_a<br>sort=totalTests_a<br>sort=failedDevices_a<br>sort=usageMillis_a<br>sort=osType_a<br>sort=id_a<br>sort=projectId_a
+  skip_common_project: false, # BOOLEAN | 
+  mode: 'DEVICE_NAME', # String | 
+  sort: '', # String | sort parameter contains list of fields used for sort query result <br> examples: <br> sort=failedRatio_a<br>sort=passedTests_a<br>sort=releaseVersion_a<br>sort=failedTests_a<br>sort=passedRatio_a<br>sort=deviceName_a<br>sort=usageCount_a<br>sort=totalTests_a<br>sort=failedDevices_a<br>sort=osType_a<br>sort=usageMillis_a<br>sort=id_a<br>sort=projectId_a
+  filter: '', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=releaseversion_eq_value<br>filter=testrunid_eq_1<br>filter=devicename_eq_value<br>filter=common_eq_true<br>filter=createtime_eq_1700230365460<br>filter=ostype_eq_ios<br>filter=id_eq_1<br>filter=projectid_eq_1
+  offset: '0', # String | offset parameter define page number
+  limit: '20' # String | limit parameter define page size
 }
 
 begin
   #Get device statistics.
-  result = api_instance.get_device_statistics_using_get1(user_id, opts)
+  result = api_instance.get_device_statistics1(opts)
   p result
 rescue BitbarCloudApiClient::ApiError => e
-  puts "Exception when calling UsageAndStatisticsApi->get_device_statistics_using_get1: #{e}"
+  puts "Exception when calling UsageAndStatisticsApi->get_device_statistics1: #{e}"
 end
 ```
 
@@ -126,23 +107,20 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **user_id** | **Integer**| userId | 
- **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;testrunid_eq_1&lt;br&gt;filter&#x3D;releaseversion_eq_value&lt;br&gt;filter&#x3D;devicename_eq_value&lt;br&gt;filter&#x3D;common_eq_null&lt;br&gt;filter&#x3D;createtime_eq_1593583748401&lt;br&gt;filter&#x3D;ostype_eq_ios&lt;br&gt;filter&#x3D;id_eq_1&lt;br&gt;filter&#x3D;projectid_eq_1 | [optional] 
- **for_whole_account** | **BOOLEAN**| forWholeAccount | [optional] [default to false]
- **limit** | **Integer**| limit parameter define page size | [optional] [default to 20]
- **mode** | **String**| mode | [optional] [default to DEVICE_NAME]
- **offset** | **Integer**| offset parameter define page number | [optional] [default to 0]
- **skip_common_project** | **BOOLEAN**| skipCommonProject | [optional] [default to false]
- **skip_shared** | **BOOLEAN**| skipShared | [optional] [default to false]
- **sort** | **String**| sort parameter contains list of fields used for sort query result &lt;br&gt; examples: &lt;br&gt; sort&#x3D;failedRatio_a&lt;br&gt;sort&#x3D;passedTests_a&lt;br&gt;sort&#x3D;releaseVersion_a&lt;br&gt;sort&#x3D;failedTests_a&lt;br&gt;sort&#x3D;passedRatio_a&lt;br&gt;sort&#x3D;deviceName_a&lt;br&gt;sort&#x3D;usageCount_a&lt;br&gt;sort&#x3D;totalTests_a&lt;br&gt;sort&#x3D;failedDevices_a&lt;br&gt;sort&#x3D;usageMillis_a&lt;br&gt;sort&#x3D;osType_a&lt;br&gt;sort&#x3D;id_a&lt;br&gt;sort&#x3D;projectId_a | [optional] 
+ **skip_common_project** | **BOOLEAN**|  | [optional] [default to false]
+ **mode** | **String**|  | [optional] [default to DEVICE_NAME]
+ **sort** | **String**| sort parameter contains list of fields used for sort query result &lt;br&gt; examples: &lt;br&gt; sort&#x3D;failedRatio_a&lt;br&gt;sort&#x3D;passedTests_a&lt;br&gt;sort&#x3D;releaseVersion_a&lt;br&gt;sort&#x3D;failedTests_a&lt;br&gt;sort&#x3D;passedRatio_a&lt;br&gt;sort&#x3D;deviceName_a&lt;br&gt;sort&#x3D;usageCount_a&lt;br&gt;sort&#x3D;totalTests_a&lt;br&gt;sort&#x3D;failedDevices_a&lt;br&gt;sort&#x3D;osType_a&lt;br&gt;sort&#x3D;usageMillis_a&lt;br&gt;sort&#x3D;id_a&lt;br&gt;sort&#x3D;projectId_a | [optional] 
+ **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;releaseversion_eq_value&lt;br&gt;filter&#x3D;testrunid_eq_1&lt;br&gt;filter&#x3D;devicename_eq_value&lt;br&gt;filter&#x3D;common_eq_true&lt;br&gt;filter&#x3D;createtime_eq_1700230365460&lt;br&gt;filter&#x3D;ostype_eq_ios&lt;br&gt;filter&#x3D;id_eq_1&lt;br&gt;filter&#x3D;projectid_eq_1 | [optional] 
+ **offset** | **String**| offset parameter define page number | [optional] [default to 0]
+ **limit** | **String**| limit parameter define page size | [optional] [default to 20]
 
 ### Return type
 
-[**APIListOfAPIDeviceStatistic**](APIListOfAPIDeviceStatistic.md)
+[**APIListAPIDeviceStatistic**](APIListAPIDeviceStatistic.md)
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -151,8 +129,8 @@ Name | Type | Description  | Notes
 
 
 
-# **get_user_device_usage_statistics_using_get**
-> APIListOfAPIDeviceUsage get_user_device_usage_statistics_using_get(user_id, opts)
+# **get_user_device_usage_statistics**
+> APIListAPIDeviceUsage get_user_device_usage_statistics(user_id, opts)
 
 Get device usage statistics.
 
@@ -160,37 +138,26 @@ Get device usage statistics.
 ```ruby
 # load the gem
 require 'bitbar-cloud-api-client'
-# setup authorization
-BitbarCloudApiClient.configure do |config|
-  # Configure HTTP basic authorization: apiKeyInHeader
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
-
-  # Configure OAuth2 access token for authorization: oAuth2
-  config.access_token = 'YOUR ACCESS TOKEN'
-end
 
 api_instance = BitbarCloudApiClient::UsageAndStatisticsApi.new
-
-user_id = 789 # Integer | userId
-
+user_id = 789 # Integer | 
 opts = { 
-  filter: 'filter_example', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=devicesession.createtime_eq_1593583748409<br>filter=common_eq_null<br>filter=displayname_eq_value<br>filter=ostype_eq_ios<br>filter=creditsprice_eq_1<br>filter=devicesession.userid_eq_1<br>filter=id_eq_1
-  for_whole_account: false, # BOOLEAN | forWholeAccount
-  limit: 20, # Integer | limit parameter define page size
-  offset: 0, # Integer | offset parameter define page number
-  skip_common_project: false, # BOOLEAN | skipCommonProject
-  skip_shared: false, # BOOLEAN | skipShared
-  sort: 'sort_example', # String | sort parameter contains list of fields used for sort query result <br> examples: <br> sort=deviceSession.createTime_a<br>sort=displayName_a<br>sort=failedDeviceSessions_a<br>sort=totalDeviceSessions_a<br>sort=osType_a<br>sort=creditsPrice_a<br>sort=deviceSession.userId_a<br>sort=id_a
-  start_time: 789 # Integer | startTime
+  for_whole_account: false, # BOOLEAN | 
+  skip_common_project: false, # BOOLEAN | 
+  skip_shared: false, # BOOLEAN | 
+  start_time: 789, # Integer | 
+  sort: '', # String | sort parameter contains list of fields used for sort query result <br> examples: <br> sort=deviceSession.createTime_a<br>sort=displayName_a<br>sort=failedDeviceSessions_a<br>sort=creditsPrice_a<br>sort=osType_a<br>sort=totalDeviceSessions_a<br>sort=deviceSession.userId_a<br>sort=id_a<br>sort=manufacturer_a
+  filter: '', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=devicesession.createtime_eq_1700230364248<br>filter=common_eq_true<br>filter=displayname_eq_value<br>filter=creditsprice_eq_1<br>filter=ostype_eq_ios<br>filter=devicesession.userid_eq_1<br>filter=id_eq_1<br>filter=manufacturer_eq_value
+  offset: '0', # String | offset parameter define page number
+  limit: '20' # String | limit parameter define page size
 }
 
 begin
   #Get device usage statistics.
-  result = api_instance.get_user_device_usage_statistics_using_get(user_id, opts)
+  result = api_instance.get_user_device_usage_statistics(user_id, opts)
   p result
 rescue BitbarCloudApiClient::ApiError => e
-  puts "Exception when calling UsageAndStatisticsApi->get_user_device_usage_statistics_using_get: #{e}"
+  puts "Exception when calling UsageAndStatisticsApi->get_user_device_usage_statistics: #{e}"
 end
 ```
 
@@ -198,23 +165,23 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **user_id** | **Integer**| userId | 
- **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;devicesession.createtime_eq_1593583748409&lt;br&gt;filter&#x3D;common_eq_null&lt;br&gt;filter&#x3D;displayname_eq_value&lt;br&gt;filter&#x3D;ostype_eq_ios&lt;br&gt;filter&#x3D;creditsprice_eq_1&lt;br&gt;filter&#x3D;devicesession.userid_eq_1&lt;br&gt;filter&#x3D;id_eq_1 | [optional] 
- **for_whole_account** | **BOOLEAN**| forWholeAccount | [optional] [default to false]
- **limit** | **Integer**| limit parameter define page size | [optional] [default to 20]
- **offset** | **Integer**| offset parameter define page number | [optional] [default to 0]
- **skip_common_project** | **BOOLEAN**| skipCommonProject | [optional] [default to false]
- **skip_shared** | **BOOLEAN**| skipShared | [optional] [default to false]
- **sort** | **String**| sort parameter contains list of fields used for sort query result &lt;br&gt; examples: &lt;br&gt; sort&#x3D;deviceSession.createTime_a&lt;br&gt;sort&#x3D;displayName_a&lt;br&gt;sort&#x3D;failedDeviceSessions_a&lt;br&gt;sort&#x3D;totalDeviceSessions_a&lt;br&gt;sort&#x3D;osType_a&lt;br&gt;sort&#x3D;creditsPrice_a&lt;br&gt;sort&#x3D;deviceSession.userId_a&lt;br&gt;sort&#x3D;id_a | [optional] 
- **start_time** | **Integer**| startTime | [optional] 
+ **user_id** | **Integer**|  | 
+ **for_whole_account** | **BOOLEAN**|  | [optional] [default to false]
+ **skip_common_project** | **BOOLEAN**|  | [optional] [default to false]
+ **skip_shared** | **BOOLEAN**|  | [optional] [default to false]
+ **start_time** | **Integer**|  | [optional] 
+ **sort** | **String**| sort parameter contains list of fields used for sort query result &lt;br&gt; examples: &lt;br&gt; sort&#x3D;deviceSession.createTime_a&lt;br&gt;sort&#x3D;displayName_a&lt;br&gt;sort&#x3D;failedDeviceSessions_a&lt;br&gt;sort&#x3D;creditsPrice_a&lt;br&gt;sort&#x3D;osType_a&lt;br&gt;sort&#x3D;totalDeviceSessions_a&lt;br&gt;sort&#x3D;deviceSession.userId_a&lt;br&gt;sort&#x3D;id_a&lt;br&gt;sort&#x3D;manufacturer_a | [optional] 
+ **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;devicesession.createtime_eq_1700230364248&lt;br&gt;filter&#x3D;common_eq_true&lt;br&gt;filter&#x3D;displayname_eq_value&lt;br&gt;filter&#x3D;creditsprice_eq_1&lt;br&gt;filter&#x3D;ostype_eq_ios&lt;br&gt;filter&#x3D;devicesession.userid_eq_1&lt;br&gt;filter&#x3D;id_eq_1&lt;br&gt;filter&#x3D;manufacturer_eq_value | [optional] 
+ **offset** | **String**| offset parameter define page number | [optional] [default to 0]
+ **limit** | **String**| limit parameter define page size | [optional] [default to 20]
 
 ### Return type
 
-[**APIListOfAPIDeviceUsage**](APIListOfAPIDeviceUsage.md)
+[**APIListAPIDeviceUsage**](APIListAPIDeviceUsage.md)
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -223,8 +190,8 @@ Name | Type | Description  | Notes
 
 
 
-# **get_user_reserved_device_time_using_get**
-> APIBasicDeviceTime get_user_reserved_device_time_using_get(user_id)
+# **get_user_reserved_device_time**
+> APIBasicDeviceTime get_user_reserved_device_time(user_id)
 
 Get reserved device time.
 
@@ -232,27 +199,17 @@ Get reserved device time.
 ```ruby
 # load the gem
 require 'bitbar-cloud-api-client'
-# setup authorization
-BitbarCloudApiClient.configure do |config|
-  # Configure HTTP basic authorization: apiKeyInHeader
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
-
-  # Configure OAuth2 access token for authorization: oAuth2
-  config.access_token = 'YOUR ACCESS TOKEN'
-end
 
 api_instance = BitbarCloudApiClient::UsageAndStatisticsApi.new
-
-user_id = 789 # Integer | userId
+user_id = 789 # Integer | 
 
 
 begin
   #Get reserved device time.
-  result = api_instance.get_user_reserved_device_time_using_get(user_id)
+  result = api_instance.get_user_reserved_device_time(user_id)
   p result
 rescue BitbarCloudApiClient::ApiError => e
-  puts "Exception when calling UsageAndStatisticsApi->get_user_reserved_device_time_using_get: #{e}"
+  puts "Exception when calling UsageAndStatisticsApi->get_user_reserved_device_time: #{e}"
 end
 ```
 
@@ -260,7 +217,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **user_id** | **Integer**| userId | 
+ **user_id** | **Integer**|  | 
 
 ### Return type
 
@@ -268,7 +225,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -277,8 +234,8 @@ Name | Type | Description  | Notes
 
 
 
-# **get_user_statistics_using_get**
-> APIUserStatistics get_user_statistics_using_get(user_id, opts)
+# **get_user_statistics**
+> APIUserStatistics get_user_statistics(user_id, opts)
 
 Get statistics.
 
@@ -286,33 +243,22 @@ Get statistics.
 ```ruby
 # load the gem
 require 'bitbar-cloud-api-client'
-# setup authorization
-BitbarCloudApiClient.configure do |config|
-  # Configure HTTP basic authorization: apiKeyInHeader
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
-
-  # Configure OAuth2 access token for authorization: oAuth2
-  config.access_token = 'YOUR ACCESS TOKEN'
-end
 
 api_instance = BitbarCloudApiClient::UsageAndStatisticsApi.new
-
-user_id = 789 # Integer | userId
-
+user_id = 789 # Integer | 
 opts = { 
-  for_whole_account: false, # BOOLEAN | forWholeAccount
-  skip_common_project: false, # BOOLEAN | skipCommonProject
-  skip_shared: false, # BOOLEAN | skipShared
-  start_time: 789 # Integer | startTime
+  for_whole_account: false, # BOOLEAN | 
+  skip_common_project: false, # BOOLEAN | 
+  skip_shared: false, # BOOLEAN | 
+  start_time: 789 # Integer | 
 }
 
 begin
   #Get statistics.
-  result = api_instance.get_user_statistics_using_get(user_id, opts)
+  result = api_instance.get_user_statistics(user_id, opts)
   p result
 rescue BitbarCloudApiClient::ApiError => e
-  puts "Exception when calling UsageAndStatisticsApi->get_user_statistics_using_get: #{e}"
+  puts "Exception when calling UsageAndStatisticsApi->get_user_statistics: #{e}"
 end
 ```
 
@@ -320,11 +266,11 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **user_id** | **Integer**| userId | 
- **for_whole_account** | **BOOLEAN**| forWholeAccount | [optional] [default to false]
- **skip_common_project** | **BOOLEAN**| skipCommonProject | [optional] [default to false]
- **skip_shared** | **BOOLEAN**| skipShared | [optional] [default to false]
- **start_time** | **Integer**| startTime | [optional] 
+ **user_id** | **Integer**|  | 
+ **for_whole_account** | **BOOLEAN**|  | [optional] [default to false]
+ **skip_common_project** | **BOOLEAN**|  | [optional] [default to false]
+ **skip_shared** | **BOOLEAN**|  | [optional] [default to false]
+ **start_time** | **Integer**|  | [optional] 
 
 ### Return type
 
@@ -332,7 +278,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -341,8 +287,8 @@ Name | Type | Description  | Notes
 
 
 
-# **get_user_used_device_time_using_get**
-> APIBasicDeviceTime get_user_used_device_time_using_get(user_id)
+# **get_user_used_device_time**
+> APIBasicDeviceTime get_user_used_device_time(user_id)
 
 Get used device time.
 
@@ -350,27 +296,17 @@ Get used device time.
 ```ruby
 # load the gem
 require 'bitbar-cloud-api-client'
-# setup authorization
-BitbarCloudApiClient.configure do |config|
-  # Configure HTTP basic authorization: apiKeyInHeader
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
-
-  # Configure OAuth2 access token for authorization: oAuth2
-  config.access_token = 'YOUR ACCESS TOKEN'
-end
 
 api_instance = BitbarCloudApiClient::UsageAndStatisticsApi.new
-
-user_id = 789 # Integer | userId
+user_id = 789 # Integer | 
 
 
 begin
   #Get used device time.
-  result = api_instance.get_user_used_device_time_using_get(user_id)
+  result = api_instance.get_user_used_device_time(user_id)
   p result
 rescue BitbarCloudApiClient::ApiError => e
-  puts "Exception when calling UsageAndStatisticsApi->get_user_used_device_time_using_get: #{e}"
+  puts "Exception when calling UsageAndStatisticsApi->get_user_used_device_time: #{e}"
 end
 ```
 
@@ -378,7 +314,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **user_id** | **Integer**| userId | 
+ **user_id** | **Integer**|  | 
 
 ### Return type
 
@@ -386,7 +322,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -395,8 +331,8 @@ Name | Type | Description  | Notes
 
 
 
-# **get_users_device_time_history_summary_using_get**
-> APIUserDeviceTimeSummary get_users_device_time_history_summary_using_get(user_id, opts)
+# **get_users_device_time_history**
+> APIListAPIUserDeviceTime get_users_device_time_history(user_id, opts)
 
 Get device time history.
 
@@ -404,34 +340,23 @@ Get device time history.
 ```ruby
 # load the gem
 require 'bitbar-cloud-api-client'
-# setup authorization
-BitbarCloudApiClient.configure do |config|
-  # Configure HTTP basic authorization: apiKeyInHeader
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
-
-  # Configure OAuth2 access token for authorization: oAuth2
-  config.access_token = 'YOUR ACCESS TOKEN'
-end
 
 api_instance = BitbarCloudApiClient::UsageAndStatisticsApi.new
-
-user_id = 789 # Integer | userId
-
+user_id = 789 # Integer | 
 opts = { 
-  filter: 'filter_example', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=starttime_eq_1593583748068<br>filter=id_eq_1<br>filter=_endtime_eq_1593583748068<br>filter=username_eq_value<br>filter=userid_eq_1
-  for_whole_account: false, # BOOLEAN | forWholeAccount
-  limit: 20, # Integer | limit parameter define page size
-  offset: 0, # Integer | offset parameter define page number
-  sort: 'sort_example' # String | sort parameter contains list of fields used for sort query result <br> examples: <br> sort=createTime_a<br>sort=id_a<br>sort=userName_a<br>sort=type_a
+  for_whole_account: false, # BOOLEAN | 
+  sort: '', # String | sort parameter contains list of fields used for sort query result <br> examples: <br> sort=createTime_a<br>sort=id_a<br>sort=type_a<br>sort=userName_a
+  filter: '', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=starttime_eq_1700230364254<br>filter=_endtime_eq_1700230364254<br>filter=id_eq_1<br>filter=username_eq_value<br>filter=userid_eq_1
+  offset: '0', # String | offset parameter define page number
+  limit: '20' # String | limit parameter define page size
 }
 
 begin
   #Get device time history.
-  result = api_instance.get_users_device_time_history_summary_using_get(user_id, opts)
+  result = api_instance.get_users_device_time_history(user_id, opts)
   p result
 rescue BitbarCloudApiClient::ApiError => e
-  puts "Exception when calling UsageAndStatisticsApi->get_users_device_time_history_summary_using_get: #{e}"
+  puts "Exception when calling UsageAndStatisticsApi->get_users_device_time_history: #{e}"
 end
 ```
 
@@ -439,12 +364,67 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **user_id** | **Integer**| userId | 
- **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;starttime_eq_1593583748068&lt;br&gt;filter&#x3D;id_eq_1&lt;br&gt;filter&#x3D;_endtime_eq_1593583748068&lt;br&gt;filter&#x3D;username_eq_value&lt;br&gt;filter&#x3D;userid_eq_1 | [optional] 
- **for_whole_account** | **BOOLEAN**| forWholeAccount | [optional] [default to false]
- **limit** | **Integer**| limit parameter define page size | [optional] [default to 20]
- **offset** | **Integer**| offset parameter define page number | [optional] [default to 0]
- **sort** | **String**| sort parameter contains list of fields used for sort query result &lt;br&gt; examples: &lt;br&gt; sort&#x3D;createTime_a&lt;br&gt;sort&#x3D;id_a&lt;br&gt;sort&#x3D;userName_a&lt;br&gt;sort&#x3D;type_a | [optional] 
+ **user_id** | **Integer**|  | 
+ **for_whole_account** | **BOOLEAN**|  | [optional] [default to false]
+ **sort** | **String**| sort parameter contains list of fields used for sort query result &lt;br&gt; examples: &lt;br&gt; sort&#x3D;createTime_a&lt;br&gt;sort&#x3D;id_a&lt;br&gt;sort&#x3D;type_a&lt;br&gt;sort&#x3D;userName_a | [optional] 
+ **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;starttime_eq_1700230364254&lt;br&gt;filter&#x3D;_endtime_eq_1700230364254&lt;br&gt;filter&#x3D;id_eq_1&lt;br&gt;filter&#x3D;username_eq_value&lt;br&gt;filter&#x3D;userid_eq_1 | [optional] 
+ **offset** | **String**| offset parameter define page number | [optional] [default to 0]
+ **limit** | **String**| limit parameter define page size | [optional] [default to 20]
+
+### Return type
+
+[**APIListAPIUserDeviceTime**](APIListAPIUserDeviceTime.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: */*
+
+
+
+# **get_users_device_time_history_summary**
+> APIUserDeviceTimeSummary get_users_device_time_history_summary(user_id, opts)
+
+Get device time history.
+
+### Example
+```ruby
+# load the gem
+require 'bitbar-cloud-api-client'
+
+api_instance = BitbarCloudApiClient::UsageAndStatisticsApi.new
+user_id = 789 # Integer | 
+opts = { 
+  for_whole_account: false, # BOOLEAN | 
+  sort: '', # String | sort parameter contains list of fields used for sort query result <br> examples: <br> sort=createTime_a<br>sort=id_a<br>sort=type_a<br>sort=userName_a
+  filter: '', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=starttime_eq_1700230364262<br>filter=_endtime_eq_1700230364262<br>filter=id_eq_1<br>filter=username_eq_value<br>filter=userid_eq_1
+  offset: '0', # String | offset parameter define page number
+  limit: '20' # String | limit parameter define page size
+}
+
+begin
+  #Get device time history.
+  result = api_instance.get_users_device_time_history_summary(user_id, opts)
+  p result
+rescue BitbarCloudApiClient::ApiError => e
+  puts "Exception when calling UsageAndStatisticsApi->get_users_device_time_history_summary: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **user_id** | **Integer**|  | 
+ **for_whole_account** | **BOOLEAN**|  | [optional] [default to false]
+ **sort** | **String**| sort parameter contains list of fields used for sort query result &lt;br&gt; examples: &lt;br&gt; sort&#x3D;createTime_a&lt;br&gt;sort&#x3D;id_a&lt;br&gt;sort&#x3D;type_a&lt;br&gt;sort&#x3D;userName_a | [optional] 
+ **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;starttime_eq_1700230364262&lt;br&gt;filter&#x3D;_endtime_eq_1700230364262&lt;br&gt;filter&#x3D;id_eq_1&lt;br&gt;filter&#x3D;username_eq_value&lt;br&gt;filter&#x3D;userid_eq_1 | [optional] 
+ **offset** | **String**| offset parameter define page number | [optional] [default to 0]
+ **limit** | **String**| limit parameter define page size | [optional] [default to 20]
 
 ### Return type
 
@@ -452,73 +432,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: */*
-
-
-
-# **get_users_device_time_history_using_get**
-> APIListOfAPIUserDeviceTime get_users_device_time_history_using_get(user_id, opts)
-
-Get device time history.
-
-### Example
-```ruby
-# load the gem
-require 'bitbar-cloud-api-client'
-# setup authorization
-BitbarCloudApiClient.configure do |config|
-  # Configure HTTP basic authorization: apiKeyInHeader
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
-
-  # Configure OAuth2 access token for authorization: oAuth2
-  config.access_token = 'YOUR ACCESS TOKEN'
-end
-
-api_instance = BitbarCloudApiClient::UsageAndStatisticsApi.new
-
-user_id = 789 # Integer | userId
-
-opts = { 
-  filter: 'filter_example', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=starttime_eq_1593583747982<br>filter=id_eq_1<br>filter=_endtime_eq_1593583747982<br>filter=username_eq_value<br>filter=userid_eq_1
-  for_whole_account: false, # BOOLEAN | forWholeAccount
-  limit: 20, # Integer | limit parameter define page size
-  offset: 0, # Integer | offset parameter define page number
-  sort: 'sort_example' # String | sort parameter contains list of fields used for sort query result <br> examples: <br> sort=createTime_a<br>sort=id_a<br>sort=userName_a<br>sort=type_a
-}
-
-begin
-  #Get device time history.
-  result = api_instance.get_users_device_time_history_using_get(user_id, opts)
-  p result
-rescue BitbarCloudApiClient::ApiError => e
-  puts "Exception when calling UsageAndStatisticsApi->get_users_device_time_history_using_get: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **user_id** | **Integer**| userId | 
- **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;starttime_eq_1593583747982&lt;br&gt;filter&#x3D;id_eq_1&lt;br&gt;filter&#x3D;_endtime_eq_1593583747982&lt;br&gt;filter&#x3D;username_eq_value&lt;br&gt;filter&#x3D;userid_eq_1 | [optional] 
- **for_whole_account** | **BOOLEAN**| forWholeAccount | [optional] [default to false]
- **limit** | **Integer**| limit parameter define page size | [optional] [default to 20]
- **offset** | **Integer**| offset parameter define page number | [optional] [default to 0]
- **sort** | **String**| sort parameter contains list of fields used for sort query result &lt;br&gt; examples: &lt;br&gt; sort&#x3D;createTime_a&lt;br&gt;sort&#x3D;id_a&lt;br&gt;sort&#x3D;userName_a&lt;br&gt;sort&#x3D;type_a | [optional] 
-
-### Return type
-
-[**APIListOfAPIUserDeviceTime**](APIListOfAPIUserDeviceTime.md)
-
-### Authorization
-
-[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
+No authorization required
 
 ### HTTP request headers
 

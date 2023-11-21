@@ -7,4 +7,3 @@ Name | Type | Description | Notes
 **limit** | **Integer** |  | [optional] 
 **limited** | **BOOLEAN** |  | [optional] 
 
-

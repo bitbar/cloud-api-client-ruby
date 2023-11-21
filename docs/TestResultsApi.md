@@ -1,55 +1,107 @@
 # BitbarCloudApiClient::TestResultsApi
 
-All URIs are relative to *https://cloud.bitbar.com*
+All URIs are relative to *https://cloud.bitbar.com/cloud*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**abort_user_test_run_using_post**](TestResultsApi.md#abort_user_test_run_using_post) | **POST** /api/v2/users/{userId}/projects/{projectId}/runs/{runId}/abort | Abort test run and receive partial results.
-[**add_file_using_post1**](TestResultsApi.md#add_file_using_post1) | **POST** /api/v2/users/{userId}/device-sessions/{deviceSessionId}/output-file-set/files | Add file to device session.
-[**add_test_run_tag_using_post1**](TestResultsApi.md#add_test_run_tag_using_post1) | **POST** /api/v2/users/{userId}/projects/{projectId}/runs/{runId}/tags | Add tag to test run.
-[**delete_file_using_delete4**](TestResultsApi.md#delete_file_using_delete4) | **DELETE** /api/v2/users/{userId}/device-sessions/{deviceSessionId}/output-file-set/files/{fileId} | Delete file from device session.
-[**delete_test_run_tag_using_delete1**](TestResultsApi.md#delete_test_run_tag_using_delete1) | **DELETE** /api/v2/users/{userId}/projects/{projectId}/runs/{runId}/tags/{tagId} | Delete test run tag.
-[**delete_user_test_run_using_delete**](TestResultsApi.md#delete_user_test_run_using_delete) | **DELETE** /api/v2/users/{userId}/projects/{projectId}/runs/{runId} | Delete test run.
-[**download_output_files_zip_using_get1**](TestResultsApi.md#download_output_files_zip_using_get1) | **GET** /api/v2/users/{userId}/device-sessions/{deviceSessionId}/output-file-set/files.zip | Get device session output files.zip.
-[**download_test_run_output_files_zip_using_get2**](TestResultsApi.md#download_test_run_output_files_zip_using_get2) | **GET** /api/v2/users/{userId}/projects/{projectId}/runs/{runId}/device-sessions/{deviceSessionId}/output-file-set/files.zip | Get device session output files.zip.
-[**get_all_test_run_device_session_steps_using_get2**](TestResultsApi.md#get_all_test_run_device_session_steps_using_get2) | **GET** /api/v2/users/{userId}/projects/{projectId}/runs/{runId}/steps | Get device session steps of all device sessions in run.
-[**get_current_device_session_step_using_get3**](TestResultsApi.md#get_current_device_session_step_using_get3) | **GET** /api/v2/users/{userId}/projects/{projectId}/runs/{runId}/device-sessions/{deviceSessionId}/steps/current | Get current device session step.
-[**get_device_session_steps_using_get3**](TestResultsApi.md#get_device_session_steps_using_get3) | **GET** /api/v2/users/{userId}/projects/{projectId}/runs/{runId}/device-sessions/{deviceSessionId}/steps | Get device session steps.
-[**get_device_session_test_case_runs_using_get2**](TestResultsApi.md#get_device_session_test_case_runs_using_get2) | **GET** /api/v2/users/{userId}/projects/{projectId}/runs/{runId}/device-sessions/{deviceSessionId}/test-case-runs | Get device session steps.
-[**get_device_sessions_using_get1**](TestResultsApi.md#get_device_sessions_using_get1) | **GET** /api/v2/users/{userId}/projects/{projectId}/runs/{runId}/device-sessions | Get device sessions.
-[**get_files_for_device_session_by_tag_using_get**](TestResultsApi.md#get_files_for_device_session_by_tag_using_get) | **GET** /api/v2/users/{userId}/projects/{projectId}/runs/{runId}/device-sessions/{deviceSessionId}/output-file-set/files | Get device session output files.
-[**get_inspector_device_sessions_using_get**](TestResultsApi.md#get_inspector_device_sessions_using_get) | **GET** /api/v2/users/{userId}/device-sessions | Get device sessions.
-[**get_output_files_using_get**](TestResultsApi.md#get_output_files_using_get) | **GET** /api/v2/users/{userId}/device-sessions/{deviceSessionId}/output-file-set/files | Get files for device session.
-[**get_screenshot_names_using_get2**](TestResultsApi.md#get_screenshot_names_using_get2) | **GET** /api/v2/users/{userId}/projects/{projectId}/runs/{runId}/screenshot-names | Get screenshot names.
-[**get_test_run_data_availability_with_user_using_get**](TestResultsApi.md#get_test_run_data_availability_with_user_using_get) | **GET** /api/v2/users/{userId}/projects/{projectId}/runs/{runId}/data-availability | Get test run data availability.
-[**get_test_run_screenshots_using_get2**](TestResultsApi.md#get_test_run_screenshots_using_get2) | **GET** /api/v2/users/{userId}/projects/{projectId}/runs/{runId}/screenshots | Get test run screenshots by name.
-[**get_test_run_tag_using_get1**](TestResultsApi.md#get_test_run_tag_using_get1) | **GET** /api/v2/users/{userId}/projects/{projectId}/runs/{runId}/tags/{tagId} | Get test run tag.
-[**get_test_run_tags_using_get1**](TestResultsApi.md#get_test_run_tags_using_get1) | **GET** /api/v2/users/{userId}/projects/{projectId}/runs/{runId}/tags | Get test run tags.
-[**get_user_cluster_logs_using_get**](TestResultsApi.md#get_user_cluster_logs_using_get) | **GET** /api/v2/users/{userId}/projects/{projectId}/runs/{runId}/device-sessions/{deviceSessionId}/cluster-logs | This endpoint is deprecated.
-[**get_user_device_session_data_zip_using_get**](TestResultsApi.md#get_user_device_session_data_zip_using_get) | **GET** /api/v2/users/{userId}/projects/{projectId}/runs/{runId}/device-sessions/{deviceSessionId}/result-data.zip | This endpoint is deprecated.
-[**get_user_device_session_junit_using_get**](TestResultsApi.md#get_user_device_session_junit_using_get) | **GET** /api/v2/users/{userId}/projects/{projectId}/runs/{runId}/device-sessions/{deviceSessionId}/junit.xml | This endpoint is deprecated.
-[**get_user_device_session_logs_using_get**](TestResultsApi.md#get_user_device_session_logs_using_get) | **GET** /api/v2/users/{userId}/projects/{projectId}/runs/{runId}/device-sessions/{deviceSessionId}/logs | This endpoint is deprecated.
-[**get_user_device_session_performance_using_get**](TestResultsApi.md#get_user_device_session_performance_using_get) | **GET** /api/v2/users/{userId}/projects/{projectId}/runs/{runId}/device-sessions/{deviceSessionId}/performance | This endpoint is deprecated.
-[**get_user_device_session_screenshots_using_get**](TestResultsApi.md#get_user_device_session_screenshots_using_get) | **GET** /api/v2/users/{userId}/projects/{projectId}/runs/{runId}/device-sessions/{deviceSessionId}/screenshots | Get device session screenshots.
-[**get_user_device_session_step_using_get**](TestResultsApi.md#get_user_device_session_step_using_get) | **GET** /api/v2/users/{userId}/projects/{projectId}/runs/{runId}/device-sessions/{deviceSessionId}/steps/{deviceSessionStepId} | Get device session step.
-[**get_user_device_session_with_users_using_get**](TestResultsApi.md#get_user_device_session_with_users_using_get) | **GET** /api/v2/users/{userId}/projects/{projectId}/runs/{runId}/device-sessions/{deviceSessionId} | Get device session.
-[**get_user_inspector_device_session_using_get**](TestResultsApi.md#get_user_inspector_device_session_using_get) | **GET** /api/v2/users/{userId}/device-sessions/{deviceSessionId} | Get device session.
-[**get_user_project_test_runs_using_get**](TestResultsApi.md#get_user_project_test_runs_using_get) | **GET** /api/v2/users/{userId}/projects/{projectId}/runs | Get test runs.
-[**get_user_test_run_using_get**](TestResultsApi.md#get_user_test_run_using_get) | **GET** /api/v2/users/{userId}/projects/{projectId}/runs/{runId} | Get test run.
-[**get_user_test_runs_using_get**](TestResultsApi.md#get_user_test_runs_using_get) | **GET** /api/v2/users/{userId}/runs | Get test runs.
-[**release_device_session_using_post1**](TestResultsApi.md#release_device_session_using_post1) | **POST** /api/v2/users/{userId}/device-sessions/{deviceSessionId}/release | Release device session.
-[**request_user_test_run_files_using_post**](TestResultsApi.md#request_user_test_run_files_using_post) | **POST** /api/v2/users/{userId}/projects/{projectId}/runs/{runId}/files.zip | Generate files zip.
-[**request_user_test_run_logs_using_post**](TestResultsApi.md#request_user_test_run_logs_using_post) | **POST** /api/v2/users/{userId}/projects/{projectId}/runs/{runId}/logs.zip | Generate logs zip.
-[**request_user_test_run_performance_using_post**](TestResultsApi.md#request_user_test_run_performance_using_post) | **POST** /api/v2/users/{userId}/projects/{projectId}/runs/{runId}/performance.zip | Generate performance zip.
-[**request_user_test_run_screenshots_using_post**](TestResultsApi.md#request_user_test_run_screenshots_using_post) | **POST** /api/v2/users/{userId}/projects/{projectId}/runs/{runId}/screenshots.zip | Generate screenshot zip.
-[**retry_device_session_with_user_using_post**](TestResultsApi.md#retry_device_session_with_user_using_post) | **POST** /api/v2/users/{userId}/projects/{projectId}/runs/{runId}/device-sessions/{deviceSessionId}/retry | Retry device session.
-[**retry_test_run_with_user_using_post**](TestResultsApi.md#retry_test_run_with_user_using_post) | **POST** /api/v2/users/{userId}/projects/{projectId}/runs/{runId}/retry | Retry test run or its device sessions.
-[**serve_screenshot_using_get**](TestResultsApi.md#serve_screenshot_using_get) | **GET** /api/v2/users/{userId}/projects/{projectId}/runs/{runId}/device-sessions/{deviceSessionId}/screenshots/{screenshotId} | Get device session screenshot.
-[**update_user_test_run_using_post**](TestResultsApi.md#update_user_test_run_using_post) | **POST** /api/v2/users/{userId}/projects/{projectId}/runs/{runId} | Update test run.
+[**abort_device_session**](TestResultsApi.md#abort_device_session) | **POST** /api/v2/users/{userId}/projects/{projectId}/runs/{runId}/device-sessions/{deviceSessionId}/abort | Abort device session.
+[**abort_user_test_run**](TestResultsApi.md#abort_user_test_run) | **POST** /api/v2/users/{userId}/projects/{projectId}/runs/{runId}/abort | Abort test run and receive partial results.
+[**add_file**](TestResultsApi.md#add_file) | **POST** /api/v2/users/{userId}/projects/{projectId}/runs/{runId}/device-sessions/{deviceSessionId}/output-file-set/files | Add file to device session.
+[**add_file1**](TestResultsApi.md#add_file1) | **POST** /api/v2/users/{userId}/device-sessions/{deviceSessionId}/output-file-set/files | Add file to device session.
+[**add_file2**](TestResultsApi.md#add_file2) | **POST** /api/v2/runs/{runId}/device-sessions/{deviceSessionId}/output-file-set/files | Add file to device session.
+[**add_file3**](TestResultsApi.md#add_file3) | **POST** /api/v2/projects/{projectId}/runs/{runId}/device-sessions/{deviceSessionId}/output-file-set/files | Add file to device session.
+[**add_test_run_tag**](TestResultsApi.md#add_test_run_tag) | **POST** /api/v2/users/{userId}/projects/{projectId}/runs/{runId}/tags | Add tag to test run.
+[**delete_file1**](TestResultsApi.md#delete_file1) | **DELETE** /api/v2/users/{userId}/device-sessions/{deviceSessionId}/output-file-set/files/{fileId} | Delete file from device session.
+[**delete_test_run_tag**](TestResultsApi.md#delete_test_run_tag) | **DELETE** /api/v2/users/{userId}/projects/{projectId}/runs/{runId}/tags/{tagId} | Delete test run tag.
+[**delete_user_test_run**](TestResultsApi.md#delete_user_test_run) | **DELETE** /api/v2/users/{userId}/projects/{projectId}/runs/{runId} | Delete test run.
+[**download_output_files_zip**](TestResultsApi.md#download_output_files_zip) | **GET** /api/v2/users/{userId}/device-sessions/{deviceSessionId}/output-file-set/files.zip | Get device session output files.zip.
+[**download_test_run_output_files_zip**](TestResultsApi.md#download_test_run_output_files_zip) | **GET** /api/v2/users/{userId}/projects/{projectId}/runs/{runId}/device-sessions/{deviceSessionId}/output-file-set/files.zip | Get device session output files.zip.
+[**get_all_test_run_device_session_steps**](TestResultsApi.md#get_all_test_run_device_session_steps) | **GET** /api/v2/users/{userId}/projects/{projectId}/runs/{runId}/steps | Get device session steps of all device sessions in run.
+[**get_current_device_session_step**](TestResultsApi.md#get_current_device_session_step) | **GET** /api/v2/users/{userId}/projects/{projectId}/runs/{runId}/device-sessions/{deviceSessionId}/steps/current | Get current device session step.
+[**get_device_session_commands**](TestResultsApi.md#get_device_session_commands) | **GET** /api/v2/users/{userId}/projects/{projectId}/runs/{runId}/device-sessions/{deviceSessionId}/commands | Get device session commands.
+[**get_device_session_steps**](TestResultsApi.md#get_device_session_steps) | **GET** /api/v2/users/{userId}/projects/{projectId}/runs/{runId}/device-sessions/{deviceSessionId}/steps | Get device session steps.
+[**get_device_session_test_case_runs**](TestResultsApi.md#get_device_session_test_case_runs) | **GET** /api/v2/users/{userId}/projects/{projectId}/runs/{runId}/device-sessions/{deviceSessionId}/test-case-runs | Get device session steps.
+[**get_device_sessions**](TestResultsApi.md#get_device_sessions) | **GET** /api/v2/users/{userId}/projects/{projectId}/runs/{runId}/device-sessions | Get device sessions.
+[**get_files_for_device_session_by_tag**](TestResultsApi.md#get_files_for_device_session_by_tag) | **GET** /api/v2/users/{userId}/projects/{projectId}/runs/{runId}/device-sessions/{deviceSessionId}/output-file-set/files | Get device session output files.
+[**get_inspector_device_sessions**](TestResultsApi.md#get_inspector_device_sessions) | **GET** /api/v2/users/{userId}/device-sessions | Get device sessions.
+[**get_output_files**](TestResultsApi.md#get_output_files) | **GET** /api/v2/users/{userId}/device-sessions/{deviceSessionId}/output-file-set/files | Get files for device session.
+[**get_screenshot_names**](TestResultsApi.md#get_screenshot_names) | **GET** /api/v2/users/{userId}/projects/{projectId}/runs/{runId}/screenshot-names | Get screenshot names.
+[**get_test_run_data_availability_with_user**](TestResultsApi.md#get_test_run_data_availability_with_user) | **GET** /api/v2/users/{userId}/projects/{projectId}/runs/{runId}/data-availability | Get test run data availability.
+[**get_test_run_screenshots**](TestResultsApi.md#get_test_run_screenshots) | **GET** /api/v2/users/{userId}/projects/{projectId}/runs/{runId}/screenshots | Get test run screenshots by name.
+[**get_test_run_tag**](TestResultsApi.md#get_test_run_tag) | **GET** /api/v2/users/{userId}/projects/{projectId}/runs/{runId}/tags/{tagId} | Get test run tag.
+[**get_test_run_tags**](TestResultsApi.md#get_test_run_tags) | **GET** /api/v2/users/{userId}/projects/{projectId}/runs/{runId}/tags | Get test run tags.
+[**get_user_device_session_screenshots**](TestResultsApi.md#get_user_device_session_screenshots) | **GET** /api/v2/users/{userId}/projects/{projectId}/runs/{runId}/device-sessions/{deviceSessionId}/screenshots | Get device session screenshots.
+[**get_user_device_session_step**](TestResultsApi.md#get_user_device_session_step) | **GET** /api/v2/users/{userId}/projects/{projectId}/runs/{runId}/device-sessions/{deviceSessionId}/steps/{deviceSessionStepId} | Get device session step.
+[**get_user_device_session_with_users**](TestResultsApi.md#get_user_device_session_with_users) | **GET** /api/v2/users/{userId}/projects/{projectId}/runs/{runId}/device-sessions/{deviceSessionId} | Get device session.
+[**get_user_inspector_device_session**](TestResultsApi.md#get_user_inspector_device_session) | **GET** /api/v2/users/{userId}/device-sessions/{deviceSessionId} | Get device session.
+[**get_user_project_test_runs**](TestResultsApi.md#get_user_project_test_runs) | **GET** /api/v2/users/{userId}/projects/{projectId}/runs | Get test runs.
+[**get_user_test_run**](TestResultsApi.md#get_user_test_run) | **GET** /api/v2/users/{userId}/projects/{projectId}/runs/{runId} | Get test run.
+[**get_user_test_runs**](TestResultsApi.md#get_user_test_runs) | **GET** /api/v2/users/{userId}/runs | Get test runs.
+[**get_visual_test_images**](TestResultsApi.md#get_visual_test_images) | **GET** /api/v2/users/{userId}/device-sessions/{deviceSessionId}/visualtest/images | Retrieve VisualTests images.
+[**release_device_session**](TestResultsApi.md#release_device_session) | **POST** /api/v2/users/{userId}/device-sessions/{deviceSessionId}/release | Release device session.
+[**request_user_test_run_files**](TestResultsApi.md#request_user_test_run_files) | **POST** /api/v2/users/{userId}/projects/{projectId}/runs/{runId}/files.zip | Generate files zip.
+[**request_user_test_run_logs**](TestResultsApi.md#request_user_test_run_logs) | **POST** /api/v2/users/{userId}/projects/{projectId}/runs/{runId}/logs.zip | Generate logs zip.
+[**request_user_test_run_performance**](TestResultsApi.md#request_user_test_run_performance) | **POST** /api/v2/users/{userId}/projects/{projectId}/runs/{runId}/performance.zip | Generate performance zip.
+[**request_user_test_run_screenshots**](TestResultsApi.md#request_user_test_run_screenshots) | **POST** /api/v2/users/{userId}/projects/{projectId}/runs/{runId}/screenshots.zip | Generate screenshot zip.
+[**retry_device_session_with_user**](TestResultsApi.md#retry_device_session_with_user) | **POST** /api/v2/users/{userId}/projects/{projectId}/runs/{runId}/device-sessions/{deviceSessionId}/retry | Retry device session.
+[**retry_test_run_with_user**](TestResultsApi.md#retry_test_run_with_user) | **POST** /api/v2/users/{userId}/projects/{projectId}/runs/{runId}/retry | Retry test run or its device sessions.
+[**serve_screenshot**](TestResultsApi.md#serve_screenshot) | **GET** /api/v2/users/{userId}/projects/{projectId}/runs/{runId}/device-sessions/{deviceSessionId}/screenshots/{screenshotId} | Get device session screenshot.
+[**update_device_session1**](TestResultsApi.md#update_device_session1) | **POST** /api/v2/users/{userId}/projects/{projectId}/runs/{runId}/device-sessions/{deviceSessionId} | Update device session by external id.
+[**update_user_test_run**](TestResultsApi.md#update_user_test_run) | **POST** /api/v2/users/{userId}/projects/{projectId}/runs/{runId} | Update test run.
+[**update_users_device_session1**](TestResultsApi.md#update_users_device_session1) | **POST** /api/v2/users/{userId}/device-sessions/{deviceSessionId} | Update device session by external id.
+
+# **abort_device_session**
+> APIDeviceSession abort_device_session(user_id, project_id, run_id, device_session_id)
+
+Abort device session.
+
+### Example
+```ruby
+# load the gem
+require 'bitbar-cloud-api-client'
+
+api_instance = BitbarCloudApiClient::TestResultsApi.new
+user_id = 789 # Integer | 
+project_id = 789 # Integer | 
+run_id = 789 # Integer | 
+device_session_id = 789 # Integer | 
 
 
-# **abort_user_test_run_using_post**
-> APITestRun abort_user_test_run_using_post(project_id, run_id, user_id)
+begin
+  #Abort device session.
+  result = api_instance.abort_device_session(user_id, project_id, run_id, device_session_id)
+  p result
+rescue BitbarCloudApiClient::ApiError => e
+  puts "Exception when calling TestResultsApi->abort_device_session: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **user_id** | **Integer**|  | 
+ **project_id** | **Integer**|  | 
+ **run_id** | **Integer**|  | 
+ **device_session_id** | **Integer**|  | 
+
+### Return type
+
+[**APIDeviceSession**](APIDeviceSession.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: */*
+
+
+
+# **abort_user_test_run**
+> APITestRun abort_user_test_run(user_id, project_id, run_id)
 
 Abort test run and receive partial results.
 
@@ -57,31 +109,19 @@ Abort test run and receive partial results.
 ```ruby
 # load the gem
 require 'bitbar-cloud-api-client'
-# setup authorization
-BitbarCloudApiClient.configure do |config|
-  # Configure HTTP basic authorization: apiKeyInHeader
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
-
-  # Configure OAuth2 access token for authorization: oAuth2
-  config.access_token = 'YOUR ACCESS TOKEN'
-end
 
 api_instance = BitbarCloudApiClient::TestResultsApi.new
-
-project_id = 789 # Integer | projectId
-
-run_id = 789 # Integer | runId
-
-user_id = 789 # Integer | userId
+user_id = 789 # Integer | 
+project_id = 789 # Integer | 
+run_id = 789 # Integer | 
 
 
 begin
   #Abort test run and receive partial results.
-  result = api_instance.abort_user_test_run_using_post(project_id, run_id, user_id)
+  result = api_instance.abort_user_test_run(user_id, project_id, run_id)
   p result
 rescue BitbarCloudApiClient::ApiError => e
-  puts "Exception when calling TestResultsApi->abort_user_test_run_using_post: #{e}"
+  puts "Exception when calling TestResultsApi->abort_user_test_run: #{e}"
 end
 ```
 
@@ -89,9 +129,9 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **project_id** | **Integer**| projectId | 
- **run_id** | **Integer**| runId | 
- **user_id** | **Integer**| userId | 
+ **user_id** | **Integer**|  | 
+ **project_id** | **Integer**|  | 
+ **run_id** | **Integer**|  | 
 
 ### Return type
 
@@ -99,17 +139,17 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
+No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: */*
 
 
 
-# **add_file_using_post1**
-> APIUserFile add_file_using_post1(device_session_id, file, name, user_id, opts)
+# **add_file**
+> APIUserFile add_file(nameuser_idproject_idrun_iddevice_session_id, opts)
 
 Add file to device session.
 
@@ -117,36 +157,24 @@ Add file to device session.
 ```ruby
 # load the gem
 require 'bitbar-cloud-api-client'
-# setup authorization
-BitbarCloudApiClient.configure do |config|
-  # Configure HTTP basic authorization: apiKeyInHeader
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
-
-  # Configure OAuth2 access token for authorization: oAuth2
-  config.access_token = 'YOUR ACCESS TOKEN'
-end
 
 api_instance = BitbarCloudApiClient::TestResultsApi.new
-
-device_session_id = 789 # Integer | deviceSessionId
-
-file = File.new('/path/to/file.txt') # File | file
-
-name = 'name_example' # String | name
-
-user_id = 789 # Integer | userId
-
+name = 'name_example' # String | 
+user_id = 789 # Integer | 
+project_id = 789 # Integer | 
+run_id = 789 # Integer | 
+device_session_id = 789 # Integer | 
 opts = { 
-  tag: 'tag_example' # String | tag
+  body: BitbarCloudApiClient::OutputfilesetFilesBody.new # OutputfilesetFilesBody | 
+  tag: 'tag_example' # String | 
 }
 
 begin
   #Add file to device session.
-  result = api_instance.add_file_using_post1(device_session_id, file, name, user_id, opts)
+  result = api_instance.add_file(nameuser_idproject_idrun_iddevice_session_id, opts)
   p result
 rescue BitbarCloudApiClient::ApiError => e
-  puts "Exception when calling TestResultsApi->add_file_using_post1: #{e}"
+  puts "Exception when calling TestResultsApi->add_file: #{e}"
 end
 ```
 
@@ -154,11 +182,13 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **device_session_id** | **Integer**| deviceSessionId | 
- **file** | **File**| file | 
- **name** | **String**| name | 
- **user_id** | **Integer**| userId | 
- **tag** | **String**| tag | [optional] 
+ **name** | **String**|  | 
+ **user_id** | **Integer**|  | 
+ **project_id** | **Integer**|  | 
+ **run_id** | **Integer**|  | 
+ **device_session_id** | **Integer**|  | 
+ **body** | [**OutputfilesetFilesBody**](OutputfilesetFilesBody.md)|  | [optional] 
+ **tag** | **String**|  | [optional] 
 
 ### Return type
 
@@ -166,17 +196,178 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
+No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: multipart/form-data
+ - **Content-Type**: application/json
  - **Accept**: */*
 
 
 
-# **add_test_run_tag_using_post1**
-> APITag add_test_run_tag_using_post1(name, project_id, run_id, user_id)
+# **add_file1**
+> APIUserFile add_file1(nameuser_iddevice_session_id, opts)
+
+Add file to device session.
+
+### Example
+```ruby
+# load the gem
+require 'bitbar-cloud-api-client'
+
+api_instance = BitbarCloudApiClient::TestResultsApi.new
+name = 'name_example' # String | 
+user_id = 789 # Integer | 
+device_session_id = 789 # Integer | 
+opts = { 
+  body: BitbarCloudApiClient::OutputfilesetFilesBody1.new # OutputfilesetFilesBody1 | 
+  tag: 'tag_example' # String | 
+}
+
+begin
+  #Add file to device session.
+  result = api_instance.add_file1(nameuser_iddevice_session_id, opts)
+  p result
+rescue BitbarCloudApiClient::ApiError => e
+  puts "Exception when calling TestResultsApi->add_file1: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **String**|  | 
+ **user_id** | **Integer**|  | 
+ **device_session_id** | **Integer**|  | 
+ **body** | [**OutputfilesetFilesBody1**](OutputfilesetFilesBody1.md)|  | [optional] 
+ **tag** | **String**|  | [optional] 
+
+### Return type
+
+[**APIUserFile**](APIUserFile.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: */*
+
+
+
+# **add_file2**
+> APIUserFile add_file2(namerun_iddevice_session_id, opts)
+
+Add file to device session.
+
+### Example
+```ruby
+# load the gem
+require 'bitbar-cloud-api-client'
+
+api_instance = BitbarCloudApiClient::TestResultsApi.new
+name = 'name_example' # String | 
+run_id = 789 # Integer | 
+device_session_id = 789 # Integer | 
+opts = { 
+  body: BitbarCloudApiClient::OutputfilesetFilesBody2.new # OutputfilesetFilesBody2 | 
+  tag: 'tag_example' # String | 
+}
+
+begin
+  #Add file to device session.
+  result = api_instance.add_file2(namerun_iddevice_session_id, opts)
+  p result
+rescue BitbarCloudApiClient::ApiError => e
+  puts "Exception when calling TestResultsApi->add_file2: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **String**|  | 
+ **run_id** | **Integer**|  | 
+ **device_session_id** | **Integer**|  | 
+ **body** | [**OutputfilesetFilesBody2**](OutputfilesetFilesBody2.md)|  | [optional] 
+ **tag** | **String**|  | [optional] 
+
+### Return type
+
+[**APIUserFile**](APIUserFile.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: */*
+
+
+
+# **add_file3**
+> APIUserFile add_file3(nameproject_idrun_iddevice_session_id, opts)
+
+Add file to device session.
+
+### Example
+```ruby
+# load the gem
+require 'bitbar-cloud-api-client'
+
+api_instance = BitbarCloudApiClient::TestResultsApi.new
+name = 'name_example' # String | 
+project_id = 789 # Integer | 
+run_id = 789 # Integer | 
+device_session_id = 789 # Integer | 
+opts = { 
+  body: BitbarCloudApiClient::OutputfilesetFilesBody3.new # OutputfilesetFilesBody3 | 
+  tag: 'tag_example' # String | 
+}
+
+begin
+  #Add file to device session.
+  result = api_instance.add_file3(nameproject_idrun_iddevice_session_id, opts)
+  p result
+rescue BitbarCloudApiClient::ApiError => e
+  puts "Exception when calling TestResultsApi->add_file3: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **String**|  | 
+ **project_id** | **Integer**|  | 
+ **run_id** | **Integer**|  | 
+ **device_session_id** | **Integer**|  | 
+ **body** | [**OutputfilesetFilesBody3**](OutputfilesetFilesBody3.md)|  | [optional] 
+ **tag** | **String**|  | [optional] 
+
+### Return type
+
+[**APIUserFile**](APIUserFile.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: */*
+
+
+
+# **add_test_run_tag**
+> APITag add_test_run_tag(user_id, project_id, run_id, name)
 
 Add tag to test run.
 
@@ -184,33 +375,20 @@ Add tag to test run.
 ```ruby
 # load the gem
 require 'bitbar-cloud-api-client'
-# setup authorization
-BitbarCloudApiClient.configure do |config|
-  # Configure HTTP basic authorization: apiKeyInHeader
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
-
-  # Configure OAuth2 access token for authorization: oAuth2
-  config.access_token = 'YOUR ACCESS TOKEN'
-end
 
 api_instance = BitbarCloudApiClient::TestResultsApi.new
-
-name = 'name_example' # String | name
-
-project_id = 789 # Integer | projectId
-
-run_id = 789 # Integer | runId
-
-user_id = 789 # Integer | userId
+user_id = 789 # Integer | 
+project_id = 789 # Integer | 
+run_id = 789 # Integer | 
+name = 'name_example' # String | 
 
 
 begin
   #Add tag to test run.
-  result = api_instance.add_test_run_tag_using_post1(name, project_id, run_id, user_id)
+  result = api_instance.add_test_run_tag(user_id, project_id, run_id, name)
   p result
 rescue BitbarCloudApiClient::ApiError => e
-  puts "Exception when calling TestResultsApi->add_test_run_tag_using_post1: #{e}"
+  puts "Exception when calling TestResultsApi->add_test_run_tag: #{e}"
 end
 ```
 
@@ -218,10 +396,10 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **name** | **String**| name | 
- **project_id** | **Integer**| projectId | 
- **run_id** | **Integer**| runId | 
- **user_id** | **Integer**| userId | 
+ **user_id** | **Integer**|  | 
+ **project_id** | **Integer**|  | 
+ **run_id** | **Integer**|  | 
+ **name** | **String**|  | 
 
 ### Return type
 
@@ -229,17 +407,17 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
+No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: */*
 
 
 
-# **delete_file_using_delete4**
-> delete_file_using_delete4(device_session_id, file_id, user_id)
+# **delete_file1**
+> delete_file1(user_id, device_session_id, file_id)
 
 Delete file from device session.
 
@@ -247,30 +425,18 @@ Delete file from device session.
 ```ruby
 # load the gem
 require 'bitbar-cloud-api-client'
-# setup authorization
-BitbarCloudApiClient.configure do |config|
-  # Configure HTTP basic authorization: apiKeyInHeader
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
-
-  # Configure OAuth2 access token for authorization: oAuth2
-  config.access_token = 'YOUR ACCESS TOKEN'
-end
 
 api_instance = BitbarCloudApiClient::TestResultsApi.new
-
-device_session_id = 789 # Integer | deviceSessionId
-
-file_id = 789 # Integer | fileId
-
-user_id = 789 # Integer | userId
+user_id = 789 # Integer | 
+device_session_id = 789 # Integer | 
+file_id = 789 # Integer | 
 
 
 begin
   #Delete file from device session.
-  api_instance.delete_file_using_delete4(device_session_id, file_id, user_id)
+  api_instance.delete_file1(user_id, device_session_id, file_id)
 rescue BitbarCloudApiClient::ApiError => e
-  puts "Exception when calling TestResultsApi->delete_file_using_delete4: #{e}"
+  puts "Exception when calling TestResultsApi->delete_file1: #{e}"
 end
 ```
 
@@ -278,9 +444,9 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **device_session_id** | **Integer**| deviceSessionId | 
- **file_id** | **Integer**| fileId | 
- **user_id** | **Integer**| userId | 
+ **user_id** | **Integer**|  | 
+ **device_session_id** | **Integer**|  | 
+ **file_id** | **Integer**|  | 
 
 ### Return type
 
@@ -288,7 +454,7 @@ nil (empty response body)
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -297,8 +463,8 @@ nil (empty response body)
 
 
 
-# **delete_test_run_tag_using_delete1**
-> delete_test_run_tag_using_delete1(project_id, run_id, tag_id, user_id)
+# **delete_test_run_tag**
+> delete_test_run_tag(user_id, project_id, run_id, tag_id)
 
 Delete test run tag.
 
@@ -306,32 +472,19 @@ Delete test run tag.
 ```ruby
 # load the gem
 require 'bitbar-cloud-api-client'
-# setup authorization
-BitbarCloudApiClient.configure do |config|
-  # Configure HTTP basic authorization: apiKeyInHeader
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
-
-  # Configure OAuth2 access token for authorization: oAuth2
-  config.access_token = 'YOUR ACCESS TOKEN'
-end
 
 api_instance = BitbarCloudApiClient::TestResultsApi.new
-
-project_id = 789 # Integer | projectId
-
-run_id = 789 # Integer | runId
-
-tag_id = 789 # Integer | tagId
-
-user_id = 789 # Integer | userId
+user_id = 789 # Integer | 
+project_id = 789 # Integer | 
+run_id = 789 # Integer | 
+tag_id = 789 # Integer | 
 
 
 begin
   #Delete test run tag.
-  api_instance.delete_test_run_tag_using_delete1(project_id, run_id, tag_id, user_id)
+  api_instance.delete_test_run_tag(user_id, project_id, run_id, tag_id)
 rescue BitbarCloudApiClient::ApiError => e
-  puts "Exception when calling TestResultsApi->delete_test_run_tag_using_delete1: #{e}"
+  puts "Exception when calling TestResultsApi->delete_test_run_tag: #{e}"
 end
 ```
 
@@ -339,10 +492,10 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **project_id** | **Integer**| projectId | 
- **run_id** | **Integer**| runId | 
- **tag_id** | **Integer**| tagId | 
- **user_id** | **Integer**| userId | 
+ **user_id** | **Integer**|  | 
+ **project_id** | **Integer**|  | 
+ **run_id** | **Integer**|  | 
+ **tag_id** | **Integer**|  | 
 
 ### Return type
 
@@ -350,7 +503,7 @@ nil (empty response body)
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -359,8 +512,8 @@ nil (empty response body)
 
 
 
-# **delete_user_test_run_using_delete**
-> delete_user_test_run_using_delete(project_id, run_id, user_id)
+# **delete_user_test_run**
+> delete_user_test_run(user_id, project_id, run_id)
 
 Delete test run.
 
@@ -368,30 +521,18 @@ Delete test run.
 ```ruby
 # load the gem
 require 'bitbar-cloud-api-client'
-# setup authorization
-BitbarCloudApiClient.configure do |config|
-  # Configure HTTP basic authorization: apiKeyInHeader
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
-
-  # Configure OAuth2 access token for authorization: oAuth2
-  config.access_token = 'YOUR ACCESS TOKEN'
-end
 
 api_instance = BitbarCloudApiClient::TestResultsApi.new
-
-project_id = 789 # Integer | projectId
-
-run_id = 789 # Integer | runId
-
-user_id = 789 # Integer | userId
+user_id = 789 # Integer | 
+project_id = 789 # Integer | 
+run_id = 789 # Integer | 
 
 
 begin
   #Delete test run.
-  api_instance.delete_user_test_run_using_delete(project_id, run_id, user_id)
+  api_instance.delete_user_test_run(user_id, project_id, run_id)
 rescue BitbarCloudApiClient::ApiError => e
-  puts "Exception when calling TestResultsApi->delete_user_test_run_using_delete: #{e}"
+  puts "Exception when calling TestResultsApi->delete_user_test_run: #{e}"
 end
 ```
 
@@ -399,9 +540,9 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **project_id** | **Integer**| projectId | 
- **run_id** | **Integer**| runId | 
- **user_id** | **Integer**| userId | 
+ **user_id** | **Integer**|  | 
+ **project_id** | **Integer**|  | 
+ **run_id** | **Integer**|  | 
 
 ### Return type
 
@@ -409,7 +550,7 @@ nil (empty response body)
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -418,8 +559,8 @@ nil (empty response body)
 
 
 
-# **download_output_files_zip_using_get1**
-> download_output_files_zip_using_get1(device_session_id, user_id)
+# **download_output_files_zip**
+> download_output_files_zip(user_id, device_session_id)
 
 Get device session output files.zip.
 
@@ -427,28 +568,17 @@ Get device session output files.zip.
 ```ruby
 # load the gem
 require 'bitbar-cloud-api-client'
-# setup authorization
-BitbarCloudApiClient.configure do |config|
-  # Configure HTTP basic authorization: apiKeyInHeader
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
-
-  # Configure OAuth2 access token for authorization: oAuth2
-  config.access_token = 'YOUR ACCESS TOKEN'
-end
 
 api_instance = BitbarCloudApiClient::TestResultsApi.new
-
-device_session_id = 789 # Integer | deviceSessionId
-
-user_id = 789 # Integer | userId
+user_id = 789 # Integer | 
+device_session_id = 789 # Integer | 
 
 
 begin
   #Get device session output files.zip.
-  api_instance.download_output_files_zip_using_get1(device_session_id, user_id)
+  api_instance.download_output_files_zip(user_id, device_session_id)
 rescue BitbarCloudApiClient::ApiError => e
-  puts "Exception when calling TestResultsApi->download_output_files_zip_using_get1: #{e}"
+  puts "Exception when calling TestResultsApi->download_output_files_zip: #{e}"
 end
 ```
 
@@ -456,8 +586,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **device_session_id** | **Integer**| deviceSessionId | 
- **user_id** | **Integer**| userId | 
+ **user_id** | **Integer**|  | 
+ **device_session_id** | **Integer**|  | 
 
 ### Return type
 
@@ -465,7 +595,7 @@ nil (empty response body)
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -474,8 +604,8 @@ nil (empty response body)
 
 
 
-# **download_test_run_output_files_zip_using_get2**
-> download_test_run_output_files_zip_using_get2(device_session_id, project_id, run_id, user_id)
+# **download_test_run_output_files_zip**
+> download_test_run_output_files_zip(user_id, project_id, run_id, device_session_id)
 
 Get device session output files.zip.
 
@@ -483,32 +613,19 @@ Get device session output files.zip.
 ```ruby
 # load the gem
 require 'bitbar-cloud-api-client'
-# setup authorization
-BitbarCloudApiClient.configure do |config|
-  # Configure HTTP basic authorization: apiKeyInHeader
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
-
-  # Configure OAuth2 access token for authorization: oAuth2
-  config.access_token = 'YOUR ACCESS TOKEN'
-end
 
 api_instance = BitbarCloudApiClient::TestResultsApi.new
-
-device_session_id = 789 # Integer | deviceSessionId
-
-project_id = 789 # Integer | projectId
-
-run_id = 789 # Integer | runId
-
-user_id = 789 # Integer | userId
+user_id = 789 # Integer | 
+project_id = 789 # Integer | 
+run_id = 789 # Integer | 
+device_session_id = 789 # Integer | 
 
 
 begin
   #Get device session output files.zip.
-  api_instance.download_test_run_output_files_zip_using_get2(device_session_id, project_id, run_id, user_id)
+  api_instance.download_test_run_output_files_zip(user_id, project_id, run_id, device_session_id)
 rescue BitbarCloudApiClient::ApiError => e
-  puts "Exception when calling TestResultsApi->download_test_run_output_files_zip_using_get2: #{e}"
+  puts "Exception when calling TestResultsApi->download_test_run_output_files_zip: #{e}"
 end
 ```
 
@@ -516,10 +633,10 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **device_session_id** | **Integer**| deviceSessionId | 
- **project_id** | **Integer**| projectId | 
- **run_id** | **Integer**| runId | 
- **user_id** | **Integer**| userId | 
+ **user_id** | **Integer**|  | 
+ **project_id** | **Integer**|  | 
+ **run_id** | **Integer**|  | 
+ **device_session_id** | **Integer**|  | 
 
 ### Return type
 
@@ -527,7 +644,7 @@ nil (empty response body)
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -536,8 +653,8 @@ nil (empty response body)
 
 
 
-# **get_all_test_run_device_session_steps_using_get2**
-> APIListOfAPIDeviceSessionStep get_all_test_run_device_session_steps_using_get2(project_id, run_id, user_id, opts)
+# **get_all_test_run_device_session_steps**
+> APIListAPIDeviceSessionStep get_all_test_run_device_session_steps(user_id, project_id, run_id, opts)
 
 Get device session steps of all device sessions in run.
 
@@ -545,37 +662,24 @@ Get device session steps of all device sessions in run.
 ```ruby
 # load the gem
 require 'bitbar-cloud-api-client'
-# setup authorization
-BitbarCloudApiClient.configure do |config|
-  # Configure HTTP basic authorization: apiKeyInHeader
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
-
-  # Configure OAuth2 access token for authorization: oAuth2
-  config.access_token = 'YOUR ACCESS TOKEN'
-end
 
 api_instance = BitbarCloudApiClient::TestResultsApi.new
-
-project_id = 789 # Integer | projectId
-
-run_id = 789 # Integer | runId
-
-user_id = 789 # Integer | userId
-
+user_id = 789 # Integer | 
+project_id = 789 # Integer | 
+run_id = 789 # Integer | 
 opts = { 
-  filter: 'filter_example', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=finishtimems_eq_1<br>filter=devicesessionid_eq_1<br>filter=testrunid_eq_1<br>filter=starttimems_eq_1<br>filter=id_eq_1
-  limit: 20, # Integer | limit parameter define page size
-  offset: 0, # Integer | offset parameter define page number
-  sort: 'sort_example' # String | sort parameter contains list of fields used for sort query result <br> examples: <br> sort=finishTimeMS_a<br>sort=deviceSessionId_a<br>sort=testRunId_a<br>sort=startTimeMS_a<br>sort=id_a
+  sort: '', # String | sort parameter contains list of fields used for sort query result <br> examples: <br> sort=finishTimeMS_a<br>sort=deviceSessionId_a<br>sort=testRunId_a<br>sort=startTimeMS_a<br>sort=id_a
+  filter: '', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=finishtimems_eq_1<br>filter=devicesessionid_eq_1<br>filter=testrunid_eq_1<br>filter=starttimems_eq_1<br>filter=id_eq_1
+  offset: '0', # String | offset parameter define page number
+  limit: '20' # String | limit parameter define page size
 }
 
 begin
   #Get device session steps of all device sessions in run.
-  result = api_instance.get_all_test_run_device_session_steps_using_get2(project_id, run_id, user_id, opts)
+  result = api_instance.get_all_test_run_device_session_steps(user_id, project_id, run_id, opts)
   p result
 rescue BitbarCloudApiClient::ApiError => e
-  puts "Exception when calling TestResultsApi->get_all_test_run_device_session_steps_using_get2: #{e}"
+  puts "Exception when calling TestResultsApi->get_all_test_run_device_session_steps: #{e}"
 end
 ```
 
@@ -583,21 +687,21 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **project_id** | **Integer**| projectId | 
- **run_id** | **Integer**| runId | 
- **user_id** | **Integer**| userId | 
- **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;finishtimems_eq_1&lt;br&gt;filter&#x3D;devicesessionid_eq_1&lt;br&gt;filter&#x3D;testrunid_eq_1&lt;br&gt;filter&#x3D;starttimems_eq_1&lt;br&gt;filter&#x3D;id_eq_1 | [optional] 
- **limit** | **Integer**| limit parameter define page size | [optional] [default to 20]
- **offset** | **Integer**| offset parameter define page number | [optional] [default to 0]
+ **user_id** | **Integer**|  | 
+ **project_id** | **Integer**|  | 
+ **run_id** | **Integer**|  | 
  **sort** | **String**| sort parameter contains list of fields used for sort query result &lt;br&gt; examples: &lt;br&gt; sort&#x3D;finishTimeMS_a&lt;br&gt;sort&#x3D;deviceSessionId_a&lt;br&gt;sort&#x3D;testRunId_a&lt;br&gt;sort&#x3D;startTimeMS_a&lt;br&gt;sort&#x3D;id_a | [optional] 
+ **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;finishtimems_eq_1&lt;br&gt;filter&#x3D;devicesessionid_eq_1&lt;br&gt;filter&#x3D;testrunid_eq_1&lt;br&gt;filter&#x3D;starttimems_eq_1&lt;br&gt;filter&#x3D;id_eq_1 | [optional] 
+ **offset** | **String**| offset parameter define page number | [optional] [default to 0]
+ **limit** | **String**| limit parameter define page size | [optional] [default to 20]
 
 ### Return type
 
-[**APIListOfAPIDeviceSessionStep**](APIListOfAPIDeviceSessionStep.md)
+[**APIListAPIDeviceSessionStep**](APIListAPIDeviceSessionStep.md)
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -606,8 +710,8 @@ Name | Type | Description  | Notes
 
 
 
-# **get_current_device_session_step_using_get3**
-> APIDeviceSessionStep get_current_device_session_step_using_get3(device_session_id, project_id, run_id, user_id)
+# **get_current_device_session_step**
+> APIDeviceSessionStep get_current_device_session_step(user_id, project_id, run_id, device_session_id)
 
 Get current device session step.
 
@@ -615,33 +719,20 @@ Get current device session step.
 ```ruby
 # load the gem
 require 'bitbar-cloud-api-client'
-# setup authorization
-BitbarCloudApiClient.configure do |config|
-  # Configure HTTP basic authorization: apiKeyInHeader
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
-
-  # Configure OAuth2 access token for authorization: oAuth2
-  config.access_token = 'YOUR ACCESS TOKEN'
-end
 
 api_instance = BitbarCloudApiClient::TestResultsApi.new
-
-device_session_id = 789 # Integer | deviceSessionId
-
-project_id = 789 # Integer | projectId
-
-run_id = 789 # Integer | runId
-
-user_id = 789 # Integer | userId
+user_id = 789 # Integer | 
+project_id = 789 # Integer | 
+run_id = 789 # Integer | 
+device_session_id = 789 # Integer | 
 
 
 begin
   #Get current device session step.
-  result = api_instance.get_current_device_session_step_using_get3(device_session_id, project_id, run_id, user_id)
+  result = api_instance.get_current_device_session_step(user_id, project_id, run_id, device_session_id)
   p result
 rescue BitbarCloudApiClient::ApiError => e
-  puts "Exception when calling TestResultsApi->get_current_device_session_step_using_get3: #{e}"
+  puts "Exception when calling TestResultsApi->get_current_device_session_step: #{e}"
 end
 ```
 
@@ -649,10 +740,10 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **device_session_id** | **Integer**| deviceSessionId | 
- **project_id** | **Integer**| projectId | 
- **run_id** | **Integer**| runId | 
- **user_id** | **Integer**| userId | 
+ **user_id** | **Integer**|  | 
+ **project_id** | **Integer**|  | 
+ **run_id** | **Integer**|  | 
+ **device_session_id** | **Integer**|  | 
 
 ### Return type
 
@@ -660,7 +751,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -669,48 +760,29 @@ Name | Type | Description  | Notes
 
 
 
-# **get_device_session_steps_using_get3**
-> APIListOfAPIDeviceSessionStep get_device_session_steps_using_get3(device_session_id, project_id, run_id, user_id, opts)
+# **get_device_session_commands**
+> APIListAPICommand get_device_session_commands(user_id, project_id, run_id, device_session_id)
 
-Get device session steps.
+Get device session commands.
 
 ### Example
 ```ruby
 # load the gem
 require 'bitbar-cloud-api-client'
-# setup authorization
-BitbarCloudApiClient.configure do |config|
-  # Configure HTTP basic authorization: apiKeyInHeader
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
-
-  # Configure OAuth2 access token for authorization: oAuth2
-  config.access_token = 'YOUR ACCESS TOKEN'
-end
 
 api_instance = BitbarCloudApiClient::TestResultsApi.new
+user_id = 789 # Integer | 
+project_id = 789 # Integer | 
+run_id = 789 # Integer | 
+device_session_id = 789 # Integer | 
 
-device_session_id = 789 # Integer | deviceSessionId
-
-project_id = 789 # Integer | projectId
-
-run_id = 789 # Integer | runId
-
-user_id = 789 # Integer | userId
-
-opts = { 
-  filter: 'filter_example', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=finishtimems_eq_1<br>filter=devicesessionid_eq_1<br>filter=testrunid_eq_1<br>filter=starttimems_eq_1<br>filter=id_eq_1
-  limit: 20, # Integer | limit parameter define page size
-  offset: 0, # Integer | offset parameter define page number
-  sort: 'sort_example' # String | sort parameter contains list of fields used for sort query result <br> examples: <br> sort=finishTimeMS_a<br>sort=deviceSessionId_a<br>sort=testRunId_a<br>sort=startTimeMS_a<br>sort=id_a
-}
 
 begin
-  #Get device session steps.
-  result = api_instance.get_device_session_steps_using_get3(device_session_id, project_id, run_id, user_id, opts)
+  #Get device session commands.
+  result = api_instance.get_device_session_commands(user_id, project_id, run_id, device_session_id)
   p result
 rescue BitbarCloudApiClient::ApiError => e
-  puts "Exception when calling TestResultsApi->get_device_session_steps_using_get3: #{e}"
+  puts "Exception when calling TestResultsApi->get_device_session_commands: #{e}"
 end
 ```
 
@@ -718,22 +790,77 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **device_session_id** | **Integer**| deviceSessionId | 
- **project_id** | **Integer**| projectId | 
- **run_id** | **Integer**| runId | 
- **user_id** | **Integer**| userId | 
- **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;finishtimems_eq_1&lt;br&gt;filter&#x3D;devicesessionid_eq_1&lt;br&gt;filter&#x3D;testrunid_eq_1&lt;br&gt;filter&#x3D;starttimems_eq_1&lt;br&gt;filter&#x3D;id_eq_1 | [optional] 
- **limit** | **Integer**| limit parameter define page size | [optional] [default to 20]
- **offset** | **Integer**| offset parameter define page number | [optional] [default to 0]
+ **user_id** | **Integer**|  | 
+ **project_id** | **Integer**|  | 
+ **run_id** | **Integer**|  | 
+ **device_session_id** | **Integer**|  | 
+
+### Return type
+
+[**APIListAPICommand**](APIListAPICommand.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: */*
+
+
+
+# **get_device_session_steps**
+> APIListAPIDeviceSessionStep get_device_session_steps(user_id, project_id, run_id, device_session_id, opts)
+
+Get device session steps.
+
+### Example
+```ruby
+# load the gem
+require 'bitbar-cloud-api-client'
+
+api_instance = BitbarCloudApiClient::TestResultsApi.new
+user_id = 789 # Integer | 
+project_id = 789 # Integer | 
+run_id = 789 # Integer | 
+device_session_id = 789 # Integer | 
+opts = { 
+  sort: '', # String | sort parameter contains list of fields used for sort query result <br> examples: <br> sort=finishTimeMS_a<br>sort=deviceSessionId_a<br>sort=testRunId_a<br>sort=startTimeMS_a<br>sort=id_a
+  filter: '', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=finishtimems_eq_1<br>filter=devicesessionid_eq_1<br>filter=testrunid_eq_1<br>filter=starttimems_eq_1<br>filter=id_eq_1
+  offset: '0', # String | offset parameter define page number
+  limit: '20' # String | limit parameter define page size
+}
+
+begin
+  #Get device session steps.
+  result = api_instance.get_device_session_steps(user_id, project_id, run_id, device_session_id, opts)
+  p result
+rescue BitbarCloudApiClient::ApiError => e
+  puts "Exception when calling TestResultsApi->get_device_session_steps: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **user_id** | **Integer**|  | 
+ **project_id** | **Integer**|  | 
+ **run_id** | **Integer**|  | 
+ **device_session_id** | **Integer**|  | 
  **sort** | **String**| sort parameter contains list of fields used for sort query result &lt;br&gt; examples: &lt;br&gt; sort&#x3D;finishTimeMS_a&lt;br&gt;sort&#x3D;deviceSessionId_a&lt;br&gt;sort&#x3D;testRunId_a&lt;br&gt;sort&#x3D;startTimeMS_a&lt;br&gt;sort&#x3D;id_a | [optional] 
+ **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;finishtimems_eq_1&lt;br&gt;filter&#x3D;devicesessionid_eq_1&lt;br&gt;filter&#x3D;testrunid_eq_1&lt;br&gt;filter&#x3D;starttimems_eq_1&lt;br&gt;filter&#x3D;id_eq_1 | [optional] 
+ **offset** | **String**| offset parameter define page number | [optional] [default to 0]
+ **limit** | **String**| limit parameter define page size | [optional] [default to 20]
 
 ### Return type
 
-[**APIListOfAPIDeviceSessionStep**](APIListOfAPIDeviceSessionStep.md)
+[**APIListAPIDeviceSessionStep**](APIListAPIDeviceSessionStep.md)
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -742,8 +869,8 @@ Name | Type | Description  | Notes
 
 
 
-# **get_device_session_test_case_runs_using_get2**
-> APIListOfAPITestCaseRun get_device_session_test_case_runs_using_get2(device_session_id, project_id, run_id, user_id, opts)
+# **get_device_session_test_case_runs**
+> APIListAPITestCaseRun get_device_session_test_case_runs(user_id, project_id, run_id, device_session_id)
 
 Get device session steps.
 
@@ -751,39 +878,20 @@ Get device session steps.
 ```ruby
 # load the gem
 require 'bitbar-cloud-api-client'
-# setup authorization
-BitbarCloudApiClient.configure do |config|
-  # Configure HTTP basic authorization: apiKeyInHeader
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
-
-  # Configure OAuth2 access token for authorization: oAuth2
-  config.access_token = 'YOUR ACCESS TOKEN'
-end
 
 api_instance = BitbarCloudApiClient::TestResultsApi.new
+user_id = 789 # Integer | 
+project_id = 789 # Integer | 
+run_id = 789 # Integer | 
+device_session_id = 789 # Integer | 
 
-device_session_id = 789 # Integer | deviceSessionId
-
-project_id = 789 # Integer | projectId
-
-run_id = 789 # Integer | runId
-
-user_id = 789 # Integer | userId
-
-opts = { 
-  filter: 'filter_example', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=result_eq_passed<br>filter=createtime_eq_1593583746581<br>filter=id_eq_1
-  limit: 20, # Integer | limit parameter define page size
-  offset: 0, # Integer | offset parameter define page number
-  sort: 'sort_example' # String | sort parameter contains list of fields used for sort query result <br> examples: <br> sort=result_a<br>sort=createTime_a<br>sort=id_a
-}
 
 begin
   #Get device session steps.
-  result = api_instance.get_device_session_test_case_runs_using_get2(device_session_id, project_id, run_id, user_id, opts)
+  result = api_instance.get_device_session_test_case_runs(user_id, project_id, run_id, device_session_id)
   p result
 rescue BitbarCloudApiClient::ApiError => e
-  puts "Exception when calling TestResultsApi->get_device_session_test_case_runs_using_get2: #{e}"
+  puts "Exception when calling TestResultsApi->get_device_session_test_case_runs: #{e}"
 end
 ```
 
@@ -791,22 +899,18 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **device_session_id** | **Integer**| deviceSessionId | 
- **project_id** | **Integer**| projectId | 
- **run_id** | **Integer**| runId | 
- **user_id** | **Integer**| userId | 
- **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;result_eq_passed&lt;br&gt;filter&#x3D;createtime_eq_1593583746581&lt;br&gt;filter&#x3D;id_eq_1 | [optional] 
- **limit** | **Integer**| limit parameter define page size | [optional] [default to 20]
- **offset** | **Integer**| offset parameter define page number | [optional] [default to 0]
- **sort** | **String**| sort parameter contains list of fields used for sort query result &lt;br&gt; examples: &lt;br&gt; sort&#x3D;result_a&lt;br&gt;sort&#x3D;createTime_a&lt;br&gt;sort&#x3D;id_a | [optional] 
+ **user_id** | **Integer**|  | 
+ **project_id** | **Integer**|  | 
+ **run_id** | **Integer**|  | 
+ **device_session_id** | **Integer**|  | 
 
 ### Return type
 
-[**APIListOfAPITestCaseRun**](APIListOfAPITestCaseRun.md)
+[**APIListAPITestCaseRun**](APIListAPITestCaseRun.md)
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -815,8 +919,8 @@ Name | Type | Description  | Notes
 
 
 
-# **get_device_sessions_using_get1**
-> APIListOfAPIDeviceSession get_device_sessions_using_get1(project_id, run_id, user_id, opts)
+# **get_device_sessions**
+> APIListAPIDeviceSession get_device_sessions(user_id, project_id, run_id, opts)
 
 Get device sessions.
 
@@ -824,37 +928,24 @@ Get device sessions.
 ```ruby
 # load the gem
 require 'bitbar-cloud-api-client'
-# setup authorization
-BitbarCloudApiClient.configure do |config|
-  # Configure HTTP basic authorization: apiKeyInHeader
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
-
-  # Configure OAuth2 access token for authorization: oAuth2
-  config.access_token = 'YOUR ACCESS TOKEN'
-end
 
 api_instance = BitbarCloudApiClient::TestResultsApi.new
-
-project_id = 789 # Integer | projectId
-
-run_id = 789 # Integer | runId
-
-user_id = 789 # Integer | userId
-
+user_id = 789 # Integer | 
+project_id = 789 # Integer | 
+run_id = 789 # Integer | 
 opts = { 
-  filter: 'filter_example', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=testrunid_eq_1<br>filter=successratio_eq_1<br>filter=type_eq_automatic<br>filter=retrystate_eq_none<br>filter=device.id_eq_1<br>filter=userid_eq_1<br>filter=timelimit_eq_1<br>filter=duration_eq_1<br>filter=createtime_eq_1593583743582<br>filter=launchappduration_eq_1<br>filter=useremail_eq_value<br>filter=starttime_eq_1593583743582<br>filter=state_eq_aborted<br>filter=id_eq_1<br>filter=_endtime_eq_1593583743582<br>filter=projectname_eq_value<br>filter=device.displayname_eq_value<br>filter=testrunname_eq_null<br>filter=projectid_eq_1
-  limit: 20, # Integer | limit parameter define page size
-  offset: 0, # Integer | offset parameter define page number
-  sort: 'sort_example' # String | sort parameter contains list of fields used for sort query result <br> examples: <br> sort=testRunId_a<br>sort=isExcluded_a<br>sort=successRatio_a<br>sort=type_a<br>sort=retryState_a<br>sort=device.id_a<br>sort=userId_a<br>sort=timeLimit_a<br>sort=duration_a<br>sort=createTime_a<br>sort=launchAppDuration_a<br>sort=userEmail_a<br>sort=startTime_a<br>sort=state_a<br>sort=id_a<br>sort=_endTime_a<br>sort=projectName_a<br>sort=device.displayName_a<br>sort=testRunName_a<br>sort=projectId_a
+  sort: '', # String | sort parameter contains list of fields used for sort query result <br> examples: <br> sort=isExcluded_a<br>sort=testRunId_a<br>sort=clientSideId_a<br>sort=externalId_a<br>sort=successRatio_a<br>sort=device.id_a<br>sort=retryState_a<br>sort=type_a<br>sort=userId_a<br>sort=duration_a<br>sort=timeLimit_a<br>sort=createTime_a<br>sort=biometricInstrumentation_a<br>sort=startTime_a<br>sort=userEmail_a<br>sort=_endTime_a<br>sort=id_a<br>sort=state_a<br>sort=device.displayName_a<br>sort=projectName_a<br>sort=projectId_a<br>sort=testRunName_a
+  filter: '', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=testrunid_eq_1<br>filter=clientsideid_eq_value<br>filter=externalid_eq_value<br>filter=successratio_eq_1<br>filter=device.id_eq_1<br>filter=retrystate_eq_none<br>filter=type_eq_automatic<br>filter=userid_eq_1<br>filter=duration_eq_1<br>filter=timelimit_eq_1<br>filter=createtime_eq_1700230364086<br>filter=biometricinstrumentation_eq_true<br>filter=starttime_eq_1700230364086<br>filter=useremail_eq_value<br>filter=_endtime_eq_1700230364086<br>filter=id_eq_1<br>filter=state_eq_aborted<br>filter=device.displayname_eq_value<br>filter=projectname_eq_value<br>filter=projectid_eq_1<br>filter=testrunname_eq_null
+  offset: '0', # String | offset parameter define page number
+  limit: '20' # String | limit parameter define page size
 }
 
 begin
   #Get device sessions.
-  result = api_instance.get_device_sessions_using_get1(project_id, run_id, user_id, opts)
+  result = api_instance.get_device_sessions(user_id, project_id, run_id, opts)
   p result
 rescue BitbarCloudApiClient::ApiError => e
-  puts "Exception when calling TestResultsApi->get_device_sessions_using_get1: #{e}"
+  puts "Exception when calling TestResultsApi->get_device_sessions: #{e}"
 end
 ```
 
@@ -862,21 +953,21 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **project_id** | **Integer**| projectId | 
- **run_id** | **Integer**| runId | 
- **user_id** | **Integer**| userId | 
- **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;testrunid_eq_1&lt;br&gt;filter&#x3D;successratio_eq_1&lt;br&gt;filter&#x3D;type_eq_automatic&lt;br&gt;filter&#x3D;retrystate_eq_none&lt;br&gt;filter&#x3D;device.id_eq_1&lt;br&gt;filter&#x3D;userid_eq_1&lt;br&gt;filter&#x3D;timelimit_eq_1&lt;br&gt;filter&#x3D;duration_eq_1&lt;br&gt;filter&#x3D;createtime_eq_1593583743582&lt;br&gt;filter&#x3D;launchappduration_eq_1&lt;br&gt;filter&#x3D;useremail_eq_value&lt;br&gt;filter&#x3D;starttime_eq_1593583743582&lt;br&gt;filter&#x3D;state_eq_aborted&lt;br&gt;filter&#x3D;id_eq_1&lt;br&gt;filter&#x3D;_endtime_eq_1593583743582&lt;br&gt;filter&#x3D;projectname_eq_value&lt;br&gt;filter&#x3D;device.displayname_eq_value&lt;br&gt;filter&#x3D;testrunname_eq_null&lt;br&gt;filter&#x3D;projectid_eq_1 | [optional] 
- **limit** | **Integer**| limit parameter define page size | [optional] [default to 20]
- **offset** | **Integer**| offset parameter define page number | [optional] [default to 0]
- **sort** | **String**| sort parameter contains list of fields used for sort query result &lt;br&gt; examples: &lt;br&gt; sort&#x3D;testRunId_a&lt;br&gt;sort&#x3D;isExcluded_a&lt;br&gt;sort&#x3D;successRatio_a&lt;br&gt;sort&#x3D;type_a&lt;br&gt;sort&#x3D;retryState_a&lt;br&gt;sort&#x3D;device.id_a&lt;br&gt;sort&#x3D;userId_a&lt;br&gt;sort&#x3D;timeLimit_a&lt;br&gt;sort&#x3D;duration_a&lt;br&gt;sort&#x3D;createTime_a&lt;br&gt;sort&#x3D;launchAppDuration_a&lt;br&gt;sort&#x3D;userEmail_a&lt;br&gt;sort&#x3D;startTime_a&lt;br&gt;sort&#x3D;state_a&lt;br&gt;sort&#x3D;id_a&lt;br&gt;sort&#x3D;_endTime_a&lt;br&gt;sort&#x3D;projectName_a&lt;br&gt;sort&#x3D;device.displayName_a&lt;br&gt;sort&#x3D;testRunName_a&lt;br&gt;sort&#x3D;projectId_a | [optional] 
+ **user_id** | **Integer**|  | 
+ **project_id** | **Integer**|  | 
+ **run_id** | **Integer**|  | 
+ **sort** | **String**| sort parameter contains list of fields used for sort query result &lt;br&gt; examples: &lt;br&gt; sort&#x3D;isExcluded_a&lt;br&gt;sort&#x3D;testRunId_a&lt;br&gt;sort&#x3D;clientSideId_a&lt;br&gt;sort&#x3D;externalId_a&lt;br&gt;sort&#x3D;successRatio_a&lt;br&gt;sort&#x3D;device.id_a&lt;br&gt;sort&#x3D;retryState_a&lt;br&gt;sort&#x3D;type_a&lt;br&gt;sort&#x3D;userId_a&lt;br&gt;sort&#x3D;duration_a&lt;br&gt;sort&#x3D;timeLimit_a&lt;br&gt;sort&#x3D;createTime_a&lt;br&gt;sort&#x3D;biometricInstrumentation_a&lt;br&gt;sort&#x3D;startTime_a&lt;br&gt;sort&#x3D;userEmail_a&lt;br&gt;sort&#x3D;_endTime_a&lt;br&gt;sort&#x3D;id_a&lt;br&gt;sort&#x3D;state_a&lt;br&gt;sort&#x3D;device.displayName_a&lt;br&gt;sort&#x3D;projectName_a&lt;br&gt;sort&#x3D;projectId_a&lt;br&gt;sort&#x3D;testRunName_a | [optional] 
+ **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;testrunid_eq_1&lt;br&gt;filter&#x3D;clientsideid_eq_value&lt;br&gt;filter&#x3D;externalid_eq_value&lt;br&gt;filter&#x3D;successratio_eq_1&lt;br&gt;filter&#x3D;device.id_eq_1&lt;br&gt;filter&#x3D;retrystate_eq_none&lt;br&gt;filter&#x3D;type_eq_automatic&lt;br&gt;filter&#x3D;userid_eq_1&lt;br&gt;filter&#x3D;duration_eq_1&lt;br&gt;filter&#x3D;timelimit_eq_1&lt;br&gt;filter&#x3D;createtime_eq_1700230364086&lt;br&gt;filter&#x3D;biometricinstrumentation_eq_true&lt;br&gt;filter&#x3D;starttime_eq_1700230364086&lt;br&gt;filter&#x3D;useremail_eq_value&lt;br&gt;filter&#x3D;_endtime_eq_1700230364086&lt;br&gt;filter&#x3D;id_eq_1&lt;br&gt;filter&#x3D;state_eq_aborted&lt;br&gt;filter&#x3D;device.displayname_eq_value&lt;br&gt;filter&#x3D;projectname_eq_value&lt;br&gt;filter&#x3D;projectid_eq_1&lt;br&gt;filter&#x3D;testrunname_eq_null | [optional] 
+ **offset** | **String**| offset parameter define page number | [optional] [default to 0]
+ **limit** | **String**| limit parameter define page size | [optional] [default to 20]
 
 ### Return type
 
-[**APIListOfAPIDeviceSession**](APIListOfAPIDeviceSession.md)
+[**APIListAPIDeviceSession**](APIListAPIDeviceSession.md)
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -885,8 +976,8 @@ Name | Type | Description  | Notes
 
 
 
-# **get_files_for_device_session_by_tag_using_get**
-> APIListOfAPIUserFile get_files_for_device_session_by_tag_using_get(device_session_id, project_id, run_id, user_id, opts)
+# **get_files_for_device_session_by_tag**
+> APIListAPIUserFile get_files_for_device_session_by_tag(user_id, project_id, run_id, device_session_id, opts)
 
 Get device session output files.
 
@@ -894,40 +985,26 @@ Get device session output files.
 ```ruby
 # load the gem
 require 'bitbar-cloud-api-client'
-# setup authorization
-BitbarCloudApiClient.configure do |config|
-  # Configure HTTP basic authorization: apiKeyInHeader
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
-
-  # Configure OAuth2 access token for authorization: oAuth2
-  config.access_token = 'YOUR ACCESS TOKEN'
-end
 
 api_instance = BitbarCloudApiClient::TestResultsApi.new
-
-device_session_id = 789 # Integer | deviceSessionId
-
-project_id = 789 # Integer | projectId
-
-run_id = 789 # Integer | runId
-
-user_id = 789 # Integer | userId
-
+user_id = 789 # Integer | 
+project_id = 789 # Integer | 
+run_id = 789 # Integer | 
+device_session_id = 789 # Integer | 
 opts = { 
-  filter: 'filter_example', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=size_eq_1<br>filter=createtime_eq_1593583743377<br>filter=name_eq_value<br>filter=mimetype_eq_value<br>filter=inputtype_eq_application<br>filter=state_eq_preparing<br>filter=id_eq_1<br>filter=direction_eq_input
-  limit: 20, # Integer | limit parameter define page size
-  offset: 0, # Integer | offset parameter define page number
-  sort: 'sort_example', # String | sort parameter contains list of fields used for sort query result <br> examples: <br> sort=size_a<br>sort=createTime_a<br>sort=name_a<br>sort=mimetype_a<br>sort=inputType_a<br>sort=state_a<br>sort=id_a<br>sort=direction_a
-  tag: ['tag_example'] # Array<String> | tag[]
+  tag: ['tag_example'], # Array<String> | 
+  sort: '', # String | sort parameter contains list of fields used for sort query result <br> examples: <br> sort=size_a<br>sort=createTime_a<br>sort=name_a<br>sort=inputType_a<br>sort=mimetype_a<br>sort=userEmail_a<br>sort=id_a<br>sort=state_a<br>sort=direction_a
+  filter: '', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=size_eq_1<br>filter=createtime_eq_1700230364167<br>filter=name_eq_value<br>filter=inputtype_eq_application<br>filter=mimetype_eq_value<br>filter=useremail_eq_value<br>filter=id_eq_1<br>filter=state_eq_preparing<br>filter=direction_eq_input
+  offset: '0', # String | offset parameter define page number
+  limit: '20' # String | limit parameter define page size
 }
 
 begin
   #Get device session output files.
-  result = api_instance.get_files_for_device_session_by_tag_using_get(device_session_id, project_id, run_id, user_id, opts)
+  result = api_instance.get_files_for_device_session_by_tag(user_id, project_id, run_id, device_session_id, opts)
   p result
 rescue BitbarCloudApiClient::ApiError => e
-  puts "Exception when calling TestResultsApi->get_files_for_device_session_by_tag_using_get: #{e}"
+  puts "Exception when calling TestResultsApi->get_files_for_device_session_by_tag: #{e}"
 end
 ```
 
@@ -935,23 +1012,23 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **device_session_id** | **Integer**| deviceSessionId | 
- **project_id** | **Integer**| projectId | 
- **run_id** | **Integer**| runId | 
- **user_id** | **Integer**| userId | 
- **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;size_eq_1&lt;br&gt;filter&#x3D;createtime_eq_1593583743377&lt;br&gt;filter&#x3D;name_eq_value&lt;br&gt;filter&#x3D;mimetype_eq_value&lt;br&gt;filter&#x3D;inputtype_eq_application&lt;br&gt;filter&#x3D;state_eq_preparing&lt;br&gt;filter&#x3D;id_eq_1&lt;br&gt;filter&#x3D;direction_eq_input | [optional] 
- **limit** | **Integer**| limit parameter define page size | [optional] [default to 20]
- **offset** | **Integer**| offset parameter define page number | [optional] [default to 0]
- **sort** | **String**| sort parameter contains list of fields used for sort query result &lt;br&gt; examples: &lt;br&gt; sort&#x3D;size_a&lt;br&gt;sort&#x3D;createTime_a&lt;br&gt;sort&#x3D;name_a&lt;br&gt;sort&#x3D;mimetype_a&lt;br&gt;sort&#x3D;inputType_a&lt;br&gt;sort&#x3D;state_a&lt;br&gt;sort&#x3D;id_a&lt;br&gt;sort&#x3D;direction_a | [optional] 
- **tag** | [**Array&lt;String&gt;**](String.md)| tag[] | [optional] 
+ **user_id** | **Integer**|  | 
+ **project_id** | **Integer**|  | 
+ **run_id** | **Integer**|  | 
+ **device_session_id** | **Integer**|  | 
+ **tag** | [**Array&lt;String&gt;**](String.md)|  | [optional] 
+ **sort** | **String**| sort parameter contains list of fields used for sort query result &lt;br&gt; examples: &lt;br&gt; sort&#x3D;size_a&lt;br&gt;sort&#x3D;createTime_a&lt;br&gt;sort&#x3D;name_a&lt;br&gt;sort&#x3D;inputType_a&lt;br&gt;sort&#x3D;mimetype_a&lt;br&gt;sort&#x3D;userEmail_a&lt;br&gt;sort&#x3D;id_a&lt;br&gt;sort&#x3D;state_a&lt;br&gt;sort&#x3D;direction_a | [optional] 
+ **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;size_eq_1&lt;br&gt;filter&#x3D;createtime_eq_1700230364167&lt;br&gt;filter&#x3D;name_eq_value&lt;br&gt;filter&#x3D;inputtype_eq_application&lt;br&gt;filter&#x3D;mimetype_eq_value&lt;br&gt;filter&#x3D;useremail_eq_value&lt;br&gt;filter&#x3D;id_eq_1&lt;br&gt;filter&#x3D;state_eq_preparing&lt;br&gt;filter&#x3D;direction_eq_input | [optional] 
+ **offset** | **String**| offset parameter define page number | [optional] [default to 0]
+ **limit** | **String**| limit parameter define page size | [optional] [default to 20]
 
 ### Return type
 
-[**APIListOfAPIUserFile**](APIListOfAPIUserFile.md)
+[**APIListAPIUserFile**](APIListAPIUserFile.md)
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -960,8 +1037,8 @@ Name | Type | Description  | Notes
 
 
 
-# **get_inspector_device_sessions_using_get**
-> APIListOfAPIDeviceSession get_inspector_device_sessions_using_get(user_id, opts)
+# **get_inspector_device_sessions**
+> APIListAPIDeviceSession get_inspector_device_sessions(user_id, opts)
 
 Get device sessions.
 
@@ -969,33 +1046,23 @@ Get device sessions.
 ```ruby
 # load the gem
 require 'bitbar-cloud-api-client'
-# setup authorization
-BitbarCloudApiClient.configure do |config|
-  # Configure HTTP basic authorization: apiKeyInHeader
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
-
-  # Configure OAuth2 access token for authorization: oAuth2
-  config.access_token = 'YOUR ACCESS TOKEN'
-end
 
 api_instance = BitbarCloudApiClient::TestResultsApi.new
-
-user_id = 789 # Integer | userId
-
+user_id = 789 # Integer | 
 opts = { 
-  filter: 'filter_example', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=testrunid_eq_1<br>filter=successratio_eq_1<br>filter=type_eq_automatic<br>filter=retrystate_eq_none<br>filter=device.id_eq_1<br>filter=userid_eq_1<br>filter=timelimit_eq_1<br>filter=duration_eq_1<br>filter=createtime_eq_1593583747969<br>filter=launchappduration_eq_1<br>filter=useremail_eq_value<br>filter=starttime_eq_1593583747969<br>filter=state_eq_aborted<br>filter=id_eq_1<br>filter=_endtime_eq_1593583747969<br>filter=projectname_eq_value<br>filter=device.displayname_eq_value<br>filter=testrunname_eq_null<br>filter=projectid_eq_1
-  limit: 20, # Integer | limit parameter define page size
-  offset: 0, # Integer | offset parameter define page number
-  sort: 'sort_example' # String | sort parameter contains list of fields used for sort query result <br> examples: <br> sort=testRunId_a<br>sort=isExcluded_a<br>sort=successRatio_a<br>sort=type_a<br>sort=retryState_a<br>sort=device.id_a<br>sort=userId_a<br>sort=timeLimit_a<br>sort=duration_a<br>sort=createTime_a<br>sort=launchAppDuration_a<br>sort=userEmail_a<br>sort=startTime_a<br>sort=state_a<br>sort=id_a<br>sort=_endTime_a<br>sort=projectName_a<br>sort=device.displayName_a<br>sort=testRunName_a<br>sort=projectId_a
+  with_properties: true, # BOOLEAN | 
+  sort: '', # String | sort parameter contains list of fields used for sort query result <br> examples: <br> sort=isExcluded_a<br>sort=testRunId_a<br>sort=clientSideId_a<br>sort=externalId_a<br>sort=successRatio_a<br>sort=device.id_a<br>sort=retryState_a<br>sort=type_a<br>sort=userId_a<br>sort=duration_a<br>sort=timeLimit_a<br>sort=createTime_a<br>sort=biometricInstrumentation_a<br>sort=startTime_a<br>sort=userEmail_a<br>sort=_endTime_a<br>sort=id_a<br>sort=state_a<br>sort=device.displayName_a<br>sort=projectName_a<br>sort=projectId_a<br>sort=testRunName_a
+  filter: '', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=testrunid_eq_1<br>filter=clientsideid_eq_value<br>filter=externalid_eq_value<br>filter=successratio_eq_1<br>filter=device.id_eq_1<br>filter=retrystate_eq_none<br>filter=type_eq_automatic<br>filter=userid_eq_1<br>filter=duration_eq_1<br>filter=timelimit_eq_1<br>filter=createtime_eq_1700230364288<br>filter=biometricinstrumentation_eq_true<br>filter=starttime_eq_1700230364288<br>filter=useremail_eq_value<br>filter=_endtime_eq_1700230364288<br>filter=id_eq_1<br>filter=state_eq_aborted<br>filter=device.displayname_eq_value<br>filter=projectname_eq_value<br>filter=projectid_eq_1<br>filter=testrunname_eq_null
+  offset: '0', # String | offset parameter define page number
+  limit: '20' # String | limit parameter define page size
 }
 
 begin
   #Get device sessions.
-  result = api_instance.get_inspector_device_sessions_using_get(user_id, opts)
+  result = api_instance.get_inspector_device_sessions(user_id, opts)
   p result
 rescue BitbarCloudApiClient::ApiError => e
-  puts "Exception when calling TestResultsApi->get_inspector_device_sessions_using_get: #{e}"
+  puts "Exception when calling TestResultsApi->get_inspector_device_sessions: #{e}"
 end
 ```
 
@@ -1003,19 +1070,20 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **user_id** | **Integer**| userId | 
- **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;testrunid_eq_1&lt;br&gt;filter&#x3D;successratio_eq_1&lt;br&gt;filter&#x3D;type_eq_automatic&lt;br&gt;filter&#x3D;retrystate_eq_none&lt;br&gt;filter&#x3D;device.id_eq_1&lt;br&gt;filter&#x3D;userid_eq_1&lt;br&gt;filter&#x3D;timelimit_eq_1&lt;br&gt;filter&#x3D;duration_eq_1&lt;br&gt;filter&#x3D;createtime_eq_1593583747969&lt;br&gt;filter&#x3D;launchappduration_eq_1&lt;br&gt;filter&#x3D;useremail_eq_value&lt;br&gt;filter&#x3D;starttime_eq_1593583747969&lt;br&gt;filter&#x3D;state_eq_aborted&lt;br&gt;filter&#x3D;id_eq_1&lt;br&gt;filter&#x3D;_endtime_eq_1593583747969&lt;br&gt;filter&#x3D;projectname_eq_value&lt;br&gt;filter&#x3D;device.displayname_eq_value&lt;br&gt;filter&#x3D;testrunname_eq_null&lt;br&gt;filter&#x3D;projectid_eq_1 | [optional] 
- **limit** | **Integer**| limit parameter define page size | [optional] [default to 20]
- **offset** | **Integer**| offset parameter define page number | [optional] [default to 0]
- **sort** | **String**| sort parameter contains list of fields used for sort query result &lt;br&gt; examples: &lt;br&gt; sort&#x3D;testRunId_a&lt;br&gt;sort&#x3D;isExcluded_a&lt;br&gt;sort&#x3D;successRatio_a&lt;br&gt;sort&#x3D;type_a&lt;br&gt;sort&#x3D;retryState_a&lt;br&gt;sort&#x3D;device.id_a&lt;br&gt;sort&#x3D;userId_a&lt;br&gt;sort&#x3D;timeLimit_a&lt;br&gt;sort&#x3D;duration_a&lt;br&gt;sort&#x3D;createTime_a&lt;br&gt;sort&#x3D;launchAppDuration_a&lt;br&gt;sort&#x3D;userEmail_a&lt;br&gt;sort&#x3D;startTime_a&lt;br&gt;sort&#x3D;state_a&lt;br&gt;sort&#x3D;id_a&lt;br&gt;sort&#x3D;_endTime_a&lt;br&gt;sort&#x3D;projectName_a&lt;br&gt;sort&#x3D;device.displayName_a&lt;br&gt;sort&#x3D;testRunName_a&lt;br&gt;sort&#x3D;projectId_a | [optional] 
+ **user_id** | **Integer**|  | 
+ **with_properties** | **BOOLEAN**|  | [optional] 
+ **sort** | **String**| sort parameter contains list of fields used for sort query result &lt;br&gt; examples: &lt;br&gt; sort&#x3D;isExcluded_a&lt;br&gt;sort&#x3D;testRunId_a&lt;br&gt;sort&#x3D;clientSideId_a&lt;br&gt;sort&#x3D;externalId_a&lt;br&gt;sort&#x3D;successRatio_a&lt;br&gt;sort&#x3D;device.id_a&lt;br&gt;sort&#x3D;retryState_a&lt;br&gt;sort&#x3D;type_a&lt;br&gt;sort&#x3D;userId_a&lt;br&gt;sort&#x3D;duration_a&lt;br&gt;sort&#x3D;timeLimit_a&lt;br&gt;sort&#x3D;createTime_a&lt;br&gt;sort&#x3D;biometricInstrumentation_a&lt;br&gt;sort&#x3D;startTime_a&lt;br&gt;sort&#x3D;userEmail_a&lt;br&gt;sort&#x3D;_endTime_a&lt;br&gt;sort&#x3D;id_a&lt;br&gt;sort&#x3D;state_a&lt;br&gt;sort&#x3D;device.displayName_a&lt;br&gt;sort&#x3D;projectName_a&lt;br&gt;sort&#x3D;projectId_a&lt;br&gt;sort&#x3D;testRunName_a | [optional] 
+ **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;testrunid_eq_1&lt;br&gt;filter&#x3D;clientsideid_eq_value&lt;br&gt;filter&#x3D;externalid_eq_value&lt;br&gt;filter&#x3D;successratio_eq_1&lt;br&gt;filter&#x3D;device.id_eq_1&lt;br&gt;filter&#x3D;retrystate_eq_none&lt;br&gt;filter&#x3D;type_eq_automatic&lt;br&gt;filter&#x3D;userid_eq_1&lt;br&gt;filter&#x3D;duration_eq_1&lt;br&gt;filter&#x3D;timelimit_eq_1&lt;br&gt;filter&#x3D;createtime_eq_1700230364288&lt;br&gt;filter&#x3D;biometricinstrumentation_eq_true&lt;br&gt;filter&#x3D;starttime_eq_1700230364288&lt;br&gt;filter&#x3D;useremail_eq_value&lt;br&gt;filter&#x3D;_endtime_eq_1700230364288&lt;br&gt;filter&#x3D;id_eq_1&lt;br&gt;filter&#x3D;state_eq_aborted&lt;br&gt;filter&#x3D;device.displayname_eq_value&lt;br&gt;filter&#x3D;projectname_eq_value&lt;br&gt;filter&#x3D;projectid_eq_1&lt;br&gt;filter&#x3D;testrunname_eq_null | [optional] 
+ **offset** | **String**| offset parameter define page number | [optional] [default to 0]
+ **limit** | **String**| limit parameter define page size | [optional] [default to 20]
 
 ### Return type
 
-[**APIListOfAPIDeviceSession**](APIListOfAPIDeviceSession.md)
+[**APIListAPIDeviceSession**](APIListAPIDeviceSession.md)
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -1024,8 +1092,8 @@ Name | Type | Description  | Notes
 
 
 
-# **get_output_files_using_get**
-> APIListOfAPIUserFile get_output_files_using_get(device_session_id, user_id, opts)
+# **get_output_files**
+> APIListAPIUserFile get_output_files(user_id, device_session_id, opts)
 
 Get files for device session.
 
@@ -1033,36 +1101,24 @@ Get files for device session.
 ```ruby
 # load the gem
 require 'bitbar-cloud-api-client'
-# setup authorization
-BitbarCloudApiClient.configure do |config|
-  # Configure HTTP basic authorization: apiKeyInHeader
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
-
-  # Configure OAuth2 access token for authorization: oAuth2
-  config.access_token = 'YOUR ACCESS TOKEN'
-end
 
 api_instance = BitbarCloudApiClient::TestResultsApi.new
-
-device_session_id = 789 # Integer | deviceSessionId
-
-user_id = 789 # Integer | userId
-
+user_id = 789 # Integer | 
+device_session_id = 789 # Integer | 
 opts = { 
-  filter: 'filter_example', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=size_eq_1<br>filter=createtime_eq_1593583747884<br>filter=name_eq_value<br>filter=mimetype_eq_value<br>filter=inputtype_eq_application<br>filter=state_eq_preparing<br>filter=id_eq_1<br>filter=direction_eq_input
-  limit: 20, # Integer | limit parameter define page size
-  offset: 0, # Integer | offset parameter define page number
-  sort: 'sort_example', # String | sort parameter contains list of fields used for sort query result <br> examples: <br> sort=size_a<br>sort=createTime_a<br>sort=name_a<br>sort=mimetype_a<br>sort=inputType_a<br>sort=state_a<br>sort=id_a<br>sort=direction_a
-  tag: ['tag_example'] # Array<String> | tag[]
+  tag: ['tag_example'], # Array<String> | 
+  sort: '', # String | sort parameter contains list of fields used for sort query result <br> examples: <br> sort=size_a<br>sort=createTime_a<br>sort=name_a<br>sort=inputType_a<br>sort=mimetype_a<br>sort=userEmail_a<br>sort=id_a<br>sort=state_a<br>sort=direction_a
+  filter: '', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=size_eq_1<br>filter=createtime_eq_1700230364352<br>filter=name_eq_value<br>filter=inputtype_eq_application<br>filter=mimetype_eq_value<br>filter=useremail_eq_value<br>filter=id_eq_1<br>filter=state_eq_preparing<br>filter=direction_eq_input
+  offset: '0', # String | offset parameter define page number
+  limit: '20' # String | limit parameter define page size
 }
 
 begin
   #Get files for device session.
-  result = api_instance.get_output_files_using_get(device_session_id, user_id, opts)
+  result = api_instance.get_output_files(user_id, device_session_id, opts)
   p result
 rescue BitbarCloudApiClient::ApiError => e
-  puts "Exception when calling TestResultsApi->get_output_files_using_get: #{e}"
+  puts "Exception when calling TestResultsApi->get_output_files: #{e}"
 end
 ```
 
@@ -1070,21 +1126,21 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **device_session_id** | **Integer**| deviceSessionId | 
- **user_id** | **Integer**| userId | 
- **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;size_eq_1&lt;br&gt;filter&#x3D;createtime_eq_1593583747884&lt;br&gt;filter&#x3D;name_eq_value&lt;br&gt;filter&#x3D;mimetype_eq_value&lt;br&gt;filter&#x3D;inputtype_eq_application&lt;br&gt;filter&#x3D;state_eq_preparing&lt;br&gt;filter&#x3D;id_eq_1&lt;br&gt;filter&#x3D;direction_eq_input | [optional] 
- **limit** | **Integer**| limit parameter define page size | [optional] [default to 20]
- **offset** | **Integer**| offset parameter define page number | [optional] [default to 0]
- **sort** | **String**| sort parameter contains list of fields used for sort query result &lt;br&gt; examples: &lt;br&gt; sort&#x3D;size_a&lt;br&gt;sort&#x3D;createTime_a&lt;br&gt;sort&#x3D;name_a&lt;br&gt;sort&#x3D;mimetype_a&lt;br&gt;sort&#x3D;inputType_a&lt;br&gt;sort&#x3D;state_a&lt;br&gt;sort&#x3D;id_a&lt;br&gt;sort&#x3D;direction_a | [optional] 
- **tag** | [**Array&lt;String&gt;**](String.md)| tag[] | [optional] 
+ **user_id** | **Integer**|  | 
+ **device_session_id** | **Integer**|  | 
+ **tag** | [**Array&lt;String&gt;**](String.md)|  | [optional] 
+ **sort** | **String**| sort parameter contains list of fields used for sort query result &lt;br&gt; examples: &lt;br&gt; sort&#x3D;size_a&lt;br&gt;sort&#x3D;createTime_a&lt;br&gt;sort&#x3D;name_a&lt;br&gt;sort&#x3D;inputType_a&lt;br&gt;sort&#x3D;mimetype_a&lt;br&gt;sort&#x3D;userEmail_a&lt;br&gt;sort&#x3D;id_a&lt;br&gt;sort&#x3D;state_a&lt;br&gt;sort&#x3D;direction_a | [optional] 
+ **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;size_eq_1&lt;br&gt;filter&#x3D;createtime_eq_1700230364352&lt;br&gt;filter&#x3D;name_eq_value&lt;br&gt;filter&#x3D;inputtype_eq_application&lt;br&gt;filter&#x3D;mimetype_eq_value&lt;br&gt;filter&#x3D;useremail_eq_value&lt;br&gt;filter&#x3D;id_eq_1&lt;br&gt;filter&#x3D;state_eq_preparing&lt;br&gt;filter&#x3D;direction_eq_input | [optional] 
+ **offset** | **String**| offset parameter define page number | [optional] [default to 0]
+ **limit** | **String**| limit parameter define page size | [optional] [default to 20]
 
 ### Return type
 
-[**APIListOfAPIUserFile**](APIListOfAPIUserFile.md)
+[**APIListAPIUserFile**](APIListAPIUserFile.md)
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -1093,8 +1149,8 @@ Name | Type | Description  | Notes
 
 
 
-# **get_screenshot_names_using_get2**
-> APIListOfAPIScreenshot get_screenshot_names_using_get2(project_id, run_id, user_id)
+# **get_screenshot_names**
+> APIListAPIScreenshot get_screenshot_names(user_id, project_id, run_id)
 
 Get screenshot names.
 
@@ -1102,31 +1158,19 @@ Get screenshot names.
 ```ruby
 # load the gem
 require 'bitbar-cloud-api-client'
-# setup authorization
-BitbarCloudApiClient.configure do |config|
-  # Configure HTTP basic authorization: apiKeyInHeader
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
-
-  # Configure OAuth2 access token for authorization: oAuth2
-  config.access_token = 'YOUR ACCESS TOKEN'
-end
 
 api_instance = BitbarCloudApiClient::TestResultsApi.new
-
-project_id = 789 # Integer | projectId
-
-run_id = 789 # Integer | runId
-
-user_id = 789 # Integer | userId
+user_id = 789 # Integer | 
+project_id = 789 # Integer | 
+run_id = 789 # Integer | 
 
 
 begin
   #Get screenshot names.
-  result = api_instance.get_screenshot_names_using_get2(project_id, run_id, user_id)
+  result = api_instance.get_screenshot_names(user_id, project_id, run_id)
   p result
 rescue BitbarCloudApiClient::ApiError => e
-  puts "Exception when calling TestResultsApi->get_screenshot_names_using_get2: #{e}"
+  puts "Exception when calling TestResultsApi->get_screenshot_names: #{e}"
 end
 ```
 
@@ -1134,17 +1178,17 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **project_id** | **Integer**| projectId | 
- **run_id** | **Integer**| runId | 
- **user_id** | **Integer**| userId | 
+ **user_id** | **Integer**|  | 
+ **project_id** | **Integer**|  | 
+ **run_id** | **Integer**|  | 
 
 ### Return type
 
-[**APIListOfAPIScreenshot**](APIListOfAPIScreenshot.md)
+[**APIListAPIScreenshot**](APIListAPIScreenshot.md)
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -1153,8 +1197,8 @@ Name | Type | Description  | Notes
 
 
 
-# **get_test_run_data_availability_with_user_using_get**
-> APITestRunDataAvailability get_test_run_data_availability_with_user_using_get(project_id, run_id, user_id)
+# **get_test_run_data_availability_with_user**
+> APITestRunDataAvailability get_test_run_data_availability_with_user(user_id, project_id, run_id)
 
 Get test run data availability.
 
@@ -1162,31 +1206,19 @@ Get test run data availability.
 ```ruby
 # load the gem
 require 'bitbar-cloud-api-client'
-# setup authorization
-BitbarCloudApiClient.configure do |config|
-  # Configure HTTP basic authorization: apiKeyInHeader
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
-
-  # Configure OAuth2 access token for authorization: oAuth2
-  config.access_token = 'YOUR ACCESS TOKEN'
-end
 
 api_instance = BitbarCloudApiClient::TestResultsApi.new
-
-project_id = 789 # Integer | projectId
-
-run_id = 789 # Integer | runId
-
-user_id = 789 # Integer | userId
+user_id = 789 # Integer | 
+project_id = 789 # Integer | 
+run_id = 789 # Integer | 
 
 
 begin
   #Get test run data availability.
-  result = api_instance.get_test_run_data_availability_with_user_using_get(project_id, run_id, user_id)
+  result = api_instance.get_test_run_data_availability_with_user(user_id, project_id, run_id)
   p result
 rescue BitbarCloudApiClient::ApiError => e
-  puts "Exception when calling TestResultsApi->get_test_run_data_availability_with_user_using_get: #{e}"
+  puts "Exception when calling TestResultsApi->get_test_run_data_availability_with_user: #{e}"
 end
 ```
 
@@ -1194,9 +1226,9 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **project_id** | **Integer**| projectId | 
- **run_id** | **Integer**| runId | 
- **user_id** | **Integer**| userId | 
+ **user_id** | **Integer**|  | 
+ **project_id** | **Integer**|  | 
+ **run_id** | **Integer**|  | 
 
 ### Return type
 
@@ -1204,7 +1236,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -1213,8 +1245,8 @@ Name | Type | Description  | Notes
 
 
 
-# **get_test_run_screenshots_using_get2**
-> APIListOfAPIScreenshotExtended get_test_run_screenshots_using_get2(name, project_id, run_id, user_id, opts)
+# **get_test_run_screenshots**
+> APIListAPIScreenshotExtended get_test_run_screenshots(user_id, project_id, run_id, name, opts)
 
 Get test run screenshots by name.
 
@@ -1222,39 +1254,25 @@ Get test run screenshots by name.
 ```ruby
 # load the gem
 require 'bitbar-cloud-api-client'
-# setup authorization
-BitbarCloudApiClient.configure do |config|
-  # Configure HTTP basic authorization: apiKeyInHeader
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
-
-  # Configure OAuth2 access token for authorization: oAuth2
-  config.access_token = 'YOUR ACCESS TOKEN'
-end
 
 api_instance = BitbarCloudApiClient::TestResultsApi.new
-
-name = 'name_example' # String | name
-
-project_id = 789 # Integer | projectId
-
-run_id = 789 # Integer | runId
-
-user_id = 789 # Integer | userId
-
+user_id = 789 # Integer | 
+project_id = 789 # Integer | 
+run_id = 789 # Integer | 
+name = 'name_example' # String | 
 opts = { 
-  filter: 'filter_example', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=originalname_eq_value<br>filter=taketimestamp_eq_1<br>filter=id_eq_1
-  limit: 20, # Integer | limit parameter define page size
-  offset: 0, # Integer | offset parameter define page number
-  sort: 'sort_example' # String | sort parameter contains list of fields used for sort query result <br> examples: <br> sort=originalName_a<br>sort=takeTimestamp_a<br>sort=id_a
+  sort: '', # String | sort parameter contains list of fields used for sort query result <br> examples: <br> sort=originalName_a<br>sort=takeTimestamp_a<br>sort=id_a
+  filter: '', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=originalname_eq_value<br>filter=taketimestamp_eq_1<br>filter=id_eq_1
+  offset: '0', # String | offset parameter define page number
+  limit: '20' # String | limit parameter define page size
 }
 
 begin
   #Get test run screenshots by name.
-  result = api_instance.get_test_run_screenshots_using_get2(name, project_id, run_id, user_id, opts)
+  result = api_instance.get_test_run_screenshots(user_id, project_id, run_id, name, opts)
   p result
 rescue BitbarCloudApiClient::ApiError => e
-  puts "Exception when calling TestResultsApi->get_test_run_screenshots_using_get2: #{e}"
+  puts "Exception when calling TestResultsApi->get_test_run_screenshots: #{e}"
 end
 ```
 
@@ -1262,22 +1280,22 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **name** | **String**| name | 
- **project_id** | **Integer**| projectId | 
- **run_id** | **Integer**| runId | 
- **user_id** | **Integer**| userId | 
- **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;originalname_eq_value&lt;br&gt;filter&#x3D;taketimestamp_eq_1&lt;br&gt;filter&#x3D;id_eq_1 | [optional] 
- **limit** | **Integer**| limit parameter define page size | [optional] [default to 20]
- **offset** | **Integer**| offset parameter define page number | [optional] [default to 0]
+ **user_id** | **Integer**|  | 
+ **project_id** | **Integer**|  | 
+ **run_id** | **Integer**|  | 
+ **name** | **String**|  | 
  **sort** | **String**| sort parameter contains list of fields used for sort query result &lt;br&gt; examples: &lt;br&gt; sort&#x3D;originalName_a&lt;br&gt;sort&#x3D;takeTimestamp_a&lt;br&gt;sort&#x3D;id_a | [optional] 
+ **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;originalname_eq_value&lt;br&gt;filter&#x3D;taketimestamp_eq_1&lt;br&gt;filter&#x3D;id_eq_1 | [optional] 
+ **offset** | **String**| offset parameter define page number | [optional] [default to 0]
+ **limit** | **String**| limit parameter define page size | [optional] [default to 20]
 
 ### Return type
 
-[**APIListOfAPIScreenshotExtended**](APIListOfAPIScreenshotExtended.md)
+[**APIListAPIScreenshotExtended**](APIListAPIScreenshotExtended.md)
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -1286,8 +1304,8 @@ Name | Type | Description  | Notes
 
 
 
-# **get_test_run_tag_using_get1**
-> APITag get_test_run_tag_using_get1(project_id, run_id, tag_id, user_id)
+# **get_test_run_tag**
+> APITag get_test_run_tag(user_id, project_id, run_id, tag_id)
 
 Get test run tag.
 
@@ -1295,33 +1313,20 @@ Get test run tag.
 ```ruby
 # load the gem
 require 'bitbar-cloud-api-client'
-# setup authorization
-BitbarCloudApiClient.configure do |config|
-  # Configure HTTP basic authorization: apiKeyInHeader
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
-
-  # Configure OAuth2 access token for authorization: oAuth2
-  config.access_token = 'YOUR ACCESS TOKEN'
-end
 
 api_instance = BitbarCloudApiClient::TestResultsApi.new
-
-project_id = 789 # Integer | projectId
-
-run_id = 789 # Integer | runId
-
-tag_id = 789 # Integer | tagId
-
-user_id = 789 # Integer | userId
+user_id = 789 # Integer | 
+project_id = 789 # Integer | 
+run_id = 789 # Integer | 
+tag_id = 789 # Integer | 
 
 
 begin
   #Get test run tag.
-  result = api_instance.get_test_run_tag_using_get1(project_id, run_id, tag_id, user_id)
+  result = api_instance.get_test_run_tag(user_id, project_id, run_id, tag_id)
   p result
 rescue BitbarCloudApiClient::ApiError => e
-  puts "Exception when calling TestResultsApi->get_test_run_tag_using_get1: #{e}"
+  puts "Exception when calling TestResultsApi->get_test_run_tag: #{e}"
 end
 ```
 
@@ -1329,10 +1334,10 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **project_id** | **Integer**| projectId | 
- **run_id** | **Integer**| runId | 
- **tag_id** | **Integer**| tagId | 
- **user_id** | **Integer**| userId | 
+ **user_id** | **Integer**|  | 
+ **project_id** | **Integer**|  | 
+ **run_id** | **Integer**|  | 
+ **tag_id** | **Integer**|  | 
 
 ### Return type
 
@@ -1340,7 +1345,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -1349,8 +1354,8 @@ Name | Type | Description  | Notes
 
 
 
-# **get_test_run_tags_using_get1**
-> APIListOfAPITag get_test_run_tags_using_get1(project_id, run_id, user_id, opts)
+# **get_test_run_tags**
+> APIListAPITag get_test_run_tags(user_id, project_id, run_id, opts)
 
 Get test run tags.
 
@@ -1358,37 +1363,24 @@ Get test run tags.
 ```ruby
 # load the gem
 require 'bitbar-cloud-api-client'
-# setup authorization
-BitbarCloudApiClient.configure do |config|
-  # Configure HTTP basic authorization: apiKeyInHeader
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
-
-  # Configure OAuth2 access token for authorization: oAuth2
-  config.access_token = 'YOUR ACCESS TOKEN'
-end
 
 api_instance = BitbarCloudApiClient::TestResultsApi.new
-
-project_id = 789 # Integer | projectId
-
-run_id = 789 # Integer | runId
-
-user_id = 789 # Integer | userId
-
+user_id = 789 # Integer | 
+project_id = 789 # Integer | 
+run_id = 789 # Integer | 
 opts = { 
-  filter: 'filter_example', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=testrunid_eq_1<br>filter=name_eq_value<br>filter=id_eq_1
-  limit: 20, # Integer | limit parameter define page size
-  offset: 0, # Integer | offset parameter define page number
-  sort: 'sort_example' # String | sort parameter contains list of fields used for sort query result <br> examples: <br> sort=testRunId_a<br>sort=name_a<br>sort=id_a
+  sort: '', # String | sort parameter contains list of fields used for sort query result <br> examples: <br> sort=testRunId_a<br>sort=name_a<br>sort=id_a
+  filter: '', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=testrunid_eq_1<br>filter=name_eq_value<br>filter=id_eq_1
+  offset: '0', # String | offset parameter define page number
+  limit: '20' # String | limit parameter define page size
 }
 
 begin
   #Get test run tags.
-  result = api_instance.get_test_run_tags_using_get1(project_id, run_id, user_id, opts)
+  result = api_instance.get_test_run_tags(user_id, project_id, run_id, opts)
   p result
 rescue BitbarCloudApiClient::ApiError => e
-  puts "Exception when calling TestResultsApi->get_test_run_tags_using_get1: #{e}"
+  puts "Exception when calling TestResultsApi->get_test_run_tags: #{e}"
 end
 ```
 
@@ -1396,21 +1388,21 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **project_id** | **Integer**| projectId | 
- **run_id** | **Integer**| runId | 
- **user_id** | **Integer**| userId | 
- **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;testrunid_eq_1&lt;br&gt;filter&#x3D;name_eq_value&lt;br&gt;filter&#x3D;id_eq_1 | [optional] 
- **limit** | **Integer**| limit parameter define page size | [optional] [default to 20]
- **offset** | **Integer**| offset parameter define page number | [optional] [default to 0]
+ **user_id** | **Integer**|  | 
+ **project_id** | **Integer**|  | 
+ **run_id** | **Integer**|  | 
  **sort** | **String**| sort parameter contains list of fields used for sort query result &lt;br&gt; examples: &lt;br&gt; sort&#x3D;testRunId_a&lt;br&gt;sort&#x3D;name_a&lt;br&gt;sort&#x3D;id_a | [optional] 
+ **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;testrunid_eq_1&lt;br&gt;filter&#x3D;name_eq_value&lt;br&gt;filter&#x3D;id_eq_1 | [optional] 
+ **offset** | **String**| offset parameter define page number | [optional] [default to 0]
+ **limit** | **String**| limit parameter define page size | [optional] [default to 20]
 
 ### Return type
 
-[**APIListOfAPITag**](APIListOfAPITag.md)
+[**APIListAPITag**](APIListAPITag.md)
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -1419,318 +1411,8 @@ Name | Type | Description  | Notes
 
 
 
-# **get_user_cluster_logs_using_get**
-> get_user_cluster_logs_using_get(device_session_id, project_id, run_id, user_id)
-
-This endpoint is deprecated.
-
-### Example
-```ruby
-# load the gem
-require 'bitbar-cloud-api-client'
-# setup authorization
-BitbarCloudApiClient.configure do |config|
-  # Configure HTTP basic authorization: apiKeyInHeader
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
-
-  # Configure OAuth2 access token for authorization: oAuth2
-  config.access_token = 'YOUR ACCESS TOKEN'
-end
-
-api_instance = BitbarCloudApiClient::TestResultsApi.new
-
-device_session_id = 789 # Integer | deviceSessionId
-
-project_id = 789 # Integer | projectId
-
-run_id = 789 # Integer | runId
-
-user_id = 789 # Integer | userId
-
-
-begin
-  #This endpoint is deprecated.
-  api_instance.get_user_cluster_logs_using_get(device_session_id, project_id, run_id, user_id)
-rescue BitbarCloudApiClient::ApiError => e
-  puts "Exception when calling TestResultsApi->get_user_cluster_logs_using_get: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **device_session_id** | **Integer**| deviceSessionId | 
- **project_id** | **Integer**| projectId | 
- **run_id** | **Integer**| runId | 
- **user_id** | **Integer**| userId | 
-
-### Return type
-
-nil (empty response body)
-
-### Authorization
-
-[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: */*
-
-
-
-# **get_user_device_session_data_zip_using_get**
-> get_user_device_session_data_zip_using_get(device_session_id, project_id, run_id, user_id)
-
-This endpoint is deprecated.
-
-### Example
-```ruby
-# load the gem
-require 'bitbar-cloud-api-client'
-# setup authorization
-BitbarCloudApiClient.configure do |config|
-  # Configure HTTP basic authorization: apiKeyInHeader
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
-
-  # Configure OAuth2 access token for authorization: oAuth2
-  config.access_token = 'YOUR ACCESS TOKEN'
-end
-
-api_instance = BitbarCloudApiClient::TestResultsApi.new
-
-device_session_id = 789 # Integer | deviceSessionId
-
-project_id = 789 # Integer | projectId
-
-run_id = 789 # Integer | runId
-
-user_id = 789 # Integer | userId
-
-
-begin
-  #This endpoint is deprecated.
-  api_instance.get_user_device_session_data_zip_using_get(device_session_id, project_id, run_id, user_id)
-rescue BitbarCloudApiClient::ApiError => e
-  puts "Exception when calling TestResultsApi->get_user_device_session_data_zip_using_get: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **device_session_id** | **Integer**| deviceSessionId | 
- **project_id** | **Integer**| projectId | 
- **run_id** | **Integer**| runId | 
- **user_id** | **Integer**| userId | 
-
-### Return type
-
-nil (empty response body)
-
-### Authorization
-
-[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: */*
-
-
-
-# **get_user_device_session_junit_using_get**
-> get_user_device_session_junit_using_get(device_session_id, project_id, run_id, user_id)
-
-This endpoint is deprecated.
-
-### Example
-```ruby
-# load the gem
-require 'bitbar-cloud-api-client'
-# setup authorization
-BitbarCloudApiClient.configure do |config|
-  # Configure HTTP basic authorization: apiKeyInHeader
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
-
-  # Configure OAuth2 access token for authorization: oAuth2
-  config.access_token = 'YOUR ACCESS TOKEN'
-end
-
-api_instance = BitbarCloudApiClient::TestResultsApi.new
-
-device_session_id = 789 # Integer | deviceSessionId
-
-project_id = 789 # Integer | projectId
-
-run_id = 789 # Integer | runId
-
-user_id = 789 # Integer | userId
-
-
-begin
-  #This endpoint is deprecated.
-  api_instance.get_user_device_session_junit_using_get(device_session_id, project_id, run_id, user_id)
-rescue BitbarCloudApiClient::ApiError => e
-  puts "Exception when calling TestResultsApi->get_user_device_session_junit_using_get: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **device_session_id** | **Integer**| deviceSessionId | 
- **project_id** | **Integer**| projectId | 
- **run_id** | **Integer**| runId | 
- **user_id** | **Integer**| userId | 
-
-### Return type
-
-nil (empty response body)
-
-### Authorization
-
-[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: */*
-
-
-
-# **get_user_device_session_logs_using_get**
-> get_user_device_session_logs_using_get(device_session_id, project_id, run_id, user_id)
-
-This endpoint is deprecated.
-
-### Example
-```ruby
-# load the gem
-require 'bitbar-cloud-api-client'
-# setup authorization
-BitbarCloudApiClient.configure do |config|
-  # Configure HTTP basic authorization: apiKeyInHeader
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
-
-  # Configure OAuth2 access token for authorization: oAuth2
-  config.access_token = 'YOUR ACCESS TOKEN'
-end
-
-api_instance = BitbarCloudApiClient::TestResultsApi.new
-
-device_session_id = 789 # Integer | deviceSessionId
-
-project_id = 789 # Integer | projectId
-
-run_id = 789 # Integer | runId
-
-user_id = 789 # Integer | userId
-
-
-begin
-  #This endpoint is deprecated.
-  api_instance.get_user_device_session_logs_using_get(device_session_id, project_id, run_id, user_id)
-rescue BitbarCloudApiClient::ApiError => e
-  puts "Exception when calling TestResultsApi->get_user_device_session_logs_using_get: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **device_session_id** | **Integer**| deviceSessionId | 
- **project_id** | **Integer**| projectId | 
- **run_id** | **Integer**| runId | 
- **user_id** | **Integer**| userId | 
-
-### Return type
-
-nil (empty response body)
-
-### Authorization
-
-[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: */*
-
-
-
-# **get_user_device_session_performance_using_get**
-> get_user_device_session_performance_using_get(device_session_id, project_id, run_id, user_id)
-
-This endpoint is deprecated.
-
-### Example
-```ruby
-# load the gem
-require 'bitbar-cloud-api-client'
-# setup authorization
-BitbarCloudApiClient.configure do |config|
-  # Configure HTTP basic authorization: apiKeyInHeader
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
-
-  # Configure OAuth2 access token for authorization: oAuth2
-  config.access_token = 'YOUR ACCESS TOKEN'
-end
-
-api_instance = BitbarCloudApiClient::TestResultsApi.new
-
-device_session_id = 789 # Integer | deviceSessionId
-
-project_id = 789 # Integer | projectId
-
-run_id = 789 # Integer | runId
-
-user_id = 789 # Integer | userId
-
-
-begin
-  #This endpoint is deprecated.
-  api_instance.get_user_device_session_performance_using_get(device_session_id, project_id, run_id, user_id)
-rescue BitbarCloudApiClient::ApiError => e
-  puts "Exception when calling TestResultsApi->get_user_device_session_performance_using_get: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **device_session_id** | **Integer**| deviceSessionId | 
- **project_id** | **Integer**| projectId | 
- **run_id** | **Integer**| runId | 
- **user_id** | **Integer**| userId | 
-
-### Return type
-
-nil (empty response body)
-
-### Authorization
-
-[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: */*
-
-
-
-# **get_user_device_session_screenshots_using_get**
-> APIListOfAPIScreenshot get_user_device_session_screenshots_using_get(device_session_id, project_id, run_id, user_id, opts)
+# **get_user_device_session_screenshots**
+> APIListAPIScreenshot get_user_device_session_screenshots(user_id, project_id, run_id, device_session_id, opts)
 
 Get device session screenshots.
 
@@ -1738,39 +1420,25 @@ Get device session screenshots.
 ```ruby
 # load the gem
 require 'bitbar-cloud-api-client'
-# setup authorization
-BitbarCloudApiClient.configure do |config|
-  # Configure HTTP basic authorization: apiKeyInHeader
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
-
-  # Configure OAuth2 access token for authorization: oAuth2
-  config.access_token = 'YOUR ACCESS TOKEN'
-end
 
 api_instance = BitbarCloudApiClient::TestResultsApi.new
-
-device_session_id = 789 # Integer | deviceSessionId
-
-project_id = 789 # Integer | projectId
-
-run_id = 789 # Integer | runId
-
-user_id = 789 # Integer | userId
-
+user_id = 789 # Integer | 
+project_id = 789 # Integer | 
+run_id = 789 # Integer | 
+device_session_id = 789 # Integer | 
 opts = { 
-  filter: 'filter_example', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=originalname_eq_value<br>filter=taketimestamp_eq_1<br>filter=id_eq_1
-  limit: 20, # Integer | limit parameter define page size
-  offset: 0, # Integer | offset parameter define page number
-  sort: 'sort_example' # String | sort parameter contains list of fields used for sort query result <br> examples: <br> sort=originalName_a<br>sort=takeTimestamp_a<br>sort=id_a
+  sort: '', # String | sort parameter contains list of fields used for sort query result <br> examples: <br> sort=originalName_a<br>sort=takeTimestamp_a<br>sort=id_a
+  filter: '', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=originalname_eq_value<br>filter=taketimestamp_eq_1<br>filter=id_eq_1
+  offset: '0', # String | offset parameter define page number
+  limit: '20' # String | limit parameter define page size
 }
 
 begin
   #Get device session screenshots.
-  result = api_instance.get_user_device_session_screenshots_using_get(device_session_id, project_id, run_id, user_id, opts)
+  result = api_instance.get_user_device_session_screenshots(user_id, project_id, run_id, device_session_id, opts)
   p result
 rescue BitbarCloudApiClient::ApiError => e
-  puts "Exception when calling TestResultsApi->get_user_device_session_screenshots_using_get: #{e}"
+  puts "Exception when calling TestResultsApi->get_user_device_session_screenshots: #{e}"
 end
 ```
 
@@ -1778,22 +1446,22 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **device_session_id** | **Integer**| deviceSessionId | 
- **project_id** | **Integer**| projectId | 
- **run_id** | **Integer**| runId | 
- **user_id** | **Integer**| userId | 
- **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;originalname_eq_value&lt;br&gt;filter&#x3D;taketimestamp_eq_1&lt;br&gt;filter&#x3D;id_eq_1 | [optional] 
- **limit** | **Integer**| limit parameter define page size | [optional] [default to 20]
- **offset** | **Integer**| offset parameter define page number | [optional] [default to 0]
+ **user_id** | **Integer**|  | 
+ **project_id** | **Integer**|  | 
+ **run_id** | **Integer**|  | 
+ **device_session_id** | **Integer**|  | 
  **sort** | **String**| sort parameter contains list of fields used for sort query result &lt;br&gt; examples: &lt;br&gt; sort&#x3D;originalName_a&lt;br&gt;sort&#x3D;takeTimestamp_a&lt;br&gt;sort&#x3D;id_a | [optional] 
+ **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;originalname_eq_value&lt;br&gt;filter&#x3D;taketimestamp_eq_1&lt;br&gt;filter&#x3D;id_eq_1 | [optional] 
+ **offset** | **String**| offset parameter define page number | [optional] [default to 0]
+ **limit** | **String**| limit parameter define page size | [optional] [default to 20]
 
 ### Return type
 
-[**APIListOfAPIScreenshot**](APIListOfAPIScreenshot.md)
+[**APIListAPIScreenshot**](APIListAPIScreenshot.md)
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -1802,8 +1470,8 @@ Name | Type | Description  | Notes
 
 
 
-# **get_user_device_session_step_using_get**
-> APIDeviceSessionStep get_user_device_session_step_using_get(device_session_id, device_session_step_id, project_id, run_id, user_id)
+# **get_user_device_session_step**
+> APIDeviceSessionStep get_user_device_session_step(user_id, project_id, run_id, device_session_id, device_session_step_id)
 
 Get device session step.
 
@@ -1811,35 +1479,21 @@ Get device session step.
 ```ruby
 # load the gem
 require 'bitbar-cloud-api-client'
-# setup authorization
-BitbarCloudApiClient.configure do |config|
-  # Configure HTTP basic authorization: apiKeyInHeader
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
-
-  # Configure OAuth2 access token for authorization: oAuth2
-  config.access_token = 'YOUR ACCESS TOKEN'
-end
 
 api_instance = BitbarCloudApiClient::TestResultsApi.new
-
-device_session_id = 789 # Integer | deviceSessionId
-
-device_session_step_id = 789 # Integer | deviceSessionStepId
-
-project_id = 789 # Integer | projectId
-
-run_id = 789 # Integer | runId
-
-user_id = 789 # Integer | userId
+user_id = 789 # Integer | 
+project_id = 789 # Integer | 
+run_id = 789 # Integer | 
+device_session_id = 789 # Integer | 
+device_session_step_id = 789 # Integer | 
 
 
 begin
   #Get device session step.
-  result = api_instance.get_user_device_session_step_using_get(device_session_id, device_session_step_id, project_id, run_id, user_id)
+  result = api_instance.get_user_device_session_step(user_id, project_id, run_id, device_session_id, device_session_step_id)
   p result
 rescue BitbarCloudApiClient::ApiError => e
-  puts "Exception when calling TestResultsApi->get_user_device_session_step_using_get: #{e}"
+  puts "Exception when calling TestResultsApi->get_user_device_session_step: #{e}"
 end
 ```
 
@@ -1847,11 +1501,11 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **device_session_id** | **Integer**| deviceSessionId | 
- **device_session_step_id** | **Integer**| deviceSessionStepId | 
- **project_id** | **Integer**| projectId | 
- **run_id** | **Integer**| runId | 
- **user_id** | **Integer**| userId | 
+ **user_id** | **Integer**|  | 
+ **project_id** | **Integer**|  | 
+ **run_id** | **Integer**|  | 
+ **device_session_id** | **Integer**|  | 
+ **device_session_step_id** | **Integer**|  | 
 
 ### Return type
 
@@ -1859,7 +1513,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -1868,8 +1522,8 @@ Name | Type | Description  | Notes
 
 
 
-# **get_user_device_session_with_users_using_get**
-> APIDeviceSession get_user_device_session_with_users_using_get(device_session_id, project_id, run_id, user_id)
+# **get_user_device_session_with_users**
+> APIDeviceSession get_user_device_session_with_users(user_id, project_id, run_id, device_session_id)
 
 Get device session.
 
@@ -1877,33 +1531,20 @@ Get device session.
 ```ruby
 # load the gem
 require 'bitbar-cloud-api-client'
-# setup authorization
-BitbarCloudApiClient.configure do |config|
-  # Configure HTTP basic authorization: apiKeyInHeader
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
-
-  # Configure OAuth2 access token for authorization: oAuth2
-  config.access_token = 'YOUR ACCESS TOKEN'
-end
 
 api_instance = BitbarCloudApiClient::TestResultsApi.new
-
-device_session_id = 789 # Integer | deviceSessionId
-
-project_id = 789 # Integer | projectId
-
-run_id = 789 # Integer | runId
-
-user_id = 789 # Integer | userId
+user_id = 789 # Integer | 
+project_id = 789 # Integer | 
+run_id = 789 # Integer | 
+device_session_id = 789 # Integer | 
 
 
 begin
   #Get device session.
-  result = api_instance.get_user_device_session_with_users_using_get(device_session_id, project_id, run_id, user_id)
+  result = api_instance.get_user_device_session_with_users(user_id, project_id, run_id, device_session_id)
   p result
 rescue BitbarCloudApiClient::ApiError => e
-  puts "Exception when calling TestResultsApi->get_user_device_session_with_users_using_get: #{e}"
+  puts "Exception when calling TestResultsApi->get_user_device_session_with_users: #{e}"
 end
 ```
 
@@ -1911,10 +1552,10 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **device_session_id** | **Integer**| deviceSessionId | 
- **project_id** | **Integer**| projectId | 
- **run_id** | **Integer**| runId | 
- **user_id** | **Integer**| userId | 
+ **user_id** | **Integer**|  | 
+ **project_id** | **Integer**|  | 
+ **run_id** | **Integer**|  | 
+ **device_session_id** | **Integer**|  | 
 
 ### Return type
 
@@ -1922,7 +1563,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -1931,8 +1572,8 @@ Name | Type | Description  | Notes
 
 
 
-# **get_user_inspector_device_session_using_get**
-> APIDeviceSession get_user_inspector_device_session_using_get(device_session_id, user_id)
+# **get_user_inspector_device_session**
+> APIDeviceSession get_user_inspector_device_session(user_id, device_session_id, opts)
 
 Get device session.
 
@@ -1940,29 +1581,20 @@ Get device session.
 ```ruby
 # load the gem
 require 'bitbar-cloud-api-client'
-# setup authorization
-BitbarCloudApiClient.configure do |config|
-  # Configure HTTP basic authorization: apiKeyInHeader
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
-
-  # Configure OAuth2 access token for authorization: oAuth2
-  config.access_token = 'YOUR ACCESS TOKEN'
-end
 
 api_instance = BitbarCloudApiClient::TestResultsApi.new
-
-device_session_id = 789 # Integer | deviceSessionId
-
-user_id = 789 # Integer | userId
-
+user_id = 789 # Integer | 
+device_session_id = 789 # Integer | 
+opts = { 
+  with_properties: true # BOOLEAN | 
+}
 
 begin
   #Get device session.
-  result = api_instance.get_user_inspector_device_session_using_get(device_session_id, user_id)
+  result = api_instance.get_user_inspector_device_session(user_id, device_session_id, opts)
   p result
 rescue BitbarCloudApiClient::ApiError => e
-  puts "Exception when calling TestResultsApi->get_user_inspector_device_session_using_get: #{e}"
+  puts "Exception when calling TestResultsApi->get_user_inspector_device_session: #{e}"
 end
 ```
 
@@ -1970,8 +1602,9 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **device_session_id** | **Integer**| deviceSessionId | 
- **user_id** | **Integer**| userId | 
+ **user_id** | **Integer**|  | 
+ **device_session_id** | **Integer**|  | 
+ **with_properties** | **BOOLEAN**|  | [optional] 
 
 ### Return type
 
@@ -1979,7 +1612,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -1988,8 +1621,8 @@ Name | Type | Description  | Notes
 
 
 
-# **get_user_project_test_runs_using_get**
-> APIListOfAPITestRun get_user_project_test_runs_using_get(project_id, user_id, opts)
+# **get_user_project_test_runs**
+> APIListAPITestRun get_user_project_test_runs(user_id, project_id, opts)
 
 Get test runs.
 
@@ -1997,35 +1630,23 @@ Get test runs.
 ```ruby
 # load the gem
 require 'bitbar-cloud-api-client'
-# setup authorization
-BitbarCloudApiClient.configure do |config|
-  # Configure HTTP basic authorization: apiKeyInHeader
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
-
-  # Configure OAuth2 access token for authorization: oAuth2
-  config.access_token = 'YOUR ACCESS TOKEN'
-end
 
 api_instance = BitbarCloudApiClient::TestResultsApi.new
-
-project_id = 789 # Integer | projectId
-
-user_id = 789 # Integer | userId
-
+user_id = 789 # Integer | 
+project_id = 789 # Integer | 
 opts = { 
-  filter: 'filter_example', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=frameworkid_eq_1<br>filter=frameworkname_eq_value<br>filter=common_eq_null<br>filter=createtime_eq_1593583747582<br>filter=displayname_eq_value<br>filter=successratio_eq_1<br>filter=starttime_eq_1593583747582<br>filter=id_eq_1<br>filter=userid_eq_1<br>filter=projectid_eq_1
-  limit: 20, # Integer | limit parameter define page size
-  offset: 0, # Integer | offset parameter define page number
-  sort: 'sort_example' # String | sort parameter contains list of fields used for sort query result <br> examples: <br> sort=frameworkId_a<br>sort=frameworkName_a<br>sort=common_a<br>sort=deviceCount_a<br>sort=createTime_a<br>sort=displayName_a<br>sort=executionRatio_a<br>sort=successRatio_a<br>sort=startTime_a<br>sort=state_a<br>sort=id_a<br>sort=userId_a<br>sort=projectId_a
+  sort: '', # String | sort parameter contains list of fields used for sort query result <br> examples: <br> sort=frameworkId_a<br>sort=frameworkName_a<br>sort=deviceCount_a<br>sort=displayName_a<br>sort=executionRatio_a<br>sort=successRatio_a<br>sort=userId_a<br>sort=common_a<br>sort=createTime_a<br>sort=startTime_a<br>sort=id_a<br>sort=state_a<br>sort=projectId_a
+  filter: '', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=frameworkid_eq_1<br>filter=frameworkname_eq_value<br>filter=displayname_eq_value<br>filter=successratio_eq_1<br>filter=userid_eq_1<br>filter=common_eq_true<br>filter=createtime_eq_1700230363968<br>filter=starttime_eq_1700230363968<br>filter=id_eq_1<br>filter=projectid_eq_1
+  offset: '0', # String | offset parameter define page number
+  limit: '20' # String | limit parameter define page size
 }
 
 begin
   #Get test runs.
-  result = api_instance.get_user_project_test_runs_using_get(project_id, user_id, opts)
+  result = api_instance.get_user_project_test_runs(user_id, project_id, opts)
   p result
 rescue BitbarCloudApiClient::ApiError => e
-  puts "Exception when calling TestResultsApi->get_user_project_test_runs_using_get: #{e}"
+  puts "Exception when calling TestResultsApi->get_user_project_test_runs: #{e}"
 end
 ```
 
@@ -2033,20 +1654,20 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **project_id** | **Integer**| projectId | 
- **user_id** | **Integer**| userId | 
- **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;frameworkid_eq_1&lt;br&gt;filter&#x3D;frameworkname_eq_value&lt;br&gt;filter&#x3D;common_eq_null&lt;br&gt;filter&#x3D;createtime_eq_1593583747582&lt;br&gt;filter&#x3D;displayname_eq_value&lt;br&gt;filter&#x3D;successratio_eq_1&lt;br&gt;filter&#x3D;starttime_eq_1593583747582&lt;br&gt;filter&#x3D;id_eq_1&lt;br&gt;filter&#x3D;userid_eq_1&lt;br&gt;filter&#x3D;projectid_eq_1 | [optional] 
- **limit** | **Integer**| limit parameter define page size | [optional] [default to 20]
- **offset** | **Integer**| offset parameter define page number | [optional] [default to 0]
- **sort** | **String**| sort parameter contains list of fields used for sort query result &lt;br&gt; examples: &lt;br&gt; sort&#x3D;frameworkId_a&lt;br&gt;sort&#x3D;frameworkName_a&lt;br&gt;sort&#x3D;common_a&lt;br&gt;sort&#x3D;deviceCount_a&lt;br&gt;sort&#x3D;createTime_a&lt;br&gt;sort&#x3D;displayName_a&lt;br&gt;sort&#x3D;executionRatio_a&lt;br&gt;sort&#x3D;successRatio_a&lt;br&gt;sort&#x3D;startTime_a&lt;br&gt;sort&#x3D;state_a&lt;br&gt;sort&#x3D;id_a&lt;br&gt;sort&#x3D;userId_a&lt;br&gt;sort&#x3D;projectId_a | [optional] 
+ **user_id** | **Integer**|  | 
+ **project_id** | **Integer**|  | 
+ **sort** | **String**| sort parameter contains list of fields used for sort query result &lt;br&gt; examples: &lt;br&gt; sort&#x3D;frameworkId_a&lt;br&gt;sort&#x3D;frameworkName_a&lt;br&gt;sort&#x3D;deviceCount_a&lt;br&gt;sort&#x3D;displayName_a&lt;br&gt;sort&#x3D;executionRatio_a&lt;br&gt;sort&#x3D;successRatio_a&lt;br&gt;sort&#x3D;userId_a&lt;br&gt;sort&#x3D;common_a&lt;br&gt;sort&#x3D;createTime_a&lt;br&gt;sort&#x3D;startTime_a&lt;br&gt;sort&#x3D;id_a&lt;br&gt;sort&#x3D;state_a&lt;br&gt;sort&#x3D;projectId_a | [optional] 
+ **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;frameworkid_eq_1&lt;br&gt;filter&#x3D;frameworkname_eq_value&lt;br&gt;filter&#x3D;displayname_eq_value&lt;br&gt;filter&#x3D;successratio_eq_1&lt;br&gt;filter&#x3D;userid_eq_1&lt;br&gt;filter&#x3D;common_eq_true&lt;br&gt;filter&#x3D;createtime_eq_1700230363968&lt;br&gt;filter&#x3D;starttime_eq_1700230363968&lt;br&gt;filter&#x3D;id_eq_1&lt;br&gt;filter&#x3D;projectid_eq_1 | [optional] 
+ **offset** | **String**| offset parameter define page number | [optional] [default to 0]
+ **limit** | **String**| limit parameter define page size | [optional] [default to 20]
 
 ### Return type
 
-[**APIListOfAPITestRun**](APIListOfAPITestRun.md)
+[**APIListAPITestRun**](APIListAPITestRun.md)
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -2055,8 +1676,8 @@ Name | Type | Description  | Notes
 
 
 
-# **get_user_test_run_using_get**
-> APITestRun get_user_test_run_using_get(project_id, run_id, user_id)
+# **get_user_test_run**
+> APITestRun get_user_test_run(user_id, project_id, run_id)
 
 Get test run.
 
@@ -2064,31 +1685,19 @@ Get test run.
 ```ruby
 # load the gem
 require 'bitbar-cloud-api-client'
-# setup authorization
-BitbarCloudApiClient.configure do |config|
-  # Configure HTTP basic authorization: apiKeyInHeader
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
-
-  # Configure OAuth2 access token for authorization: oAuth2
-  config.access_token = 'YOUR ACCESS TOKEN'
-end
 
 api_instance = BitbarCloudApiClient::TestResultsApi.new
-
-project_id = 789 # Integer | projectId
-
-run_id = 789 # Integer | runId
-
-user_id = 789 # Integer | userId
+user_id = 789 # Integer | 
+project_id = 789 # Integer | 
+run_id = 789 # Integer | 
 
 
 begin
   #Get test run.
-  result = api_instance.get_user_test_run_using_get(project_id, run_id, user_id)
+  result = api_instance.get_user_test_run(user_id, project_id, run_id)
   p result
 rescue BitbarCloudApiClient::ApiError => e
-  puts "Exception when calling TestResultsApi->get_user_test_run_using_get: #{e}"
+  puts "Exception when calling TestResultsApi->get_user_test_run: #{e}"
 end
 ```
 
@@ -2096,9 +1705,9 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **project_id** | **Integer**| projectId | 
- **run_id** | **Integer**| runId | 
- **user_id** | **Integer**| userId | 
+ **user_id** | **Integer**|  | 
+ **project_id** | **Integer**|  | 
+ **run_id** | **Integer**|  | 
 
 ### Return type
 
@@ -2106,7 +1715,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -2115,8 +1724,8 @@ Name | Type | Description  | Notes
 
 
 
-# **get_user_test_runs_using_get**
-> APIListOfAPITestRun get_user_test_runs_using_get(user_id, opts)
+# **get_user_test_runs**
+> APIListAPITestRun get_user_test_runs(user_id, opts)
 
 Get test runs.
 
@@ -2124,36 +1733,25 @@ Get test runs.
 ```ruby
 # load the gem
 require 'bitbar-cloud-api-client'
-# setup authorization
-BitbarCloudApiClient.configure do |config|
-  # Configure HTTP basic authorization: apiKeyInHeader
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
-
-  # Configure OAuth2 access token for authorization: oAuth2
-  config.access_token = 'YOUR ACCESS TOKEN'
-end
 
 api_instance = BitbarCloudApiClient::TestResultsApi.new
-
-user_id = 789 # Integer | userId
-
+user_id = 789 # Integer | 
 opts = { 
-  filter: 'filter_example', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=frameworkid_eq_1<br>filter=frameworkname_eq_value<br>filter=common_eq_null<br>filter=createtime_eq_1593583747585<br>filter=displayname_eq_value<br>filter=successratio_eq_1<br>filter=starttime_eq_1593583747585<br>filter=id_eq_1<br>filter=userid_eq_1<br>filter=projectid_eq_1
-  for_whole_account: false, # BOOLEAN | forWholeAccount
-  limit: 20, # Integer | limit parameter define page size
-  offset: 0, # Integer | offset parameter define page number
-  skip_common_project: false, # BOOLEAN | skipCommonProject
-  skip_shared: false, # BOOLEAN | skipShared
-  sort: 'sort_example' # String | sort parameter contains list of fields used for sort query result <br> examples: <br> sort=frameworkId_a<br>sort=frameworkName_a<br>sort=common_a<br>sort=deviceCount_a<br>sort=createTime_a<br>sort=displayName_a<br>sort=executionRatio_a<br>sort=successRatio_a<br>sort=startTime_a<br>sort=state_a<br>sort=id_a<br>sort=userId_a<br>sort=projectId_a
+  for_whole_account: false, # BOOLEAN | 
+  skip_common_project: false, # BOOLEAN | 
+  skip_shared: false, # BOOLEAN | 
+  sort: '', # String | sort parameter contains list of fields used for sort query result <br> examples: <br> sort=frameworkId_a<br>sort=frameworkName_a<br>sort=deviceCount_a<br>sort=displayName_a<br>sort=executionRatio_a<br>sort=successRatio_a<br>sort=userId_a<br>sort=common_a<br>sort=createTime_a<br>sort=startTime_a<br>sort=id_a<br>sort=state_a<br>sort=projectId_a
+  filter: '', # String | filter parameter contains list of fields used for filter query result <br> examples: <br> filter=frameworkid_eq_1<br>filter=frameworkname_eq_value<br>filter=displayname_eq_value<br>filter=successratio_eq_1<br>filter=userid_eq_1<br>filter=common_eq_true<br>filter=createtime_eq_1700230363880<br>filter=starttime_eq_1700230363880<br>filter=id_eq_1<br>filter=projectid_eq_1
+  offset: '0', # String | offset parameter define page number
+  limit: '20' # String | limit parameter define page size
 }
 
 begin
   #Get test runs.
-  result = api_instance.get_user_test_runs_using_get(user_id, opts)
+  result = api_instance.get_user_test_runs(user_id, opts)
   p result
 rescue BitbarCloudApiClient::ApiError => e
-  puts "Exception when calling TestResultsApi->get_user_test_runs_using_get: #{e}"
+  puts "Exception when calling TestResultsApi->get_user_test_runs: #{e}"
 end
 ```
 
@@ -2161,22 +1759,22 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **user_id** | **Integer**| userId | 
- **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;frameworkid_eq_1&lt;br&gt;filter&#x3D;frameworkname_eq_value&lt;br&gt;filter&#x3D;common_eq_null&lt;br&gt;filter&#x3D;createtime_eq_1593583747585&lt;br&gt;filter&#x3D;displayname_eq_value&lt;br&gt;filter&#x3D;successratio_eq_1&lt;br&gt;filter&#x3D;starttime_eq_1593583747585&lt;br&gt;filter&#x3D;id_eq_1&lt;br&gt;filter&#x3D;userid_eq_1&lt;br&gt;filter&#x3D;projectid_eq_1 | [optional] 
- **for_whole_account** | **BOOLEAN**| forWholeAccount | [optional] [default to false]
- **limit** | **Integer**| limit parameter define page size | [optional] [default to 20]
- **offset** | **Integer**| offset parameter define page number | [optional] [default to 0]
- **skip_common_project** | **BOOLEAN**| skipCommonProject | [optional] [default to false]
- **skip_shared** | **BOOLEAN**| skipShared | [optional] [default to false]
- **sort** | **String**| sort parameter contains list of fields used for sort query result &lt;br&gt; examples: &lt;br&gt; sort&#x3D;frameworkId_a&lt;br&gt;sort&#x3D;frameworkName_a&lt;br&gt;sort&#x3D;common_a&lt;br&gt;sort&#x3D;deviceCount_a&lt;br&gt;sort&#x3D;createTime_a&lt;br&gt;sort&#x3D;displayName_a&lt;br&gt;sort&#x3D;executionRatio_a&lt;br&gt;sort&#x3D;successRatio_a&lt;br&gt;sort&#x3D;startTime_a&lt;br&gt;sort&#x3D;state_a&lt;br&gt;sort&#x3D;id_a&lt;br&gt;sort&#x3D;userId_a&lt;br&gt;sort&#x3D;projectId_a | [optional] 
+ **user_id** | **Integer**|  | 
+ **for_whole_account** | **BOOLEAN**|  | [optional] [default to false]
+ **skip_common_project** | **BOOLEAN**|  | [optional] [default to false]
+ **skip_shared** | **BOOLEAN**|  | [optional] [default to false]
+ **sort** | **String**| sort parameter contains list of fields used for sort query result &lt;br&gt; examples: &lt;br&gt; sort&#x3D;frameworkId_a&lt;br&gt;sort&#x3D;frameworkName_a&lt;br&gt;sort&#x3D;deviceCount_a&lt;br&gt;sort&#x3D;displayName_a&lt;br&gt;sort&#x3D;executionRatio_a&lt;br&gt;sort&#x3D;successRatio_a&lt;br&gt;sort&#x3D;userId_a&lt;br&gt;sort&#x3D;common_a&lt;br&gt;sort&#x3D;createTime_a&lt;br&gt;sort&#x3D;startTime_a&lt;br&gt;sort&#x3D;id_a&lt;br&gt;sort&#x3D;state_a&lt;br&gt;sort&#x3D;projectId_a | [optional] 
+ **filter** | **String**| filter parameter contains list of fields used for filter query result &lt;br&gt; examples: &lt;br&gt; filter&#x3D;frameworkid_eq_1&lt;br&gt;filter&#x3D;frameworkname_eq_value&lt;br&gt;filter&#x3D;displayname_eq_value&lt;br&gt;filter&#x3D;successratio_eq_1&lt;br&gt;filter&#x3D;userid_eq_1&lt;br&gt;filter&#x3D;common_eq_true&lt;br&gt;filter&#x3D;createtime_eq_1700230363880&lt;br&gt;filter&#x3D;starttime_eq_1700230363880&lt;br&gt;filter&#x3D;id_eq_1&lt;br&gt;filter&#x3D;projectid_eq_1 | [optional] 
+ **offset** | **String**| offset parameter define page number | [optional] [default to 0]
+ **limit** | **String**| limit parameter define page size | [optional] [default to 20]
 
 ### Return type
 
-[**APIListOfAPITestRun**](APIListOfAPITestRun.md)
+[**APIListAPITestRun**](APIListAPITestRun.md)
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -2185,8 +1783,54 @@ Name | Type | Description  | Notes
 
 
 
-# **release_device_session_using_post1**
-> APIDeviceSession release_device_session_using_post1(device_session_id, user_id)
+# **get_visual_test_images**
+> APIListAPIVisualTestImage get_visual_test_images(user_id, device_session_id)
+
+Retrieve VisualTests images.
+
+### Example
+```ruby
+# load the gem
+require 'bitbar-cloud-api-client'
+
+api_instance = BitbarCloudApiClient::TestResultsApi.new
+user_id = 789 # Integer | 
+device_session_id = 789 # Integer | 
+
+
+begin
+  #Retrieve VisualTests images.
+  result = api_instance.get_visual_test_images(user_id, device_session_id)
+  p result
+rescue BitbarCloudApiClient::ApiError => e
+  puts "Exception when calling TestResultsApi->get_visual_test_images: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **user_id** | **Integer**|  | 
+ **device_session_id** | **Integer**|  | 
+
+### Return type
+
+[**APIListAPIVisualTestImage**](APIListAPIVisualTestImage.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: */*
+
+
+
+# **release_device_session**
+> APIDeviceSession release_device_session(user_id, device_session_id)
 
 Release device session.
 
@@ -2194,29 +1838,18 @@ Release device session.
 ```ruby
 # load the gem
 require 'bitbar-cloud-api-client'
-# setup authorization
-BitbarCloudApiClient.configure do |config|
-  # Configure HTTP basic authorization: apiKeyInHeader
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
-
-  # Configure OAuth2 access token for authorization: oAuth2
-  config.access_token = 'YOUR ACCESS TOKEN'
-end
 
 api_instance = BitbarCloudApiClient::TestResultsApi.new
-
-device_session_id = 789 # Integer | deviceSessionId
-
-user_id = 789 # Integer | userId
+user_id = 789 # Integer | 
+device_session_id = 789 # Integer | 
 
 
 begin
   #Release device session.
-  result = api_instance.release_device_session_using_post1(device_session_id, user_id)
+  result = api_instance.release_device_session(user_id, device_session_id)
   p result
 rescue BitbarCloudApiClient::ApiError => e
-  puts "Exception when calling TestResultsApi->release_device_session_using_post1: #{e}"
+  puts "Exception when calling TestResultsApi->release_device_session: #{e}"
 end
 ```
 
@@ -2224,8 +1857,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **device_session_id** | **Integer**| deviceSessionId | 
- **user_id** | **Integer**| userId | 
+ **user_id** | **Integer**|  | 
+ **device_session_id** | **Integer**|  | 
 
 ### Return type
 
@@ -2233,461 +1866,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: */*
-
-
-
-# **request_user_test_run_files_using_post**
-> APIUserFile request_user_test_run_files_using_post(project_id, run_id, user_id, opts)
-
-Generate files zip.
-
-### Example
-```ruby
-# load the gem
-require 'bitbar-cloud-api-client'
-# setup authorization
-BitbarCloudApiClient.configure do |config|
-  # Configure HTTP basic authorization: apiKeyInHeader
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
-
-  # Configure OAuth2 access token for authorization: oAuth2
-  config.access_token = 'YOUR ACCESS TOKEN'
-end
-
-api_instance = BitbarCloudApiClient::TestResultsApi.new
-
-project_id = 789 # Integer | projectId
-
-run_id = 789 # Integer | runId
-
-user_id = 789 # Integer | userId
-
-opts = { 
-  device_run_ids: [56] # Array<Integer> | deviceRunIds[]
-}
-
-begin
-  #Generate files zip.
-  result = api_instance.request_user_test_run_files_using_post(project_id, run_id, user_id, opts)
-  p result
-rescue BitbarCloudApiClient::ApiError => e
-  puts "Exception when calling TestResultsApi->request_user_test_run_files_using_post: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **project_id** | **Integer**| projectId | 
- **run_id** | **Integer**| runId | 
- **user_id** | **Integer**| userId | 
- **device_run_ids** | [**Array&lt;Integer&gt;**](Integer.md)| deviceRunIds[] | [optional] 
-
-### Return type
-
-[**APIUserFile**](APIUserFile.md)
-
-### Authorization
-
-[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: */*
-
-
-
-# **request_user_test_run_logs_using_post**
-> APIUserFile request_user_test_run_logs_using_post(project_id, run_id, user_id, opts)
-
-Generate logs zip.
-
-### Example
-```ruby
-# load the gem
-require 'bitbar-cloud-api-client'
-# setup authorization
-BitbarCloudApiClient.configure do |config|
-  # Configure HTTP basic authorization: apiKeyInHeader
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
-
-  # Configure OAuth2 access token for authorization: oAuth2
-  config.access_token = 'YOUR ACCESS TOKEN'
-end
-
-api_instance = BitbarCloudApiClient::TestResultsApi.new
-
-project_id = 789 # Integer | projectId
-
-run_id = 789 # Integer | runId
-
-user_id = 789 # Integer | userId
-
-opts = { 
-  device_run_ids: [56] # Array<Integer> | deviceRunIds[]
-}
-
-begin
-  #Generate logs zip.
-  result = api_instance.request_user_test_run_logs_using_post(project_id, run_id, user_id, opts)
-  p result
-rescue BitbarCloudApiClient::ApiError => e
-  puts "Exception when calling TestResultsApi->request_user_test_run_logs_using_post: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **project_id** | **Integer**| projectId | 
- **run_id** | **Integer**| runId | 
- **user_id** | **Integer**| userId | 
- **device_run_ids** | [**Array&lt;Integer&gt;**](Integer.md)| deviceRunIds[] | [optional] 
-
-### Return type
-
-[**APIUserFile**](APIUserFile.md)
-
-### Authorization
-
-[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: */*
-
-
-
-# **request_user_test_run_performance_using_post**
-> APIUserFile request_user_test_run_performance_using_post(project_id, run_id, user_id, opts)
-
-Generate performance zip.
-
-### Example
-```ruby
-# load the gem
-require 'bitbar-cloud-api-client'
-# setup authorization
-BitbarCloudApiClient.configure do |config|
-  # Configure HTTP basic authorization: apiKeyInHeader
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
-
-  # Configure OAuth2 access token for authorization: oAuth2
-  config.access_token = 'YOUR ACCESS TOKEN'
-end
-
-api_instance = BitbarCloudApiClient::TestResultsApi.new
-
-project_id = 789 # Integer | projectId
-
-run_id = 789 # Integer | runId
-
-user_id = 789 # Integer | userId
-
-opts = { 
-  device_run_ids: [56] # Array<Integer> | deviceRunIds[]
-}
-
-begin
-  #Generate performance zip.
-  result = api_instance.request_user_test_run_performance_using_post(project_id, run_id, user_id, opts)
-  p result
-rescue BitbarCloudApiClient::ApiError => e
-  puts "Exception when calling TestResultsApi->request_user_test_run_performance_using_post: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **project_id** | **Integer**| projectId | 
- **run_id** | **Integer**| runId | 
- **user_id** | **Integer**| userId | 
- **device_run_ids** | [**Array&lt;Integer&gt;**](Integer.md)| deviceRunIds[] | [optional] 
-
-### Return type
-
-[**APIUserFile**](APIUserFile.md)
-
-### Authorization
-
-[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: */*
-
-
-
-# **request_user_test_run_screenshots_using_post**
-> APIUserFile request_user_test_run_screenshots_using_post(project_id, run_id, user_id, opts)
-
-Generate screenshot zip.
-
-### Example
-```ruby
-# load the gem
-require 'bitbar-cloud-api-client'
-# setup authorization
-BitbarCloudApiClient.configure do |config|
-  # Configure HTTP basic authorization: apiKeyInHeader
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
-
-  # Configure OAuth2 access token for authorization: oAuth2
-  config.access_token = 'YOUR ACCESS TOKEN'
-end
-
-api_instance = BitbarCloudApiClient::TestResultsApi.new
-
-project_id = 789 # Integer | projectId
-
-run_id = 789 # Integer | runId
-
-user_id = 789 # Integer | userId
-
-opts = { 
-  device_run_ids: [56] # Array<Integer> | deviceRunIds[]
-}
-
-begin
-  #Generate screenshot zip.
-  result = api_instance.request_user_test_run_screenshots_using_post(project_id, run_id, user_id, opts)
-  p result
-rescue BitbarCloudApiClient::ApiError => e
-  puts "Exception when calling TestResultsApi->request_user_test_run_screenshots_using_post: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **project_id** | **Integer**| projectId | 
- **run_id** | **Integer**| runId | 
- **user_id** | **Integer**| userId | 
- **device_run_ids** | [**Array&lt;Integer&gt;**](Integer.md)| deviceRunIds[] | [optional] 
-
-### Return type
-
-[**APIUserFile**](APIUserFile.md)
-
-### Authorization
-
-[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: */*
-
-
-
-# **retry_device_session_with_user_using_post**
-> APIDeviceSession retry_device_session_with_user_using_post(device_session_id, project_id, run_id, user_id)
-
-Retry device session.
-
-### Example
-```ruby
-# load the gem
-require 'bitbar-cloud-api-client'
-# setup authorization
-BitbarCloudApiClient.configure do |config|
-  # Configure HTTP basic authorization: apiKeyInHeader
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
-
-  # Configure OAuth2 access token for authorization: oAuth2
-  config.access_token = 'YOUR ACCESS TOKEN'
-end
-
-api_instance = BitbarCloudApiClient::TestResultsApi.new
-
-device_session_id = 789 # Integer | deviceSessionId
-
-project_id = 789 # Integer | projectId
-
-run_id = 789 # Integer | runId
-
-user_id = 789 # Integer | userId
-
-
-begin
-  #Retry device session.
-  result = api_instance.retry_device_session_with_user_using_post(device_session_id, project_id, run_id, user_id)
-  p result
-rescue BitbarCloudApiClient::ApiError => e
-  puts "Exception when calling TestResultsApi->retry_device_session_with_user_using_post: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **device_session_id** | **Integer**| deviceSessionId | 
- **project_id** | **Integer**| projectId | 
- **run_id** | **Integer**| runId | 
- **user_id** | **Integer**| userId | 
-
-### Return type
-
-[**APIDeviceSession**](APIDeviceSession.md)
-
-### Authorization
-
-[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: */*
-
-
-
-# **retry_test_run_with_user_using_post**
-> APITestRun retry_test_run_with_user_using_post(project_id, run_id, user_id, opts)
-
-Retry test run or its device sessions.
-
-### Example
-```ruby
-# load the gem
-require 'bitbar-cloud-api-client'
-# setup authorization
-BitbarCloudApiClient.configure do |config|
-  # Configure HTTP basic authorization: apiKeyInHeader
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
-
-  # Configure OAuth2 access token for authorization: oAuth2
-  config.access_token = 'YOUR ACCESS TOKEN'
-end
-
-api_instance = BitbarCloudApiClient::TestResultsApi.new
-
-project_id = 789 # Integer | projectId
-
-run_id = 789 # Integer | runId
-
-user_id = 789 # Integer | userId
-
-opts = { 
-  device_run_ids: [56] # Array<Integer> | deviceRunIds[]
-}
-
-begin
-  #Retry test run or its device sessions.
-  result = api_instance.retry_test_run_with_user_using_post(project_id, run_id, user_id, opts)
-  p result
-rescue BitbarCloudApiClient::ApiError => e
-  puts "Exception when calling TestResultsApi->retry_test_run_with_user_using_post: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **project_id** | **Integer**| projectId | 
- **run_id** | **Integer**| runId | 
- **user_id** | **Integer**| userId | 
- **device_run_ids** | [**Array&lt;Integer&gt;**](Integer.md)| deviceRunIds[] | [optional] 
-
-### Return type
-
-[**APITestRun**](APITestRun.md)
-
-### Authorization
-
-[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: */*
-
-
-
-# **serve_screenshot_using_get**
-> serve_screenshot_using_get(device_session_id, project_id, run_id, screenshot_id, user_id, opts)
-
-Get device session screenshot.
-
-### Example
-```ruby
-# load the gem
-require 'bitbar-cloud-api-client'
-# setup authorization
-BitbarCloudApiClient.configure do |config|
-  # Configure HTTP basic authorization: apiKeyInHeader
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
-
-  # Configure OAuth2 access token for authorization: oAuth2
-  config.access_token = 'YOUR ACCESS TOKEN'
-end
-
-api_instance = BitbarCloudApiClient::TestResultsApi.new
-
-device_session_id = 789 # Integer | deviceSessionId
-
-project_id = 789 # Integer | projectId
-
-run_id = 789 # Integer | runId
-
-screenshot_id = 789 # Integer | screenshotId
-
-user_id = 789 # Integer | userId
-
-opts = { 
-  height: 56, # Integer | height
-  width: 56 # Integer | width
-}
-
-begin
-  #Get device session screenshot.
-  api_instance.serve_screenshot_using_get(device_session_id, project_id, run_id, screenshot_id, user_id, opts)
-rescue BitbarCloudApiClient::ApiError => e
-  puts "Exception when calling TestResultsApi->serve_screenshot_using_get: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **device_session_id** | **Integer**| deviceSessionId | 
- **project_id** | **Integer**| projectId | 
- **run_id** | **Integer**| runId | 
- **screenshot_id** | **Integer**| screenshotId | 
- **user_id** | **Integer**| userId | 
- **height** | **Integer**| height | [optional] 
- **width** | **Integer**| width | [optional] 
-
-### Return type
-
-nil (empty response body)
-
-### Authorization
-
-[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -2696,42 +1875,30 @@ nil (empty response body)
 
 
 
-# **update_user_test_run_using_post**
-> APITestRun update_user_test_run_using_post(display_name, project_id, run_id, user_id)
+# **request_user_test_run_files**
+> APIUserFile request_user_test_run_files(user_id, project_id, run_id, opts)
 
-Update test run.
+Generate files zip.
 
 ### Example
 ```ruby
 # load the gem
 require 'bitbar-cloud-api-client'
-# setup authorization
-BitbarCloudApiClient.configure do |config|
-  # Configure HTTP basic authorization: apiKeyInHeader
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
-
-  # Configure OAuth2 access token for authorization: oAuth2
-  config.access_token = 'YOUR ACCESS TOKEN'
-end
 
 api_instance = BitbarCloudApiClient::TestResultsApi.new
-
-display_name = 'display_name_example' # String | displayName
-
-project_id = 789 # Integer | projectId
-
-run_id = 789 # Integer | runId
-
-user_id = 789 # Integer | userId
-
+user_id = 789 # Integer | 
+project_id = 789 # Integer | 
+run_id = 789 # Integer | 
+opts = { 
+  device_run_ids: [56] # Array<Integer> | 
+}
 
 begin
-  #Update test run.
-  result = api_instance.update_user_test_run_using_post(display_name, project_id, run_id, user_id)
+  #Generate files zip.
+  result = api_instance.request_user_test_run_files(user_id, project_id, run_id, opts)
   p result
 rescue BitbarCloudApiClient::ApiError => e
-  puts "Exception when calling TestResultsApi->update_user_test_run_using_post: #{e}"
+  puts "Exception when calling TestResultsApi->request_user_test_run_files: #{e}"
 end
 ```
 
@@ -2739,10 +1906,264 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **display_name** | **String**| displayName | 
- **project_id** | **Integer**| projectId | 
- **run_id** | **Integer**| runId | 
- **user_id** | **Integer**| userId | 
+ **user_id** | **Integer**|  | 
+ **project_id** | **Integer**|  | 
+ **run_id** | **Integer**|  | 
+ **device_run_ids** | [**Array&lt;Integer&gt;**](Integer.md)|  | [optional] 
+
+### Return type
+
+[**APIUserFile**](APIUserFile.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: */*
+
+
+
+# **request_user_test_run_logs**
+> APIUserFile request_user_test_run_logs(user_id, project_id, run_id, opts)
+
+Generate logs zip.
+
+### Example
+```ruby
+# load the gem
+require 'bitbar-cloud-api-client'
+
+api_instance = BitbarCloudApiClient::TestResultsApi.new
+user_id = 789 # Integer | 
+project_id = 789 # Integer | 
+run_id = 789 # Integer | 
+opts = { 
+  device_run_ids: [56] # Array<Integer> | 
+}
+
+begin
+  #Generate logs zip.
+  result = api_instance.request_user_test_run_logs(user_id, project_id, run_id, opts)
+  p result
+rescue BitbarCloudApiClient::ApiError => e
+  puts "Exception when calling TestResultsApi->request_user_test_run_logs: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **user_id** | **Integer**|  | 
+ **project_id** | **Integer**|  | 
+ **run_id** | **Integer**|  | 
+ **device_run_ids** | [**Array&lt;Integer&gt;**](Integer.md)|  | [optional] 
+
+### Return type
+
+[**APIUserFile**](APIUserFile.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: */*
+
+
+
+# **request_user_test_run_performance**
+> APIUserFile request_user_test_run_performance(user_id, project_id, run_id, opts)
+
+Generate performance zip.
+
+### Example
+```ruby
+# load the gem
+require 'bitbar-cloud-api-client'
+
+api_instance = BitbarCloudApiClient::TestResultsApi.new
+user_id = 789 # Integer | 
+project_id = 789 # Integer | 
+run_id = 789 # Integer | 
+opts = { 
+  device_run_ids: [56] # Array<Integer> | 
+}
+
+begin
+  #Generate performance zip.
+  result = api_instance.request_user_test_run_performance(user_id, project_id, run_id, opts)
+  p result
+rescue BitbarCloudApiClient::ApiError => e
+  puts "Exception when calling TestResultsApi->request_user_test_run_performance: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **user_id** | **Integer**|  | 
+ **project_id** | **Integer**|  | 
+ **run_id** | **Integer**|  | 
+ **device_run_ids** | [**Array&lt;Integer&gt;**](Integer.md)|  | [optional] 
+
+### Return type
+
+[**APIUserFile**](APIUserFile.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: */*
+
+
+
+# **request_user_test_run_screenshots**
+> APIUserFile request_user_test_run_screenshots(user_id, project_id, run_id, opts)
+
+Generate screenshot zip.
+
+### Example
+```ruby
+# load the gem
+require 'bitbar-cloud-api-client'
+
+api_instance = BitbarCloudApiClient::TestResultsApi.new
+user_id = 789 # Integer | 
+project_id = 789 # Integer | 
+run_id = 789 # Integer | 
+opts = { 
+  device_run_ids: [56] # Array<Integer> | 
+}
+
+begin
+  #Generate screenshot zip.
+  result = api_instance.request_user_test_run_screenshots(user_id, project_id, run_id, opts)
+  p result
+rescue BitbarCloudApiClient::ApiError => e
+  puts "Exception when calling TestResultsApi->request_user_test_run_screenshots: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **user_id** | **Integer**|  | 
+ **project_id** | **Integer**|  | 
+ **run_id** | **Integer**|  | 
+ **device_run_ids** | [**Array&lt;Integer&gt;**](Integer.md)|  | [optional] 
+
+### Return type
+
+[**APIUserFile**](APIUserFile.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: */*
+
+
+
+# **retry_device_session_with_user**
+> APIDeviceSession retry_device_session_with_user(user_id, project_id, run_id, device_session_id)
+
+Retry device session.
+
+### Example
+```ruby
+# load the gem
+require 'bitbar-cloud-api-client'
+
+api_instance = BitbarCloudApiClient::TestResultsApi.new
+user_id = 789 # Integer | 
+project_id = 789 # Integer | 
+run_id = 789 # Integer | 
+device_session_id = 789 # Integer | 
+
+
+begin
+  #Retry device session.
+  result = api_instance.retry_device_session_with_user(user_id, project_id, run_id, device_session_id)
+  p result
+rescue BitbarCloudApiClient::ApiError => e
+  puts "Exception when calling TestResultsApi->retry_device_session_with_user: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **user_id** | **Integer**|  | 
+ **project_id** | **Integer**|  | 
+ **run_id** | **Integer**|  | 
+ **device_session_id** | **Integer**|  | 
+
+### Return type
+
+[**APIDeviceSession**](APIDeviceSession.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: */*
+
+
+
+# **retry_test_run_with_user**
+> APITestRun retry_test_run_with_user(user_id, project_id, run_id, opts)
+
+Retry test run or its device sessions.
+
+### Example
+```ruby
+# load the gem
+require 'bitbar-cloud-api-client'
+
+api_instance = BitbarCloudApiClient::TestResultsApi.new
+user_id = 789 # Integer | 
+project_id = 789 # Integer | 
+run_id = 789 # Integer | 
+opts = { 
+  device_run_ids: [56] # Array<Integer> | 
+}
+
+begin
+  #Retry test run or its device sessions.
+  result = api_instance.retry_test_run_with_user(user_id, project_id, run_id, opts)
+  p result
+rescue BitbarCloudApiClient::ApiError => e
+  puts "Exception when calling TestResultsApi->retry_test_run_with_user: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **user_id** | **Integer**|  | 
+ **project_id** | **Integer**|  | 
+ **run_id** | **Integer**|  | 
+ **device_run_ids** | [**Array&lt;Integer&gt;**](Integer.md)|  | [optional] 
 
 ### Return type
 
@@ -2750,11 +2171,227 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKeyInHeader](../README.md#apiKeyInHeader), [oAuth2](../README.md#oAuth2)
+No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
+ - **Accept**: */*
+
+
+
+# **serve_screenshot**
+> serve_screenshot(user_id, project_id, run_id, device_session_id, screenshot_id, opts)
+
+Get device session screenshot.
+
+### Example
+```ruby
+# load the gem
+require 'bitbar-cloud-api-client'
+
+api_instance = BitbarCloudApiClient::TestResultsApi.new
+user_id = 789 # Integer | 
+project_id = 789 # Integer | 
+run_id = 789 # Integer | 
+device_session_id = 789 # Integer | 
+screenshot_id = 789 # Integer | 
+opts = { 
+  width: 56, # Integer | 
+  height: 56 # Integer | 
+}
+
+begin
+  #Get device session screenshot.
+  api_instance.serve_screenshot(user_id, project_id, run_id, device_session_id, screenshot_id, opts)
+rescue BitbarCloudApiClient::ApiError => e
+  puts "Exception when calling TestResultsApi->serve_screenshot: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **user_id** | **Integer**|  | 
+ **project_id** | **Integer**|  | 
+ **run_id** | **Integer**|  | 
+ **device_session_id** | **Integer**|  | 
+ **screenshot_id** | **Integer**|  | 
+ **width** | **Integer**|  | [optional] 
+ **height** | **Integer**|  | [optional] 
+
+### Return type
+
+nil (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: */*
+
+
+
+# **update_device_session1**
+> APIDeviceSession update_device_session1(user_id, project_id, run_id, device_session_id, opts)
+
+Update device session by external id.
+
+### Example
+```ruby
+# load the gem
+require 'bitbar-cloud-api-client'
+
+api_instance = BitbarCloudApiClient::TestResultsApi.new
+user_id = 789 # Integer | 
+project_id = 789 # Integer | 
+run_id = 789 # Integer | 
+device_session_id = 789 # Integer | 
+opts = { 
+  name: 'name_example', # String | 
+  client_side_id: 'client_side_id_example', # String | 
+  state: 'state_example' # String | 
+}
+
+begin
+  #Update device session by external id.
+  result = api_instance.update_device_session1(user_id, project_id, run_id, device_session_id, opts)
+  p result
+rescue BitbarCloudApiClient::ApiError => e
+  puts "Exception when calling TestResultsApi->update_device_session1: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **user_id** | **Integer**|  | 
+ **project_id** | **Integer**|  | 
+ **run_id** | **Integer**|  | 
+ **device_session_id** | **Integer**|  | 
+ **name** | **String**|  | [optional] 
+ **client_side_id** | **String**|  | [optional] 
+ **state** | **String**|  | [optional] 
+
+### Return type
+
+[**APIDeviceSession**](APIDeviceSession.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: */*
+
+
+
+# **update_user_test_run**
+> APITestRun update_user_test_run(user_id, project_id, run_id, display_name)
+
+Update test run.
+
+### Example
+```ruby
+# load the gem
+require 'bitbar-cloud-api-client'
+
+api_instance = BitbarCloudApiClient::TestResultsApi.new
+user_id = 789 # Integer | 
+project_id = 789 # Integer | 
+run_id = 789 # Integer | 
+display_name = 'display_name_example' # String | 
+
+
+begin
+  #Update test run.
+  result = api_instance.update_user_test_run(user_id, project_id, run_id, display_name)
+  p result
+rescue BitbarCloudApiClient::ApiError => e
+  puts "Exception when calling TestResultsApi->update_user_test_run: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **user_id** | **Integer**|  | 
+ **project_id** | **Integer**|  | 
+ **run_id** | **Integer**|  | 
+ **display_name** | **String**|  | 
+
+### Return type
+
+[**APITestRun**](APITestRun.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: */*
+
+
+
+# **update_users_device_session1**
+> APIDeviceSession update_users_device_session1(user_id, device_session_id, opts)
+
+Update device session by external id.
+
+### Example
+```ruby
+# load the gem
+require 'bitbar-cloud-api-client'
+
+api_instance = BitbarCloudApiClient::TestResultsApi.new
+user_id = 789 # Integer | 
+device_session_id = 789 # Integer | 
+opts = { 
+  name: 'name_example', # String | 
+  client_side_id: 'client_side_id_example', # String | 
+  state: 'state_example' # String | 
+}
+
+begin
+  #Update device session by external id.
+  result = api_instance.update_users_device_session1(user_id, device_session_id, opts)
+  p result
+rescue BitbarCloudApiClient::ApiError => e
+  puts "Exception when calling TestResultsApi->update_users_device_session1: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **user_id** | **Integer**|  | 
+ **device_session_id** | **Integer**|  | 
+ **name** | **String**|  | [optional] 
+ **client_side_id** | **String**|  | [optional] 
+ **state** | **String**|  | [optional] 
+
+### Return type
+
+[**APIDeviceSession**](APIDeviceSession.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
  - **Accept**: */*
 
 

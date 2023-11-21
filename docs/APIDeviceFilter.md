@@ -3,10 +3,10 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**id** | **Integer** |  | [optional] 
+**self_uri** | **String** |  | [optional] 
+**name** | **String** |  | [optional] 
 **display_name** | **String** |  | [optional] 
 **hidden** | **BOOLEAN** |  | [optional] 
-**id** | **Integer** |  | [optional] 
-**name** | **String** |  | [optional] 
-**self_uri** | **String** |  | [optional] 
-
+**os_type** | **String** |  | [optional] 
 
